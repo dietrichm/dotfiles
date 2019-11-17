@@ -1,0 +1,6 @@
+-R
+--exclude=.git
+--exclude=node_modules
+--links=no
+--languages=php,javascript,go
+--php-kinds=-av

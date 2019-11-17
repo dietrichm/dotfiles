@@ -1,0 +1,43 @@
+# vim: set noexpandtab:
+[alias]
+	addn = add -N
+	addp = add -p
+	br = branch -vv
+	bra = branch -vva
+	c = "!git add -p && GIT_EDITOR='nvim +startinsert' git commit"
+	ci = commit --allow-empty -m 'Retrigger CI'
+	contains = branch -a --contains
+	diffc = diff --cached
+	merged = branch -a --merged
+	no-merged = branch -a --no-merged
+	setuser = "!f() { echo -n 'Email address: ' && read email && git config user.name 'Dietrich Moerman' && git config user.email $email; }; f"
+	st = status -sb
+[push]
+	default = current
+[user]
+	useconfigonly = true
+[core]
+	excludesfile = ~/.gitignore_global
+	attributesfile = ~/.gitattributes_global
+	pager = less --tabs=4 -RFX
+	autocrlf = input
+[color]
+	ui = true
+[commit]
+	verbose = true
+	gpgsign = true
+[fetch]
+	prune = true
+[merge]
+	conflictstyle = diff3
+	tool = nfugitive
+[mergetool "nfugitive"]
+	cmd = nvim +Gdiff "$MERGED"
+[diff]
+	tool = nvimdiff
+[difftool "nvimdiff"]
+	cmd = nvim -d "$LOCAL" "$REMOTE"
+[diff "markdown"]
+	xfuncname = "^#+.*$"
+[stash]
+	showPatch = true

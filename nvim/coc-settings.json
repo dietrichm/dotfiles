@@ -1,0 +1,5 @@
+{
+    "diagnostic.enable": false,
+    "suggest.autoTrigger": "always",
+    "coc.preferences.extensionUpdateCheck": "never"
+}

@@ -1,0 +1,7 @@
+# Configure views.
+set blob-view = line-number:yes,interval=1 text
+
+# Colours.
+color cursor black blue
+color title-focus black cyan
+color title-blur black cyan

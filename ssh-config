@@ -1,0 +1,3 @@
+# vi: ft=sshconfig
+
+Include config.d/*

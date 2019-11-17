@@ -1,0 +1,3 @@
+*.php diff=php
+*.md diff=markdown
+*.apib diff=markdown
