@@ -42,5 +42,3 @@ While in NVIM, execute regularly:
 In Tmux, execute regularly:
 
     `prefix` + <kbd>U</kbd>
-
-# vim: set nospell:
