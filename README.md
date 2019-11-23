@@ -39,6 +39,4 @@ While in NVIM, execute regularly:
     :PlugUpgrade
     :PlugUpdate
 
-In Tmux, execute regularly:
-
-    `prefix` + <kbd>U</kbd>
+In Tmux, execute `prefix` + <kbd>U</kbd> regularly.
