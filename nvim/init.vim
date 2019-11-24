@@ -1,3 +1,4 @@
+let s:nvim_config_root = $HOME . '/.config/nvim'
 let s:load_line_plugins = 0
 
 call plug#begin()
@@ -92,7 +93,7 @@ set spelllang=en_gb
 set path-=/usr/include
 
 " Persistent undo.
-let &undodir = $HOME . '/.config/nvim/undodir'
+let &undodir = s:nvim_config_root . '/undodir'
 set undofile
 
 " Colours
@@ -235,7 +236,7 @@ endfunction
 let g:fzf_layout = { 'window': 'call FloatingFZF()' }
 
 " Configure UltiSnips.
-let g:UltiSnipsSnippetsDir = $HOME . '/.config/nvim/UltiSnips'
+let g:UltiSnipsSnippetsDir = s:nvim_config_root . '/UltiSnips'
 let g:UltiSnipsEditSplit = 'context'
 
 " Configure COC.
@@ -255,7 +256,7 @@ let g:vdebug_options = {
 let g:splitjoin_php_method_chain_full = 1
 
 " Configure PDV.
-let g:pdv_template_dir = $HOME . '/.config/nvim/pdv-templates'
+let g:pdv_template_dir = s:nvim_config_root . '/pdv-templates'
 
 " Configure Sniphpets.
 let g:sniphpets_common_disable_shortcuts = 1
