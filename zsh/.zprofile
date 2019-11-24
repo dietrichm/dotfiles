@@ -7,6 +7,8 @@ path=(
     bin
     vendor/bin
     $HOME/.composer/vendor/bin
+    $HOME/.yarn/bin
+    $HOME/.config/yarn/global/node_modules/.bin
     $HOME/bin
     $HOME/.local/bin
     $HOME/Library/Python/3.7/bin
