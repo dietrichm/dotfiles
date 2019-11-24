@@ -217,6 +217,9 @@ let g:vista_executive_for = {
     \ 'markdown': 'toc',
 \ }
 let g:vista_sidebar_width = 45
+augroup vista
+    autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
+augroup END
 nnoremap <silent> <Leader>tb :Vista<CR>
 nnoremap <silent> <Leader>ts :echo get(b:, 'vista_nearest_method_or_function', '')<CR>
 
