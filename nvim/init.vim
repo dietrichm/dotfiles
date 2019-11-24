@@ -1,6 +1,13 @@
 let s:nvim_config_root = $HOME . '/.config/nvim'
 let s:load_line_plugins = 0
 
+let s:vim_plug_script = s:nvim_config_root . '/autoload/plug.vim'
+if empty(glob(s:vim_plug_script))
+    execute '!curl -fLo ' . s:vim_plug_script . ' --create-dirs '
+        \ . 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin()
 
 " Tools.
