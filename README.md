@@ -29,7 +29,6 @@
  * In the repo, execute `git submodule update --init`.
  * Edit `~/.zshenv` to read `export ZDOTDIR="$HOME/my-repos/dotfiles/zsh"` (adapt directory).
  * Execute `config-install.sh`.
- * In NVIM, execute `:PlugInstall`.
  * In Tmux, execute `prefix` + <kbd>I</kbd>.
 
 ### Updating
