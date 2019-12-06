@@ -223,9 +223,6 @@ augroup END
 nnoremap <silent> <Leader>tb :Vista<CR>
 nnoremap <silent> <Leader>ts :echo get(b:, 'vista_nearest_method_or_function', '')<CR>
 
-" Configure vim-tmux-navigator.
-let g:tmux_navigator_disable_when_zoomed = 1
-
 " Configure FZF.
 nnoremap <silent> <Leader>o :Files<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
