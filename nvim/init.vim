@@ -216,6 +216,7 @@ let g:vista_executive_for = {
     \ 'php': 'coc',
     \ 'markdown': 'toc',
 \ }
+let g:vista_ignore_kinds = ['Variable']
 let g:vista_sidebar_width = 45
 augroup vista
     autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
