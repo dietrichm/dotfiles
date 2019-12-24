@@ -50,6 +50,7 @@
   ],
   "Scrollback Lines" : 1000,
   "Scrollback in Alternate Screen" : false,
+  "Draw Powerline Glyphs" : true,
   "Flashing Bell" : true,
   "Cursor Guide Color" : {
     "Red Component" : 0.70213186740875244,
