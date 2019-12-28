@@ -22,7 +22,6 @@
 ### Fonts
 
  * Meslo for Powerline
- * Noto Mono
 
 ## Installation
 
