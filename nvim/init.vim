@@ -294,6 +294,12 @@ augroup END
 nnoremap <silent> } :keepjumps normal! }<CR>
 nnoremap <silent> { :keepjumps normal! {<CR>
 
+" Move through quickfix list.
+nnoremap <silent> ]q :cnext<CR>
+nnoremap <silent> [q :cprevious<CR>
+nnoremap <silent> ]Q :clast<CR>
+nnoremap <silent> [Q :cfirst<CR>
+
 " Search word using ripgrep.
 nnoremap <silent> <Leader>sw :execute "Rg \\b" . expand("<cword>") . "\\b"<CR>
 
