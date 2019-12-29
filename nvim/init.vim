@@ -97,7 +97,7 @@ set hidden
 set updatetime=250
 set shortmess+=cIW
 set spelllang=en_gb
-set path-=/usr/include
+set path=.,**2
 
 " Persistent undo.
 let &undodir = s:nvim_config_root . '/undodir'
