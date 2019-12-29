@@ -98,6 +98,7 @@ set updatetime=250
 set shortmess+=cIW
 set spelllang=en_gb
 set path=.,**2
+set grepprg=rg\ --vimgrep
 
 " Persistent undo.
 let &undodir = s:nvim_config_root . '/undodir'
