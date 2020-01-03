@@ -5,6 +5,7 @@
  * zsh
  * git
  * OpenSSH
+ * GnuPG
  * Python
  * Node >= 8.10.0
  * Yarn
