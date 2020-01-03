@@ -1,5 +1,6 @@
 # Configure views.
 set blob-view = line-number:yes,interval=1 text
+set diff-options = -C --show-signature
 
 # Colours.
 color cursor black blue
