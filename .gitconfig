@@ -8,6 +8,7 @@
 	ci = commit --allow-empty -m 'Retrigger CI'
 	contains = branch -a --contains
 	diffc = diff --cached
+	gone = "!git branch -v | grep ' \\[gone\\] ' | awk '{print $1}'"
 	merged = branch -a --merged
 	no-merged = branch -a --no-merged
 	setuser = "!f() { echo -n 'Email address: ' && read email && git config user.name 'Dietrich Moerman' && git config user.email $email; }; f"
