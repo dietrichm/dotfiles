@@ -103,19 +103,19 @@ endsnippet
 snippet with "Builder / With" b
 public function with${1}(${2:$1 }$${1/^./\l$0/}): self
 {
-	\$that = clone \$this;
-	\$that->${1/^./\l$0/} = \$${1/^./\l$0/};
+	\$${3:clone} = clone \$this;
+	\$$3->${1/^./\l$0/} = \$${1/^./\l$0/};
 
-	return \$that;
+	return \$$3;
 }
 endsnippet
 
 snippet without "Builder / Without" b
 public function without${1}(): self
 {
-	\$that = clone \$this;
-	\$that->${1/^./\l$0/} = null;
+	\$${2:clone} = clone \$this;
+	\$$2->${1/^./\l$0/} = null;
 
-	return \$that;
+	return \$$2;
 }
 endsnippet
