@@ -1,3 +1,7 @@
+" Expand spaces and CRs in matching braces.
+let b:delimitMate_expand_space = 1
+let b:delimitMate_expand_cr = 1
+
 " Commands provided by vim-go.
 nmap <silent> <buffer> <Leader>gb <Plug>(go-build)
 nmap <silent> <buffer> <Leader>gc <Plug>(go-coverage-toggle)
