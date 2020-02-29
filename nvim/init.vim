@@ -114,6 +114,10 @@ highlight SpellLocal ctermfg=0
 highlight SpellCap ctermfg=0
 highlight SpellRare ctermfg=0
 
+" Increase contrast in Golang coverage colours.
+highlight goCoverageCovered ctermfg=lightcyan
+highlight goCoverageUncover ctermfg=red
+
 " Configure netrw.
 let g:netrw_banner = 0
 let g:netrw_bufsettings = 'noma nomod nonu nowrap ro nobl nolist'
