@@ -18,6 +18,7 @@
  * fzf
  * ripgrep
  * tmux
+ * Golang
  * [restic](https://restic.github.io/)
 
 ### Fonts

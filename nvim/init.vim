@@ -50,7 +50,7 @@ Plug 'mhinz/vim-signify'
 
 " Developing.
 Plug 'vim-vdebug/vdebug'
-if executable('go') | Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } | endif
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " PHP.
 Plug 'StanAngeloff/php.vim'
