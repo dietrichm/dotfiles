@@ -266,6 +266,9 @@ let g:vdebug_options = {
     \ },
 \ }
 
+" Configure vim-go.
+let g:go_def_mapping_enabled = 0
+
 " Configure splitjoin.
 let g:splitjoin_php_method_chain_full = 1
 
