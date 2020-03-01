@@ -19,12 +19,12 @@ path=(
 export PATH
 
 # Various.
+export CLICOLOR=1
+export EDITOR=nvim
+export FZF_DEFAULT_COMMAND="rg --files"
+export GPG_TTY=$(tty)
 export LANG=en_GB.UTF-8
 export LANGUAGE=en_GB:en
 export LC_ALL=en_GB.UTF-8
-export CLICOLOR=1
-export EDITOR=nvim
 export RESTIC_REPOSITORY=sftp:nas:/shares/Data/dietrich-restic
 export RIPGREP_CONFIG_PATH=$MY_CONFIG_ROOT/ripgrep.conf
-export FZF_DEFAULT_COMMAND="rg --files"
-export GPG_TTY=$(tty)
