@@ -1,5 +1,6 @@
 {
     "diagnostic.enable": false,
     "suggest.autoTrigger": "always",
+    "coc.preferences.currentFunctionSymbolAutoUpdate": true,
     "coc.preferences.extensionUpdateCheck": "never"
 }
