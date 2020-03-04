@@ -224,9 +224,6 @@ let g:vista_executive_for = {
 \ }
 let g:vista_ignore_kinds = ['Function', 'Variable']
 let g:vista_sidebar_width = 45
-augroup vista
-    autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
-augroup END
 nnoremap <silent> <Leader>tb :Vista<CR>
 
 " Configure FZF.
