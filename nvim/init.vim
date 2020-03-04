@@ -228,7 +228,6 @@ augroup vista
     autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
 augroup END
 nnoremap <silent> <Leader>tb :Vista<CR>
-nnoremap <silent> <Leader>ts :echo get(b:, 'vista_nearest_method_or_function', '')<CR>
 
 " Configure FZF.
 nnoremap <silent> <Leader>o :Files<CR>
@@ -256,6 +255,7 @@ let g:UltiSnipsEditSplit = 'context'
 " Configure COC.
 inoremap <silent> <expr> <C-Space> coc#refresh()
 nnoremap <silent> <Leader>h :call CocAction('doHover')<CR>
+nnoremap <silent> <Leader>ts :echo get(b:, 'coc_current_function', '')<CR>
 
 " Configure Vdebug.
 let g:vdebug_options = {
@@ -321,7 +321,7 @@ nnoremap <silent> <Leader>da :%bd<CR>
 " Path copy mappings.
 nnoremap <silent> <Leader>pc :let @+ = @%<CR>
 nnoremap <silent> <Leader>Pc :let @+ = @% . ":" . line(".")<CR>
-nnoremap <silent> <Leader>tc :let @+ = @% . " --filter " . get(b:, 'vista_nearest_method_or_function', '')<CR>
+nnoremap <silent> <Leader>tc :let @+ = @% . " --filter " . get(b:, 'coc_current_function', '')<CR>
 
 " Use arrow keys for resizing splits.
 nnoremap <silent> <Up>    :resize +1<CR>
