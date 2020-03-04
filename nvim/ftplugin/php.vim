@@ -15,12 +15,7 @@ let b:ale_linters = ['php']
 let b:delimitMate_expand_space = 1
 let b:delimitMate_expand_cr = 1
 
-" Jump to definition.
-nmap <silent> <buffer> <C-]> <Plug>(coc-definition)
-
-" Jump to definition in split.
-nnoremap <silent> <buffer> <C-W>] :call CocAction('jumpDefinition', 'vsplit')<CR>
-nnoremap <silent> <buffer> <C-W><C-]> :call CocAction('jumpDefinition', 'vsplit')<CR>
+call ApplyCocDefinitionMappings()
 
 " Searching using ripgrep.
 nnoremap <silent> <buffer> <Leader>sce :execute "Rg \\bclass .+ (extends\|implements) .*\\b" . expand("<cword>") . "\\b"<CR>
