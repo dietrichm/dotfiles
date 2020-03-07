@@ -2,5 +2,8 @@
     "diagnostic.enable": false,
     "suggest.autoTrigger": "always",
     "coc.preferences.currentFunctionSymbolAutoUpdate": true,
-    "coc.preferences.extensionUpdateCheck": "never"
+    "coc.preferences.extensionUpdateCheck": "never",
+    "list.normalMappings": {
+        "v": "action:vsplit"
+    }
 }
