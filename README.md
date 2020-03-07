@@ -40,3 +40,11 @@ While in NVIM, execute regularly:
     :PlugUpdate
 
 In Tmux, execute `prefix` + <kbd>U</kbd> regularly.
+
+## Linting VimL scripts
+
+Vimscript files can be linted using [Vint](https://github.com/Vimjas/vint). Install the linter using:
+
+    pip install --pre vim-vint
+
+Then, lint all VimL files with `make lint`.
