@@ -5,8 +5,11 @@ setlocal colorcolumn=121
 setlocal suffixesadd+=.php
 setlocal includeexpr=substitute(v:fname,'^/','','')
 
-" Colour column 81 only for PHP source files and tests.
-autocmd BufEnter */{app,domain,src,tests}/*.php setlocal colorcolumn=+1,121
+augroup php
+    autocmd!
+    " Colour column 81 only for PHP source files and tests.
+    autocmd BufEnter */{app,domain,src,tests}/*.php setlocal colorcolumn=+1,121
+augroup END
 
 " Configure ALE.
 let b:ale_linters = ['php']
