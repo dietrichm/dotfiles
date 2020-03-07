@@ -1,0 +1,5 @@
+cmdargs:
+  env:
+    neovim: true
+  severity: style_problem
+  color: true
