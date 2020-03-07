@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 let s:nvim_config_root = $HOME . '/.config/nvim'
 let s:load_line_plugins = 0
 

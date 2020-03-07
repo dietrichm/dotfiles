@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 " Vim already sets a text width of 72.
 setlocal colorcolumn=+1
 
