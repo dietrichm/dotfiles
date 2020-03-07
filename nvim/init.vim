@@ -250,6 +250,7 @@ let g:UltiSnipsSnippetsDir = s:nvim_config_root . '/UltiSnips'
 let g:UltiSnipsEditSplit = 'context'
 
 " Configure COC.
+nmap <silent> <Leader>sr <Plug>(coc-references)
 inoremap <silent> <expr> <C-Space> coc#refresh()
 nnoremap <silent> <Leader>h :call CocAction('doHover')<CR>
 nnoremap <silent> <Leader>ts :echo get(b:, 'coc_current_function', '')<CR>
