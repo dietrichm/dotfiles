@@ -66,9 +66,11 @@ Plug 'sniphpets/sniphpets'
     Plug 'sniphpets/sniphpets-common'
     Plug 'sniphpets/sniphpets-phpunit'
 
-" Other syntax.
+" JavaScript.
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
+
+" Other syntax.
 Plug 'lumiliet/vim-twig'
 
 call plug#end()
