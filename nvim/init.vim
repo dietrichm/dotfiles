@@ -68,6 +68,7 @@ Plug 'sniphpets/sniphpets'
 
 " JavaScript.
 Plug 'pangloss/vim-javascript'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
 " Other syntax.
