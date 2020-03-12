@@ -2,5 +2,5 @@
 --exclude=.git
 --exclude=node_modules
 --links=no
---languages=php,javascript,go
+--languages=php,javascript,go,vim
 --php-kinds=-av
