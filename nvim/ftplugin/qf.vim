@@ -1,1 +1,3 @@
 setlocal nonumber
+
+wincmd J
