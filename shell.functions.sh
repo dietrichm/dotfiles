@@ -9,3 +9,9 @@ ls() {
     fi
     command ls --color "$@"
 }
+
+ctags() {
+    command ctags "$@" 2> >(
+        grep -Ev "^ctags: Warning: ignoring null tag in .+\.js\(line: .+\)$"
+    )
+}
