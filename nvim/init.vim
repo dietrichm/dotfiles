@@ -325,8 +325,13 @@ nnoremap <silent> [q :cprevious<CR>
 nnoremap <silent> ]Q :clast<CR>
 nnoremap <silent> [Q :cfirst<CR>
 
-" Search word using ripgrep.
+" Searching using ripgrep.
 nnoremap <silent> <Leader>sw :execute "Rg \\b" . expand("<cword>") . "\\b"<CR>
+command! -bang -nargs=* Rgi call fzf#vim#grep(
+    \ "rg --ignore-vcs --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>),
+    \ 1,
+    \ <bang>0
+\ )
 
 " Delete all buffers.
 nnoremap <silent> <Leader>da :%bd<CR>
