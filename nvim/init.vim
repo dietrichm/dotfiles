@@ -292,7 +292,10 @@ let g:pdv_template_dir = s:nvim_config_root . '/pdv-templates'
 let g:sniphpets_common_disable_shortcuts = 1
 
 " Configure EditorConfig.
-let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+let g:EditorConfig_exclude_patterns = [
+    \ 'fugitive://.*',
+    \ '.git/COMMIT_EDITMSG'
+\ ]
 
 " Configure highlightedyank.
 let g:highlightedyank_highlight_duration = 750
