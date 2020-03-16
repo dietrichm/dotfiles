@@ -4,6 +4,4 @@ scriptencoding utf-8
 setlocal colorcolumn=+1
 
 setlocal spell
-
-" Don't add character for trailing space.
-setlocal listchars=tab:→\ ,extends:»,precedes:«,nbsp:·
+setlocal nolist
