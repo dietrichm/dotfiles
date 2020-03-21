@@ -250,6 +250,7 @@ function! FloatingFZF()
     call nvim_open_win(nvim_create_buf(v:false, v:true), v:true, opts)
 endfunction
 let g:fzf_layout = { 'window': 'call FloatingFZF()' }
+let g:fzf_preview_window = ''
 
 " Configure UltiSnips.
 let g:UltiSnipsSnippetsDir = s:nvim_config_root . '/UltiSnips'
