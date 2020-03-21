@@ -14,7 +14,7 @@ endif
 call plug#begin()
 
 " Tools.
-Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
+Plug 'junegunn/fzf', {'do': './install --all'}
     Plug 'junegunn/fzf.vim'
 Plug 'Shougo/defx.nvim'
 Plug 'liuchengxu/vista.vim'
@@ -250,6 +250,7 @@ function! FloatingFZF()
     call nvim_open_win(nvim_create_buf(v:false, v:true), v:true, opts)
 endfunction
 let g:fzf_layout = { 'window': 'call FloatingFZF()' }
+let g:fzf_preview_window = ''
 
 " Configure UltiSnips.
 let g:UltiSnipsSnippetsDir = s:nvim_config_root . '/UltiSnips'
@@ -333,6 +334,7 @@ nnoremap <silent> <Leader>sw :execute "Rg \\b" . expand("<cword>") . "\\b"<CR>
 command! -bang -nargs=* Rgi call fzf#vim#grep(
     \ "rg --ignore-vcs --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>),
     \ 1,
+    \ {},
     \ <bang>0
 \ )
 
