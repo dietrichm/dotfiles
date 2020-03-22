@@ -6,3 +6,6 @@ set diff-options = -C --show-signature
 color cursor black blue
 color title-focus black cyan
 color title-blur black cyan
+
+# Keybindings.
+bind generic I !@sh -c "echo -n %(commit) | copy.sh"
