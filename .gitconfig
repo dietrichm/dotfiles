@@ -1,4 +1,3 @@
-# vim: set noexpandtab:
 [alias]
 	addn = add -N
 	addp = add -p
