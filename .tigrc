@@ -8,4 +8,4 @@ color title-focus black cyan
 color title-blur black cyan
 
 # Keybindings.
-bind generic I !@sh -c "echo -n %(commit) | copy.sh"
+bind generic I !@sh -c "echo -n %(commit) | copy-to-clipboard.sh"
