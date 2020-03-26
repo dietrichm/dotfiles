@@ -12,7 +12,7 @@
 	master = "!git checkout master && git pull && git gone-remove"
 	merged = branch -a --merged
 	no-merged = branch -a --no-merged
-	setuser = "!f() { echo -n 'Email address: ' && read email && git config user.name 'Dietrich Moerman' && git config user.email $email; }; f"
+	setuser = "!f() { printf 'Email address: ' && read email && git config user.name 'Dietrich Moerman' && git config user.email $email; }; f"
 	st = status -sb
 [push]
 	default = current
