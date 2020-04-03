@@ -16,7 +16,7 @@ call plug#begin()
 " Tools.
 Plug 'junegunn/fzf', {'do': './install --all'}
     Plug 'junegunn/fzf.vim'
-Plug 'Shougo/defx.nvim'
+Plug 'dietrichm/defx.nvim', {'branch': 'correctly-apply-relative-path'}
 Plug 'liuchengxu/vista.vim'
 Plug 'christoomey/vim-tmux-navigator'
 
