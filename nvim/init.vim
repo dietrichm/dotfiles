@@ -61,7 +61,7 @@ Plug 'alvan/vim-php-manual'
 Plug 'tobyS/pdv'
     Plug 'tobyS/vmustache'
 Plug 'arnaud-lb/vim-php-namespace'
-Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
 Plug 'sniphpets/sniphpets'
     Plug 'sniphpets/sniphpets-common'
     Plug 'sniphpets/sniphpets-phpunit'
