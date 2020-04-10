@@ -1,6 +1,7 @@
 -R
 --exclude=.git
 --exclude=node_modules
+--exclude=*.min.js
 --links=no
 --languages=php,javascript,go,vim,python
 --php-kinds=-av
