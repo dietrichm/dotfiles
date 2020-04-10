@@ -49,6 +49,15 @@ Some projects require or can benefit from some custom configuration for some of 
 
 Aside from common global configuration options set in `.ctags`, additional project-level parameters can be defined within `.ctags.d/*.ctags` files. This allows to exclude i.e. compiled or vendor source files using more `--exclude=` options.
 
+### Phpactor
+
+Additionally to settings in `phpactor/phpactor.yml`, config options can be set per project in a `.phpactor.yml` file. For example, to override the default indentation to tabs and change the path to Composer's autoloader:
+
+```yaml
+code_transform.indentation: "	"
+composer.autoloader_path: %project_root%/dependencies/autoload.php
+```
+
 ## Linting VimL scripts
 
 Vimscript files can be linted using [Vint](https://github.com/Vimjas/vint). Install the linter using:
