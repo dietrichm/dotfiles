@@ -41,6 +41,14 @@ While in NVIM, execute regularly:
 
 In Tmux, execute `prefix` + <kbd>U</kbd> regularly.
 
+## Custom configuration
+
+Some projects require or can benefit from some custom configuration for some of the tools used in this development set-up.
+
+### universal-ctags
+
+Aside from common global configuration options set in `.ctags`, additional project-level parameters can be defined within `.ctags.d/*.ctags` files. This allows to exclude i.e. compiled or vendor source files using more `--exclude=` options.
+
 ## Linting VimL scripts
 
 Vimscript files can be linted using [Vint](https://github.com/Vimjas/vint). Install the linter using:
