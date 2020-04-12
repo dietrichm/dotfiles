@@ -1,4 +1,5 @@
 {
+  "ASCII Ligatures" : false,
   "Working Directory" : "\/Users\/dietrich",
   "Prompt Before Closing 2" : false,
   "Selected Text Color" : {
@@ -318,7 +319,7 @@
   "AWDS Pane Directory" : "",
   "Blur" : false,
   "Vertical Spacing" : 1,
-  "Normal Font" : "MesloLGM-RegularForPowerline 14",
+  "Normal Font" : "JetBrainsMono-Regular 14",
   "Ansi 7 Color" : {
     "Red Component" : 0.8784313725490196,
     "Color Space" : "sRGB",
@@ -364,13 +365,14 @@
     "Green Component" : 0.96078431372549022
   },
   "Columns" : 110,
+  "Unicode Normalization" : 0,
   "Visual Bell" : false,
   "Custom Directory" : "Advanced",
+  "Thin Strokes" : 4,
   "Ansi 5 Color" : {
     "Red Component" : 0.82745098039215681,
     "Color Space" : "sRGB",
     "Blue Component" : 0.76470588235294112,
     "Green Component" : 0.50588235294117645
-  },
-  "ASCII Ligatures" : false
+  }
 }
