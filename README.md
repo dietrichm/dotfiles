@@ -23,7 +23,9 @@
 
 ### Fonts
 
- * Meslo for Powerline
+The provided iTerm2 profile relies on [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) to be available, but any other (monospaced) font with Powerline symbols can be used as well.
+
+Previously, I used [Meslo for Powerline](https://github.com/powerline/fonts).
 
 ## Installation
 
