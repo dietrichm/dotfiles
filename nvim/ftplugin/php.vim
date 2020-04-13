@@ -5,6 +5,9 @@ setlocal colorcolumn=121
 setlocal suffixesadd+=.php
 setlocal includeexpr=substitute(v:fname,'^/','','')
 
+" Format through language server.
+setlocal formatexpr=CocAction('formatSelected')
+
 augroup php
     autocmd!
     " Colour column 81 only for PHP source files and tests.
