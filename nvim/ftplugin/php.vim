@@ -27,7 +27,7 @@ nnoremap <silent> <buffer> <Leader>scr :execute "Rg \\b" . expand("<cword>") . "
 nnoremap <silent> <buffer> <Leader>smc :execute "Rg (->\|::)" . expand("<cword>") . "\\b"<CR>
 
 " Phpactor
-nnoremap <silent> <buffer> <Leader>u :call phpactor#UseAdd()<CR>
+nnoremap <silent> <buffer> <Leader>u :call phpactor#ImportClass()<CR>
 nnoremap <silent> <buffer> <Leader>e :call phpactor#ClassExpand()<CR>
 nnoremap <silent> <buffer> <Leader>mm :call phpactor#ContextMenu()<CR>
 nnoremap <silent> <buffer> <Leader>nn :call phpactor#Navigate()<CR>
