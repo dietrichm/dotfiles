@@ -36,10 +36,5 @@ nnoremap <silent> <buffer> <Leader>ee :call phpactor#ExtractExpression(v:false)<
 vnoremap <silent> <buffer> <Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
 vnoremap <silent> <buffer> <Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
 
-" PHP namespaces
-nnoremap <silent> <buffer> <Leader>lu :call PhpInsertUse()<CR>
-nnoremap <silent> <buffer> <Leader>le :call PhpExpandClass()<CR>
-nnoremap <silent> <buffer> <Leader>su :call PhpSortUse()<CR>
-
 " PDV
 nnoremap <silent> <buffer> <Leader>ac :call pdv#DocumentWithSnip()<CR>
