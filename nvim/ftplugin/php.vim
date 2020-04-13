@@ -33,6 +33,7 @@ nnoremap <silent> <buffer> <Leader>mm :call phpactor#ContextMenu()<CR>
 nnoremap <silent> <buffer> <Leader>nn :call phpactor#Navigate()<CR>
 nnoremap <silent> <buffer> <Leader>tt :call phpactor#Transform()<CR>
 nnoremap <silent> <buffer> <Leader>ee :call phpactor#ExtractExpression(v:false)<CR>
+nnoremap <silent> <buffer> <Leader>ec :call phpactor#ExtractConstant()<CR>
 vnoremap <silent> <buffer> <Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
 vnoremap <silent> <buffer> <Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
 
