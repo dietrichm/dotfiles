@@ -318,7 +318,7 @@
   },
   "AWDS Pane Directory" : "",
   "Blur" : false,
-  "Vertical Spacing" : 1,
+  "Vertical Spacing" : 1.1000000000000001,
   "Normal Font" : "JetBrainsMono-Regular 14",
   "Ansi 7 Color" : {
     "Red Component" : 0.8784313725490196,
