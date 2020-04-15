@@ -53,9 +53,10 @@ Aside from common global configuration options set in `.ctags`, additional proje
 
 ### Phpactor
 
-Additionally to settings in `phpactor/phpactor.yml`, config options can be set per project in a `.phpactor.yml` file. For example, to override the default indentation to tabs and change the path to Composer's autoloader:
+Additionally to settings in `phpactor/phpactor.yml`, config options can be set per project in a `.phpactor.yml` file. For example, to change the project's PHP version, override the default indentation to tabs and change the path to Composer's autoloader:
 
 ```yaml
+php.version: "7.3.0"
 code_transform.indentation: "	"
 composer.autoloader_path: %project_root%/dependencies/autoload.php
 ```
