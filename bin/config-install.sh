@@ -17,10 +17,11 @@ declare -A files=(
     [.ignore]=.ignore
     [.tigrc]=.tigrc
     [.tmux.conf]=.tmux.conf
+    [gpg-agent.conf]=.gnupg/gpg-agent.conf
+    [kitty]=.config/kitty
     [nvim]=.config/nvim
     [phpactor]=.config/phpactor
     [ssh-config]=.ssh/config
-    [gpg-agent.conf]=.gnupg/gpg-agent.conf
 )
 
 function __backup_file
