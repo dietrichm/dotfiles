@@ -2,6 +2,7 @@
 
 ## Dependencies
 
+ * [kitty](https://sw.kovidgoyal.net/kitty/)
  * zsh
  * git
  * OpenSSH
@@ -23,9 +24,7 @@
 
 ### Fonts
 
-The provided iTerm2 profile relies on [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) to be available, but any other (monospaced) font with Powerline symbols can be used as well.
-
-Previously, I used [Meslo for Powerline](https://github.com/powerline/fonts).
+The kitty configuration relies on [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) to be available and will enable its font ligatures.
 
 ## Installation
 
