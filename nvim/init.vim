@@ -169,8 +169,8 @@ let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
 let g:airline#extensions#ale#error_symbol = '✘:'
 let g:airline#extensions#ale#warning_symbol = '▲:'
 
-if s:load_line_plugins
-    " Configure Promptline.
+" Configure Promptline.
+if exists(':PromptlineSnapshot')
     let g:promptline_theme = 'airline_insert'
     let g:promptline_preset = {
         \ 'a': [ promptline#slices#host({ 'only_if_ssh': 1 }), promptline#slices#user() ],
@@ -184,8 +184,10 @@ if s:load_line_plugins
             \ 'right_sections': [ 'warn', 'x', 'y' ]
         \ }
     \ }
+endif
 
-    " Configure tmuxline.
+" Configure tmuxline.
+if exists(':TmuxlineSnapshot')
     let g:tmuxline_theme = 'airline'
     let g:tmuxline_preset = {
         \ 'a': '#S',
