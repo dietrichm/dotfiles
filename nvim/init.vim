@@ -228,9 +228,10 @@ let g:vista_close_on_jump = 1
 let g:vista_echo_cursor = 0
 let g:vista_executive_for = {
     \ 'php': 'coc',
+    \ 'python': 'coc',
     \ 'markdown': 'toc',
 \ }
-let g:vista_ignore_kinds = ['Function', 'Variable']
+let g:vista_ignore_kinds = ['Function', 'Variable', 'Unknown']
 let g:vista_sidebar_width = 45
 nnoremap <silent> <Leader>tb :Vista<CR>
 
