@@ -71,6 +71,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
+" Python.
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+
 " Other syntax.
 Plug 'lumiliet/vim-twig'
 
