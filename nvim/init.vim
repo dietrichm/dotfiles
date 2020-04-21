@@ -73,6 +73,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 
 " Python.
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'Vimjas/vim-python-pep8-indent'
 
 " Other syntax.
 Plug 'lumiliet/vim-twig'
