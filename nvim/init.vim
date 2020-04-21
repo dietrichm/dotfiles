@@ -153,6 +153,9 @@ let g:PHP_noArrowMatching = 1
 " Configure Phpactor.
 let g:phpactorPhpBin = '/usr/local/bin/php'
 
+" Configure Semshi.
+let g:semshi#error_sign = v:false
+
 " Configure ALE.
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'never'
