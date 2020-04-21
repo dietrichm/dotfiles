@@ -5,5 +5,6 @@
     "coc.preferences.extensionUpdateCheck": "never",
     "list.normalMappings": {
         "v": "action:vsplit"
-    }
+    },
+    "python.jediEnabled": false
 }

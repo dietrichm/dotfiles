@@ -36,6 +36,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'marlonfan/coc-phpls', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-sources', {'as': 'coc-ultisnips', 'do': 'yarn install --frozen-lockfile', 'rtp': 'packages/ultisnips'}
     Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
     Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
 Plug 'w0rp/ale'
@@ -69,6 +70,10 @@ Plug 'sniphpets/sniphpets'
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
+
+" Python.
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'Vimjas/vim-python-pep8-indent'
 
 " Other syntax.
 Plug 'lumiliet/vim-twig'
@@ -149,6 +154,9 @@ let g:PHP_noArrowMatching = 1
 " Configure Phpactor.
 let g:phpactorPhpBin = '/usr/local/bin/php'
 
+" Configure Semshi.
+let g:semshi#error_sign = v:false
+
 " Configure ALE.
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'never'
@@ -227,9 +235,10 @@ let g:vista_close_on_jump = 1
 let g:vista_echo_cursor = 0
 let g:vista_executive_for = {
     \ 'php': 'coc',
+    \ 'python': 'coc',
     \ 'markdown': 'toc',
 \ }
-let g:vista_ignore_kinds = ['Function', 'Variable']
+let g:vista_ignore_kinds = ['Function', 'Variable', 'Unknown']
 let g:vista_sidebar_width = 45
 nnoremap <silent> <Leader>tb :Vista<CR>
 
