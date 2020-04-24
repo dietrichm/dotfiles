@@ -11,7 +11,7 @@
  * Node >= 8.10.0
  * Yarn
  * Neovim with Python extensions
- * PHP 7 (accessible at `/usr/local/bin/php`)
+ * PHP 7
  * Composer
  * universal-ctags
  * [EditorConfig](http://editorconfig.org/) `editorconfig-core-c`
