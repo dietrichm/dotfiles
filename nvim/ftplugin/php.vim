@@ -14,9 +14,6 @@ augroup php
     autocmd BufEnter */{app,domain,src,tests}/*.php setlocal colorcolumn=+1,121
 augroup END
 
-" Configure ALE.
-let b:ale_linters = ['php']
-
 " Expand spaces and CRs in matching braces.
 let b:delimitMate_expand_space = 1
 let b:delimitMate_expand_cr = 1

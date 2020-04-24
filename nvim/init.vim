@@ -19,6 +19,7 @@ Plug 'junegunn/fzf', {'do': './install --all'}
 Plug 'Shougo/defx.nvim'
 Plug 'liuchengxu/vista.vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'embear/vim-localvimrc'
 
 " UI and colours.
 Plug 'chriskempson/base16-vim'
@@ -141,6 +142,9 @@ nnoremap <silent> <Leader>ft :Defx `expand('%:p:h')`
     \ -winwidth=45
     \ -direction=topleft<CR>
 
+" Configure Localvimrc.
+let g:localvimrc_persistent = 1
+
 " Configure NERDCommenter.
 let g:NERDDefaultAlign = 'left'
 
@@ -151,9 +155,6 @@ let g:php_manual_online_search_shortcut = ''
 let g:php_namespace_sort_after_insert = 1
 let g:PHP_noArrowMatching = 1
 
-" Configure Phpactor.
-let g:phpactorPhpBin = '/usr/local/bin/php'
-
 " Configure Semshi.
 let g:semshi#error_sign = v:false
 
@@ -162,7 +163,6 @@ let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '▲'
-let g:ale_php_php_executable = '/usr/local/bin/php'
 
 " Configure Airline.
 let g:airline_powerline_fonts = 1

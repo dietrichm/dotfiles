@@ -11,7 +11,7 @@
  * Node >= 8.10.0
  * Yarn
  * Neovim with Python extensions
- * PHP 7 (accessible at `/usr/local/bin/php`)
+ * PHP 7
  * Composer
  * universal-ctags
  * [EditorConfig](http://editorconfig.org/) `editorconfig-core-c`
@@ -45,6 +45,17 @@ In Tmux, execute `prefix` + <kbd>U</kbd> regularly.
 ## Custom configuration
 
 Some projects require or can benefit from some custom configuration for some of the tools used in this development set-up.
+
+### Neovim
+
+Project local configuration can be set in `.lvimrc`. This allows for example to alter the set and configuration of linters being used by ALE:
+
+```viml
+let g:ale_linters = {
+    \ 'php': ['php']
+\ }
+let g:ale_php_php_executable = '/usr/local/bin/php'
+```
 
 ### universal-ctags
 
