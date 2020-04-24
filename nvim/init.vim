@@ -19,6 +19,7 @@ Plug 'junegunn/fzf', {'do': './install --all'}
 Plug 'Shougo/defx.nvim'
 Plug 'liuchengxu/vista.vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'embear/vim-localvimrc'
 
 " UI and colours.
 Plug 'chriskempson/base16-vim'
