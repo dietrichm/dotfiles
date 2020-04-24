@@ -142,6 +142,9 @@ nnoremap <silent> <Leader>ft :Defx `expand('%:p:h')`
     \ -winwidth=45
     \ -direction=topleft<CR>
 
+" Configure Localvimrc.
+let g:localvimrc_persistent = 1
+
 " Configure NERDCommenter.
 let g:NERDDefaultAlign = 'left'
 
