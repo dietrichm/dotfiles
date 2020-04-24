@@ -46,6 +46,17 @@ In Tmux, execute `prefix` + <kbd>U</kbd> regularly.
 
 Some projects require or can benefit from some custom configuration for some of the tools used in this development set-up.
 
+### Neovim
+
+Project local configuration can be set in `.lvimrc`. This allows for example to alter the set and configuration of linters being used by ALE:
+
+```viml
+let g:ale_linters = {
+    \ 'php': ['php']
+\ }
+let g:ale_php_php_executable = '/usr/local/bin/php'
+```
+
 ### universal-ctags
 
 Aside from common global configuration options set in `.ctags`, additional project-level parameters can be defined within `.ctags.d/*.ctags` files. This allows to exclude i.e. compiled or vendor source files using more `--exclude=` options.
