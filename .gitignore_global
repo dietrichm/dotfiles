@@ -7,6 +7,7 @@ FirePHPCore/
 *~
 tags
 !tags/
+.lvimrc
 .ctags.d/*.ctags
 .padawan/
 .phpactor.yml
