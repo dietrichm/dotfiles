@@ -13,6 +13,7 @@ path=(
     $HOME/.local/bin
     $HOME/Library/Python/3.7/bin
     $MY_CONFIG_ROOT/bin
+    /usr/local/opt/python@3.8/bin
     /usr/local/go/bin
     $path
 )
