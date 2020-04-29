@@ -40,7 +40,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
     Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/nerdcommenter'
