@@ -18,6 +18,7 @@ function! AleProcessPhpCsFixer(buffer, output) abort
     let l:temporary_file = AlePhpCsFixerTempFile(a:buffer)
     let l:lines = readfile(l:temporary_file)
     call delete(l:temporary_file)
+    echo 'Fixed ' . bufname(a:buffer)
 
     return l:lines
 endfunction
