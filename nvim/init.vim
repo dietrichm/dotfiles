@@ -161,6 +161,8 @@ let g:semshi#error_sign = v:false
 " Configure ALE.
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'never'
+let g:ale_list_window_size = 3
+let g:ale_open_list = 1
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '▲'
 
