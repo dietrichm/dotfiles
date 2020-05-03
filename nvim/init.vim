@@ -335,11 +335,15 @@ augroup END
 nnoremap <silent> } :keepjumps normal! }<CR>
 nnoremap <silent> { :keepjumps normal! {<CR>
 
-" Move through quickfix list.
+" Move through quickfix and location list.
 nnoremap <silent> ]q :cnext<CR>
 nnoremap <silent> [q :cprevious<CR>
 nnoremap <silent> ]Q :clast<CR>
 nnoremap <silent> [Q :cfirst<CR>
+nnoremap <silent> ]l :lnext<CR>
+nnoremap <silent> [l :lprevious<CR>
+nnoremap <silent> ]L :llast<CR>
+nnoremap <silent> [L :lfirst<CR>
 
 " Searching using ripgrep.
 nnoremap <silent> <Leader>sw :execute "Rg \\b" . expand("<cword>") . "\\b"<CR>
