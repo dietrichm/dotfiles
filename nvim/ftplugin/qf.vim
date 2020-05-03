@@ -1,3 +1,5 @@
 setlocal nonumber
 
-wincmd J
+if empty(getloclist(0))
+    wincmd J
+endif
