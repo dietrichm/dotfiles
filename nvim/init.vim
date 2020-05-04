@@ -165,6 +165,10 @@ let g:ale_open_list = 1
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '▲'
+augroup ale
+    autocmd!
+    autocmd QuitPre * if empty(&buftype) | lclose | endif
+augroup END
 
 " Configure Airline.
 let g:airline_powerline_fonts = 1
