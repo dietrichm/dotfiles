@@ -6,5 +6,5 @@
     "list.normalMappings": {
         "v": "action:vsplit"
     },
-    "python.jediEnabled": false
+    "python.jediEnabled": true,
 }
