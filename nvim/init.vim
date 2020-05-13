@@ -246,7 +246,7 @@ let g:vista_executive_for = {
     \ 'php': 'coc',
     \ 'python': 'coc',
 \ }
-let g:vista_ignore_kinds = ['Function', 'Variable', 'Unknown']
+let g:vista_ignore_kinds = ['Variable', 'Unknown']
 let g:vista_sidebar_width = 45
 nnoremap <silent> <Leader>tb :Vista<CR>
 
