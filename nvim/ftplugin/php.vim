@@ -20,6 +20,7 @@ let b:delimitMate_expand_cr = 1
 
 " Configure test runner.
 let b:test_runner_executable = 'phpunit'
+let b:test_runner_filter_arg = '--filter'
 
 call ApplyCocDefinitionMappings()
 
