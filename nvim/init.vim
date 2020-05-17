@@ -369,8 +369,8 @@ nnoremap <silent> <Leader>pc :let @+ = @%<CR>
 nnoremap <silent> <Leader>Pc :let @+ = @% . ":" . line(".")<CR>
 
 " Test runner mappings.
-nnoremap <silent> <buffer> <Leader>rc :call test_runner#RunCase()<CR>
-nnoremap <silent> <buffer> <Leader>rt :call test_runner#RunTest()<CR>
+nnoremap <silent> <Leader>rc :call test_runner#RunCase()<CR>
+nnoremap <silent> <Leader>rt :call test_runner#RunTest()<CR>
 
 " Use arrow keys for resizing splits.
 nnoremap <silent> <Up>    :resize +1<CR>
