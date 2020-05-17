@@ -29,3 +29,11 @@ function! test_runner#Run(current_test) abort
 
     call VimuxRunCommand(l:command)
 endfunction
+
+function! test_runner#RunCase() abort
+    call test_runner#Run(v:false)
+endfunction
+
+function! test_runner#RunTest() abort
+    call test_runner#Run(v:true)
+endfunction
