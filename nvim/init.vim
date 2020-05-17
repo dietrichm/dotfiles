@@ -20,6 +20,7 @@ Plug 'Shougo/defx.nvim'
 Plug 'liuchengxu/vista.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'embear/vim-localvimrc'
+Plug 'benmills/vimux'
 
 " UI and colours.
 Plug 'chriskempson/base16-vim'
@@ -366,7 +367,10 @@ nnoremap <silent> <Leader>da :%bd<CR>
 " Path copy mappings.
 nnoremap <silent> <Leader>pc :let @+ = @%<CR>
 nnoremap <silent> <Leader>Pc :let @+ = @% . ":" . line(".")<CR>
-nnoremap <silent> <Leader>tc :let @+ = @% . " --filter " . get(b:, 'coc_current_function', '')<CR>
+
+" Test runner mappings.
+nnoremap <silent> <buffer> <Leader>rc :call test_runner#RunCase()<CR>
+nnoremap <silent> <buffer> <Leader>rt :call test_runner#RunTest()<CR>
 
 " Use arrow keys for resizing splits.
 nnoremap <silent> <Up>    :resize +1<CR>
