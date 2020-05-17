@@ -367,7 +367,6 @@ nnoremap <silent> <Leader>da :%bd<CR>
 " Path copy mappings.
 nnoremap <silent> <Leader>pc :let @+ = @%<CR>
 nnoremap <silent> <Leader>Pc :let @+ = @% . ":" . line(".")<CR>
-nnoremap <silent> <Leader>tc :let @+ = @% . " --filter " . get(b:, 'coc_current_function', '')<CR>
 
 " Test runner mappings.
 nnoremap <silent> <buffer> <Leader>rc :call test_runner#RunCase()<CR>
