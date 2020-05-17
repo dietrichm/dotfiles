@@ -1,5 +1,5 @@
 plugged/
 .netrwhist
-autoload/
+autoload/plug.vim*
 spell/
 undodir/
