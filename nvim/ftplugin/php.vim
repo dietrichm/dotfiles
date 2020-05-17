@@ -18,6 +18,9 @@ augroup END
 let b:delimitMate_expand_space = 1
 let b:delimitMate_expand_cr = 1
 
+" Configure test runner.
+let b:test_runner_executable = 'phpunit'
+
 call ApplyCocDefinitionMappings()
 
 " Searching using ripgrep.
