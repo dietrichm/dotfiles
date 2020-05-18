@@ -25,7 +25,7 @@ function! test_runner#Run(current_test) abort
         return
     endif
 
-    let l:command .= ' ' . l:filter_arg . ' ' . l:current_test_name
+    let l:command .= ' ' . l:filter_arg . l:current_test_name
 
     call VimuxRunCommand(l:command)
 endfunction
