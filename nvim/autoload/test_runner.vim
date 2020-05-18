@@ -37,3 +37,7 @@ endfunction
 function! test_runner#RunTest() abort
     call test_runner#Run(v:true)
 endfunction
+
+function! test_runner#ReRun() abort
+    call VimuxRunLastCommand()
+endfunction
