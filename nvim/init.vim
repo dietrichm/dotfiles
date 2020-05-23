@@ -17,7 +17,7 @@ call plug#begin()
 Plug 'junegunn/fzf', {'do': './install --all'}
     Plug 'junegunn/fzf.vim'
 Plug 'Shougo/defx.nvim'
-Plug 'dietrichm/vista.vim', {'branch': 'support-apiblueprint'}
+Plug 'liuchengxu/vista.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'embear/vim-localvimrc'
 Plug 'benmills/vimux'
