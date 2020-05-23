@@ -79,6 +79,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 
 " Other syntax.
 Plug 'lumiliet/vim-twig'
+Plug 'kylef/apiblueprint.vim'
 
 call plug#end()
 
@@ -242,6 +243,7 @@ let g:vista#renderer#enable_icon = 0
 let g:vista_close_on_jump = 1
 let g:vista_echo_cursor = 0
 let g:vista_executive_for = {
+    \ 'apiblueprint': 'markdown',
     \ 'go': 'coc',
     \ 'markdown': 'toc',
     \ 'php': 'coc',
