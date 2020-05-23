@@ -79,6 +79,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 
 " Other syntax.
 Plug 'lumiliet/vim-twig'
+Plug 'kylef/apiblueprint.vim'
 
 call plug#end()
 
