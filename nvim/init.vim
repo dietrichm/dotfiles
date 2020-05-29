@@ -330,17 +330,8 @@ nnoremap <silent> # :setlocal hlsearch \| :normal! #<CR>
 nnoremap <silent> g* :setlocal hlsearch \| :normal! g*<CR>
 nnoremap <silent> g# :setlocal hlsearch \| :normal! g#<CR>
 
-" Enable search highlight manually.
-nnoremap <silent> \ :setlocal hlsearch<CR>
-
-" Disable search highlight and reload signs using CR.
-nnoremap <silent> <CR> :setlocal nohlsearch \| :SignifyRefresh<CR>
-augroup carriage_return
-    autocmd!
-    " Except for in the quickfix and command line window.
-    autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
-    autocmd CmdwinEnter * nnoremap <buffer> <CR> <CR>
-augroup END
+" Toggle search highlight.
+nnoremap <silent> \ :setlocal hlsearch!<CR>
 
 " Paragraph motions do not change jumplist.
 nnoremap <silent> } :keepjumps normal! }<CR>
