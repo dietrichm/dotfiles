@@ -227,6 +227,12 @@ augroup fugitive
     autocmd BufReadPost fugitive://* set bufhidden=delete
 augroup END
 
+" Yank highlighting.
+augroup yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 750)
+augroup END
+
 " Configure vim-signify.
 let g:signify_sign_change = '~'
 let g:signify_sign_show_count = 0
