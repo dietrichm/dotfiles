@@ -330,8 +330,8 @@ nnoremap <silent> # :setlocal hlsearch \| :normal! #<CR>
 nnoremap <silent> g* :setlocal hlsearch \| :normal! g*<CR>
 nnoremap <silent> g# :setlocal hlsearch \| :normal! g#<CR>
 
-" Enable search highlight manually.
-nnoremap <silent> \ :setlocal hlsearch<CR>
+" Toggle search highlight.
+nnoremap <silent> \ :setlocal hlsearch!<CR>
 
 " Disable search highlight and reload signs using CR.
 nnoremap <silent> <CR> :setlocal nohlsearch \| :SignifyRefresh<CR>
