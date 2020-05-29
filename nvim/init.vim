@@ -46,7 +46,6 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
-Plug 'machakann/vim-highlightedyank'
 
 " Git.
 Plug 'tpope/vim-fugitive'
@@ -318,9 +317,6 @@ let g:EditorConfig_exclude_patterns = [
     \ 'fugitive://.*',
     \ '.git/COMMIT_EDITMSG'
 \ ]
-
-" Configure highlightedyank.
-let g:highlightedyank_highlight_duration = 750
 
 " Enable search highlight when searching for symbols.
 nnoremap <silent> * :setlocal hlsearch \| :normal! *<CR>
