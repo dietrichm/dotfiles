@@ -34,7 +34,7 @@ Plug 'vim-airline/vim-airline'
 " Editing.
 Plug 'editorconfig/editorconfig-vim'
 Plug 'SirVer/ultisnips'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dietrichm/coc.nvim', {'branch': 'php-doc-floating-buffer-title', 'do': 'yarn install --frozen-lockfile'}
     Plug 'marlonfan/coc-phpls', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-sources', {'as': 'coc-ultisnips', 'do': 'yarn install --frozen-lockfile', 'rtp': 'packages/ultisnips'}
     Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
