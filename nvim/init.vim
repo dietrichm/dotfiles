@@ -46,7 +46,6 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
-Plug 'machakann/vim-highlightedyank'
 
 " Git.
 Plug 'tpope/vim-fugitive'
@@ -228,6 +227,12 @@ augroup fugitive
     autocmd BufReadPost fugitive://* set bufhidden=delete
 augroup END
 
+" Yank highlighting.
+augroup yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 750)
+augroup END
+
 " Configure vim-signify.
 let g:signify_sign_change = '~'
 let g:signify_sign_show_count = 0
@@ -318,9 +323,6 @@ let g:EditorConfig_exclude_patterns = [
     \ 'fugitive://.*',
     \ '.git/COMMIT_EDITMSG'
 \ ]
-
-" Configure highlightedyank.
-let g:highlightedyank_highlight_duration = 750
 
 " Enable search highlight when searching for symbols.
 nnoremap <silent> * :setlocal hlsearch \| :normal! *<CR>
