@@ -131,6 +131,9 @@ highlight SpellRare ctermfg=0
 highlight goCoverageCovered ctermfg=lightcyan
 highlight goCoverageUncover ctermfg=red
 
+" Comments are rendered in italic.
+highlight Comment cterm=italic
+
 " Configure netrw.
 let g:netrw_banner = 0
 let g:netrw_bufsettings = 'noma nomod nonu nowrap ro nobl nolist'
