@@ -33,12 +33,22 @@ The kitty configuration relies on [JetBrains Mono](https://github.com/JetBrains/
  * Execute `config-install.sh`.
  * In Tmux, execute `prefix` + <kbd>I</kbd>.
 
+On Mac OS X, the following might be necessary to have correct terminal capabilities in Tmux:
+
+```shell
+brew install ncurses
+/usr/local/opt/ncurses/bin/infocmp tmux-256color > tmux-256color.terminfo
+tic tmux-256color.terminfo
+```
+
 ### Updating
 
 While in NVIM, execute regularly:
 
-    :PlugUpgrade
-    :PlugUpdate
+```
+:PlugUpgrade
+:PlugUpdate
+```
 
 In Tmux, execute `prefix` + <kbd>U</kbd> regularly.
 
@@ -76,6 +86,8 @@ composer.autoloader_path: %project_root%/dependencies/autoload.php
 
 Vimscript files can be linted using [Vint](https://github.com/Vimjas/vint). Install the linter using:
 
-    pip3 install --pre vim-vint
+```shell
+pip3 install --pre vim-vint
+```
 
 Then, lint all VimL files with `make lint`.
