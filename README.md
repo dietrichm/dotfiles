@@ -45,8 +45,10 @@ tic tmux-256color.terminfo
 
 While in NVIM, execute regularly:
 
-    :PlugUpgrade
-    :PlugUpdate
+```
+:PlugUpgrade
+:PlugUpdate
+```
 
 In Tmux, execute `prefix` + <kbd>U</kbd> regularly.
 
@@ -84,6 +86,8 @@ composer.autoloader_path: %project_root%/dependencies/autoload.php
 
 Vimscript files can be linted using [Vint](https://github.com/Vimjas/vint). Install the linter using:
 
-    pip3 install --pre vim-vint
+```shell
+pip3 install --pre vim-vint
+```
 
 Then, lint all VimL files with `make lint`.
