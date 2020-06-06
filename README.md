@@ -33,14 +33,6 @@ The kitty configuration relies on [JetBrains Mono](https://github.com/JetBrains/
  * Execute `config-install.sh`.
  * In Tmux, execute `prefix` + <kbd>I</kbd>.
 
-On Mac OS X, the following might be necessary to have correct terminal capabilities in Tmux:
-
-```shell
-brew install ncurses
-/usr/local/opt/ncurses/bin/infocmp tmux-256color > tmux-256color.terminfo
-tic tmux-256color.terminfo
-```
-
 ### Updating
 
 While in NVIM, execute regularly:
