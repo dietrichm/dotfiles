@@ -36,7 +36,7 @@ function __backup_file
 }
 
 # Compile and install terminfo file for Tmux.
-tic tmux-256color.terminfo || echo -e "Skipped compiling terminfo for Tmux.\n"
+tic $MY_CONFIG_ROOT/tmux-256color.terminfo || echo -e "Skipped compiling terminfo for Tmux.\n"
 
 for file in "${!files[@]}"
 do
