@@ -35,6 +35,9 @@ function __backup_file
     fi
 }
 
+# Compile and install terminfo file for Tmux.
+tic tmux-256color.terminfo || echo -e "Skipped compiling terminfo for Tmux.\n"
+
 for file in "${!files[@]}"
 do
     source="${files[$file]}"
