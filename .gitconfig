@@ -9,7 +9,7 @@
 	diffc = diff --cached
 	gone = "!git branch -v | grep ' \\[gone\\] ' | awk '{print $1}'"
 	gone-remove = "!git gone | xargs git branch -d"
-	master = "!git checkout master && git pull && git gone-remove"
+	master = "!git checkout master && git pull --ff-only && git gone-remove"
 	merged = branch -a --merged
 	no-merged = branch -a --no-merged
 	setuser = "!f() { printf 'Email address: ' && read email && git config user.name 'Dietrich Moerman' && git config user.email $email; }; f"
