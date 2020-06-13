@@ -44,7 +44,6 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'dense-analysis/ale'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
-Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 
 " Git.
@@ -148,9 +147,6 @@ nnoremap <silent> <Leader>ft :Defx `expand('%:p:h')`
 
 " Configure Localvimrc.
 let g:localvimrc_persistent = 1
-
-" Configure NERDCommenter.
-let g:NERDDefaultAlign = 'left'
 
 " Configure PHP syntax.
 let g:php_html_load = 0
