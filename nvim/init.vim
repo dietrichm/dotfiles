@@ -45,6 +45,7 @@ Plug 'dense-analysis/ale'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 
 " Git.
 Plug 'tpope/vim-fugitive'
