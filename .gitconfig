@@ -14,6 +14,8 @@
 	no-merged = branch -a --no-merged
 	setuser = "!f() { printf 'Email address: ' && read email && git config user.name 'Dietrich Moerman' && git config user.email $email; }; f"
 	st = status -sb
+[pull]
+	ff = only
 [push]
 	default = current
 [user]
