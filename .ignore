@@ -8,3 +8,4 @@ node_modules/
 .phpunit.result.cache
 *.min.js
 .mypy_cache/
+__pycache__/
