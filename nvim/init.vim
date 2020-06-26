@@ -82,8 +82,8 @@ Plug 'kylef/apiblueprint.vim'
 
 call plug#end()
 
-" Map the leader key to SPACE
-let mapleader = "\<SPACE>"
+nnoremap <Space> <Nop>
+let mapleader = "\<Space>"
 
 " General settings
 set scrolloff=2
