@@ -82,6 +82,7 @@ Plug 'kylef/apiblueprint.vim'
 
 call plug#end()
 
+nnoremap <Space> <Nop>
 let mapleader = "\<Space>"
 
 " General settings
