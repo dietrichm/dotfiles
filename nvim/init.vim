@@ -160,7 +160,7 @@ let g:semshi#mark_selected_nodes = 0
 " Configure ALE.
 let g:ale_lint_on_enter = 0
 let g:ale_list_window_size = 3
-let g:ale_open_list = 'on_save'
+let g:ale_open_list = 0
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '▲'
