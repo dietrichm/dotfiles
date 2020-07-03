@@ -19,3 +19,4 @@ www/sites/*.local
 www/sites/*.local.*
 settings.local.php
 *.ale-php-cs-fixer
+.vim/
