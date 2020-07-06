@@ -10,4 +10,5 @@ let b:test_runner_filter_arg = '-k '
 
 call ApplyCocDefinitionMappings()
 
+nmap <silent> <buffer> <Leader>rn <Plug>(coc-rename)
 nnoremap <silent> <buffer> <Leader>si :call CocAction('runCommand', 'python.sortImports')<CR>
