@@ -309,9 +309,6 @@ let g:go_def_mapping_enabled = 0
 " Configure splitjoin.
 let g:splitjoin_php_method_chain_full = 1
 
-" Configure PDV.
-let g:pdv_template_dir = s:nvim_config_root . '/pdv-templates'
-
 " Configure Sniphpets.
 let g:sniphpets_common_disable_shortcuts = 1
 
