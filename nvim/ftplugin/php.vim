@@ -40,6 +40,3 @@ nnoremap <silent> <buffer> <Leader>ee :call phpactor#ExtractExpression(v:false)<
 nnoremap <silent> <buffer> <Leader>ec :call phpactor#ExtractConstant()<CR>
 vnoremap <silent> <buffer> <Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
 vnoremap <silent> <buffer> <Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
-
-" PDV
-nnoremap <silent> <buffer> <Leader>ac :call pdv#DocumentWithSnip()<CR>
