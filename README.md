@@ -7,10 +7,11 @@
  * git
  * OpenSSH
  * GnuPG
- * Python 3
+ * Python 3.8
+ * pip
  * Node >= 8.10.0
  * Yarn
- * Neovim with Python extensions
+ * Neovim >= 0.5.0
  * PHP 7
  * Composer
  * universal-ctags
