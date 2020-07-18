@@ -77,10 +77,6 @@ composer.autoloader_path: %project_root%/dependencies/autoload.php
 
 ## Linting VimL scripts
 
-Vimscript files can be linted using [Vint](https://github.com/Vimjas/vint). Install the linter using:
+Vimscript files can be linted using [Vint](https://github.com/Vimjas/vint).
 
-```shell
-pip3 install --pre vim-vint
-```
-
-Then, lint all VimL files with `make lint`.
+To lint all VimL files, run `make lint`.
