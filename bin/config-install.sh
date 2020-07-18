@@ -38,6 +38,10 @@ function __backup_file
 # Compile and install terminfo file for Tmux.
 tic $MY_CONFIG_ROOT/tmux-256color.terminfo || echo -e "Skipped compiling terminfo for Tmux.\n"
 
+# Install Python dependencies.
+pip3.8 install -r $MY_CONFIG_ROOT/requirements.txt
+echo
+
 for file in "${!files[@]}"
 do
     source="${files[$file]}"
