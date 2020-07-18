@@ -47,7 +47,7 @@ do
     if [ -h "$source" ]
     then
         # Symlink exists already.
-        existing=$(readlink -f "$source")
+        existing=$(readlink "$source")
         if [ "$existing" = "$target" ]
         then
             # Correct symlink.
