@@ -7,10 +7,11 @@
  * git
  * OpenSSH
  * GnuPG
- * Python 3
+ * Python 3.8
+ * pip
  * Node >= 8.10.0
  * Yarn
- * Neovim with Python extensions
+ * Neovim >= 0.5.0
  * PHP 7
  * Composer
  * universal-ctags
@@ -76,10 +77,6 @@ composer.autoloader_path: %project_root%/dependencies/autoload.php
 
 ## Linting VimL scripts
 
-Vimscript files can be linted using [Vint](https://github.com/Vimjas/vint). Install the linter using:
+Vimscript files can be linted using [Vint](https://github.com/Vimjas/vint).
 
-```shell
-pip3 install --pre vim-vint
-```
-
-Then, lint all VimL files with `make lint`.
+To lint all VimL files, run `make lint`.

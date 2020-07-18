@@ -1,0 +1,2 @@
+neovim
+vim-vint >= 0.4a3
