@@ -18,7 +18,6 @@ ZLE_RPROMPT_INDENT=0
 bindkey -v
 
 # Autocompletion.
-# TODO: add completion sources for i.e. Makefiles.
 zstyle :compinstall filename "$ZDOTDIR/.zshrc"
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' list-colors ''
