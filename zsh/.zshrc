@@ -11,11 +11,13 @@ SAVEHIST=1000
 # Options.
 setopt appendhistory beep
 
+# Disable right prompt indent.
+ZLE_RPROMPT_INDENT=0
+
 # Key bindings.
 bindkey -v
 
 # Autocompletion.
-# TODO: add completion sources for i.e. Makefiles.
 zstyle :compinstall filename "$ZDOTDIR/.zshrc"
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' list-colors ''
