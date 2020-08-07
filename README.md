@@ -15,7 +15,6 @@
  * PHP 7
  * Composer
  * universal-ctags
- * [EditorConfig](http://editorconfig.org/) `editorconfig-core-c`
  * tig
  * fzf
  * ripgrep
