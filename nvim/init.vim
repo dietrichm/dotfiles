@@ -87,7 +87,6 @@ let mapleader = "\<Space>"
 set scrolloff=2
 set number
 set numberwidth=1
-set pastetoggle=<F2>
 set fileformats=unix
 set noshowmode
 set tabstop=4
