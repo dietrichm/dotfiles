@@ -11,6 +11,9 @@ SAVEHIST=1000
 # Options.
 setopt appendhistory beep
 
+# Disable right prompt indent.
+ZLE_RPROMPT_INDENT=0
+
 # Key bindings.
 bindkey -v
 
