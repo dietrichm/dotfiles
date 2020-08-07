@@ -45,3 +45,5 @@
 	xfuncname = "^#+.*$"
 [stash]
 	showPatch = true
+[init]
+	defaultBranch = main
