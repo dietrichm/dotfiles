@@ -12,14 +12,17 @@
  * Node >= 8.10.0
  * Yarn
  * Neovim >= 0.5.0
- * PHP 7
- * Composer
  * universal-ctags
  * tig
  * fzf
  * ripgrep
  * tmux
- * Golang
+
+The following dependencies are _optional_ and enable additional functionality, mostly in Neovim.
+
+ * Go (Golang)
+ * PHP 7
+ * Composer
  * [restic](https://restic.github.io/)
 
 ### Fonts
