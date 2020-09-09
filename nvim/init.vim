@@ -2,6 +2,7 @@ scriptencoding utf-8
 
 let s:nvim_config_root = $HOME . '/.config/nvim'
 let s:load_line_plugins = 0
+let s:load_go_plugins = executable('go') == 1
 
 let s:vim_plug_script = s:nvim_config_root . '/autoload/plug.vim'
 if empty(glob(s:vim_plug_script))
@@ -40,7 +41,9 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
+    if s:load_go_plugins
+        Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
+    endif
 Plug 'dense-analysis/ale'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
@@ -55,7 +58,9 @@ Plug 'mhinz/vim-signify'
 
 " Developing.
 Plug 'vim-vdebug/vdebug'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+if s:load_go_plugins
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+endif
 
 " PHP.
 Plug 'StanAngeloff/php.vim'
