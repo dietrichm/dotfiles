@@ -12,14 +12,17 @@
  * Node >= 8.10.0
  * Yarn
  * Neovim >= 0.5.0
- * PHP 7
- * Composer
  * universal-ctags
  * tig
  * fzf
  * ripgrep
  * tmux
- * Golang
+
+The following dependencies are _optional_ and enable additional functionality, mostly in Neovim.
+
+ * Go (Golang)
+ * PHP 7
+ * Composer
  * [restic](https://restic.github.io/)
 
 ### Fonts
@@ -31,11 +34,12 @@ The kitty configuration relies on [JetBrains Mono](https://github.com/JetBrains/
  * In the repo, execute `git submodule update --init`.
  * Edit `~/.zshenv` to read `export ZDOTDIR="$HOME/my-repos/dotfiles/zsh"` (adapt directory).
  * Execute `config-install.sh`.
+ * Opening Neovim for the first time will install _vim-plug_ and all plugins.
  * In Tmux, execute `prefix` + <kbd>I</kbd>.
 
 ### Updating
 
-While in NVIM, execute regularly:
+While in Neovim, execute regularly:
 
 ```
 :PlugUpgrade
