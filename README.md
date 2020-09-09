@@ -34,11 +34,12 @@ The kitty configuration relies on [JetBrains Mono](https://github.com/JetBrains/
  * In the repo, execute `git submodule update --init`.
  * Edit `~/.zshenv` to read `export ZDOTDIR="$HOME/my-repos/dotfiles/zsh"` (adapt directory).
  * Execute `config-install.sh`.
+ * Opening Neovim for the first time will install _vim-plug_ and all plugins.
  * In Tmux, execute `prefix` + <kbd>I</kbd>.
 
 ### Updating
 
-While in NVIM, execute regularly:
+While in Neovim, execute regularly:
 
 ```
 :PlugUpgrade
