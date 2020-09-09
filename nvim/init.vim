@@ -3,6 +3,7 @@ scriptencoding utf-8
 let s:nvim_config_root = $HOME . '/.config/nvim'
 let s:load_line_plugins = 0
 let s:load_go_plugins = executable('go') == 1
+let s:load_php_plugins = executable('php') == 1
 
 let s:vim_plug_script = s:nvim_config_root . '/autoload/plug.vim'
 if empty(glob(s:vim_plug_script))
@@ -36,7 +37,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'SirVer/ultisnips'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'marlonfan/coc-phpls', {'do': 'yarn install --frozen-lockfile'}
+    if s:load_php_plugins
+        Plug 'marlonfan/coc-phpls', {'do': 'yarn install --frozen-lockfile'}
+    endif
     Plug 'neoclide/coc-sources', {'as': 'coc-ultisnips', 'do': 'yarn install --frozen-lockfile', 'rtp': 'packages/ultisnips'}
     Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
@@ -63,12 +66,14 @@ if s:load_go_plugins
 endif
 
 " PHP.
-Plug 'StanAngeloff/php.vim'
-Plug 'alvan/vim-php-manual'
-Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
-Plug 'sniphpets/sniphpets'
-    Plug 'sniphpets/sniphpets-common'
-    Plug 'sniphpets/sniphpets-phpunit'
+if s:load_php_plugins
+    Plug 'StanAngeloff/php.vim'
+    Plug 'alvan/vim-php-manual'
+    Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
+    Plug 'sniphpets/sniphpets'
+        Plug 'sniphpets/sniphpets-common'
+        Plug 'sniphpets/sniphpets-phpunit'
+endif
 
 " JavaScript.
 Plug 'pangloss/vim-javascript'
