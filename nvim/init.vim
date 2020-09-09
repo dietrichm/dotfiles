@@ -1,5 +1,10 @@
 scriptencoding utf-8
 
+if executable('yarn') < 1
+    echoerr 'Yarn is not installed - plugins will fail to install. Skipping loading init.vim.'
+    finish
+endif
+
 let s:nvim_config_root = $HOME . '/.config/nvim'
 let s:load_line_plugins = 0
 let s:load_go_plugins = executable('go') == 1
