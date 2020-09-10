@@ -1,5 +1,7 @@
 # dotfiles
 
+These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no longer supported.
+
 ## Dependencies
 
  * [kitty](https://sw.kovidgoyal.net/kitty/)
