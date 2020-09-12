@@ -331,6 +331,9 @@ let g:EditorConfig_exclude_patterns = [
     \ '.git/COMMIT_EDITMSG'
 \ ]
 
+" Configure folding.
+let g:markdown_folding = 1
+
 " Enable search highlight when searching for symbols.
 nnoremap <silent> * :setlocal hlsearch \| :normal! *<CR>
 nnoremap <silent> # :setlocal hlsearch \| :normal! #<CR>
