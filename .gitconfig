@@ -8,7 +8,7 @@
 	contains = branch -a --contains
 	diffc = diff --cached
 	gone = "!git branch -v | grep ' \\[gone\\] ' | awk '{print $1}'"
-	gone-remove = "!git gone | xargs git branch -d"
+	gone-remove = "!git gone | xargs -r git branch -d"
 	main = "!git checkout master || git checkout main && git pull --ff-only && git gone-remove"
 	merged = branch -a --merged
 	no-merged = branch -a --no-merged
