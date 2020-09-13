@@ -20,6 +20,8 @@ These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no lo
  * ripgrep
  * tmux
 
+### Optional
+
 The following dependencies are _optional_ and enable additional functionality, mostly in Neovim.
 
  * Go (Golang)
