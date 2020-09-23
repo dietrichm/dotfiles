@@ -8,7 +8,11 @@ let b:delimitMate_expand_cr = 1
 let b:delimitMate_expand_space = 1
 
 " Configure test runner.
-let b:test_runner_executable = 'pipenv run pytest'
+if empty(findfile('Pipfile.lock'))
+    let b:test_runner_executable = 'pytest'
+else
+    let b:test_runner_executable = 'pipenv run pytest'
+endif
 let b:test_runner_filter_arg = '-k '
 
 call ApplyCocDefinitionMappings()
