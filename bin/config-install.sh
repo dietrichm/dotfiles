@@ -10,13 +10,13 @@ set -e
 
 # Local file to target in ~.
 declare -A files=(
-    [.ctags]=.ctags
     [.gitattributes_global]=.gitattributes_global
     [.gitconfig]=.gitconfig
     [.gitignore_global]=.gitignore_global
     [.ignore]=.ignore
     [.tigrc]=.tigrc
     [.tmux.conf]=.tmux.conf
+    [ctags]=.config/ctags
     [gpg-agent.conf]=.gnupg/gpg-agent.conf
     [kitty]=.config/kitty
     [nvim]=.config/nvim
