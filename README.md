@@ -70,7 +70,7 @@ let g:phpactorPhpBin = '/usr/local/bin/php'
 
 ### universal-ctags
 
-Aside from common global configuration options set in `.ctags`, additional project-level parameters can be defined within `.ctags.d/*.ctags` files. This allows to exclude i.e. compiled or vendor source files using more `--exclude=` options.
+Aside from common global configuration options set in `ctags/global.ctags`, additional project-level parameters can be defined within `.ctags.d/*.ctags` files. This allows to exclude i.e. compiled or vendor source files using more `--exclude=` options.
 
 ### Phpactor
 
