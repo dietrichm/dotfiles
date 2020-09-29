@@ -6,10 +6,11 @@
 	c = "!git add -p && GIT_EDITOR='nvim +startinsert' git commit"
 	ci = commit --allow-empty -m 'Retrigger CI'
 	contains = branch -a --contains
+	default = "!git symbolic-ref --short refs/remotes/origin/HEAD | sed 's@^origin/@@'"
 	diffc = diff --cached
 	gone = "!git branch -v | grep ' \\[gone\\] ' | awk '{print $1}'"
 	gone-remove = "!git gone | xargs -r git branch -d"
-	main = "!git checkout master || git checkout main && git pull --ff-only && git gone-remove"
+	main = "!git checkout $(git default) && git pull --ff-only && git gone-remove"
 	merged = branch -a --merged
 	no-merged = branch -a --no-merged
 	setuser = "!f() { printf 'Email address: ' && read email && git config user.name 'Dietrich Moerman' && git config user.email $email; }; f"
