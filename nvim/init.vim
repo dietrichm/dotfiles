@@ -215,19 +215,17 @@ catch
 endtry
 
 " Configure tmuxline.
-if exists(':TmuxlineSnapshot')
-    let g:tmuxline_theme = 'airline'
-    let g:tmuxline_preset = {
-        \ 'a': '#S',
-        \ 'win': '#I#F #W',
-        \ 'cwin': '#I#F #W',
-        \ 'y': '#{battery_percentage}',
-        \ 'z': '%R',
-        \ 'options': {
-            \ 'status-justify': 'left'
-        \ }
+let g:tmuxline_theme = 'airline'
+let g:tmuxline_preset = {
+    \ 'a': '#S',
+    \ 'win': '#I#F #W',
+    \ 'cwin': '#I#F #W',
+    \ 'y': '#{battery_percentage}',
+    \ 'z': '%R',
+    \ 'options': {
+        \ 'status-justify': 'left'
     \ }
-endif
+\ }
 
 augroup terminal
     autocmd!
