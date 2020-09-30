@@ -204,7 +204,7 @@ try
         \ 'b': [ promptline#slices#cwd() ],
         \ 'c': [ '%#' ],
         \ 'x': [ promptline#slices#git_status() ],
-        \ 'y': [ promptline#slices#vcs_branch() ],
+        \ 'y': [ promptline#slices#vcs_branch(), promptline#slices#conda_env() ],
         \ 'warn': [ promptline#slices#last_exit_code() ],
         \ 'options': {
             \ 'left_sections': [ 'a', 'b', 'c' ],
