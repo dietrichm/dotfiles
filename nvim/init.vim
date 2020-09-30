@@ -197,7 +197,7 @@ let g:airline#extensions#ale#error_symbol = '✘:'
 let g:airline#extensions#ale#warning_symbol = '▲:'
 
 " Configure Promptline.
-if exists(':PromptlineSnapshot')
+try
     let g:promptline_theme = 'airline_insert'
     let g:promptline_preset = {
         \ 'a': [ promptline#slices#host({ 'only_if_ssh': 1 }), promptline#slices#user() ],
@@ -211,7 +211,8 @@ if exists(':PromptlineSnapshot')
             \ 'right_sections': [ 'warn', 'x', 'y' ]
         \ }
     \ }
-endif
+catch
+endtry
 
 " Configure tmuxline.
 if exists(':TmuxlineSnapshot')
