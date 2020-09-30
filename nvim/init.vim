@@ -34,7 +34,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     if s:load_line_plugins
-        Plug 'dietrichm/promptline.vim'
+        Plug 'edkolev/promptline.vim'
         Plug 'edkolev/tmuxline.vim'
     endif
 
