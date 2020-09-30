@@ -34,7 +34,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     if s:load_line_plugins
-        Plug 'dietrichm/promptline.vim'
+        Plug 'edkolev/promptline.vim'
         Plug 'edkolev/tmuxline.vim'
     endif
 
@@ -197,36 +197,35 @@ let g:airline#extensions#ale#error_symbol = '✘:'
 let g:airline#extensions#ale#warning_symbol = '▲:'
 
 " Configure Promptline.
-if exists(':PromptlineSnapshot')
+try
     let g:promptline_theme = 'airline_insert'
     let g:promptline_preset = {
         \ 'a': [ promptline#slices#host({ 'only_if_ssh': 1 }), promptline#slices#user() ],
         \ 'b': [ promptline#slices#cwd() ],
         \ 'c': [ '%#' ],
         \ 'x': [ promptline#slices#git_status() ],
-        \ 'y': [ promptline#slices#vcs_branch() ],
+        \ 'y': [ promptline#slices#vcs_branch(), promptline#slices#conda_env() ],
         \ 'warn': [ promptline#slices#last_exit_code() ],
         \ 'options': {
             \ 'left_sections': [ 'a', 'b', 'c' ],
             \ 'right_sections': [ 'warn', 'x', 'y' ]
         \ }
     \ }
-endif
+catch
+endtry
 
 " Configure tmuxline.
-if exists(':TmuxlineSnapshot')
-    let g:tmuxline_theme = 'airline'
-    let g:tmuxline_preset = {
-        \ 'a': '#S',
-        \ 'win': '#I#F #W',
-        \ 'cwin': '#I#F #W',
-        \ 'y': '#{battery_percentage}',
-        \ 'z': '%R',
-        \ 'options': {
-            \ 'status-justify': 'left'
-        \ }
+let g:tmuxline_theme = 'airline'
+let g:tmuxline_preset = {
+    \ 'a': '#S',
+    \ 'win': '#I#F #W',
+    \ 'cwin': '#I#F #W',
+    \ 'y': '#{battery_percentage}',
+    \ 'z': '%R',
+    \ 'options': {
+        \ 'status-justify': 'left'
     \ }
-endif
+\ }
 
 augroup terminal
     autocmd!
