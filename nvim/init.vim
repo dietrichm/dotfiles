@@ -262,7 +262,6 @@ let g:vista_executive_for = {
     \ 'go': 'coc',
     \ 'markdown': 'toc',
     \ 'php': 'coc',
-    \ 'python': 'coc',
 \ }
 let g:vista_ignore_kinds = ['Variable', 'Unknown']
 let g:vista_sidebar_width = 45
