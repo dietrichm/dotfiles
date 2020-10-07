@@ -7,3 +7,7 @@ ctags() {
         grep -Ev "^ctags: Warning: ignoring null tag in .+\.js\(line: .+\)$"
     )
 }
+
+ca() {
+    conda activate "$(basename $PWD)"
+}
