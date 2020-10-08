@@ -294,7 +294,7 @@ let g:UltiSnipsEditSplit = 'context'
 " Configure COC.
 nmap <silent> <Leader>sr <Plug>(coc-references)
 inoremap <silent> <expr> <C-Space> coc#refresh()
-nnoremap <silent> <Leader>h :call CocAction('doHover')<CR>
+nnoremap <silent> <Leader>h :call CocActionAsync('doHover')<CR>
 nnoremap <silent> <Leader>ts :echo get(b:, 'coc_current_function', '')<CR>
 
 function! ApplyCocDefinitionMappings() abort
