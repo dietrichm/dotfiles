@@ -15,6 +15,7 @@ path=(
     /usr/local/opt/python@3.8/bin
     /usr/local/go/bin
     $path
+    $MY_CONFIG_ROOT/bin/fallback
 )
 export PATH
 
