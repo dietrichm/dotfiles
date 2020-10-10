@@ -21,3 +21,4 @@ settings.local.php
 *.ale-php-cs-fixer
 .vim/
 docker-compose.override.yml
+container-compose.override.yml
