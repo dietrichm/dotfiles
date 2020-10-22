@@ -1,3 +1,4 @@
-*.php diff=php
-*.md diff=markdown
 *.apib diff=markdown
+*.md diff=markdown
+*.php diff=php
+*.py diff=python
