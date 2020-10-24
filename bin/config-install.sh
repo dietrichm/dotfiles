@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -z "$MY_CONFIG_ROOT" ]
-then
+if [ -z "$MY_CONFIG_ROOT" ]; then
     echo "Please follow install instructions in README.md first."
     exit 1
 fi
@@ -24,11 +23,10 @@ declare -A files=(
     [ssh-config]=.ssh/config
 )
 
-function __backup_file
-{
+__backup_file() {
     local source=$1
-    if [ -e "$source" ]
-    then
+
+    if [ -e "$source" ]; then
         # File exists already (link, file, directory).
         mv "$source" "$source.backup"
         echo "Backed up $source as $source.backup."
@@ -36,36 +34,40 @@ function __backup_file
 }
 
 # Compile and install terminfo file for Tmux.
-tic $MY_CONFIG_ROOT/tmux-256color.terminfo || echo -e "Skipped compiling terminfo for Tmux.\n"
+tic $MY_CONFIG_ROOT/tmux-256color.terminfo \
+    || echo -e "Skipped compiling terminfo for Tmux.\n"
 
 # Install Python dependencies.
 pip3.8 install --user -U -r $MY_CONFIG_ROOT/requirements.txt
 echo
 
-for file in "${!files[@]}"
-do
+for file in "${!files[@]}"; do
     source="${files[$file]}"
     target="$file"
+
     [ "${source:0:1}" = "/" ] || source="$HOME/$source"
     [ "${target:0:1}" = "/" ] || target="$MY_CONFIG_ROOT/$target"
-    if [ -h "$source" ]
-    then
+
+    if [ -h "$source" ]; then
         # Symlink exists already.
         existing=$(readlink "$source")
-        if [ "$existing" = "$target" ]
-        then
+
+        if [ "$existing" = "$target" ]; then
             # Correct symlink.
             echo "Skipping $file; already installed."
             continue
         fi
     fi
+
     echo -n " * Install $file as $source? [y/n] "
     read install
-    if [ "$install" != "y" ] && [ "$install" != "Y" ]
-    then
+
+    if [ "$install" != "y" ] && [ "$install" != "Y" ]; then
         continue
     fi
+
     __backup_file "$source"
+
     # Install symlink.
     ln -s "$target" "$source"
     echo "Installed $file as $source."
