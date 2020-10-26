@@ -28,6 +28,7 @@ zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}'
 zstyle ':completion:*' menu select
 autoload -Uz compinit
 compinit
+source "$MY_CONFIG_ROOT/vendor/fzf-tab/fzf-tab.plugin.zsh"
 
 # Load subfiles.
 for file in "$MY_CONFIG_ROOT"/shell.*.sh; do
