@@ -1,3 +1,6 @@
 [submodule "tpm"]
 	path = vendor/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "fzf-tab"]
+	path = vendor/fzf-tab
+	url = https://github.com/Aloxaf/fzf-tab
