@@ -6,8 +6,5 @@
     "list.normalMappings": {
         "v": "action:vsplit"
     },
-    "python.autoComplete.addBrackets": true,
-    "python.jediEnabled": true,
-    "python.linting.enabled": false,
-    "python.pythonPath": "python3.8"
+    "jedi.startupMessage": false
 }
