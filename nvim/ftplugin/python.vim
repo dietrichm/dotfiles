@@ -1,6 +1,5 @@
 setlocal textwidth=79
 setlocal colorcolumn=+1
-setlocal formatexpr=CocAction('formatSelected')
 
 let b:ale_python_auto_pipenv = 1
 let b:ale_python_flake8_change_directory = 0
@@ -18,8 +17,7 @@ endif
 
 call ApplyCocDefinitionMappings()
 
-nmap <silent> <buffer> <Leader>rn <Plug>(coc-rename)
-nnoremap <silent> <buffer> <Leader>si :call CocActionAsync('runCommand', 'python.sortImports')<CR>
+nnoremap <silent> <buffer> <Leader>si :Isort<CR>
 
 " Searching using ripgrep.
 nnoremap <silent> <buffer> <Leader>sce :execute "Rg \\bclass .+\\(.*\\b" . expand("<cword>") . "\\b.*\\)"<CR>

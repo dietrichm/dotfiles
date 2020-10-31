@@ -47,7 +47,7 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
     endif
     Plug 'neoclide/coc-sources', {'as': 'coc-ultisnips', 'do': 'yarn install --frozen-lockfile', 'rtp': 'packages/ultisnips'}
     Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'pappasam/coc-jedi', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
     if s:load_go_plugins
         Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
@@ -89,6 +89,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 " Python.
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'fisadev/vim-isort'
 
 " Other syntax.
 Plug 'lumiliet/vim-twig'
@@ -292,7 +293,10 @@ let g:UltiSnipsSnippetsDir = s:nvim_config_root . '/UltiSnips'
 let g:UltiSnipsEditSplit = 'context'
 
 " Configure COC.
+nmap <silent> <Leader>ca <Plug>(coc-codeaction)
+nmap <silent> <Leader>rn <Plug>(coc-rename)
 nmap <silent> <Leader>sr <Plug>(coc-references)
+xmap <silent> <Leader>ca <Plug>(coc-codeaction-selected)
 inoremap <silent> <expr> <C-Space> coc#refresh()
 nnoremap <silent> <Leader>h :call CocActionAsync('doHover')<CR>
 nnoremap <silent> <Leader>ts :echo get(b:, 'coc_current_function', '')<CR>
