@@ -18,7 +18,6 @@ endif
 
 call ApplyCocDefinitionMappings()
 
-nmap <silent> <buffer> <Leader>rn <Plug>(coc-rename)
 nnoremap <silent> <buffer> <Leader>si :call CocActionAsync('runCommand', 'python.sortImports')<CR>
 
 " Searching using ripgrep.
