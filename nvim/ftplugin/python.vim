@@ -17,7 +17,7 @@ endif
 
 call ApplyCocDefinitionMappings()
 
-nnoremap <silent> <buffer> <Leader>si :call CocActionAsync('runCommand', 'python.sortImports')<CR>
+nnoremap <silent> <buffer> <Leader>si :Isort<CR>
 
 " Searching using ripgrep.
 nnoremap <silent> <buffer> <Leader>sce :execute "Rg \\bclass .+\\(.*\\b" . expand("<cword>") . "\\b.*\\)"<CR>
