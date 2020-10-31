@@ -5,3 +5,4 @@
 --links=no
 --languages=php,javascript,go,vim,python
 --php-kinds=-av
+--python-kinds=-v
