@@ -120,7 +120,7 @@ set hidden
 set updatetime=250
 set shortmess+=cIW
 set spelllang=en_gb
-set path=.,**2
+set path=.,*
 set grepprg=rg\ --vimgrep
 set undofile
 
