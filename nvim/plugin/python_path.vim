@@ -1,3 +1,8 @@
+if exists('g:loaded_python_path')
+    finish
+endif
+
+let g:loaded_python_path = 1
 let s:packages = ''
 
 if !empty($VIRTUAL_ENV)
