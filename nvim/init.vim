@@ -91,6 +91,9 @@ Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'fisadev/vim-isort'
 
+" Other syntax.
+Plug 'cespare/vim-toml'
+
 call plug#end()
 
 nnoremap <Space> <Nop>
