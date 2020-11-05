@@ -1,3 +1,9 @@
+function! s:PrepareCommand(executable, file) abort
+    let l:command = substitute(a:executable, '{file}', a:file, 'g')
+
+    return l:command
+endfunction
+
 function! test_runner#RunCase() abort
     let l:executable = get(b:, 'test_runner_executable_case', '')
 
@@ -6,7 +12,7 @@ function! test_runner#RunCase() abort
         return
     endif
 
-    let l:command = substitute(l:executable, '{file}', bufname('%'), 'g')
+    let l:command = s:PrepareCommand(l:executable, bufname('%'))
 
     call VimuxRunCommand(l:command)
 endfunction
@@ -25,7 +31,7 @@ function! test_runner#RunTest() abort
         return
     endif
 
-    let l:command = substitute(l:executable, '{file}', bufname('%'), 'g')
+    let l:command = s:PrepareCommand(l:executable, bufname('%'))
     let l:command = substitute(l:command, '{test}', l:test_name, 'g')
 
     call VimuxRunCommand(l:command)
