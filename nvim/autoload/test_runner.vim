@@ -1,5 +1,6 @@
 function! s:PrepareCommand(executable, file) abort
-    let l:command = substitute(a:executable, '{file}', a:file, 'g')
+    let l:Transformer = get(b:, 'test_runner_filename_transformer', {file -> file})
+    let l:command = substitute(a:executable, '{file}', l:Transformer(a:file), 'g')
 
     return l:command
 endfunction
