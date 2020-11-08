@@ -352,7 +352,7 @@ nnoremap <silent> <Leader>sw :execute "Rg \\b" . expand("<cword>") . "\\b"<CR>
 command! -bang -nargs=* Rgi call fzf#vim#grep(
     \ 'rg --ignore-vcs --column --line-number --no-heading --color=always --smart-case -- ' . shellescape(<q-args>),
     \ 1,
-    \ {},
+    \ call('fzf#vim#with_preview', g:fzf_preview_window),
     \ <bang>0
 \ )
 

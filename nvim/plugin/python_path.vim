@@ -20,6 +20,6 @@ let &path .= ',' . s:packages
 command! -bang -nargs=* Rgp call fzf#vim#grep(
     \ 'rg --column --line-number --no-heading --color=always --smart-case -- ' . shellescape(<q-args>),
     \ 1,
-    \ {'dir': s:packages},
+    \ call('fzf#vim#with_preview', [{'dir': s:packages}] + g:fzf_preview_window),
     \ <bang>0
 \ )
