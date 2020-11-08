@@ -271,21 +271,9 @@ nnoremap <silent> <Leader>tb :Vista<CR>
 nnoremap <silent> <Leader>o :Files<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>fh :History<CR>
-let $FZF_DEFAULT_OPTS .= ' --reverse --margin 0,1'
-function! FloatingFZF()
-    let width = float2nr(&columns * 0.8)
-    let height = float2nr(&lines * 0.6)
-    let opts = {
-        \ 'relative': 'editor',
-        \ 'row': (&lines - height) / 2,
-        \ 'col': (&columns - width) / 2,
-        \ 'width': width,
-        \ 'height': height
-    \ }
-    call nvim_open_win(nvim_create_buf(v:false, v:true), v:true, opts)
-endfunction
-let g:fzf_layout = { 'window': 'call FloatingFZF()' }
-let g:fzf_preview_window = ''
+let $FZF_DEFAULT_OPTS .= ' --reverse'
+let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.8}}
+let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
 
 " Configure UltiSnips.
 let g:UltiSnipsSnippetsDir = s:nvim_config_root . '/UltiSnips'
@@ -364,7 +352,7 @@ nnoremap <silent> <Leader>sw :execute "Rg \\b" . expand("<cword>") . "\\b"<CR>
 command! -bang -nargs=* Rgi call fzf#vim#grep(
     \ 'rg --ignore-vcs --column --line-number --no-heading --color=always --smart-case -- ' . shellescape(<q-args>),
     \ 1,
-    \ {},
+    \ call('fzf#vim#with_preview', g:fzf_preview_window),
     \ <bang>0
 \ )
 
