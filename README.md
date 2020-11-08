@@ -68,6 +68,22 @@ let g:ale_php_php_executable = '/usr/local/bin/php'
 let g:phpactorPhpBin = '/usr/local/bin/php'
 ```
 
+#### Test runner
+
+Implemented as a set of auto loaded functions in `autoload/test_runner.vim`, the test runner executes the current test case or test method (using [coc.nvim](https://github.com/neoclide/coc.nvim)) in the next available Tmux pane (through [Vimux](https://github.com/benmills/vimux)).
+
+Its behaviour is configured using these buffer level variables:
+
+```viml
+let b:test_runner_executable_case = 'runtests {file}'
+let b:test_runner_executable_test = 'runtests {file} --filter={test}'
+
+" Optional lambda to translate buffer filename into actual test case name.
+let b:test_runner_filename_transformer = {file -> substitute(file, '/', '.', '')}
+```
+
+Projects that require custom test configuration can configure these settings in a `.lvimrc` as well.
+
 ### universal-ctags
 
 Aside from common global configuration options set in `ctags/global.ctags`, additional project-level parameters can be defined within `.ctags.d/*.ctags` files. This allows to exclude i.e. compiled or vendor source files using more `--exclude=` options.
