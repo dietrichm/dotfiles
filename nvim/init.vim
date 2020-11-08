@@ -271,7 +271,7 @@ nnoremap <silent> <Leader>tb :Vista<CR>
 nnoremap <silent> <Leader>o :Files<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>fh :History<CR>
-let $FZF_DEFAULT_OPTS .= ' --reverse --margin 0,1'
+let $FZF_DEFAULT_OPTS .= ' --reverse'
 let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.6}}
 let g:fzf_preview_window = ''
 
