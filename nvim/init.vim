@@ -272,19 +272,7 @@ nnoremap <silent> <Leader>o :Files<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>fh :History<CR>
 let $FZF_DEFAULT_OPTS .= ' --reverse --margin 0,1'
-function! FloatingFZF()
-    let width = float2nr(&columns * 0.8)
-    let height = float2nr(&lines * 0.6)
-    let opts = {
-        \ 'relative': 'editor',
-        \ 'row': (&lines - height) / 2,
-        \ 'col': (&columns - width) / 2,
-        \ 'width': width,
-        \ 'height': height
-    \ }
-    call nvim_open_win(nvim_create_buf(v:false, v:true), v:true, opts)
-endfunction
-let g:fzf_layout = { 'window': 'call FloatingFZF()' }
+let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.6}}
 let g:fzf_preview_window = ''
 
 " Configure UltiSnips.
