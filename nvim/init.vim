@@ -332,6 +332,10 @@ nnoremap <silent> g# :setlocal hlsearch \| :normal! g#<CR>
 " Toggle search highlight.
 nnoremap <silent> \ :setlocal hlsearch!<CR>
 
+" Up and down by visible lines.
+nnoremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+nnoremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
 " Paragraph motions do not change jumplist.
 nnoremap <silent> } :keepjumps normal! }<CR>
 nnoremap <silent> { :keepjumps normal! {<CR>
