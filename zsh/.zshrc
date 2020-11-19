@@ -35,8 +35,4 @@ for file in "$MY_CONFIG_ROOT"/shell.*.sh; do
   source "$file"
 done
 
-# Force reload hash table.
-# This is required on Ubuntu.
-hash -f
-
 return 0
