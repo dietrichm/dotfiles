@@ -1,8 +1,3 @@
-# Load .zprofile when it's not already. This happens on Ubuntu with GDM login.
-if [ -z "$MY_CONFIG_ROOT" ]; then
-  source "$ZDOTDIR/.zprofile"
-fi
-
 # History.
 HISTFILE="$ZDOTDIR/.zhistory"
 HISTSIZE=1000
