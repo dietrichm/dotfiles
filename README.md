@@ -11,7 +11,7 @@ These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no lo
  * GnuPG
  * Python 3.8
  * pip
- * Node >= 8.10.0
+ * Node >= 12.0.0
  * Yarn
  * Neovim >= 0.5.0
  * universal-ctags
