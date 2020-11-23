@@ -1,4 +1,4 @@
 neovim
 pynvim
 vim-vint >= 0.4a3
-isort < 5
+isort[pyproject] < 5
