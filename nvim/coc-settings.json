@@ -6,5 +6,7 @@
     "list.normalMappings": {
         "v": "action:vsplit"
     },
-    "jedi.startupMessage": false
+    "python.linting.enabled": false,
+    "python.analysis.diagnosticMode": "workspace",
+    "pyright.disableOrganizeImports": true
 }
