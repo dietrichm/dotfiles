@@ -96,6 +96,18 @@ The example below configures Pyright to treat a local directory as an extra root
 }
 ```
 
+### isort
+
+Sorting Python imports happens through [isort](https://pycqa.github.io/isort/) and is triggered using <kbd>&lt;Space&gt;si</kbd> in normal mode.
+
+isort specific configuration can be set per project in a `pyproject.toml` file (as specified in [PEP 518](https://www.python.org/dev/peps/pep-0518/)):
+
+```toml
+[tool.isort]
+known_first_party = ['my_module']
+line_length = 99
+```
+
 ### universal-ctags
 
 Aside from common global configuration options set in `ctags/global.ctags`, additional project-level parameters can be defined within `.ctags.d/*.ctags` files. This allows to exclude i.e. compiled or vendor source files using more `--exclude=` options.
