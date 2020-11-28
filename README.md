@@ -79,7 +79,7 @@ let b:test_runner_executable_case = 'runtests {file}'
 let b:test_runner_executable_test = 'runtests {file} --filter={test}'
 
 " Optional lambda to translate buffer filename into actual test case name.
-let b:test_runner_filename_transformer = {file -> substitute(file, '/', '.', '')}
+let b:test_runner_filename_transformer = {file -> substitute(file, '/', '.', 'g')}
 ```
 
 Projects that require custom test configuration can configure these settings in a `.lvimrc` as well.
