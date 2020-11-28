@@ -1,24 +1,39 @@
 # dotfiles
 
+This repository contains configuration files, Vimscript code and shell scripts for my software development environment.
+The centrepieces of this environment are [kitty](https://sw.kovidgoyal.net/kitty/) and [Tmux](https://github.com/tmux/tmux) running one [Neovim](https://neovim.io/) instance and any number of zsh shells per project.
+
+At the moment, the configuration is tailored to developing in Python, PHP, Go, and (to a lesser extent - more focused on reading) JavaScript and TypeScript.
+
 These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no longer supported.
+
+- [Dependencies](#dependencies)
+  - [Optional](#optional)
+  - [Fonts](#fonts)
+- [Installation](#installation)
+  - [Updating](#updating)
+- [Custom configuration](#custom-configuration)
+  - [Neovim](#neovim)
+  - [Language Servers (LSPs)](#language-servers-lsps)
+  - [universal-ctags](#universal-ctags)
+  - [Phpactor](#phpactor)
+- [Linting VimL scripts](#linting-viml-scripts)
 
 ## Dependencies
 
  * [kitty](https://sw.kovidgoyal.net/kitty/)
+ * [Tmux](https://github.com/tmux/tmux)
+ * [Neovim](https://neovim.io/) >= 0.5.0
  * zsh
- * git
  * OpenSSH
+ * git
  * GnuPG
- * Python 3.8
- * pip
+ * Python 3.8 and pip
  * Node >= 12.0.0
  * Yarn
- * Neovim >= 0.5.0
- * universal-ctags
- * tig
- * fzf
- * ripgrep
- * tmux
+ * [ripgrep](https://github.com/BurntSushi/ripgrep)
+ * [universal-ctags](http://ctags.io/)
+ * [tig](https://jonas.github.io/tig/)
 
 ### Optional
 
@@ -79,10 +94,34 @@ let b:test_runner_executable_case = 'runtests {file}'
 let b:test_runner_executable_test = 'runtests {file} --filter={test}'
 
 " Optional lambda to translate buffer filename into actual test case name.
-let b:test_runner_filename_transformer = {file -> substitute(file, '/', '.', '')}
+let b:test_runner_filename_transformer = {file -> substitute(file, '/', '.', 'g')}
 ```
 
 Projects that require custom test configuration can configure these settings in a `.lvimrc` as well.
+
+### Language Servers (LSPs)
+
+All [language servers](https://langserver.org/) are currently installed and maintained using [coc.nvim](https://github.com/neoclide/coc.nvim) and are configured in `nvim/coc-settings.json`. Project specific settings can be added in the project's `.vim/coc-settings.json` file.
+
+The example below configures Pyright to treat a local directory as an extra root path for Python analysis:
+
+```json
+{
+    "python.analysis.extraPaths": ["my_project"]
+}
+```
+
+### isort
+
+Sorting Python imports happens through [isort](https://pycqa.github.io/isort/) and is triggered using <kbd>&lt;Space&gt;si</kbd> in normal mode.
+
+isort specific configuration can be set per project in a `pyproject.toml` file (as specified in [PEP 518](https://www.python.org/dev/peps/pep-0518/)):
+
+```toml
+[tool.isort]
+known_first_party = ['my_module']
+line_length = 99
+```
 
 ### universal-ctags
 
