@@ -22,20 +22,18 @@ These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no lo
 ## Dependencies
 
  * [kitty](https://sw.kovidgoyal.net/kitty/)
+ * [Tmux](https://github.com/tmux/tmux)
+ * [Neovim](https://neovim.io/) >= 0.5.0
  * zsh
- * git
  * OpenSSH
+ * git
  * GnuPG
- * Python 3.8
- * pip
+ * Python 3.8 and pip
  * Node >= 12.0.0
  * Yarn
- * Neovim >= 0.5.0
- * universal-ctags
- * tig
- * fzf
- * ripgrep
- * tmux
+ * [ripgrep](https://github.com/BurntSushi/ripgrep)
+ * [universal-ctags](http://ctags.io/)
+ * [tig](https://jonas.github.io/tig/)
 
 ### Optional
 
