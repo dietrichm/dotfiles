@@ -2,6 +2,18 @@
 
 These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no longer supported.
 
+- [Dependencies](#dependencies)
+  - [Optional](#optional)
+  - [Fonts](#fonts)
+- [Installation](#installation)
+  - [Updating](#updating)
+- [Custom configuration](#custom-configuration)
+  - [Neovim](#neovim)
+  - [Language Servers (LSPs)](#language-servers-lsps)
+  - [universal-ctags](#universal-ctags)
+  - [Phpactor](#phpactor)
+- [Linting VimL scripts](#linting-viml-scripts)
+
 ## Dependencies
 
  * [kitty](https://sw.kovidgoyal.net/kitty/)
