@@ -84,6 +84,18 @@ let b:test_runner_filename_transformer = {file -> substitute(file, '/', '.', '')
 
 Projects that require custom test configuration can configure these settings in a `.lvimrc` as well.
 
+### Language Servers (LSPs)
+
+All [language servers](https://langserver.org/) are currently installed and maintained using [coc.nvim](https://github.com/neoclide/coc.nvim) and are configured in `nvim/coc-settings.json`. Project specific settings can be added in the project's `.vim/coc-settings.json` file.
+
+The example below configures Pyright to treat a local directory as an extra root path for Python analysis:
+
+```json
+{
+    "python.analysis.extraPaths": ["my_project"]
+}
+```
+
 ### universal-ctags
 
 Aside from common global configuration options set in `ctags/global.ctags`, additional project-level parameters can be defined within `.ctags.d/*.ctags` files. This allows to exclude i.e. compiled or vendor source files using more `--exclude=` options.
