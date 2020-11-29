@@ -1,12 +1,12 @@
 {
-    "diagnostic.enable": false,
-    "suggest.autoTrigger": "always",
     "coc.preferences.currentFunctionSymbolAutoUpdate": true,
     "coc.preferences.extensionUpdateCheck": "never",
+    "diagnostic.enable": false,
     "list.normalMappings": {
         "v": "action:vsplit"
     },
-    "python.linting.enabled": false,
+    "pyright.disableOrganizeImports": true,
     "python.analysis.diagnosticMode": "workspace",
-    "pyright.disableOrganizeImports": true
+    "python.linting.enabled": false,
+    "suggest.autoTrigger": "always"
 }
