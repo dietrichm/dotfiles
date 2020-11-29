@@ -1,7 +1,5 @@
-# Set my config root.
 export MY_CONFIG_ROOT="$( cd "$( dirname "${(%):-%N}" )/.." && pwd )"
 
-# Configure path.
 typeset -U path
 path=(
     bin
@@ -19,7 +17,6 @@ path=(
 )
 export PATH
 
-# Various.
 export CLICOLOR=1
 export EDITOR=nvim
 export FZF_DEFAULT_COMMAND="rg --files"
