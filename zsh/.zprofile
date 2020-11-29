@@ -1,4 +1,5 @@
 export MY_CONFIG_ROOT="$( cd "$( dirname "${(%):-%N}" )/.." && pwd )"
+export GOPATH=$HOME/go
 
 typeset -U path
 path=(
@@ -9,6 +10,7 @@ path=(
     $HOME/.config/yarn/global/node_modules/.bin
     $HOME/bin
     $HOME/.local/bin
+    $GOPATH/bin
     $MY_CONFIG_ROOT/bin
     /usr/local/opt/python@3.8/bin
     /usr/local/go/bin
@@ -20,7 +22,6 @@ export PATH
 export CLICOLOR=1
 export EDITOR=nvim
 export FZF_DEFAULT_COMMAND="rg --files"
-export GOPATH=$HOME/go
 export GPG_TTY=$(tty)
 export LANG=en_GB.UTF-8
 export LANGUAGE=en_GB:en
