@@ -2,6 +2,7 @@
     "coc.preferences.currentFunctionSymbolAutoUpdate": true,
     "coc.preferences.extensionUpdateCheck": "never",
     "diagnostic.enable": false,
+    "go.goplsPath": "gopls",
     "list.normalMappings": {
         "v": "action:vsplit"
     },
