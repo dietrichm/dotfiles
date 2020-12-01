@@ -1,12 +1,20 @@
+function! s:GetConfig(key, default) abort
+    let l:settings = get(g:, 'test_runner_settings', {})
+    let l:ft_settings = get(l:settings, &filetype, {})
+    let l:Default = get(l:ft_settings, a:key, a:default)
+
+    return get(b:, 'test_runner_' . a:key, l:Default)
+endfunction
+
 function! s:PrepareCommand(executable, file) abort
-    let l:Transformer = get(b:, 'test_runner_filename_transformer', {file -> file})
+    let l:Transformer = s:GetConfig('filename_transformer', {file -> file})
     let l:command = substitute(a:executable, '{file}', l:Transformer(a:file), 'g')
 
     return l:command
 endfunction
 
 function! test_runner#RunCase() abort
-    let l:executable = get(b:, 'test_runner_executable_case', '')
+    let l:executable = s:GetConfig('executable_case', '')
 
     if empty(l:executable)
         echomsg 'No case executable configured.'
@@ -19,7 +27,7 @@ function! test_runner#RunCase() abort
 endfunction
 
 function! test_runner#RunTest() abort
-    let l:executable = get(b:, 'test_runner_executable_test', '')
+    let l:executable = s:GetConfig('executable_test', '')
     let l:test_name = get(b:, 'coc_current_function', '')
 
     if empty(l:executable)
