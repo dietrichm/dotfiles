@@ -87,7 +87,7 @@ let g:phpactorPhpBin = '/usr/local/bin/php'
 
 Implemented as a set of auto loaded functions in `autoload/test_runner.vim`, the test runner executes the current test case or test method (using [coc.nvim](https://github.com/neoclide/coc.nvim)) in the next available Tmux pane (through [Vimux](https://github.com/benmills/vimux)).
 
-Its behaviour is configured using these buffer level variables:
+Its behaviour is configured either using these buffer level variables:
 
 ```viml
 let b:test_runner_executable_case = 'runtests {file}'
@@ -95,6 +95,18 @@ let b:test_runner_executable_test = 'runtests {file} --filter={test}'
 
 " Optional lambda to translate buffer filename into actual test case name.
 let b:test_runner_filename_transformer = {file -> substitute(file, '/', '.', 'g')}
+```
+
+And/or using a global dictionary of settings, ordered by filetype:
+
+```viml
+let g:test_runner_settings = {
+    \ 'python': {
+        \ 'executable_case': 'runtests {file}',
+        \ 'executable_test': 'runtests {file} --filter={test}',
+        \ 'filename_transformer': {file -> substitute(file, '/', '.', 'g')}
+    \ }
+\ }
 ```
 
 Projects that require custom test configuration can configure these settings in a `.lvimrc` as well.
