@@ -97,15 +97,13 @@ let b:test_runner_settings = {
 \ }
 ```
 
-And/or using a global dictionary of settings, ordered by filetype:
+And/or using a global dictionary of settings, separated by filetype:
 
 ```viml
-let g:test_runner_settings = {
-    \ 'python': {
-        \ 'executable_case': 'runtests {file}',
-        \ 'executable_test': 'runtests {file} --filter={test}',
-        \ 'filename_transformer': {file -> substitute(file, '/', '.', 'g')}
-    \ }
+let g:test_runner_settings['python'] = {
+    \ 'executable_case': 'runtests {file}',
+    \ 'executable_test': 'runtests {file} --filter={test}',
+    \ 'filename_transformer': {file -> substitute(file, '/', '.', 'g')}
 \ }
 ```
 
