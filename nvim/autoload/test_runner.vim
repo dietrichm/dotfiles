@@ -14,9 +14,13 @@ function! s:GetConfig(key, default) abort
 
     let l:global_settings = get(g:, 'test_runner_settings', {})
     let l:global_ft_settings = get(l:global_settings, &filetype, {})
-    let l:Global_default = get(l:global_ft_settings, a:key, a:default)
+    let l:Global_value = get(l:global_ft_settings, a:key, '')
 
-    return l:Global_default
+    if !empty(l:Global_value)
+        return l:Global_value
+    endif
+
+    return a:default
 endfunction
 
 function! s:PrepareCommand(executable, file) abort
