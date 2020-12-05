@@ -1,4 +1,11 @@
 function! s:GetConfig(key, default) abort
+    let l:buffer_settings = get(b:, 'test_runner_settings', {})
+    let l:Buffer_value = get(l:buffer_settings, a:key, '')
+
+    if !empty(l:Buffer_value)
+        return l:Buffer_value
+    endif
+
     let l:global_settings = get(g:, 'test_runner_settings', {})
     let l:global_ft_settings = get(l:global_settings, &filetype, {})
     let l:Global_default = get(l:global_ft_settings, a:key, a:default)
