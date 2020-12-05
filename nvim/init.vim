@@ -295,6 +295,18 @@ function! ApplyCocDefinitionMappings() abort
     nnoremap <silent> <buffer> <C-W><C-]> :call CocAction('jumpDefinition', 'vsplit')<CR>
 endfunction
 
+" Configure test runner.
+let g:test_runner_settings = {
+    \ 'php': {
+        \ 'executable_case': 'phpunit {file}',
+        \ 'executable_test': 'phpunit {file} --filter={test}',
+    \ },
+    \ 'python': {
+        \ 'executable_case': 'pytest {file}',
+        \ 'executable_test': 'pytest {file} -k {test}',
+    \ },
+\ }
+
 " Configure Vdebug.
 let g:vdebug_options = {
     \ 'ide_key': 'vdebug',
