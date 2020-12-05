@@ -6,11 +6,17 @@ function! s:GetConfig(key, default) abort
         return l:Buffer_value
     endif
 
+    let l:Buffer_value = get(b:, 'test_runner_' . a:key, '')
+
+    if !empty(l:Buffer_value)
+        return l:Buffer_value
+    endif
+
     let l:global_settings = get(g:, 'test_runner_settings', {})
     let l:global_ft_settings = get(l:global_settings, &filetype, {})
     let l:Global_default = get(l:global_ft_settings, a:key, a:default)
 
-    return get(b:, 'test_runner_' . a:key, l:Global_default)
+    return l:Global_default
 endfunction
 
 function! s:PrepareCommand(executable, file) abort
