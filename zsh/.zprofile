@@ -10,6 +10,7 @@ path=(
     $HOME/.config/yarn/global/node_modules/.bin
     $HOME/bin
     $HOME/.local/bin
+    $HOME/.luarocks/bin
     $GOPATH/bin
     $MY_CONFIG_ROOT/bin
     /usr/local/opt/python@3.8/bin
