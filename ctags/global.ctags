@@ -3,5 +3,5 @@
 --exclude=node_modules
 --exclude=*.min.js
 --links=no
---languages=php,javascript,go,vim,python
+--languages=php,javascript,go,vim,python,lua
 --php-kinds=-av

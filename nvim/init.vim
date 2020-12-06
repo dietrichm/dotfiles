@@ -305,6 +305,9 @@ let g:test_runner_settings = {
         \ 'executable_case': 'pytest {file}',
         \ 'executable_test': 'pytest {file} -k {test}',
     \ },
+    \ 'lua': {
+        \ 'executable_case': 'busted {file}',
+    \ },
 \ }
 
 " Configure Vdebug.
