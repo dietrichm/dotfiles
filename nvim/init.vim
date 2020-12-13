@@ -316,6 +316,11 @@ let g:test_runner_settings = {
     \ },
 \ }
 
+" Configure vim-test.
+let g:test#preserve_screen = 1
+let g:test#python#runner = 'pytest'
+let g:test#strategy = 'vimux'
+
 " Configure Vdebug.
 let g:vdebug_options = {
     \ 'ide_key': 'vdebug',
