@@ -387,10 +387,10 @@ nnoremap <silent> <Leader>da :%bd<CR>
 nnoremap <silent> <Leader>pc :let @+ = @%<CR>
 nnoremap <silent> <Leader>Pc :let @+ = @% . ":" . line(".")<CR>
 
-" Test runner mappings.
-nnoremap <silent> <Leader>rc :call test_runner#RunCase()<CR>
-nnoremap <silent> <Leader>rt :call test_runner#RunTest()<CR>
-nnoremap <silent> <Leader>rr :call test_runner#ReRun()<CR>
+" vim-test mappings.
+nnoremap <silent> <Leader>rc :TestFile<CR>
+nnoremap <silent> <Leader>rt :TestNearest<CR>
+nnoremap <silent> <Leader>rr :TestLast<CR>
 
 " Use arrow keys for resizing splits.
 nnoremap <silent> <Up>    :resize +1<CR>
