@@ -6,13 +6,6 @@ let b:ale_python_flake8_change_directory = 0
 let b:delimitMate_expand_cr = 1
 let b:delimitMate_expand_space = 1
 
-if !empty(findfile('Pipfile.lock', '.;'))
-    let b:test_runner_settings = {
-        \ 'executable_case': 'pipenv run ' . g:test_runner_settings['python']['executable_case'],
-        \ 'executable_test': 'pipenv run ' . g:test_runner_settings['python']['executable_test'],
-    \ }
-endif
-
 nnoremap <silent> <buffer> <Leader>so :ALEFix isort<CR>
 
 " Searching using ripgrep.

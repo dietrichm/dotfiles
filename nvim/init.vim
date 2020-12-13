@@ -301,21 +301,6 @@ xmap <silent> <Leader>ca <Plug>(coc-codeaction-selected)
 inoremap <silent> <expr> <C-Space> coc#refresh()
 nnoremap <silent> <Leader>h :call CocActionAsync('doHover')<CR>
 
-" Configure test runner.
-let g:test_runner_settings = {
-    \ 'php': {
-        \ 'executable_case': 'phpunit {file}',
-        \ 'executable_test': 'phpunit {file} --filter={test}',
-    \ },
-    \ 'python': {
-        \ 'executable_case': 'pytest {file}',
-        \ 'executable_test': 'pytest {file} -k {test}',
-    \ },
-    \ 'lua': {
-        \ 'executable_case': 'busted {file}',
-    \ },
-\ }
-
 " Configure vim-test.
 let g:test#preserve_screen = 1
 let g:test#python#runner = 'pytest'
