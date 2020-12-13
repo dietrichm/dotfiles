@@ -66,6 +66,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 
 " Developing.
+Plug 'vim-test/vim-test'
 Plug 'vim-vdebug/vdebug'
 if s:load_go_plugins
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
