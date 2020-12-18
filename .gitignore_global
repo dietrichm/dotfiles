@@ -22,3 +22,4 @@ settings.local.php
 .vim/
 docker-compose.override.yml
 container-compose.override.yml
+.ignore
