@@ -19,9 +19,12 @@ declare -A files=(
     [gpg-agent.conf]=.gnupg/gpg-agent.conf
     [kitty]=.config/kitty
     [nvim]=.config/nvim
-    [phpactor]=.config/phpactor
     [ssh-config]=.ssh/config
 )
+
+if command -v php &> /dev/null; then
+    files[phpactor]=.config/phpactor
+fi
 
 __backup_file() {
     local source=$1
