@@ -119,7 +119,7 @@ set title
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
 set list
 set hidden
-set updatetime=250
+set updatetime=100
 set shortmess+=cIW
 set spelllang=en_gb
 set path=.,*
