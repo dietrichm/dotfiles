@@ -196,6 +196,16 @@ let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
 let g:airline#extensions#ale#error_symbol = '✘:'
 let g:airline#extensions#ale#warning_symbol = '▲:'
 
+" Custom Airline current function part.
+function! s:CocCurrentFunction() abort
+    return get(b:, 'coc_current_function', '')
+endfunction
+call airline#parts#define('coc_current_function', {
+    \ 'function': expand('<SID>') . 'CocCurrentFunction',
+    \ 'minwidth': 100,
+\ })
+let g:airline_section_x = airline#section#create_right(['coc_current_function', 'filetype'])
+
 " Configure Promptline.
 try
     let g:promptline_theme = 'airline_insert'
@@ -285,7 +295,6 @@ nmap <silent> <Leader>sr <Plug>(coc-references)
 xmap <silent> <Leader>ca <Plug>(coc-codeaction-selected)
 inoremap <silent> <expr> <C-Space> coc#refresh()
 nnoremap <silent> <Leader>h :call CocActionAsync('doHover')<CR>
-nnoremap <silent> <Leader>ts :echo get(b:, 'coc_current_function', '')<CR>
 
 " Configure test runner.
 let g:test_runner_settings = {
