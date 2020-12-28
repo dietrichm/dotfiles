@@ -287,15 +287,6 @@ inoremap <silent> <expr> <C-Space> coc#refresh()
 nnoremap <silent> <Leader>h :call CocActionAsync('doHover')<CR>
 nnoremap <silent> <Leader>ts :echo get(b:, 'coc_current_function', '')<CR>
 
-function! ApplyCocDefinitionMappings() abort
-    " Jump to definition.
-    nmap <silent> <buffer> <C-]> <Plug>(coc-definition)
-
-    " Jump to definition in split.
-    nnoremap <silent> <buffer> <C-W>] :call CocAction('jumpDefinition', 'vsplit')<CR>
-    nnoremap <silent> <buffer> <C-W><C-]> :call CocAction('jumpDefinition', 'vsplit')<CR>
-endfunction
-
 " Configure test runner.
 let g:test_runner_settings = {
     \ 'php': {
