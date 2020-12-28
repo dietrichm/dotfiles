@@ -196,6 +196,15 @@ let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
 let g:airline#extensions#ale#error_symbol = '✘:'
 let g:airline#extensions#ale#warning_symbol = '▲:'
 
+" Custom Airline current function part.
+function! s:CocCurrentFunction() abort
+    return get(b:, 'coc_current_function', '')
+endfunction
+call airline#parts#define('coc_current_function', {
+    \ 'function': expand('<SID>') . 'CocCurrentFunction',
+    \ 'minwidth': 100,
+\ })
+
 " Configure Promptline.
 try
     let g:promptline_theme = 'airline_insert'
