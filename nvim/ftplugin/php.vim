@@ -18,8 +18,6 @@ augroup END
 let b:delimitMate_expand_space = 1
 let b:delimitMate_expand_cr = 1
 
-call ApplyCocDefinitionMappings()
-
 " Searching using ripgrep.
 nnoremap <silent> <buffer> <Leader>sce :execute "Rg \\bclass .+ (extends\|implements) .*\\b" . expand("<cword>") . "\\b"<CR>
 nnoremap <silent> <buffer> <Leader>sci :execute "Rg \\bnew\\s+" . expand("<cword>") . "\\b"<CR>

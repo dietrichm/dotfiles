@@ -2,8 +2,6 @@
 let b:delimitMate_expand_space = 1
 let b:delimitMate_expand_cr = 1
 
-call ApplyCocDefinitionMappings()
-
 " Commands provided by vim-go.
 nmap <silent> <buffer> <Leader>gb <Plug>(go-build)
 nmap <silent> <buffer> <Leader>gc <Plug>(go-coverage-toggle)
