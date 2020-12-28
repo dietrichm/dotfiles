@@ -13,8 +13,6 @@ if !empty(findfile('Pipfile.lock', '.;'))
     \ }
 endif
 
-call ApplyCocDefinitionMappings()
-
 nnoremap <silent> <buffer> <Leader>si :ALEFix isort<CR>
 
 " Searching using ripgrep.
