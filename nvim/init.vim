@@ -290,7 +290,9 @@ let g:UltiSnipsEditSplit = 'context'
 
 " Configure COC.
 nmap <silent> <Leader>ca <Plug>(coc-codeaction)
+nmap <silent> <Leader>re <Plug>(coc-refactor)
 nmap <silent> <Leader>rn <Plug>(coc-rename)
+nmap <silent> <Leader>si <Plug>(coc-implementation)
 nmap <silent> <Leader>sr <Plug>(coc-references)
 xmap <silent> <Leader>ca <Plug>(coc-codeaction-selected)
 inoremap <silent> <expr> <C-Space> coc#refresh()

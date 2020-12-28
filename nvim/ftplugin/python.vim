@@ -13,7 +13,7 @@ if !empty(findfile('Pipfile.lock', '.;'))
     \ }
 endif
 
-nnoremap <silent> <buffer> <Leader>si :ALEFix isort<CR>
+nnoremap <silent> <buffer> <Leader>so :ALEFix isort<CR>
 
 " Searching using ripgrep.
 nnoremap <silent> <buffer> <Leader>sce :execute "Rg \\bclass .+\\(.*\\b" . expand("<cword>") . "\\b.*\\)"<CR>
