@@ -204,6 +204,7 @@ call airline#parts#define('coc_current_function', {
     \ 'function': expand('<SID>') . 'CocCurrentFunction',
     \ 'minwidth': 100,
 \ })
+let g:airline_section_x = airline#section#create_right(['coc_current_function', 'filetype'])
 
 " Configure Promptline.
 try
