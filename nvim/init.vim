@@ -125,6 +125,7 @@ set spelllang=en_gb
 set path=.,*
 set grepprg=rg\ --vimgrep
 set undofile
+set tagfunc=CocTagFunc
 
 " Colours
 set background=dark
