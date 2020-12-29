@@ -195,14 +195,15 @@ let g:airline#extensions#tabline#tab_min_count = 2
 let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
 let g:airline#extensions#ale#error_symbol = '✘:'
 let g:airline#extensions#ale#warning_symbol = '▲:'
+let g:airline#parts#ffenc#skip_expected_string = 'utf-8[unix]'
 
 " Custom Airline current function part.
 function! s:CocCurrentFunction() abort
-    return get(b:, 'coc_current_function', '')
+    return airline#util#shorten(get(b:, 'coc_current_function', ''), 170, 20, 1)
 endfunction
 call airline#parts#define('coc_current_function', {
     \ 'function': expand('<SID>') . 'CocCurrentFunction',
-    \ 'minwidth': 100,
+    \ 'minwidth': 119,
 \ })
 let g:airline_section_x = airline#section#create_right(['coc_current_function', 'filetype'])
 
