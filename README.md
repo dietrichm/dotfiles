@@ -7,6 +7,9 @@ At the moment, the configuration is tailored to developing in Python, PHP, Go, a
 
 These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no longer supported.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
 - [Dependencies](#dependencies)
   - [Optional](#optional)
   - [Fonts](#fonts)
@@ -14,10 +17,14 @@ These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no lo
   - [Updating](#updating)
 - [Custom configuration](#custom-configuration)
   - [Neovim](#neovim)
+    - [Test runner](#test-runner)
   - [Language Servers (LSPs)](#language-servers-lsps)
+  - [isort](#isort)
   - [universal-ctags](#universal-ctags)
   - [Phpactor](#phpactor)
 - [Linting VimL scripts](#linting-viml-scripts)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Dependencies
 
