@@ -66,6 +66,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 
 " Developing.
+Plug 'vim-test/vim-test'
 Plug 'vim-vdebug/vdebug'
 if s:load_go_plugins
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -300,20 +301,13 @@ xmap <silent> <Leader>ca <Plug>(coc-codeaction-selected)
 inoremap <silent> <expr> <C-Space> coc#refresh()
 nnoremap <silent> <Leader>h :call CocActionAsync('doHover')<CR>
 
-" Configure test runner.
-let g:test_runner_settings = {
-    \ 'php': {
-        \ 'executable_case': 'phpunit {file}',
-        \ 'executable_test': 'phpunit {file} --filter={test}',
-    \ },
-    \ 'python': {
-        \ 'executable_case': 'pytest {file}',
-        \ 'executable_test': 'pytest {file} -k {test}',
-    \ },
-    \ 'lua': {
-        \ 'executable_case': 'busted {file}',
-    \ },
-\ }
+" Configure vim-test.
+let g:test#preserve_screen = 1
+let g:test#python#runner = 'pytest'
+let g:test#strategy = 'vimux'
+nnoremap <silent> <Leader>rc :TestFile<CR>
+nnoremap <silent> <Leader>rt :TestNearest<CR>
+nnoremap <silent> <Leader>rr :TestLast<CR>
 
 " Configure Vdebug.
 let g:vdebug_options = {
@@ -385,11 +379,6 @@ nnoremap <silent> <Leader>da :%bd<CR>
 " Path copy mappings.
 nnoremap <silent> <Leader>pc :let @+ = @%<CR>
 nnoremap <silent> <Leader>Pc :let @+ = @% . ":" . line(".")<CR>
-
-" Test runner mappings.
-nnoremap <silent> <Leader>rc :call test_runner#RunCase()<CR>
-nnoremap <silent> <Leader>rt :call test_runner#RunTest()<CR>
-nnoremap <silent> <Leader>rr :call test_runner#ReRun()<CR>
 
 " Use arrow keys for resizing splits.
 nnoremap <silent> <Up>    :resize +1<CR>
