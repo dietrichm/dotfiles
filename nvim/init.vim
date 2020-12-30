@@ -305,6 +305,9 @@ nnoremap <silent> <Leader>h :call CocActionAsync('doHover')<CR>
 let g:test#preserve_screen = 1
 let g:test#python#runner = 'pytest'
 let g:test#strategy = 'vimux'
+nnoremap <silent> <Leader>rc :TestFile<CR>
+nnoremap <silent> <Leader>rt :TestNearest<CR>
+nnoremap <silent> <Leader>rr :TestLast<CR>
 
 " Configure Vdebug.
 let g:vdebug_options = {
@@ -376,11 +379,6 @@ nnoremap <silent> <Leader>da :%bd<CR>
 " Path copy mappings.
 nnoremap <silent> <Leader>pc :let @+ = @%<CR>
 nnoremap <silent> <Leader>Pc :let @+ = @% . ":" . line(".")<CR>
-
-" vim-test mappings.
-nnoremap <silent> <Leader>rc :TestFile<CR>
-nnoremap <silent> <Leader>rt :TestNearest<CR>
-nnoremap <silent> <Leader>rr :TestLast<CR>
 
 " Use arrow keys for resizing splits.
 nnoremap <silent> <Up>    :resize +1<CR>
