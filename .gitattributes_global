@@ -1,4 +1,5 @@
 *.apib diff=markdown
+*.go diff=golang
 *.md diff=markdown
 *.php diff=php
 *.py diff=python
