@@ -303,6 +303,7 @@ nnoremap <silent> <Leader>h :call CocActionAsync('doHover')<CR>
 " Configure vim-test.
 let g:test#preserve_screen = 1
 let g:test#python#runner = 'pytest'
+let g:test#runner_commands = ['PyTest']
 let g:test#strategy = 'vimux'
 nnoremap <silent> <Leader>rc :TestFile<CR>
 nnoremap <silent> <Leader>rt :TestNearest<CR>
