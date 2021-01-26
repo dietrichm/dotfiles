@@ -75,7 +75,7 @@ endif
 if s:load_php_plugins
     Plug 'StanAngeloff/php.vim'
     Plug 'alvan/vim-php-manual'
-    Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
+    Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'}
     Plug 'sniphpets/sniphpets'
         Plug 'sniphpets/sniphpets-common'
         Plug 'sniphpets/sniphpets-phpunit'
