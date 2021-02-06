@@ -127,6 +127,7 @@ set path=.,*
 set grepprg=rg\ --vimgrep
 set undofile
 set tagfunc=CocTagFunc
+set signcolumn=yes
 
 " Colours
 set background=dark
