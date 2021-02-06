@@ -3,5 +3,3 @@ setlocal colorcolumn=+1
 
 setlocal spell
 setlocal nolist
-
-let b:ale_linters = []
