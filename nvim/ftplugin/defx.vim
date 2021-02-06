@@ -4,7 +4,7 @@ setlocal cursorline
 nnoremap <silent> <buffer> <expr> <CR> defx#is_directory() ?
     \ defx#do_action('open') :
     \ defx#do_action('multi', ['drop', 'quit'])
-nnoremap <silent> <buffer> <expr> c defx#do_action('copy')
+nnoremap <silent> <buffer> <nowait> <expr> c defx#do_action('copy')
 nnoremap <silent> <buffer> <expr> m defx#do_action('move')
 nnoremap <silent> <buffer> <expr> p defx#do_action('paste')
 nnoremap <silent> <buffer> <expr> x defx#do_action('multi', [['drop', 'split'], 'quit'])
