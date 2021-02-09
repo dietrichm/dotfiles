@@ -337,6 +337,9 @@ let g:EditorConfig_exclude_patterns = [
     \ '.git/COMMIT_EDITMSG'
 \ ]
 
+" Configure vim-markdown.
+let g:vim_markdown_frontmatter = 1
+
 " Enable search highlight when searching for symbols.
 nnoremap <silent> * :setlocal hlsearch \| :normal! *<CR>
 nnoremap <silent> # :setlocal hlsearch \| :normal! #<CR>
