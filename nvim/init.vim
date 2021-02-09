@@ -339,6 +339,7 @@ let g:EditorConfig_exclude_patterns = [
 
 " Configure vim-markdown.
 let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_folding_style_pythonic = 1
 
 " Enable search highlight when searching for symbols.
 nnoremap <silent> * :setlocal hlsearch \| :normal! *<CR>
