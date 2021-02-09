@@ -92,6 +92,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 
 " Other syntax.
 Plug 'cespare/vim-toml'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
