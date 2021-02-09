@@ -92,6 +92,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 
 " Other syntax.
 Plug 'cespare/vim-toml'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
@@ -336,8 +337,9 @@ let g:EditorConfig_exclude_patterns = [
     \ '.git/COMMIT_EDITMSG'
 \ ]
 
-" Configure folding.
-let g:markdown_folding = 1
+" Configure vim-markdown.
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_folding_style_pythonic = 1
 
 " Enable search highlight when searching for symbols.
 nnoremap <silent> * :setlocal hlsearch \| :normal! *<CR>
