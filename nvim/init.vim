@@ -41,7 +41,7 @@ Plug 'vim-airline/vim-airline'
 " Editing.
 Plug 'editorconfig/editorconfig-vim'
 Plug 'SirVer/ultisnips'
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
     if s:load_php_plugins
         Plug 'marlonfan/coc-phpls', {'do': 'yarn install --frozen-lockfile'}
     endif
