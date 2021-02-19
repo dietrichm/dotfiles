@@ -161,10 +161,6 @@ nnoremap <silent> <Leader>ft :Defx `expand('%:p:h')`
 let g:localvimrc_persistent = 1
 
 " Configure PHP syntax.
-let g:php_html_load = 0
-let g:php_var_selector_is_identifier = 1
-let g:php_manual_online_search_shortcut = ''
-let g:php_namespace_sort_after_insert = 1
 let g:PHP_noArrowMatching = 1
 
 " Configure Semshi.
