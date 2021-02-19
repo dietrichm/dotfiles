@@ -73,7 +73,6 @@ endif
 
 " PHP.
 if s:load_php_plugins
-    Plug 'StanAngeloff/php.vim'
     Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'}
     Plug 'sniphpets/sniphpets'
         Plug 'sniphpets/sniphpets-common'
