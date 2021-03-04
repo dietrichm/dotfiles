@@ -31,6 +31,7 @@ These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no lo
  * [Tmux](https://github.com/tmux/tmux)
  * [Neovim](https://neovim.io/) >= 0.5.0
  * zsh
+ * [Stow](http://www.gnu.org/software/stow/)
  * OpenSSH
  * git
  * GnuPG
