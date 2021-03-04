@@ -14,12 +14,12 @@ declare -A files=(
     [.gitignore_global]=.gitignore_global
     [.ignore]=.ignore
     [.tigrc]=.tigrc
-    [.tmux.conf]=.tmux.conf
     [ctags]=.config/ctags
     [gpg-agent.conf]=.gnupg/gpg-agent.conf
     [kitty]=.config/kitty
     [nvim]=.config/nvim
     [ssh-config]=.ssh/config
+    [tmux/tmux.conf]=.tmux.conf
 )
 
 if command -v php &> /dev/null; then
