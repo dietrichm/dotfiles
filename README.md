@@ -14,6 +14,7 @@ These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no lo
   - [Optional](#optional)
   - [Fonts](#fonts)
 - [Installation](#installation)
+  - [Themes](#themes)
   - [Updating](#updating)
 - [Custom configuration](#custom-configuration)
   - [Neovim](#neovim)
@@ -62,6 +63,16 @@ The kitty configuration relies on [JetBrains Mono](https://github.com/JetBrains/
  * Execute `config-install.sh`.
  * Opening Neovim for the first time will install _vim-plug_ and all plugins.
  * In Tmux, execute `prefix` + <kbd>I</kbd>.
+
+### Themes
+
+Multiple themes are supported by installing specific config file variants for the desired theme. This way colours are configured for kitty, zsh, Tmux, Neovim and FZF.
+
+These files are installed through the `config-install.sh` script. Pass the theme name as first argument to the script to install a specific one.
+
+The following themes are available:
+
+* `base16-bright`
 
 ### Updating
 
