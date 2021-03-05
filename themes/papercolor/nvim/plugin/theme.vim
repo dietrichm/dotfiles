@@ -10,3 +10,6 @@ let g:PaperColor_Theme_Options = {
 " Colours
 set background=light
 colorscheme PaperColor
+
+" Error messages have grey text.
+highlight ErrorMsg ctermfg=0
