@@ -75,3 +75,9 @@ for file in "${!files[@]}"; do
     ln -s "$target" "$source"
     echo "Installed $file as $source."
 done
+echo
+
+# Install desired theme.
+theme=${1:-base16-bright}
+stow -v --override='.*' -d $MY_CONFIG_ROOT/themes $theme
+echo "Installed $theme theme."
