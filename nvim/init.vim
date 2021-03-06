@@ -31,6 +31,7 @@ Plug 'preservim/vimux'
 
 " UI and colours.
 Plug 'chriskempson/base16-vim'
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     if s:load_line_plugins
