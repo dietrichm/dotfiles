@@ -30,6 +30,11 @@ __backup_file() {
     local source=$1
 
     if [ ! -e "$source" ]; then
+        if [ -L "$source" ]; then
+            rm "$source"
+            echo "Removed broken symlink $source."
+        fi
+
         return
     fi
 
