@@ -29,11 +29,13 @@ fi
 __backup_file() {
     local source=$1
 
-    if [ -e "$source" ]; then
-        # File exists already (link, file, directory).
-        mv "$source" "$source.backup"
-        echo "Backed up $source as $source.backup."
+    if [ ! -e "$source" ]; then
+        return
     fi
+
+    # File exists already (link, file, directory).
+    mv "$source" "$source.backup"
+    echo "Backed up $source as $source.backup."
 }
 
 # Compile and install terminfo file for Tmux.
