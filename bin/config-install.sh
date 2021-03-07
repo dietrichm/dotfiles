@@ -9,12 +9,12 @@ set -e
 
 # Local file to target in ~.
 declare -A files=(
-    [.gitattributes_global]=.gitattributes_global
-    [.gitconfig]=.gitconfig
-    [.gitignore_global]=.gitignore_global
     [.ignore]=.ignore
     [.tigrc]=.tigrc
     [ctags]=.config/ctags
+    [git/.gitattributes_global]=.gitattributes_global
+    [git/.gitconfig]=.gitconfig
+    [git/.gitignore_global]=.gitignore_global
     [gpg-agent.conf]=.gnupg/gpg-agent.conf
     [kitty]=.config/kitty
     [nvim]=.config/nvim
