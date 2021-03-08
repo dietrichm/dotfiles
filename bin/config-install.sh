@@ -15,7 +15,7 @@ declare -A files=(
     [git/.gitattributes_global]=.gitattributes_global
     [git/.gitconfig]=.gitconfig
     [git/.gitignore_global]=.gitignore_global
-    [gpg-agent.conf]=.gnupg/gpg-agent.conf
+    [git/.gnupg/gpg-agent.conf]=.gnupg/gpg-agent.conf
     [kitty]=.config/kitty
     [nvim]=.config/nvim
     [ssh-config]=.ssh/config
@@ -54,7 +54,9 @@ echo
 for file in "${!files[@]}"; do
     source="$HOME/${files[$file]}"
     target="$MY_CONFIG_ROOT/$file"
-    relative_target="$(realpath --relative-to="$HOME" "$target")"
+
+    source_directory="$(dirname "$source")"
+    relative_target="$(realpath --relative-to="$source_directory" "$target")"
 
     if [ -h "$source" ]; then
         # Symlink exists already.
