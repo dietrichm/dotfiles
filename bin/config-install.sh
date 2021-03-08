@@ -44,11 +44,11 @@ __backup_file() {
 }
 
 # Compile and install terminfo file for Tmux.
-tic $MY_CONFIG_ROOT/tmux-256color.terminfo \
+tic "$MY_CONFIG_ROOT/tmux-256color.terminfo" \
     || echo -e "Skipped compiling terminfo for Tmux.\n"
 
 # Install Python dependencies.
-pip3.8 install --user -U -r $MY_CONFIG_ROOT/requirements.txt
+pip3.8 install --user -U -r "$MY_CONFIG_ROOT/requirements.txt"
 echo
 
 for file in "${!files[@]}"; do
@@ -70,7 +70,7 @@ for file in "${!files[@]}"; do
     fi
 
     echo -n " * Install $file as $source? [y/n] "
-    read install
+    read -r install
 
     if [ "$install" != "y" ] && [ "$install" != "Y" ]; then
         continue
@@ -86,5 +86,5 @@ echo
 
 # Install desired theme.
 theme=${1:-base16-bright}
-stow -v --override='.*' -d $MY_CONFIG_ROOT/themes $theme
+stow -v --override='.*' -d "$MY_CONFIG_ROOT/themes" "$theme"
 echo "Installed $theme theme."
