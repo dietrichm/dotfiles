@@ -9,12 +9,12 @@ set -e
 
 # Local file to target in ~.
 declare -A files=(
-    [.gitattributes_global]=.gitattributes_global
-    [.gitconfig]=.gitconfig
-    [.gitignore_global]=.gitignore_global
     [.ignore]=.ignore
     [.tigrc]=.tigrc
     [ctags]=.config/ctags
+    [git/.gitattributes_global]=.gitattributes_global
+    [git/.gitconfig]=.gitconfig
+    [git/.gitignore_global]=.gitignore_global
     [gpg-agent.conf]=.gnupg/gpg-agent.conf
     [kitty]=.config/kitty
     [nvim]=.config/nvim
@@ -29,11 +29,18 @@ fi
 __backup_file() {
     local source=$1
 
-    if [ -e "$source" ]; then
-        # File exists already (link, file, directory).
-        mv "$source" "$source.backup"
-        echo "Backed up $source as $source.backup."
+    if [ ! -e "$source" ]; then
+        if [ -L "$source" ]; then
+            rm "$source"
+            echo "Removed broken symlink $source."
+        fi
+
+        return
     fi
+
+    # File exists already (link, file, directory).
+    mv "$source" "$source.backup"
+    echo "Backed up $source as $source.backup."
 }
 
 # Compile and install terminfo file for Tmux.
@@ -45,17 +52,15 @@ pip3.8 install --user -U -r $MY_CONFIG_ROOT/requirements.txt
 echo
 
 for file in "${!files[@]}"; do
-    source="${files[$file]}"
-    target="$file"
-
-    [ "${source:0:1}" = "/" ] || source="$HOME/$source"
-    [ "${target:0:1}" = "/" ] || target="$MY_CONFIG_ROOT/$target"
+    source="$HOME/${files[$file]}"
+    target="$MY_CONFIG_ROOT/$file"
+    relative_target="$(realpath --relative-to="$HOME" "$target")"
 
     if [ -h "$source" ]; then
         # Symlink exists already.
-        existing=$(readlink "$source")
+        existing="$(readlink "$source")"
 
-        if [ "$existing" = "$target" ]; then
+        if [ "$existing" = "$target" ] || [ "$existing" = "$relative_target" ]; then
             # Correct symlink.
             echo "Skipping $file; already installed."
             continue
@@ -72,7 +77,7 @@ for file in "${!files[@]}"; do
     __backup_file "$source"
 
     # Install symlink.
-    ln -s "$target" "$source"
+    ln -s "$relative_target" "$source"
     echo "Installed $file as $source."
 done
 echo
