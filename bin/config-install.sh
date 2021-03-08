@@ -77,7 +77,7 @@ for file in "${!files[@]}"; do
     __backup_file "$source"
 
     # Install symlink.
-    ln -s "$target" "$source"
+    ln -s "$relative_target" "$source"
     echo "Installed $file as $source."
 done
 echo
