@@ -54,12 +54,13 @@ echo
 for file in "${!files[@]}"; do
     source="$HOME/${files[$file]}"
     target="$MY_CONFIG_ROOT/$file"
+    relative_target="$(realpath --relative-to="$HOME" "$target")"
 
     if [ -h "$source" ]; then
         # Symlink exists already.
-        existing=$(readlink "$source")
+        existing="$(readlink "$source")"
 
-        if [ "$existing" = "$target" ]; then
+        if [ "$existing" = "$target" ] || [ "$existing" = "$relative_target" ]; then
             # Correct symlink.
             echo "Skipping $file; already installed."
             continue
