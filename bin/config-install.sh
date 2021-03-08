@@ -52,11 +52,8 @@ pip3.8 install --user -U -r $MY_CONFIG_ROOT/requirements.txt
 echo
 
 for file in "${!files[@]}"; do
-    source="${files[$file]}"
-    target="$file"
-
-    [ "${source:0:1}" = "/" ] || source="$HOME/$source"
-    [ "${target:0:1}" = "/" ] || target="$MY_CONFIG_ROOT/$target"
+    source="$HOME/${files[$file]}"
+    target="$MY_CONFIG_ROOT/$file"
 
     if [ -h "$source" ]; then
         # Symlink exists already.
