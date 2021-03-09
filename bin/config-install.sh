@@ -19,7 +19,7 @@ declare -A files=(
     [kitty]=.config/kitty
     [nvim]=.config/nvim
     [ssh-config]=.ssh/config
-    [tmux/tmux.conf]=.tmux.conf
+    [tmux/.tmux.conf]=.tmux.conf
 )
 
 if command -v php &> /dev/null; then
