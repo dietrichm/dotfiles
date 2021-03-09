@@ -10,7 +10,6 @@ set -e
 # Local file to target in ~.
 declare -A files=(
     [.ignore]=.ignore
-    [.tigrc]=.tigrc
     [ctags]=.config/ctags
     [git/.gitattributes_global]=.gitattributes_global
     [git/.gitconfig]=.gitconfig
@@ -19,6 +18,7 @@ declare -A files=(
     [kitty/.config/kitty]=.config/kitty
     [nvim]=.config/nvim
     [ssh/.ssh/config]=.ssh/config
+    [tig/.config/tig]=.config/tig
     [tmux/.tmux.conf]=.tmux.conf
 )
 
