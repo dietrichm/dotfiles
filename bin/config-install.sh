@@ -18,7 +18,7 @@ declare -A files=(
     [git/.gnupg/gpg-agent.conf]=.gnupg/gpg-agent.conf
     [kitty/.config/kitty]=.config/kitty
     [nvim]=.config/nvim
-    [ssh-config]=.ssh/config
+    [ssh/.ssh/config]=.ssh/config
     [tmux/.tmux.conf]=.tmux.conf
 )
 
