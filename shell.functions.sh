@@ -9,5 +9,5 @@ ctags() {
 }
 
 ca() {
-    conda activate "$(basename $PWD)"
+    conda activate "$(basename "$PWD")"
 }
