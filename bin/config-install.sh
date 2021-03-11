@@ -23,7 +23,7 @@ declare -A files=(
 )
 
 if command -v php &> /dev/null; then
-    files[phpactor]=.config/phpactor
+    files[nvim/.config/phpactor]=.config/phpactor
 fi
 
 __backup_file() {
