@@ -9,21 +9,21 @@ set -e
 
 # Local file to target in ~.
 declare -A files=(
-    [.ignore]=.ignore
-    [ctags]=.config/ctags
     [git/.gitattributes_global]=.gitattributes_global
     [git/.gitconfig]=.gitconfig
     [git/.gitignore_global]=.gitignore_global
     [git/.gnupg/gpg-agent.conf]=.gnupg/gpg-agent.conf
     [kitty/.config/kitty]=.config/kitty
-    [nvim]=.config/nvim
+    [nvim/.config/ctags]=.config/ctags
+    [nvim/.config/nvim]=.config/nvim
+    [nvim/.ignore]=.ignore
     [ssh/.ssh/config]=.ssh/config
     [tig/.config/tig]=.config/tig
     [tmux/.tmux.conf]=.tmux.conf
 )
 
 if command -v php &> /dev/null; then
-    files[phpactor]=.config/phpactor
+    files[nvim/.config/phpactor]=.config/phpactor
 fi
 
 __backup_file() {
