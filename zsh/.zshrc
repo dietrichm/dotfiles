@@ -26,8 +26,8 @@ compinit
 source "$MY_CONFIG_ROOT/vendor/fzf-tab/fzf-tab.plugin.zsh"
 
 # Load subfiles.
-for file in "$MY_CONFIG_ROOT"/shell.*.sh; do
-  source "$file"
+for file in "$ZDOTDIR"/*.zsh; do
+    source "$file"
 done
 
 return 0
