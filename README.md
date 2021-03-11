@@ -108,7 +108,7 @@ let g:phpactorPhpBin = '/usr/local/bin/php'
 
 ### Language Servers (LSPs)
 
-All [language servers](https://langserver.org/) are currently installed and maintained using [coc.nvim](https://github.com/neoclide/coc.nvim) and are configured in `nvim/coc-settings.json`. Project specific settings can be added in the project's `.vim/coc-settings.json` file.
+All [language servers](https://langserver.org/) are currently installed and maintained using [coc.nvim](https://github.com/neoclide/coc.nvim) and are configured in `nvim/.config/nvim/coc-settings.json`. Project specific settings can be added in the project's `.vim/coc-settings.json` file.
 
 The example below configures Pyright to treat a local directory as an extra root path for Python analysis:
 
@@ -132,11 +132,11 @@ line_length = 99
 
 ### universal-ctags
 
-Aside from common global configuration options set in `ctags/global.ctags`, additional project-level parameters can be defined within `.ctags.d/*.ctags` files. This allows to exclude i.e. compiled or vendor source files using more `--exclude=` options.
+Aside from common global configuration options set in `nvim/.config/ctags/global.ctags`, additional project-level parameters can be defined within `.ctags.d/*.ctags` files. This allows to exclude i.e. compiled or vendor source files using more `--exclude=` options.
 
 ### Phpactor
 
-Additionally to settings in `phpactor/phpactor.yml`, config options can be set per project in a `.phpactor.yml` file. For example, to change the project's PHP version, override the default indentation to tabs and change the path to Composer's autoloader:
+Additionally to settings in `nvim/.config/phpactor/phpactor.yml`, config options can be set per project in a `.phpactor.yml` file. For example, to change the project's PHP version, override the default indentation to tabs and change the path to Composer's autoloader:
 
 ```yaml
 php.version: "7.3.0"
