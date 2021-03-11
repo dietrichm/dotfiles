@@ -17,6 +17,7 @@ declare -A files=(
     [nvim/.config/ctags]=.config/ctags
     [nvim/.config/nvim]=.config/nvim
     [nvim/.ignore]=.ignore
+    [nvim/.ripgrep.conf]=.ripgrep.conf
     [ssh/.ssh/config]=.ssh/config
     [tig/.config/tig]=.config/tig
     [tmux/.tmux.conf]=.tmux.conf
