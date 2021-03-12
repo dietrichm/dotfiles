@@ -63,7 +63,7 @@ for file in "${!files[@]}"; do
         # Symlink exists already.
         existing="$(readlink "$source")"
 
-        if [ "$existing" = "$target" ] || [ "$existing" = "$relative_target" ]; then
+        if [ "$existing" = "$relative_target" ]; then
             # Correct symlink.
             echo "Skipping $file; already installed."
             continue
