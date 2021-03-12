@@ -14,7 +14,6 @@ declare -A files=(
     [nvim/.config/nvim]=.config/nvim
     [nvim/.ignore]=.ignore
     [nvim/.ripgrep.conf]=.ripgrep.conf
-    [ssh/.ssh/config]=.ssh/config
     [tig/.config/tig]=.config/tig
     [tmux/.tmux.conf]=.tmux.conf
 )
@@ -81,7 +80,7 @@ for file in "${!files[@]}"; do
 done
 echo
 
-stow -v2 -d "$MY_CONFIG_ROOT" -t "$HOME" git
+stow -v2 -d "$MY_CONFIG_ROOT" -t "$HOME" git ssh
 echo
 
 # Install desired theme.
