@@ -7,66 +7,12 @@ fi
 
 set -e
 
-# Local file to target in ~.
-declare -A files=(
-)
-
-__backup_file() {
-    local source=$1
-
-    if [ ! -e "$source" ]; then
-        if [ -L "$source" ]; then
-            rm "$source"
-            echo "Removed broken symlink $source."
-        fi
-
-        return
-    fi
-
-    # File exists already (link, file, directory).
-    mv "$source" "$source.backup"
-    echo "Backed up $source as $source.backup."
-}
-
 # Compile and install terminfo file for Tmux.
 tic "$MY_CONFIG_ROOT/etc/tmux-256color.terminfo" \
     || echo -e "Skipped compiling terminfo for Tmux.\n"
 
 # Install Python dependencies.
 pip3.8 install --user -U -r "$MY_CONFIG_ROOT/etc/requirements.txt"
-echo
-
-for file in "${!files[@]}"; do
-    source="$HOME/${files[$file]}"
-    target="$MY_CONFIG_ROOT/$file"
-
-    source_directory="$(dirname "$source")"
-    relative_target="$(realpath --relative-to="$source_directory" "$target")"
-
-    if [ -h "$source" ]; then
-        # Symlink exists already.
-        existing="$(readlink "$source")"
-
-        if [ "$existing" = "$relative_target" ]; then
-            # Correct symlink.
-            echo "Skipping $file; already installed."
-            continue
-        fi
-    fi
-
-    echo -n " * Install $file as $source? [y/n] "
-    read -r install
-
-    if [ "$install" != "y" ] && [ "$install" != "Y" ]; then
-        continue
-    fi
-
-    __backup_file "$source"
-
-    # Install symlink.
-    ln -s "$relative_target" "$source"
-    echo "Installed $file as $source."
-done
 echo
 
 stow -v2 -d "$MY_CONFIG_ROOT" -t "$HOME" git ssh tig kitty nvim tmux
