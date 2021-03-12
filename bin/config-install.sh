@@ -9,16 +9,8 @@ set -e
 
 # Local file to target in ~.
 declare -A files=(
-    [nvim/.config/ctags]=.config/ctags
-    [nvim/.config/nvim]=.config/nvim
-    [nvim/.ignore]=.ignore
-    [nvim/.ripgrep.conf]=.ripgrep.conf
     [tmux/.tmux.conf]=.tmux.conf
 )
-
-if command -v php &> /dev/null; then
-    files[nvim/.config/phpactor]=.config/phpactor
-fi
 
 __backup_file() {
     local source=$1
@@ -78,7 +70,7 @@ for file in "${!files[@]}"; do
 done
 echo
 
-stow -v2 -d "$MY_CONFIG_ROOT" -t "$HOME" git ssh tig kitty
+stow -v2 -d "$MY_CONFIG_ROOT" -t "$HOME" git ssh tig kitty nvim
 echo
 
 # Install desired theme.
