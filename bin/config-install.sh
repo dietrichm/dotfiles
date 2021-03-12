@@ -9,10 +9,6 @@ set -e
 
 # Local file to target in ~.
 declare -A files=(
-    [git/.gitattributes_global]=.gitattributes_global
-    [git/.gitconfig]=.gitconfig
-    [git/.gitignore_global]=.gitignore_global
-    [git/.gnupg/gpg-agent.conf]=.gnupg/gpg-agent.conf
     [kitty/.config/kitty]=.config/kitty
     [nvim/.config/ctags]=.config/ctags
     [nvim/.config/nvim]=.config/nvim
@@ -83,6 +79,9 @@ for file in "${!files[@]}"; do
     ln -s "$relative_target" "$source"
     echo "Installed $file as $source."
 done
+echo
+
+stow -v2 -d "$MY_CONFIG_ROOT" -t "$HOME" git
 echo
 
 # Install desired theme.
