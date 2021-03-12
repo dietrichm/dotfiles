@@ -9,7 +9,6 @@ set -e
 
 # Local file to target in ~.
 declare -A files=(
-    [kitty/.config/kitty]=.config/kitty
     [nvim/.config/ctags]=.config/ctags
     [nvim/.config/nvim]=.config/nvim
     [nvim/.ignore]=.ignore
@@ -79,7 +78,7 @@ for file in "${!files[@]}"; do
 done
 echo
 
-stow -v2 -d "$MY_CONFIG_ROOT" -t "$HOME" git ssh tig
+stow -v2 -d "$MY_CONFIG_ROOT" -t "$HOME" git ssh tig kitty
 echo
 
 # Install desired theme.
