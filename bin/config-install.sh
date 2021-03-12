@@ -9,7 +9,6 @@ set -e
 
 # Local file to target in ~.
 declare -A files=(
-    [tmux/.tmux.conf]=.tmux.conf
 )
 
 __backup_file() {
@@ -70,7 +69,7 @@ for file in "${!files[@]}"; do
 done
 echo
 
-stow -v2 -d "$MY_CONFIG_ROOT" -t "$HOME" git ssh tig kitty nvim
+stow -v2 -d "$MY_CONFIG_ROOT" -t "$HOME" git ssh tig kitty nvim tmux
 echo
 
 # Install desired theme.
