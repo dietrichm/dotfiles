@@ -20,5 +20,5 @@ echo
 
 # Install desired theme.
 theme=${1:-base16-bright}
-stow -v --override='.*' -d "$MY_CONFIG_ROOT/themes" "$theme"
+stow -v2 --override='.*' -d "$MY_CONFIG_ROOT/themes" "$theme"
 echo "Installed $theme theme."
