@@ -15,10 +15,9 @@ tic "$MY_CONFIG_ROOT/etc/tmux-256color.terminfo" \
 pip3.8 install --user -U -r "$MY_CONFIG_ROOT/etc/requirements.txt"
 echo
 
-stow -v2 -d "$MY_CONFIG_ROOT" -t "$HOME" git ssh tig kitty nvim tmux
-echo
-
 # Install desired theme.
 theme=${1:-base16-bright}
 stow -v2 --override='.*' -d "$MY_CONFIG_ROOT/themes" "$theme"
-echo "Installed $theme theme."
+echo -e "Installed $theme theme.\n"
+
+stow -v2 -d "$MY_CONFIG_ROOT" -t "$HOME" git ssh tig kitty nvim tmux
