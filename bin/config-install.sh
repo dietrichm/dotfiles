@@ -7,6 +7,15 @@ fi
 
 set -e
 
+all_packages=(
+    git
+    kitty
+    nvim
+    ssh
+    tig
+    tmux
+)
+
 # Compile and install terminfo file for Tmux.
 tic "$MY_CONFIG_ROOT/etc/tmux-256color.terminfo" \
     || echo -e "Skipped compiling terminfo for Tmux.\n"
@@ -20,4 +29,4 @@ theme=${1:-base16-bright}
 stow -v2 --override='.*' -d "$MY_CONFIG_ROOT/themes" "$theme"
 echo -e "Installed $theme theme.\n"
 
-stow -v2 -d "$MY_CONFIG_ROOT" -t "$HOME" git ssh tig kitty nvim tmux
+stow -v2 -d "$MY_CONFIG_ROOT" -t "$HOME" "${all_packages[@]}"
