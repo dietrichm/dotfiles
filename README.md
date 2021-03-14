@@ -15,6 +15,7 @@ These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no lo
   - [Fonts](#fonts)
 - [Installation](#installation)
   - [Themes](#themes)
+  - [Config packages](#config-packages)
   - [Updating](#updating)
 - [Custom configuration](#custom-configuration)
   - [Neovim](#neovim)
@@ -60,7 +61,7 @@ The kitty configuration relies on [JetBrains Mono](https://github.com/JetBrains/
 
  * In the repo, execute `git submodule update --init`.
  * Edit `~/.zshenv` to read `export ZDOTDIR="$HOME/my-repos/dotfiles/zsh"` (adapt directory).
- * Execute `config-install.sh`.
+ * Execute `config-install.sh` to install all [config packages](#config-packages).
  * Opening Neovim for the first time will install _vim-plug_ and all plugins.
  * In Tmux, execute `prefix` + <kbd>I</kbd>.
 
@@ -74,6 +75,23 @@ The following themes are available:
 
 * `base16-bright` (default)
 * `papercolor`
+
+### Config packages
+
+The following (Stow based) config packages are available:
+
+* `git`
+* `kitty`
+* `nvim`
+* `ssh`
+* `tig`
+* `tmux`
+
+By default, running `config-install.sh` installs all of them.
+If you wish to only install specific packages, pass them as a second argument (after the theme name) to the script.
+Separate multiple packages using commas: `config-install.sh papercolor ssh,git`.
+
+**Note**: zsh is not installed as a package and is not optional.
 
 ### Updating
 
