@@ -16,6 +16,12 @@ all_packages=(
     tmux
 )
 
+if [ -n "$2" ]; then
+    IFS=',' read -r -a selected_packages <<< "$2"
+else
+    selected_packages=("${all_packages[@]}")
+fi
+
 # Compile and install terminfo file for Tmux.
 tic "$MY_CONFIG_ROOT/etc/tmux-256color.terminfo" \
     || echo -e "Skipped compiling terminfo for Tmux.\n"
@@ -29,4 +35,4 @@ theme=${1:-base16-bright}
 stow -v2 --override='.*' -d "$MY_CONFIG_ROOT/themes" "$theme"
 echo -e "Installed $theme theme.\n"
 
-stow -v2 -d "$MY_CONFIG_ROOT" -t "$HOME" "${all_packages[@]}"
+stow -v2 -d "$MY_CONFIG_ROOT" -t "$HOME" "${selected_packages[@]}"
