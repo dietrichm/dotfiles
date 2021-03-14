@@ -15,6 +15,7 @@ These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no lo
   - [Fonts](#fonts)
 - [Installation](#installation)
   - [Themes](#themes)
+  - [Config packages](#config-packages)
   - [Updating](#updating)
 - [Custom configuration](#custom-configuration)
   - [Neovim](#neovim)
@@ -28,39 +29,39 @@ These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no lo
 
 ## Dependencies
 
- * zsh
- * [Stow](http://www.gnu.org/software/stow/)
- * [kitty](https://sw.kovidgoyal.net/kitty/)
- * [Tmux](https://github.com/tmux/tmux)
- * [Neovim](https://neovim.io/) >= 0.5.0
- * OpenSSH
+The following is required for installing and using these dotfiles:
+
  * git
- * GnuPG
+ * zsh
+ * Bash
  * Python 3.8 and pip
- * Node >= 12.0.0
- * Yarn
- * [ripgrep](https://github.com/BurntSushi/ripgrep)
- * [universal-ctags](http://ctags.io/)
- * [tig](https://jonas.github.io/tig/)
+ * [Stow](http://www.gnu.org/software/stow/)
 
 ### Optional
 
-The following dependencies are _optional_ and enable additional functionality, mostly in Neovim.
+Depending on which [config packages](#config-packages) are installed, these dependencies are also required:
 
- * Go (Golang)
- * PHP 7
- * Composer
- * [restic](https://restic.github.io/)
-
-### Fonts
-
-The kitty configuration relies on [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) to be available and will enable its font ligatures.
+ * `git`: GnuPG
+ * `kitty`
+     * [kitty](https://sw.kovidgoyal.net/kitty/)
+     * [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
+ * `nvim`
+     * [Neovim](https://neovim.io/) >= 0.5.0
+     * Node >= 12.0.0 and Yarn
+     * [ripgrep](https://github.com/BurntSushi/ripgrep)
+     * [universal-ctags](http://ctags.io/)
+     * _Optional_
+         * Go (Golang)
+         * PHP 7 and Composer
+ * `ssh`: OpenSSH
+ * `tig`: [tig](https://jonas.github.io/tig/)
+ * `tmux`: [Tmux](https://github.com/tmux/tmux)
 
 ## Installation
 
  * In the repo, execute `git submodule update --init`.
  * Edit `~/.zshenv` to read `export ZDOTDIR="$HOME/my-repos/dotfiles/zsh"` (adapt directory).
- * Execute `config-install.sh`.
+ * Execute `config-install.sh` to install all [config packages](#config-packages).
  * Opening Neovim for the first time will install _vim-plug_ and all plugins.
  * In Tmux, execute `prefix` + <kbd>I</kbd>.
 
@@ -74,6 +75,21 @@ The following themes are available:
 
 * `base16-bright` (default)
 * `papercolor`
+
+### Config packages
+
+The following (Stow based) config packages are available:
+
+* `git`
+* `kitty`
+* `nvim`
+* `ssh`
+* `tig`
+* `tmux`
+
+By default, running `config-install.sh` installs all of them.
+If you wish to only install specific packages, pass them as a second argument (after the theme name) to the script.
+Separate multiple packages using commas: `config-install.sh papercolor ssh,git`.
 
 ### Updating
 
