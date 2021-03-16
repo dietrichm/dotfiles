@@ -4,7 +4,8 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 # Options.
-setopt appendhistory beep
+setopt appendhistory
+setopt beep
 
 # Disable right prompt indent.
 ZLE_RPROMPT_INDENT=0
