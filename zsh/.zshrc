@@ -6,6 +6,7 @@ SAVEHIST=1000
 # Options.
 setopt appendhistory
 setopt beep
+setopt globdots
 
 # Disable right prompt indent.
 ZLE_RPROMPT_INDENT=0
