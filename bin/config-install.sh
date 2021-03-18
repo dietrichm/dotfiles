@@ -29,7 +29,7 @@ if [[ " ${selected_packages[*]} " =~ " tmux " ]]; then
 fi
 
 # Install Python dependencies.
-pip3.8 install --user -U -r "$MY_CONFIG_ROOT/etc/requirements.txt"
+pip3 install --user -U -r "$MY_CONFIG_ROOT/etc/requirements.txt"
 echo
 
 # Install desired theme.
