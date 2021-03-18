@@ -12,7 +12,6 @@ These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no lo
 
 - [Dependencies](#dependencies)
   - [Optional](#optional)
-  - [Fonts](#fonts)
 - [Installation](#installation)
   - [Themes](#themes)
   - [Config packages](#config-packages)
