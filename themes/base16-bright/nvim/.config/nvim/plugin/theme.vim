@@ -1,6 +1,9 @@
 " Colours
 set background=dark
-colorscheme base16-bright
+try
+    colorscheme base16-bright
+catch /^Vim\%((\a\+)\)\=:E185/
+endtry
 
 " Wrong spell words have black text.
 highlight SpellBad ctermfg=0
