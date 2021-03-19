@@ -7,6 +7,7 @@ endif
 
 let s:nvim_config_root = $HOME . '/.config/nvim'
 let s:load_line_plugins = 0
+let s:load_coc_plugins = executable('yarn') == 1
 let s:load_go_plugins = executable('go') == 1
 let s:load_php_plugins = executable('php') == 1
 
@@ -42,7 +43,8 @@ Plug 'vim-airline/vim-airline'
 " Editing.
 Plug 'editorconfig/editorconfig-vim'
 Plug 'SirVer/ultisnips'
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+if s:load_coc_plugins
+    Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
     if s:load_php_plugins
         Plug 'marlonfan/coc-phpls', {'do': 'yarn install --frozen-lockfile'}
     endif
@@ -53,6 +55,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lock
     if s:load_go_plugins
         Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
     endif
+endif
 Plug 'dense-analysis/ale'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
@@ -126,7 +129,9 @@ set spelllang=en_gb
 set path=.,*
 set grepprg=rg\ --vimgrep
 set undofile
-set tagfunc=CocTagFunc
+if s:load_coc_plugins
+    set tagfunc=CocTagFunc
+endif
 set signcolumn=yes
 
 " Comments are rendered in italic.
