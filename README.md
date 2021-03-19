@@ -46,10 +46,10 @@ Depending on which [config packages](#config-packages) are installed, these depe
      * [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
  * `nvim`
      * [Neovim](https://neovim.io/) >= 0.5.0 or HEAD -- see [install instructions](https://github.com/neovim/neovim/wiki/Installing-Neovim)
-     * Node >= 12.0.0 and Yarn
      * [ripgrep](https://github.com/BurntSushi/ripgrep)
      * [universal-ctags](http://ctags.io/)
      * _Optional_
+         * Node >= 12.0.0 and Yarn (used for [coc.nvim](https://github.com/neoclide/coc.nvim) and LSPs)
          * Go (Golang)
          * PHP 7 and Composer
  * `ssh`: OpenSSH
