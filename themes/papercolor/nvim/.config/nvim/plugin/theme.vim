@@ -9,7 +9,10 @@ let g:PaperColor_Theme_Options = {
 
 " Colours
 set background=light
-colorscheme PaperColor
+try
+    colorscheme PaperColor
+catch /^Vim\%((\a\+)\)\=:E185/
+endtry
 
 " Error messages have grey text.
 highlight ErrorMsg ctermfg=0
