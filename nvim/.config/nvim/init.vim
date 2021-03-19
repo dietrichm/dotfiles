@@ -1,10 +1,5 @@
 scriptencoding utf-8
 
-if executable('yarn') < 1
-    echoerr 'Yarn is not installed - plugins will fail to install. Skipping loading init.vim.'
-    finish
-endif
-
 let s:nvim_config_root = $HOME . '/.config/nvim'
 let s:load_line_plugins = 0
 let s:load_coc_plugins = executable('yarn') == 1
@@ -13,6 +8,10 @@ let s:load_php_plugins = executable('php') == 1
 
 let s:vim_plug_script = s:nvim_config_root . '/autoload/plug.vim'
 if empty(glob(s:vim_plug_script))
+    if !s:load_coc_plugins && confirm('Yarn is not installed - install plugins without COC?', "Yes\nNo") != 1
+        finish
+    endif
+
     execute '!curl -fLo ' . shellescape(s:vim_plug_script) . ' --create-dirs '
         \ . 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     " vint: next-line -ProhibitAutocmdWithNoGroup
