@@ -77,9 +77,6 @@ endif
 " PHP.
 if s:load_php_plugins
     Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'}
-    Plug 'sniphpets/sniphpets'
-        Plug 'sniphpets/sniphpets-common'
-        Plug 'sniphpets/sniphpets-phpunit'
 endif
 
 " JavaScript.
@@ -312,9 +309,6 @@ let g:go_fmt_fail_silently = 1
 
 " Configure splitjoin.
 let g:splitjoin_php_method_chain_full = 1
-
-" Configure Sniphpets.
-let g:sniphpets_common_disable_shortcuts = 1
 
 " Configure EditorConfig.
 let g:EditorConfig_exclude_patterns = [
