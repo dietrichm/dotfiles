@@ -306,6 +306,7 @@ let g:vdebug_options = {
 let g:go_code_completion_enabled = 0
 let g:go_def_mapping_enabled = 0
 let g:go_fmt_fail_silently = 1
+let g:go_jump_to_error = 0
 
 " Configure splitjoin.
 let g:splitjoin_php_method_chain_full = 1
