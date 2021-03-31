@@ -17,6 +17,9 @@ endtry
 " Error messages have grey text.
 highlight ErrorMsg ctermfg=0
 
+" Allow whitespace (list) characters to change background when selected.
+highlight Whitespace ctermfg=250 ctermbg=NONE
+
 " Suitable Semshi colours for light theme.
 highlight semshiAttribute ctermfg=7
 highlight semshiBuiltin ctermfg=11
