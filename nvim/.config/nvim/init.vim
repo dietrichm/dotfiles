@@ -102,7 +102,7 @@ set scrolloff=2
 set number
 set numberwidth=1
 set fileformats=unix
-set noshowmode
+set showmode
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
