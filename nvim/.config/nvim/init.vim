@@ -171,6 +171,7 @@ nnoremap <silent> <Leader>lf :ALEFix<CR>
 " Configure Airline.
 let g:airline_powerline_fonts = 1
 let g:airline_extensions = ['tabline', 'ale']
+let g:airline_highlighting_cache = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_close_button = 0
