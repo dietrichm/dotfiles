@@ -130,22 +130,20 @@ if s:load_coc_plugins
 endif
 set signcolumn=yes
 
-if !s:load_line_plugins
-    " Custom statusline with ALE status.
-    function! ALEStatusLine() abort
-        let l:counts = ale#statusline#Count(bufnr(''))
+" Custom statusline with ALE status.
+function! ALEStatusLine() abort
+    let l:counts = ale#statusline#Count(bufnr(''))
 
-        if l:counts.total == 0
-            return ''
-        endif
+    if l:counts.total == 0
+        return ''
+    endif
 
-        let l:all_errors = l:counts.error + l:counts.style_error
-        let l:all_non_errors = l:counts.total - l:all_errors
+    let l:all_errors = l:counts.error + l:counts.style_error
+    let l:all_non_errors = l:counts.total - l:all_errors
 
-        return printf('✘%d ▲%d', all_errors, all_non_errors)
-    endfunction
-    set statusline=%<%f\ %y%m%r\ %{ALEStatusLine()}\ %=%-14.(%l,%c%V%)\ %P
-endif
+    return printf('✘%d ▲%d', all_errors, all_non_errors)
+endfunction
+set statusline=%<%f\ %y%m%r\ %{ALEStatusLine()}\ %=%-14.(%l,%c%V%)\ %P
 
 " Comments are rendered in italic.
 highlight Comment cterm=italic
@@ -186,6 +184,7 @@ augroup END
 nnoremap <silent> <Leader>lf :ALEFix<CR>
 
 " Configure Airline.
+let g:airline_disable_statusline = 1
 let g:airline_powerline_fonts = 1
 let g:airline_extensions = []
 
