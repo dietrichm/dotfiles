@@ -129,6 +129,7 @@ if s:load_coc_plugins
     set tagfunc=CocTagFunc
 endif
 set signcolumn=yes
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 " Comments are rendered in italic.
 highlight Comment cterm=italic
