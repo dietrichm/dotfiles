@@ -64,7 +64,6 @@ Plug 'tpope/vim-commentary'
 " Git.
 Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
-    Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'mhinz/vim-signify'
 
 " Developing.
