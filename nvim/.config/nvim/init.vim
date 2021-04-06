@@ -54,6 +54,7 @@ if s:load_coc_plugins
     if s:load_go_plugins
         Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
     endif
+    Plug 'antoinemadec/coc-fzf'
 endif
 Plug 'dense-analysis/ale'
 Plug 'AndrewRadev/splitjoin.vim'
