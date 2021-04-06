@@ -270,6 +270,11 @@ let $FZF_DEFAULT_OPTS .= ' --reverse'
 let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.8}}
 let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
 
+" Configure COC-FZF.
+let g:coc_fzf_opts = []
+let g:coc_fzf_preview = g:fzf_preview_window[0]
+let g:coc_fzf_preview_toggle_key = g:fzf_preview_window[1]
+
 " Configure UltiSnips.
 let g:UltiSnipsSnippetsDir = s:nvim_config_root . '/UltiSnips'
 let g:UltiSnipsEditSplit = 'context'
