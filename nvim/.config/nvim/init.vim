@@ -145,7 +145,7 @@ endfunction
 function! SpellStatusLine() abort
     return &spell ? printf('[%s]', &spelllang) : ''
 endfunction
-set statusline=%<%f\ %y%m%r%{SpellStatusLine()}\ %{ALEStatusLine()}\ %=%-14.(%l,%c%V%)\ %P
+set statusline=%<%f\ %y%{SpellStatusLine()}%m%r\ %{ALEStatusLine()}\ %=%-14.(%l,%c%V%)\ %P
 
 " Comments are rendered in italic.
 highlight Comment cterm=italic
