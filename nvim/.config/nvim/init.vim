@@ -129,7 +129,7 @@ if s:load_coc_plugins
 endif
 set signcolumn=yes
 
-" Custom statusline with ALE status.
+" Custom statusline with ALE and spell status.
 function! ALEStatusLine() abort
     let l:counts = ale#statusline#Count(bufnr(''))
 
@@ -142,7 +142,10 @@ function! ALEStatusLine() abort
 
     return printf('✘%d ▲%d', all_errors, all_non_errors)
 endfunction
-set statusline=%<%f\ %y%m%r\ %{ALEStatusLine()}\ %=%-14.(%l,%c%V%)\ %P
+function! SpellStatusLine() abort
+    return &spell ? printf('[%s]', &spelllang) : ''
+endfunction
+set statusline=%<%f\ %y%m%r%{SpellStatusLine()}\ %{ALEStatusLine()}\ %=%-14.(%l,%c%V%)\ %P
 
 " Comments are rendered in italic.
 highlight Comment cterm=italic
