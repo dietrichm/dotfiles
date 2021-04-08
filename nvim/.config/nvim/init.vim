@@ -263,6 +263,7 @@ nnoremap <silent> <Leader>tb :Vista<CR>
 " Configure FZF.
 nnoremap <silent> <Leader>o :Files<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <Leader>w :Windows<CR>
 nnoremap <silent> <Leader>fh :History<CR>
 let $FZF_DEFAULT_OPTS .= ' --reverse'
 let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.8}}
