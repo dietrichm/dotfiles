@@ -1,7 +1,9 @@
 # Configure views.
 set blob-view = line-number:yes,interval=1 text
 set diff-options = -C --show-signature
+set split-view-height = 80%
 set tab-size = 4
+set vertical-split = false
 
 # Colours.
 color cursor black blue
