@@ -73,8 +73,8 @@ These files are installed through the `config-install.sh` script. Pass the theme
 
 The following themes are available:
 
-* `base16-bright` (default)
-* `papercolor`
+* `papercolor` (default)
+* `base16-bright`
 
 ### Config packages
 
