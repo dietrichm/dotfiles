@@ -23,6 +23,7 @@ These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no lo
   - [universal-ctags](#universal-ctags)
   - [Phpactor](#phpactor)
 - [Linting VimL scripts](#linting-viml-scripts)
+- [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -164,3 +165,9 @@ composer.autoloader_path: %project_root%/dependencies/autoload.php
 Vimscript files can be linted using [Vint](https://github.com/Vimjas/vint).
 
 To lint all VimL files, run `make lint`.
+
+## License
+
+Copyright 2021, Dietrich Moerman.
+
+Released under the terms of the [MIT License](LICENSE).
