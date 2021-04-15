@@ -162,6 +162,7 @@ nnoremap <silent> <Leader>ft :Defx `expand('%:p:h')`
     \ -split=vertical
     \ -winwidth=45
     \ -direction=topleft<CR>
+command DefxScratch :Defx -columns=mark:indent:icon:filename:time -sort=Time
 
 " Configure Localvimrc.
 let g:localvimrc_persistent = 1
