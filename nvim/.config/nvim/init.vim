@@ -156,7 +156,7 @@ let g:netrw_banner = 0
 let g:netrw_bufsettings = 'noma nomod nonu nowrap ro nobl nolist'
 
 " Configure defx.
-call defx#custom#column('time', 'format', '%y.%m.%d %H:%M')
+call defx#custom#column('time', 'format', '%a %d/%m/%Y %H:%M')
 nnoremap <silent> <Leader>ft :Defx `expand('%:p:h')`
     \ -search=`expand('%:p')`
     \ -show-ignored-files
