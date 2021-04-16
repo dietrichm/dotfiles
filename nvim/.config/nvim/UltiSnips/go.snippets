@@ -31,3 +31,7 @@ endsnippet
 snippet gomock "gomock.NewController" b
 ctrl := gomock.NewController(t)
 endsnippet
+
+snippet mockgen "//go:generate mockgen" b
+//go:generate mockgen -source `!p snip.rv = fn` -destination `!p snip.rv = snip.basename`_mock.go -package `!p snip.rv = os.path.basename(os.path.dirname(path))`
+endsnippet
