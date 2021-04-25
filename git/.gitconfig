@@ -4,6 +4,7 @@
 	br = branch -vv
 	bra = branch -vva
 	c = "!git add -p && GIT_EDITOR='nvim +startinsert' git commit"
+	ca = c --amend
 	ci = commit --allow-empty -m 'Retrigger CI'
 	contains = branch -a --contains
 	default = "!git symbolic-ref --short refs/remotes/origin/HEAD | sed 's@^origin/@@'"
