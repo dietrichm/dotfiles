@@ -285,6 +285,15 @@ let g:coc_fzf_preview_toggle_key = g:fzf_preview_window[1]
 let g:UltiSnipsSnippetsDir = s:nvim_config_root . '/UltiSnips'
 let g:UltiSnipsEditSplit = 'context'
 
+" Configure LSP.
+if s:load_nvim_lsp
+lua << EOF
+    require'lspconfig'.gopls.setup{
+        cmd = {"gopls", "-remote=auto"}
+    }
+EOF
+endif
+
 " Configure COC.
 nmap <silent> <Leader>ca <Plug>(coc-codeaction)
 nmap <silent> <Leader>re <Plug>(coc-refactor)
