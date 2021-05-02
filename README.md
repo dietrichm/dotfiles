@@ -18,7 +18,7 @@ These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no lo
   - [Updating](#updating)
 - [Custom configuration](#custom-configuration)
   - [Neovim](#neovim)
-  - [Language Servers (LSPs)](#language-servers-lsps)
+  - [Language Servers (LSP)](#language-servers-lsp)
   - [isort](#isort)
   - [universal-ctags](#universal-ctags)
   - [Phpactor](#phpactor)
@@ -50,7 +50,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
      * [ripgrep](https://github.com/BurntSushi/ripgrep)
      * [universal-ctags](http://ctags.io/)
      * _Optional_
-         * Node >= 12.0.0 and Yarn (used for [coc.nvim](https://github.com/neoclide/coc.nvim) and LSPs)
+         * Node >= 12.0.0 and Yarn (used for [coc.nvim](https://github.com/neoclide/coc.nvim) and LSP servers)
          * Go (Golang)
          * PHP 7 and Composer
  * `ssh`: OpenSSH
@@ -122,7 +122,7 @@ let g:test#python#pytest#executable = 'make'
 let g:phpactorPhpBin = '/usr/local/bin/php'
 ```
 
-### Language Servers (LSPs)
+### Language Servers (LSP)
 
 All [language servers](https://langserver.org/) are currently installed and maintained using [coc.nvim](https://github.com/neoclide/coc.nvim) and are configured in `nvim/.config/nvim/coc-settings.json`. Project specific settings can be added in the project's `.vim/coc-settings.json` file.
 
