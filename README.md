@@ -134,6 +134,8 @@ The example below configures Pyright to treat a local directory as an extra root
 }
 ```
 
+**Note**: when [#77](https://github.com/dietrichm/dotfiles/issues/77) is done, coc.nvim will be replaced with [Neovim's built-in LSP support](https://neovim.io/doc/user/lsp.html).
+
 ### isort
 
 Sorting Python imports happens through [isort](https://pycqa.github.io/isort/) and is triggered using <kbd>&lt;Space&gt;so</kbd> in normal mode.
