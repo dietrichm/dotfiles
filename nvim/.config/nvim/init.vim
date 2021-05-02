@@ -2,7 +2,8 @@ scriptencoding utf-8
 
 let s:nvim_config_root = $HOME . '/.config/nvim'
 let s:load_line_plugins = 0
-let s:load_coc_plugins = executable('yarn') == 1
+let s:load_nvim_lsp = 1
+let s:load_coc_plugins = !s:load_nvim_lsp && executable('yarn') == 1
 let s:load_go_plugins = executable('go') == 1
 let s:load_php_plugins = executable('php') == 1
 
