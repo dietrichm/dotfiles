@@ -76,7 +76,7 @@ endif
 
 " PHP.
 if s:load_php_plugins
-    Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'}
+    Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 endif
 
 " JavaScript.
