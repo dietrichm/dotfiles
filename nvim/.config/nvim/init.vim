@@ -45,6 +45,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'SirVer/ultisnips'
 if s:load_nvim_lsp
     Plug 'neovim/nvim-lspconfig'
+    Plug 'hrsh7th/nvim-compe'
 endif
 if s:load_coc_plugins
     Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
