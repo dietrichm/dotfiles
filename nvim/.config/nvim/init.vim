@@ -291,12 +291,12 @@ let g:UltiSnipsEditSplit = 'context'
 
 " Configure LSP.
 if s:load_nvim_lsp
-    luafile $HOME/.config/nvim/lua/lsp.lua
+    lua require('lsp')
 endif
 
 " Configure completion.
 if s:load_nvim_lsp
-    luafile $HOME/.config/nvim/lua/completion.lua
+    lua require('completion')
 endif
 
 " Configure COC.
