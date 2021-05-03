@@ -1,5 +1,9 @@
+local on_attach = function(client, bufnr)
+end
+
 require'lspconfig'.gopls.setup{
-    cmd = {"gopls", "-remote=auto"}
+    cmd = {"gopls", "-remote=auto"};
+    on_attach = on_attach;
 }
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
