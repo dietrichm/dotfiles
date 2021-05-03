@@ -289,13 +289,9 @@ endif
 let g:UltiSnipsSnippetsDir = s:nvim_config_root . '/UltiSnips'
 let g:UltiSnipsEditSplit = 'context'
 
-" Configure LSP.
+" Configure LSP and completion.
 if s:load_nvim_lsp
     lua require('lsp')
-endif
-
-" Configure completion.
-if s:load_nvim_lsp
     lua require('completion')
 endif
 
