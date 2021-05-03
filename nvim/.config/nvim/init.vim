@@ -134,6 +134,9 @@ if s:load_coc_plugins
     set tagfunc=CocTagFunc
 endif
 set signcolumn=yes
+if s:load_nvim_lsp
+    set completeopt=menuone,noselect
+endif
 
 " Custom statusline with ALE and spell status.
 function! ALEStatusLine() abort
