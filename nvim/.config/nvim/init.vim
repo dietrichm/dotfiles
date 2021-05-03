@@ -291,11 +291,7 @@ let g:UltiSnipsEditSplit = 'context'
 
 " Configure LSP.
 if s:load_nvim_lsp
-lua << EOF
-    require'lspconfig'.gopls.setup{
-        cmd = {"gopls", "-remote=auto"}
-    }
-EOF
+    luafile $HOME/.config/nvim/lua/lsp.lua
 endif
 
 " Configure completion.
