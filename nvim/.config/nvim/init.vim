@@ -259,9 +259,7 @@ let g:vista#renderer#enable_icon = 0
 let g:vista_close_on_jump = 1
 let g:vista_echo_cursor = 0
 let g:vista_executive_for = {
-    \ 'go': 'coc',
     \ 'markdown': 'toc',
-    \ 'php': 'coc',
 \ }
 let g:vista_ignore_kinds = ['Variable', 'Unknown']
 let g:vista_sidebar_width = 45
@@ -306,6 +304,9 @@ if s:load_coc_plugins
     xmap <silent> <Leader>ca <Plug>(coc-codeaction-selected)
     inoremap <silent> <expr> <C-Space> coc#refresh()
     nnoremap <silent> <Leader>h :call CocActionAsync('doHover')<CR>
+
+    let g:vista_executive_for['go'] = 'coc'
+    let g:vista_executive_for['php'] = 'coc'
 endif
 
 " Configure vim-test.
