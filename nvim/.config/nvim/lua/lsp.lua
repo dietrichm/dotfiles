@@ -1,4 +1,7 @@
 local on_attach = function(client, bufnr)
+    local opts = {noremap = true, silent = true}
+
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 end
 
 require'lspconfig'.gopls.setup{
