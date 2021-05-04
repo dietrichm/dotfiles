@@ -1,3 +1,5 @@
+local lspconfig = require('lspconfig')
+
 local on_attach = function(client, bufnr)
     local opts = {noremap = true, silent = true}
 
@@ -9,7 +11,7 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>sr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 end
 
-require'lspconfig'.gopls.setup{
+lspconfig.gopls.setup{
     cmd = {"gopls", "-remote=auto"},
     on_attach = on_attach,
 }
