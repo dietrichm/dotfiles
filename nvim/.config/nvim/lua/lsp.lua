@@ -14,6 +14,9 @@ end
 lspconfig.gopls.setup{
     cmd = {"gopls", "-remote=auto"},
     on_attach = on_attach,
+    root_dir = function()
+        return vim.fn.getcwd()
+    end,
 }
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
