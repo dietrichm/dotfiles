@@ -22,7 +22,7 @@ These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no lo
   - [isort](#isort)
   - [universal-ctags](#universal-ctags)
   - [Phpactor](#phpactor)
-- [Linting VimL scripts](#linting-viml-scripts)
+- [Linting source files](#linting-source-files)
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -162,11 +162,11 @@ code_transform.indentation: "	"
 composer.autoloader_path: %project_root%/dependencies/autoload.php
 ```
 
-## Linting VimL scripts
+## Linting source files
 
-Vimscript files can be linted using [Vint](https://github.com/Vimjas/vint).
+Vimscript files can be linted using [Vint](https://github.com/Vimjas/vint), while Lua files are linted using [Luacheck](https://github.com/luarocks/luacheck).
 
-To lint all VimL files, run `make lint-vim`.
+To lint all source files, run `make lint`. VimL or Lua files can be linted separately using `make lint-vim` or `make lint-lua`.
 
 ## License
 
