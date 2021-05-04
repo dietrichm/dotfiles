@@ -1,6 +1,6 @@
-.PHONY: lint
+.PHONY: lint-vim
 
 vimfiles := $(shell git ls-files *.vim)
 
-lint:
+lint-vim:
 	vint $(vimfiles)

@@ -23,4 +23,4 @@ jobs:
         pip install --pre vim-vint
     - name: Lint with Vint
       run: |
-        make lint
+        make lint-vim
