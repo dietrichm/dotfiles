@@ -25,3 +25,4 @@ require'compe'.setup{
 }
 
 vim.api.nvim_set_keymap('i', '<C-Space>', 'compe#complete()', {noremap = true, silent = true, expr = true})
+vim.api.nvim_set_keymap('i', '<C-y>', 'compe#confirm("<C-y>")', {noremap = true, silent = true, expr = true})
