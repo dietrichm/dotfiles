@@ -23,3 +23,5 @@ require'compe'.setup{
         ultisnips = true,
     },
 }
+
+vim.api.nvim_set_keymap('i', '<C-Space>', 'compe#complete()', {noremap = true, silent = true, expr = true})
