@@ -38,6 +38,10 @@ lspconfig.pyright.setup{
     },
 }
 
+lspconfig.intelephense.setup{
+    on_attach = on_attach,
+}
+
 local vista_executive_for = vim.g.vista_executive_for
 vista_executive_for.go = 'nvim_lsp'
 vim.g.vista_executive_for = vista_executive_for
