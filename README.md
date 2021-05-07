@@ -42,6 +42,7 @@ The following is required for installing and using these dotfiles:
 Depending on which [config packages](#config-packages) are installed, these dependencies are also required:
 
  * `git`: GnuPG
+ * `i3`: [i3](https://i3wm.org/)
  * `kitty`
      * [kitty](https://sw.kovidgoyal.net/kitty/)
      * [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
@@ -81,6 +82,7 @@ The following themes are available:
 The following (Stow based) config packages are available:
 
 * `git`
+* `i3`
 * `kitty`
 * `nvim`
 * `ssh`
