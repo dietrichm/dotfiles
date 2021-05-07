@@ -23,6 +23,19 @@ lspconfig.gopls.setup{
 
 lspconfig.pyright.setup{
     on_attach = on_attach,
+    settings = {
+        pyright = {
+            disableOrganizeImports = true,
+        },
+        python = {
+            analysis = {
+                diagnosticMode = 'workspace',
+            },
+            linting = {
+                enabled = false,
+            },
+        },
+    },
 }
 
 local vista_executive_for = vim.g.vista_executive_for
