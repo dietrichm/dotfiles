@@ -42,7 +42,7 @@ The following is required for installing and using these dotfiles:
 Depending on which [config packages](#config-packages) are installed, these dependencies are also required:
 
  * `git`: GnuPG
- * `i3`: [i3](https://i3wm.org/)
+ * `i3`: [i3](https://i3wm.org/) with [KDE Plasma](https://kde.org/plasma-desktop/)
  * `kitty`
      * [kitty](https://sw.kovidgoyal.net/kitty/)
      * [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
