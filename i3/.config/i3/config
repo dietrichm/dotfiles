@@ -17,6 +17,8 @@ font pango:Sans Serif 10
 
 title_align center
 
+workspace_layout tabbed
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
