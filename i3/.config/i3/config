@@ -16,6 +16,8 @@ set $mod Mod4
 font pango:Sans Serif 10
 
 title_align center
+default_border normal 3px
+default_floating_border normal 3px
 
 workspace_layout tabbed
 
