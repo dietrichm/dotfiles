@@ -143,6 +143,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec --no-startup-id qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
 
+bindsym $mod+Shift+b exec --no-startup-id sleep 0.2 && qdbus org.kde.ksmserver /ScreenSaver Lock
+
 bindsym $mod+Shift+p exec --no-startup-id plasmashell --replace
 
 # resize window (you can also use the mouse for that)
