@@ -53,9 +53,9 @@ Depending on which [config packages](#config-packages) are installed, these depe
      * [ripgrep](https://github.com/BurntSushi/ripgrep)
      * [universal-ctags](http://ctags.io/)
      * _Optional_
-         * Node >= 12.0.0 and Yarn (used for [coc.nvim](https://github.com/neoclide/coc.nvim) and LSP servers)
          * Go (Golang)
          * PHP 7 and Composer
+         * Node >= 12.0.0 and Yarn (when [coc.nvim](https://github.com/neoclide/coc.nvim) is used for LSP servers)
  * `ssh`: OpenSSH
  * `tig`: [tig](https://jonas.github.io/tig/)
  * `tmux`: [Tmux](https://github.com/tmux/tmux)
