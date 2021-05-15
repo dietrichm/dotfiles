@@ -19,6 +19,8 @@ These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no lo
 - [Custom configuration](#custom-configuration)
   - [Neovim](#neovim)
   - [Language Servers (LSP)](#language-servers-lsp)
+    - [Using Neovim LSP](#using-neovim-lsp)
+    - [Using coc.nvim](#using-cocnvim)
   - [isort](#isort)
   - [universal-ctags](#universal-ctags)
   - [Phpactor](#phpactor)
@@ -55,6 +57,8 @@ Depending on which [config packages](#config-packages) are installed, these depe
      * _Optional_
          * Go (Golang)
          * PHP 7 and Composer
+         * [Pyright](https://github.com/Microsoft/pyright) (for Python intelligence)
+         * [Intelephense](https://intelephense.com/) (for PHP intelligence)
          * Node >= 12.0.0 and Yarn (when [coc.nvim](https://github.com/neoclide/coc.nvim) is used for LSP servers)
  * `ssh`: OpenSSH
  * `tig`: [tig](https://jonas.github.io/tig/)
@@ -128,7 +132,19 @@ let g:phpactorPhpBin = '/usr/local/bin/php'
 
 ### Language Servers (LSP)
 
-All [language servers](https://langserver.org/) are currently installed and maintained using [coc.nvim](https://github.com/neoclide/coc.nvim) and are configured in `nvim/.config/nvim/coc-settings.json`. Project specific settings can be added in the project's `.vim/coc-settings.json` file.
+#### Using Neovim LSP
+
+By default, Neovim 0.5/HEAD's internal LSP client is used to provide code intelligence and completion using [language servers](https://langserver.org/).
+The behaviour is configured in `nvim/.config/nvim/lua/lsp.lua`.
+
+The following language server binaries need to be installed manually:
+
+* Python ([Pyright](https://github.com/Microsoft/pyright)): `npm i -g pyright`
+* PHP ([Intelephense](https://intelephense.com/)): `npm i -g intelephense`
+
+#### Using coc.nvim
+
+Alternatively, when running Neovim using `NVIM_LSP=0 nvim`, language servers are installed and maintained using [coc.nvim](https://github.com/neoclide/coc.nvim) and are configured in `nvim/.config/nvim/coc-settings.json`. Project specific settings can be added in the project's `.vim/coc-settings.json` file.
 
 The example below configures Pyright to treat a local directory as an extra root path for Python analysis:
 
@@ -138,7 +154,7 @@ The example below configures Pyright to treat a local directory as an extra root
 }
 ```
 
-**Note**: when [#77](https://github.com/dietrichm/dotfiles/issues/77) is done, coc.nvim will be replaced with [Neovim's built-in LSP support](https://neovim.io/doc/user/lsp.html).
+**Note**: when Neovim's LSP support is sufficiently stable, coc.nvim will be removed.
 
 ### isort
 
