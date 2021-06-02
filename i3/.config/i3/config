@@ -116,7 +116,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # KDE Plasma window behaviour
-for_window [title="Desktop — Plasma"] kill; floating enable; border none
+for_window [title="Desktop — Plasma"] move scratchpad
 for_window [class="plasmashell"] floating enable
 for_window [class="Plasma"] floating enable; border none
 for_window [title="plasma-desktop"] floating enable; border none
