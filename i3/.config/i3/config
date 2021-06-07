@@ -170,4 +170,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
+    mode hide
+    hidden_state hide
+    modifier $mod
 }
