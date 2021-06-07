@@ -173,4 +173,5 @@ bar {
     mode hide
     hidden_state hide
     modifier $mod
+    tray_output none
 }
