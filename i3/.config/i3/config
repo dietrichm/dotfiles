@@ -140,7 +140,7 @@ bindsym $mod+Shift+e exec --no-startup-id qdbus org.kde.ksmserver /KSMServer org
 
 bindsym $mod+Shift+b exec --no-startup-id sleep 0.2 && qdbus org.kde.ksmserver /ScreenSaver Lock
 
-bindsym $mod+Shift+p exec --no-startup-id plasmashell --replace
+bindsym $mod+Shift+p exec --no-startup-id plasmashell --replace && killall krunner
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
