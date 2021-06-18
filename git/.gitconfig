@@ -3,7 +3,7 @@
 	addp = add -p
 	br = branch -vv
 	bra = branch -vva
-	c = "!git add -p && GIT_EDITOR='nvim +startinsert' git commit"
+	c = "!git add -p && git commit"
 	ca = c --amend
 	ci = commit --allow-empty -m 'Retrigger CI'
 	contains = branch -a --contains
