@@ -24,7 +24,7 @@ bindsym $mod+t border normal
 # kill focused window
 bindsym $mod+Shift+Q kill
 
-bindsym $mod+d exec --no-startup-id qdbus org.kde.kglobalaccel /component/krunner_desktop org.kde.kglobalaccel.Component.invokeShortcut _launch
+bindsym $mod+d exec --no-startup-id qdbus org.kde.kglobalaccel /component/org_kde_krunner_desktop org.kde.kglobalaccel.Component.invokeShortcut _launch
 
 # change focus
 bindsym $mod+h focus left
