@@ -59,6 +59,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
          * PHP 7 and Composer
          * [Pyright](https://github.com/Microsoft/pyright) (for Python intelligence)
          * [Intelephense](https://intelephense.com/) (for PHP intelligence)
+         * [.NET SDK](https://docs.microsoft.com/en-us/dotnet/core/sdk) 5.0 and [FsAutoComplete](https://github.com/fsharp/FsAutoComplete) (for F# intelligence)
          * Node >= 12.0.0 and Yarn (when [coc.nvim](https://github.com/neoclide/coc.nvim) is used for LSP servers)
  * `ssh`: OpenSSH
  * `tig`: [tig](https://jonas.github.io/tig/)
@@ -141,6 +142,7 @@ The following language server binaries need to be installed manually:
 
 * Python ([Pyright](https://github.com/Microsoft/pyright)): `npm i -g pyright`
 * PHP ([Intelephense](https://intelephense.com/)): `npm i -g intelephense`
+* F# ([FsAutoComplete](https://github.com/fsharp/FsAutoComplete)): `dotnet tool install --global fsautocomplete`
 
 #### Using coc.nvim
 
