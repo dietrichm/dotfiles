@@ -93,6 +93,9 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'Vimjas/vim-python-pep8-indent'
 
+" F#.
+Plug 'adelarsq/neofsharp.vim'
+
 " Other syntax.
 Plug 'cespare/vim-toml'
 Plug 'plasticboy/vim-markdown'
