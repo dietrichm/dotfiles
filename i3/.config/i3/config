@@ -133,6 +133,7 @@ no_focus [class="plasmashell" window_type="notification"]
 
 for_window [class="Signal"] floating enable
 for_window [class="Telegram"] floating enable
+for_window [title="Emoji Selector"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
