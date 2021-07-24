@@ -47,20 +47,6 @@ if s:load_nvim_lsp
     Plug 'neovim/nvim-lspconfig'
     Plug 'hrsh7th/nvim-compe'
 endif
-if s:load_coc_plugins
-    Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-    if s:load_php_plugins
-        Plug 'marlonfan/coc-phpls', {'do': 'yarn install --frozen-lockfile'}
-    endif
-    Plug 'neoclide/coc-sources', {'as': 'coc-ultisnips', 'do': 'yarn install --frozen-lockfile', 'rtp': 'packages/ultisnips'}
-    Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'fannheyward/coc-pyright', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
-    if s:load_go_plugins
-        Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
-    endif
-    Plug 'antoinemadec/coc-fzf'
-endif
 Plug 'dense-analysis/ale'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
