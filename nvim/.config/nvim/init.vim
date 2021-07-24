@@ -53,6 +53,8 @@ Plug 'mhinz/vim-signify'
 " Developing.
 Plug 'vim-test/vim-test'
 Plug 'vim-vdebug/vdebug'
+
+" Go.
 if s:load_go_plugins
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 endif
