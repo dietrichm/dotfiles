@@ -133,9 +133,6 @@ set spelllang=en_gb
 set path=.,*
 set grepprg=rg\ --vimgrep
 set undofile
-if s:load_coc_plugins
-    set tagfunc=CocTagFunc
-endif
 set signcolumn=yes
 
 " Custom statusline with ALE and spell status.
@@ -279,13 +276,6 @@ let $FZF_DEFAULT_OPTS .= ' --reverse'
 let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.8}}
 let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
 
-" Configure COC-FZF.
-if s:load_coc_plugins
-    let g:coc_fzf_opts = []
-    let g:coc_fzf_preview = g:fzf_preview_window[0]
-    let g:coc_fzf_preview_toggle_key = g:fzf_preview_window[1]
-endif
-
 " Configure UltiSnips.
 let g:UltiSnipsSnippetsDir = s:nvim_config_root . '/UltiSnips'
 let g:UltiSnipsEditSplit = 'context'
@@ -294,21 +284,6 @@ let g:UltiSnipsEditSplit = 'context'
 if s:load_nvim_lsp
     lua require('lsp')
     lua require('completion')
-endif
-
-" Configure COC.
-if s:load_coc_plugins
-    nmap <silent> <Leader>ca <Plug>(coc-codeaction)
-    nmap <silent> <Leader>re <Plug>(coc-refactor)
-    nmap <silent> <Leader>rn <Plug>(coc-rename)
-    nmap <silent> <Leader>si <Plug>(coc-implementation)
-    nmap <silent> <Leader>sr <Plug>(coc-references)
-    xmap <silent> <Leader>ca <Plug>(coc-codeaction-selected)
-    inoremap <silent> <expr> <C-Space> coc#refresh()
-    nnoremap <silent> <Leader>h :call CocActionAsync('doHover')<CR>
-
-    let g:vista_executive_for['go'] = 'coc'
-    let g:vista_executive_for['php'] = 'coc'
 endif
 
 " Configure vim-test.
