@@ -3,16 +3,11 @@ scriptencoding utf-8
 let s:nvim_config_root = $HOME . '/.config/nvim'
 let s:load_line_plugins = 0
 let s:load_nvim_lsp = 1
-let s:load_coc_plugins = !s:load_nvim_lsp && executable('yarn') == 1
 let s:load_go_plugins = executable('go') == 1
 let s:load_php_plugins = executable('php') == 1
 
 let s:vim_plug_script = s:nvim_config_root . '/autoload/plug.vim'
 if empty(glob(s:vim_plug_script))
-    if !s:load_coc_plugins && confirm('Yarn is not installed - install plugins without COC?', "Yes\nNo") != 1
-        finish
-    endif
-
     execute '!curl -fLo ' . shellescape(s:vim_plug_script) . ' --create-dirs '
         \ . 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     " vint: next-line -ProhibitAutocmdWithNoGroup
