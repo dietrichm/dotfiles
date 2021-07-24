@@ -20,7 +20,6 @@ These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no lo
   - [Neovim](#neovim)
   - [Language Servers (LSP)](#language-servers-lsp)
     - [Using Neovim LSP](#using-neovim-lsp)
-    - [Using coc.nvim](#using-cocnvim)
   - [isort](#isort)
   - [universal-ctags](#universal-ctags)
   - [Phpactor](#phpactor)
@@ -60,7 +59,6 @@ Depending on which [config packages](#config-packages) are installed, these depe
          * [Pyright](https://github.com/Microsoft/pyright) (for Python intelligence)
          * [Intelephense](https://intelephense.com/) (for PHP intelligence)
          * [.NET SDK](https://docs.microsoft.com/en-us/dotnet/core/sdk) 5.0 and [FsAutoComplete](https://github.com/fsharp/FsAutoComplete) (for F# intelligence)
-         * Node >= 12.0.0 and Yarn (when [coc.nvim](https://github.com/neoclide/coc.nvim) is used for LSP servers)
  * `ssh`: OpenSSH
  * `tig`: [tig](https://jonas.github.io/tig/)
  * `tmux`: [Tmux](https://github.com/tmux/tmux)
@@ -143,20 +141,6 @@ The following language server binaries need to be installed manually:
 * Python ([Pyright](https://github.com/Microsoft/pyright)): `npm i -g pyright`
 * PHP ([Intelephense](https://intelephense.com/)): `npm i -g intelephense`
 * F# ([FsAutoComplete](https://github.com/fsharp/FsAutoComplete)): `dotnet tool install --global fsautocomplete`
-
-#### Using coc.nvim
-
-Alternatively, when running Neovim using `NVIM_LSP=0 nvim`, language servers are installed and maintained using [coc.nvim](https://github.com/neoclide/coc.nvim) and are configured in `nvim/.config/nvim/coc-settings.json`. Project specific settings can be added in the project's `.vim/coc-settings.json` file.
-
-The example below configures Pyright to treat a local directory as an extra root path for Python analysis:
-
-```json
-{
-    "python.analysis.extraPaths": ["my_project"]
-}
-```
-
-**Note**: when Neovim's LSP support is sufficiently stable, coc.nvim will be removed.
 
 ### isort
 
