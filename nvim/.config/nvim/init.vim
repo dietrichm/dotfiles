@@ -2,7 +2,6 @@ scriptencoding utf-8
 
 let s:nvim_config_root = $HOME . '/.config/nvim'
 let s:load_line_plugins = 0
-let s:load_nvim_lsp = 1
 let s:load_go_plugins = executable('go') == 1
 let s:load_php_plugins = executable('php') == 1
 
@@ -38,10 +37,8 @@ endif
 " Editing.
 Plug 'editorconfig/editorconfig-vim'
 Plug 'SirVer/ultisnips'
-if s:load_nvim_lsp
-    Plug 'neovim/nvim-lspconfig'
-    Plug 'hrsh7th/nvim-compe'
-endif
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
 Plug 'dense-analysis/ale'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
@@ -262,10 +259,8 @@ let g:UltiSnipsSnippetsDir = s:nvim_config_root . '/UltiSnips'
 let g:UltiSnipsEditSplit = 'context'
 
 " Configure LSP and completion.
-if s:load_nvim_lsp
-    lua require('lsp')
-    lua require('completion')
-endif
+lua require('lsp')
+lua require('completion')
 
 " Configure vim-test.
 let g:test#preserve_screen = 1
