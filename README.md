@@ -19,7 +19,6 @@ These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no lo
 - [Custom configuration](#custom-configuration)
   - [Neovim](#neovim)
   - [Language Servers (LSP)](#language-servers-lsp)
-    - [Using Neovim LSP](#using-neovim-lsp)
   - [isort](#isort)
   - [universal-ctags](#universal-ctags)
   - [Phpactor](#phpactor)
