@@ -131,9 +131,7 @@ let g:phpactorPhpBin = '/usr/local/bin/php'
 
 ### Language Servers (LSP)
 
-#### Using Neovim LSP
-
-By default, Neovim 0.5/HEAD's internal LSP client is used to provide code intelligence and completion using [language servers](https://langserver.org/).
+Neovim 0.5/HEAD's internal LSP client is used to provide code intelligence and completion using [language servers](https://langserver.org/).
 The behaviour is configured in `nvim/.config/nvim/lua/lsp.lua`.
 
 The following language server binaries need to be installed manually:
