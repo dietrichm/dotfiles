@@ -21,6 +21,7 @@ path=(
 export PATH
 
 export CLICOLOR=1
+export DELTA_PAGER="less --tabs=4 -RFX"
 export EDITOR=nvim
 export FZF_DEFAULT_COMMAND="rg --files"
 export FZF_DEFAULT_OPTS="--no-mouse"
