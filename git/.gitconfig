@@ -49,3 +49,13 @@
 	showPatch = true
 [init]
 	defaultBranch = main
+[pager]
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
+[delta]
+	syntax-theme = GitHub
+	color-only = true
+[interactive]
+	diffFilter = delta

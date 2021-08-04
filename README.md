@@ -41,7 +41,9 @@ The following is required for installing and using these dotfiles:
 
 Depending on which [config packages](#config-packages) are installed, these dependencies are also required:
 
- * `git`: GnuPG
+ * `git`:
+     * GnuPG
+     * [Delta](https://github.com/dandavison/delta)
  * `i3`
      * [i3](https://i3wm.org/)
      * [KDE Plasma](https://kde.org/plasma-desktop/)
