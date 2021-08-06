@@ -112,10 +112,9 @@ In Tmux, execute `prefix` + <kbd>U</kbd> regularly.
 
 ## Language Servers (LSP)
 
-Neovim 0.5/HEAD's internal LSP client is used to provide code intelligence and completion using [language servers](https://langserver.org/).
-The behaviour is configured in `nvim/.config/nvim/lua/lsp.lua`.
+Neovim 0.5+ internal LSP client is used to provide code intelligence and completion using [language servers](https://langserver.org/).
 
-The following language server binaries need to be installed manually:
+Depending on the languages used, the following language server binaries need to be installed manually:
 
 * Python ([Pyright](https://github.com/Microsoft/pyright)): `npm i -g pyright`
 * PHP ([Intelephense](https://intelephense.com/)): `npm i -g intelephense`
