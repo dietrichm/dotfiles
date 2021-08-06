@@ -16,9 +16,9 @@ These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no lo
   - [Themes](#themes)
   - [Config packages](#config-packages)
   - [Updating](#updating)
+- [Language Servers (LSP)](#language-servers-lsp)
 - [Custom configuration](#custom-configuration)
   - [Neovim](#neovim)
-  - [Language Servers (LSP)](#language-servers-lsp)
   - [isort](#isort)
   - [universal-ctags](#universal-ctags)
   - [Phpactor](#phpactor)
@@ -110,6 +110,17 @@ While in Neovim, execute regularly:
 
 In Tmux, execute `prefix` + <kbd>U</kbd> regularly.
 
+## Language Servers (LSP)
+
+Neovim 0.5/HEAD's internal LSP client is used to provide code intelligence and completion using [language servers](https://langserver.org/).
+The behaviour is configured in `nvim/.config/nvim/lua/lsp.lua`.
+
+The following language server binaries need to be installed manually:
+
+* Python ([Pyright](https://github.com/Microsoft/pyright)): `npm i -g pyright`
+* PHP ([Intelephense](https://intelephense.com/)): `npm i -g intelephense`
+* F# ([FsAutoComplete](https://github.com/fsharp/FsAutoComplete)): `dotnet tool install --global fsautocomplete`
+
 ## Custom configuration
 
 Some projects require or can benefit from some custom configuration for some of the tools used in this development set-up.
@@ -129,17 +140,6 @@ let g:test#python#pytest#executable = 'make'
 
 let g:phpactorPhpBin = '/usr/local/bin/php'
 ```
-
-### Language Servers (LSP)
-
-Neovim 0.5/HEAD's internal LSP client is used to provide code intelligence and completion using [language servers](https://langserver.org/).
-The behaviour is configured in `nvim/.config/nvim/lua/lsp.lua`.
-
-The following language server binaries need to be installed manually:
-
-* Python ([Pyright](https://github.com/Microsoft/pyright)): `npm i -g pyright`
-* PHP ([Intelephense](https://intelephense.com/)): `npm i -g intelephense`
-* F# ([FsAutoComplete](https://github.com/fsharp/FsAutoComplete)): `dotnet tool install --global fsautocomplete`
 
 ### isort
 
