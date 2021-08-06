@@ -50,29 +50,19 @@ Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
 Plug 'mhinz/vim-signify'
 
-" Developing.
+" Development.
 Plug 'vim-test/vim-test'
-
-" Go.
 if s:load_go_plugins
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 endif
-
-" PHP.
 if s:load_php_plugins
     Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 endif
-
-" JavaScript.
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
-
-" Python.
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'Vimjas/vim-python-pep8-indent'
-
-" F#.
 Plug 'adelarsq/neofsharp.vim'
 
 " Other syntax.
