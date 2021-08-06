@@ -46,6 +46,10 @@ lspconfig.fsautocomplete.setup{
     on_attach = on_attach,
 }
 
+lspconfig.tsserver.setup{
+    on_attach = on_attach,
+}
+
 local vista_executive_for = vim.g.vista_executive_for
 vista_executive_for.fsharp = 'nvim_lsp'
 vista_executive_for.go = 'nvim_lsp'
