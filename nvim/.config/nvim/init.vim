@@ -52,7 +52,6 @@ Plug 'mhinz/vim-signify'
 
 " Developing.
 Plug 'vim-test/vim-test'
-Plug 'vim-vdebug/vdebug'
 
 " Go.
 if s:load_go_plugins
@@ -272,15 +271,6 @@ let g:test#strategy = 'vimux'
 nnoremap <silent> <Leader>rc :TestFile<CR>
 nnoremap <silent> <Leader>rt :TestNearest<CR>
 nnoremap <silent> <Leader>rr :TestLast<CR>
-
-" Configure Vdebug.
-let g:vdebug_options = {
-    \ 'ide_key': 'vdebug',
-    \ 'path_maps': {
-        \ '/code': getcwd(),
-        \ '/var/www': getcwd(),
-    \ },
-\ }
 
 " Configure vim-go.
 let g:go_code_completion_enabled = 0
