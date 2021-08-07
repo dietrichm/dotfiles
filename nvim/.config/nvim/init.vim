@@ -103,6 +103,7 @@ set path=.,*
 set grepprg=rg\ --vimgrep
 set undofile
 set signcolumn=yes
+set termguicolors
 
 " Custom statusline with ALE and spell status.
 function! ALEStatusLine() abort

@@ -14,9 +14,6 @@ try
 catch /^Vim\%((\a\+)\)\=:E185/
 endtry
 
-" Error messages have grey text.
-highlight ErrorMsg ctermfg=0
-
 " Allow whitespace (list) characters to change background when selected.
 highlight Whitespace ctermfg=250 ctermbg=NONE
 
