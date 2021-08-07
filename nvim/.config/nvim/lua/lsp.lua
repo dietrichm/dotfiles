@@ -58,10 +58,3 @@ vista_executive_for.php = 'nvim_lsp'
 vista_executive_for.python = 'nvim_lsp'
 vista_executive_for.typescript = 'nvim_lsp'
 vim.g.vista_executive_for = vista_executive_for
-
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics, {
-        virtual_text = false,
-        signs = false,
-    }
-)
