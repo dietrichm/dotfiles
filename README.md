@@ -1,11 +1,9 @@
 # dotfiles
 
-This repository contains configuration files, Vimscript code and shell scripts for my software development environment.
+This repository contains configuration files, Vimscript code and shell scripts for my software development environment on Linux.
 The centrepieces of this environment are [kitty](https://sw.kovidgoyal.net/kitty/) and [Tmux](https://github.com/tmux/tmux) running one [Neovim](https://neovim.io/) instance and any number of zsh shells per project.
 
-At the moment, the configuration is tailored to developing in Python, PHP, Go, and (to a lesser extent - more focused on reading) JavaScript and TypeScript.
-
-These dotfiles are being used and hence tested only on GNU/Linux. MacOS is no longer supported.
+At the moment, the configuration is tailored to developing in Python, PHP, Go, JavaScript and TypeScript.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
