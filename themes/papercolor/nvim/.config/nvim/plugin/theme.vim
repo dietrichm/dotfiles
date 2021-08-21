@@ -14,9 +14,6 @@ try
 catch /^Vim\%((\a\+)\)\=:E185/
 endtry
 
-" Allow whitespace (list) characters to change background when selected.
-highlight Whitespace ctermfg=250 ctermbg=NONE
-
 " Suitable Semshi colours for light theme.
 highlight semshiAttribute ctermfg=7
 highlight semshiBuiltin ctermfg=11
