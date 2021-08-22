@@ -246,7 +246,7 @@ nnoremap <silent> <Leader>w :Windows<CR>
 nnoremap <silent> <Leader>fh :History<CR>
 let $FZF_DEFAULT_OPTS .= ' --reverse'
 let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.8}}
-let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
+let g:fzf_preview_window = ['right:50%:hidden:+{2}-/2', 'ctrl-/']
 
 " Configure UltiSnips.
 let g:UltiSnipsSnippetsDir = s:nvim_config_root . '/UltiSnips'
