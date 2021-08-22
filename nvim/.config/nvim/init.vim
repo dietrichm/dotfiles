@@ -125,9 +125,6 @@ function! SpellStatusLine() abort
 endfunction
 set statusline=%<%f\ %y%{SpellStatusLine()}%m%r\ %{ALEStatusLine()}\ %=%-14.(%l,%c%V%)\ %P
 
-" Comments are rendered in italic.
-highlight Comment cterm=italic
-
 " Configure netrw.
 let g:netrw_banner = 0
 let g:netrw_bufsettings = 'noma nomod nonu nowrap ro nobl nolist'
