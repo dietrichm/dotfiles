@@ -39,6 +39,7 @@ endif
 Plug 'editorconfig/editorconfig-vim'
 Plug 'SirVer/ultisnips'
 Plug 'neovim/nvim-lspconfig'
+Plug 'ojroques/nvim-lspfuzzy'
 Plug 'hrsh7th/nvim-compe'
 Plug 'dense-analysis/ale'
 Plug 'AndrewRadev/splitjoin.vim'
