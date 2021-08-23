@@ -63,7 +63,6 @@ endif
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'adelarsq/neofsharp.vim'
 
@@ -144,10 +143,6 @@ let g:localvimrc_persistent = 1
 
 " Configure PHP syntax.
 let g:PHP_noArrowMatching = 1
-
-" Configure Semshi.
-let g:semshi#error_sign = v:false
-let g:semshi#mark_selected_nodes = 0
 
 " Configure ALE.
 let g:ale_lint_on_enter = 0
