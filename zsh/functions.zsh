@@ -16,5 +16,10 @@ repos() {
     local name="repos"
     local dir=~/repos
 
+    if [ $# -ge 1 ]; then
+        name="$1"
+        dir="$dir/$name"
+    fi
+
     tmux new-session -A -c "$dir" -s "$name"
 }
