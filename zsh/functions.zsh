@@ -21,5 +21,10 @@ repos() {
         dir="$dir/$name"
     fi
 
+    if [ ! -d "$dir" ]; then
+        echo "Non existing directory: $dir"
+        return 1
+    fi
+
     tmux new-session -A -c "$dir" -s "$name"
 }
