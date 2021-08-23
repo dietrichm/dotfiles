@@ -11,3 +11,10 @@ ctags() {
 ca() {
     conda activate "$(basename "$PWD")"
 }
+
+repos() {
+    local name="repos"
+    local dir=~/repos
+
+    tmux new-session -A -c "$dir" -s "$name"
+}
