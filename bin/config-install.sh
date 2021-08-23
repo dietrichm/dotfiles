@@ -23,12 +23,6 @@ else
     selected_packages=("${all_packages[@]}")
 fi
 
-if [[ " ${selected_packages[*]} " =~ " tmux " ]]; then
-    # Compile and install terminfo file for Tmux.
-    tic "$MY_CONFIG_ROOT/etc/tmux-256color.terminfo" \
-        || echo -e "Skipped compiling terminfo for Tmux.\n"
-fi
-
 # Install Python dependencies.
 pip3 install --user -U -r "$MY_CONFIG_ROOT/etc/requirements.txt"
 echo
