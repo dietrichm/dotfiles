@@ -1,11 +1,10 @@
 scriptencoding utf-8
 
-let s:nvim_config_root = $HOME . '/.config/nvim'
 let s:load_line_plugins = 0
 let s:load_go_plugins = executable('go') == 1
 let s:load_php_plugins = executable('php') == 1
 
-let s:vim_plug_script = s:nvim_config_root . '/autoload/plug.vim'
+let s:vim_plug_script = stdpath('config') . '/autoload/plug.vim'
 if empty(glob(s:vim_plug_script))
     execute '!curl -fLo ' . shellescape(s:vim_plug_script) . ' --create-dirs '
         \ . 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -241,7 +240,7 @@ let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.8}}
 let g:fzf_preview_window = ['right:50%:hidden:+{2}-/2', 'ctrl-/']
 
 " Configure UltiSnips.
-let g:UltiSnipsSnippetsDir = s:nvim_config_root . '/UltiSnips'
+let g:UltiSnipsSnippetsDir = stdpath('config') . '/UltiSnips'
 let g:UltiSnipsEditSplit = 'context'
 
 " Configure LSP and completion.
