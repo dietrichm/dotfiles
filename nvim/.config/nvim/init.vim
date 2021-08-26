@@ -103,7 +103,7 @@ set spelllang=en_gb
 set path=.,*
 set grepprg=rg\ --vimgrep
 set undofile
-set signcolumn=yes
+set signcolumn=auto:1-2
 set termguicolors
 
 " Custom statusline with ALE and spell status.
