@@ -210,6 +210,7 @@ augroup yank
 augroup END
 
 " Configure vim-signify.
+let g:signify_priority = 5
 let g:signify_sign_change = '~'
 let g:signify_sign_show_count = 0
 let g:signify_update_on_focusgained = 1
