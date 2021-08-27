@@ -89,14 +89,12 @@ set smartindent
 set nohlsearch
 set ignorecase
 set smartcase
-set inccommand=nosplit
 set nowrapscan
 set linebreak
 set title
 set titlestring=%F
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
 set list
-set hidden
 set updatetime=100
 set shortmess+=cIW
 set spelllang=en_gb
