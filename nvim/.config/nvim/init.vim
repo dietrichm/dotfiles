@@ -42,7 +42,6 @@ Plug 'ojroques/nvim-lspfuzzy'
 Plug 'hrsh7th/nvim-compe'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'dense-analysis/ale'
-Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -261,9 +260,6 @@ let g:go_code_completion_enabled = 0
 let g:go_def_mapping_enabled = 0
 let g:go_fmt_fail_silently = 1
 let g:go_jump_to_error = 0
-
-" Configure splitjoin.
-let g:splitjoin_php_method_chain_full = 1
 
 " Configure EditorConfig.
 let g:EditorConfig_exclude_patterns = [
