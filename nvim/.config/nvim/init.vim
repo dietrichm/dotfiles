@@ -117,10 +117,13 @@ function! ALEStatusLine() abort
 
     return printf('✘%d ▲%d', l:errors.errors, l:errors.warnings)
 endfunction
+function! DiagnosticStatusLine() abort
+    return ALEStatusLine()
+endfunction
 function! SpellStatusLine() abort
     return &spell ? printf('[%s]', &spelllang) : ''
 endfunction
-set statusline=%<%f\ %y%{SpellStatusLine()}%m%r\ %{ALEStatusLine()}\ %=%-14.(%l,%c%V%)\ %P
+set statusline=%<%f\ %y%{SpellStatusLine()}%m%r\ %{DiagnosticStatusLine()}\ %=%-14.(%l,%c%V%)\ %P
 
 " Configure netrw.
 let g:netrw_banner = 0
