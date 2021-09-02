@@ -122,8 +122,8 @@ function! ALEStatusCounts() abort
     \ }
 endfunction
 function! DiagnosticStatusLine() abort
-    let l:errors = ALEStatusCounts()
-    return printf('✘%d ▲%d', l:errors.errors, l:errors.warnings)
+    let l:ale = ALEStatusCounts()
+    return printf('✘%d ▲%d', l:ale.errors, l:ale.warnings)
 endfunction
 function! SpellStatusLine() abort
     return &spell ? printf('[%s]', &spelllang) : ''
