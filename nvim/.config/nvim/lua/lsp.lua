@@ -36,14 +36,6 @@ lspconfig.pyright.setup{
         pyright = {
             disableOrganizeImports = true,
         },
-        python = {
-            analysis = {
-                diagnosticMode = 'workspace',
-            },
-            linting = {
-                enabled = false,
-            },
-        },
     },
 }
 
