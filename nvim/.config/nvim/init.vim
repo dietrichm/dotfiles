@@ -122,6 +122,10 @@ function! DiagnosticStatusLine() abort
     let l:lsp = LSPStatusCounts()
     let l:ale = ALEStatusCounts()
 
+    if l:lsp.errors + l:ale.errors + l:lsp.warnings + l:ale.warnings == 0
+        return ''
+    endif
+
     return printf('✘%d ▲%d', l:lsp.errors + l:ale.errors, l:lsp.warnings + l:ale.warnings)
 endfunction
 function! SpellStatusLine() abort
