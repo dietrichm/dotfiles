@@ -104,7 +104,7 @@ set signcolumn=auto:1-2
 set termguicolors
 
 " Custom statusline with ALE and spell status.
-function! ALEStatusLine() abort
+function! ALEStatusCounts() abort
     let l:counts = ale#statusline#Count(bufnr(''))
 
     let l:all_errors = l:counts.error + l:counts.style_error
@@ -116,7 +116,7 @@ function! ALEStatusLine() abort
     \ }
 endfunction
 function! DiagnosticStatusLine() abort
-    let l:errors = ALEStatusLine()
+    let l:errors = ALEStatusCounts()
     return printf('✘%d ▲%d', l:errors.errors, l:errors.warnings)
 endfunction
 function! SpellStatusLine() abort
