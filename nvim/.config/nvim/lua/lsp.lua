@@ -13,6 +13,13 @@ local on_attach = function(_, bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
 
     vim.api.nvim_command('autocmd CursorHoldI <buffer=' .. bufnr .. '> lua vim.lsp.buf.signature_help()')
+
+    local has_buffer_linters, _ = pcall(vim.api.nvim_buf_get_var, bufnr, 'ale_linters')
+
+    if not has_buffer_linters then
+        -- Disable default ALE linters.
+        vim.api.nvim_buf_set_var(bufnr, 'ale_linters', {})
+    end
 end
 
 lspconfig.gopls.setup{
