@@ -110,7 +110,12 @@ function! ALEStatusLine() abort
     let l:all_errors = l:counts.error + l:counts.style_error
     let l:all_non_errors = l:counts.total - l:all_errors
 
-    return printf('✘%d ▲%d', all_errors, all_non_errors)
+    let l:errors = {
+      \ 'errors': l:all_errors,
+      \ 'warnings': l:all_non_errors,
+    \ }
+
+    return printf('✘%d ▲%d', l:errors.errors, l:errors.warnings)
 endfunction
 function! SpellStatusLine() abort
     return &spell ? printf('[%s]', &spelllang) : ''
