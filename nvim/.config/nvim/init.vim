@@ -113,12 +113,9 @@ endfunction
 function! ALEStatusCounts() abort
     let l:counts = ale#statusline#Count(bufnr(''))
 
-    let l:all_errors = l:counts.error + l:counts.style_error
-    let l:all_non_errors = l:counts.total - l:all_errors
-
     return {
-      \ 'errors': l:all_errors,
-      \ 'warnings': l:all_non_errors,
+      \ 'errors': l:counts.error + l:counts.style_error,
+      \ 'warnings': l:counts.warning + l:counts.style_warning,
     \ }
 endfunction
 function! DiagnosticStatusLine() abort
