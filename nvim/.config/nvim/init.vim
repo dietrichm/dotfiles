@@ -104,6 +104,12 @@ set signcolumn=auto:1-2
 set termguicolors
 
 " Custom statusline with ALE and spell status.
+function! LSPStatusCounts() abort
+    return {
+      \ 'errors': luaeval('vim.lsp.diagnostic.get_count(0, [[Error]])'),
+      \ 'warnings': luaeval('vim.lsp.diagnostic.get_count(0, [[Warning]])'),
+    \ }
+endfunction
 function! ALEStatusCounts() abort
     let l:counts = ale#statusline#Count(bufnr(''))
 
