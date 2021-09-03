@@ -1,7 +1,6 @@
 setlocal textwidth=79
 setlocal colorcolumn=+1,100
 
-let b:ale_python_auto_pipenv = 1
 let b:ale_python_flake8_change_directory = 0
 let b:delimitMate_expand_cr = 1
 let b:delimitMate_expand_space = 1
