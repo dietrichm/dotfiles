@@ -17,8 +17,8 @@ repos() {
     local dir=~/repos
 
     if [ $# -ge 1 ]; then
-        name="$1"
-        dir="$dir/$name"
+        name="${1##*/}"
+        dir="$dir/$1"
     fi
 
     if [ ! -d "$dir" ]; then
