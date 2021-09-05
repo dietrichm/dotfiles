@@ -17,6 +17,7 @@ At the moment, the configuration is tailored to developing in Python, PHP, Go, J
 - [Language Servers (LSP)](#language-servers-lsp)
 - [Custom configuration](#custom-configuration)
   - [Neovim](#neovim)
+  - [git](#git)
   - [isort](#isort)
   - [universal-ctags](#universal-ctags)
   - [Phpactor](#phpactor)
@@ -138,6 +139,20 @@ let g:test#python#runner = 'pytest'
 let g:test#python#pytest#executable = 'make'
 
 let g:phpactorPhpBin = '/usr/local/bin/php'
+```
+
+### git
+
+A `git/local.inc` file can be used to set custom git configuration values.
+Here you can use [conditional includes](https://git-scm.com/docs/git-config#_conditional_includes) to set configuration per directory:
+
+```gitconfig
+# vi: ft=gitconfig
+
+[user]
+	email = me@example.com
+[includeIf "gitdir:~/foo/bar/"]
+	path = ~/foo/bar/.gitconfig
 ```
 
 ### isort
