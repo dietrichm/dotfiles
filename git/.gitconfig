@@ -22,6 +22,7 @@
 	default = current
 [user]
 	useconfigonly = true
+	name = Dietrich Moerman
 [core]
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
