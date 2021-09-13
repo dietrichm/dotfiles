@@ -311,6 +311,9 @@ nnoremap <silent> [l :lprevious<CR>
 nnoremap <silent> ]L :llast<CR>
 nnoremap <silent> [L :lfirst<CR>
 
+" Use g] for :tjump.
+nnoremap <silent> g] g<C-]>
+
 " Searching using ripgrep.
 nnoremap <silent> <Leader>sw :execute "Rg \\b" . expand("<cword>") . "\\b"<CR>
 command! -bang -nargs=* Rgi call fzf#vim#grep(
