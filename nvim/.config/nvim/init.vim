@@ -313,6 +313,7 @@ nnoremap <silent> [L :lfirst<CR>
 
 " Use g] for :tjump.
 nnoremap <silent> g] g<C-]>
+nnoremap <silent> <C-W>g] <C-W>g<C-]>
 
 " Searching using ripgrep.
 nnoremap <silent> <Leader>sw :execute "Rg \\b" . expand("<cword>") . "\\b"<CR>
