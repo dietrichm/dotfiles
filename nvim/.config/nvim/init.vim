@@ -66,7 +66,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'adelarsq/neofsharp.vim'
 
 " Other syntax.
-Plug 'cespare/vim-toml'
+Plug 'cespare/vim-toml', {'branch': 'main'}
 Plug 'plasticboy/vim-markdown'
 
 call plug#end()
