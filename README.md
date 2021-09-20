@@ -50,7 +50,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
      * [kitty](https://sw.kovidgoyal.net/kitty/)
      * [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
  * `nvim`
-     * [Neovim](https://neovim.io/) >= 0.5.0 or HEAD -- see [install instructions](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+     * [Neovim](https://neovim.io/) HEAD (>= 0.6.0) -- see [install instructions](https://github.com/neovim/neovim/wiki/Installing-Neovim)
      * [ripgrep](https://github.com/BurntSushi/ripgrep)
      * [universal-ctags](http://ctags.io/)
      * _Optional_
@@ -112,7 +112,7 @@ In Tmux, execute `prefix` + <kbd>U</kbd> regularly.
 
 ## Language Servers (LSP)
 
-Neovim 0.5+ internal LSP client is used to provide code intelligence and completion using [language servers](https://langserver.org/).
+Neovim's internal LSP client is used to provide code intelligence and completion using [language servers](https://langserver.org/).
 
 Depending on the languages used, the following language server binaries need to be installed manually:
 
