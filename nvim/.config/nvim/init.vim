@@ -106,8 +106,8 @@ set termguicolors
 " Custom statusline with ALE and spell status.
 function! LSPStatusCounts() abort
     return {
-      \ 'errors': luaeval('vim.lsp.diagnostic.get_count(0, [[Error]])'),
-      \ 'warnings': luaeval('vim.lsp.diagnostic.get_count(0, [[Warning]])'),
+      \ 'errors': luaeval('#vim.diagnostic.get(0, {severity = vim.diagnostic.severity.ERROR})'),
+      \ 'warnings': luaeval('#vim.diagnostic.get(0, {severity = vim.diagnostic.severity.WARN})'),
     \ }
 endfunction
 function! ALEStatusCounts() abort
