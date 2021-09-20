@@ -1,6 +1,6 @@
 # dotfiles
 
-This repository contains configuration files, Vimscript code and shell scripts for my software development environment on Linux.
+This repository contains configuration files, Vimscript and [Lua](https://neovim.io/doc/user/lua.html) code, and shell scripts for my software development environment on Linux.
 The centrepieces of this environment are [kitty](https://sw.kovidgoyal.net/kitty/) and [Tmux](https://github.com/tmux/tmux) running one [Neovim](https://neovim.io/) instance and any number of zsh shells per project.
 
 At the moment, the configuration is tailored to developing in Python, PHP, Go, JavaScript and TypeScript.
