@@ -60,16 +60,16 @@ vista_executive_for.python = 'nvim_lsp'
 vista_executive_for.typescript = 'nvim_lsp'
 vim.g.vista_executive_for = vista_executive_for
 
-vim.fn.sign_define('LspDiagnosticsSignError', {
+vim.fn.sign_define('DiagnosticSignError', {
     text='❌',
 })
-vim.fn.sign_define('LspDiagnosticsSignWarning', {
+vim.fn.sign_define('DiagnosticSignWarning', {
     text='❗',
 })
-vim.fn.sign_define('LspDiagnosticsSignInformation', {
+vim.fn.sign_define('DiagnosticSignInformation', {
     text='💡',
 })
-vim.fn.sign_define('LspDiagnosticsSignHint', {
+vim.fn.sign_define('DiagnosticSignHint', {
     text='💭',
 })
 
