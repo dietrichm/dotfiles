@@ -67,10 +67,10 @@ vim.g.vista_executive_for = vista_executive_for
 vim.fn.sign_define('DiagnosticSignError', {
   text='❌',
 })
-vim.fn.sign_define('DiagnosticSignWarning', {
+vim.fn.sign_define('DiagnosticSignWarn', {
   text='❗',
 })
-vim.fn.sign_define('DiagnosticSignInformation', {
+vim.fn.sign_define('DiagnosticSignInfo', {
   text='💡',
 })
 vim.fn.sign_define('DiagnosticSignHint', {
