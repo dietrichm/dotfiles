@@ -9,7 +9,6 @@ set -e
 
 all_packages=(
     git
-    i3
     kitty
     nvim
     ssh

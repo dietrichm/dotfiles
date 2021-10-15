@@ -43,9 +43,6 @@ Depending on which [config packages](#config-packages) are installed, these depe
  * `git`:
      * GnuPG
      * [Delta](https://github.com/dandavison/delta)
- * `i3`
-     * [i3](https://i3wm.org/)
-     * [KDE Plasma](https://kde.org/plasma-desktop/)
  * `kitty`
      * [kitty](https://sw.kovidgoyal.net/kitty/)
      * [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
@@ -88,7 +85,6 @@ The following themes are available:
 The following (Stow based) config packages are available:
 
 * `git`
-* `i3`
 * `kitty`
 * `nvim`
 * `ssh`
