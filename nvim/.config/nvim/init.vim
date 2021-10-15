@@ -25,7 +25,7 @@ Plug 'preservim/vimux'
 
 " UI and colours.
 Plug 'chriskempson/base16-vim'
-Plug 'dietrichm/papercolor-theme', {'branch': 'neovim-lsp-highlights'}
+Plug 'NLKNguyen/papercolor-theme'
 if s:load_line_plugins
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
