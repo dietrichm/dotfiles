@@ -125,7 +125,7 @@ function! DiagnosticStatusLine() abort
         return ''
     endif
 
-    return printf('✘%d ▲%d', l:lsp.errors + l:ale.errors, l:lsp.warnings + l:ale.warnings)
+    return printf('❌%d ❗%d', l:lsp.errors + l:ale.errors, l:lsp.warnings + l:ale.warnings)
 endfunction
 function! SpellStatusLine() abort
     return &spell ? printf('[%s]', &spelllang) : ''
