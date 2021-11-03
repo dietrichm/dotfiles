@@ -28,3 +28,9 @@ repos() {
 
     tmux new-session -A -c "$dir" -s "$name"
 }
+
+loadkey() {
+    local key="id_rsa"
+
+    ssh-add ~/.ssh/"$key" < /dev/null
+}
