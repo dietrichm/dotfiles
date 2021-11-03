@@ -3,7 +3,6 @@
 .~lock.*#
 tags
 !tags/
-node_modules/
 .php_cs.cache
 .phpunit.result.cache
 *.min.js
