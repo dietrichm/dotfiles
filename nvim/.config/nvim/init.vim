@@ -263,9 +263,9 @@ let g:test#preserve_screen = 1
 let g:test#python#runner = 'pytest'
 let g:test#runner_commands = ['PyTest']
 let g:test#strategy = 'vimux'
-nnoremap <silent> <Leader>rc :TestFile<CR>
-nnoremap <silent> <Leader>rt :TestNearest<CR>
-nnoremap <silent> <Leader>rr :TestLast<CR>
+nnoremap <silent> <Leader>rc :update \| :TestFile<CR>
+nnoremap <silent> <Leader>rt :update \| :TestNearest<CR>
+nnoremap <silent> <Leader>rr :update \| :TestLast<CR>
 
 " Configure vim-go.
 let g:go_code_completion_enabled = 0
