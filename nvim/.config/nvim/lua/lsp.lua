@@ -17,10 +17,11 @@ local on_attach = function(_, bufnr)
 
   if has_force_ale_linting and force_ale_linting == 1 then
     vim.diagnostic.disable(bufnr)
-  else
-    vim.call('ale#toggle#DisableBuffer', bufnr)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>lf', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+    return
   end
+
+  vim.call('ale#toggle#DisableBuffer', bufnr)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>lf', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
 lspconfig.gopls.setup{
