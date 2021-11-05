@@ -123,18 +123,15 @@ Some projects require or can benefit from some custom configuration for some of 
 
 ### Neovim
 
-Project local configuration can be set in `.lvimrc`. This allows for example to alter the set and configuration of linters being used by ALE, the Python test tool and its executable, and the PHP executable used by Phpactor:
+Project local configuration can be set in `.lvimrc`.
+This allows for example to force ALE linting/fixing over LSP and configure default fixers, and set the default Python test tool and its executable:
 
 ```viml
-let g:ale_linters = {
-    \ 'php': ['php']
-\ }
-let g:ale_php_php_executable = '/usr/local/bin/php'
+let g:force_ale_linting = 1
+let g:ale_fixers = {'typescript': ['prettier']}
 
 let g:test#python#runner = 'pytest'
 let g:test#python#pytest#executable = 'make'
-
-let g:phpactorPhpBin = '/usr/local/bin/php'
 ```
 
 ### git
