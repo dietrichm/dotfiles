@@ -160,6 +160,8 @@ augroup ale
     autocmd!
     autocmd QuitPre * if empty(&buftype) | lclose | endif
 augroup END
+nnoremap <silent> [d :ALEPrevious<CR>
+nnoremap <silent> ]d :ALENext<CR>
 nnoremap <silent> <Leader>lf :ALEFix<CR>
 
 " Configure Airline.
