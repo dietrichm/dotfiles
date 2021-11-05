@@ -154,8 +154,6 @@ let g:localvimrc_persistent = 1
 let g:PHP_noArrowMatching = 1
 
 " Configure ALE.
-let g:ale_list_window_size = 3
-let g:ale_open_list = 0
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '❗'
 augroup ale
