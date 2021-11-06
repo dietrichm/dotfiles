@@ -117,6 +117,8 @@ Depending on the languages used, the following language server binaries need to 
 * TypeScript and JavaScript ([tsserver](https://github.com/theia-ide/typescript-language-server)): `npm install -g typescript typescript-language-server`
 * F# ([FsAutoComplete](https://github.com/fsharp/FsAutoComplete)): `dotnet tool install --global fsautocomplete`
 
+`gopls` (for Go) is installed by default through the [vim-go](https://github.com/fatih/vim-go) Neovim plugin.
+
 ## Custom configuration
 
 Some projects require or can benefit from some custom configuration for some of the tools used in this development set-up.
