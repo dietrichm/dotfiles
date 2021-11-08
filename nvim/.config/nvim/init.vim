@@ -160,6 +160,7 @@ let g:PHP_noArrowMatching = 1
 " Configure ALE.
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '❗'
+let g:ale_disable_lsp = 1
 augroup ale
     autocmd!
     autocmd QuitPre * if empty(&buftype) | lclose | endif
