@@ -22,6 +22,7 @@ Plug 'liuchengxu/vista.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'embear/vim-localvimrc'
 Plug 'preservim/vimux'
+Plug 'nvim-lua/plenary.nvim'
 
 " UI and colours.
 Plug 'chriskempson/base16-vim'
@@ -48,6 +49,7 @@ Plug 'tpope/vim-commentary'
 " Git.
 Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
+Plug 'lewis6991/gitsigns.nvim'
 
 " Development.
 Plug 'vim-test/vim-test'
