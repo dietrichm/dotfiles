@@ -48,7 +48,6 @@ Plug 'tpope/vim-commentary'
 " Git.
 Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
-Plug 'mhinz/vim-signify'
 
 " Development.
 Plug 'vim-test/vim-test'
@@ -219,17 +218,6 @@ augroup END
 augroup yank
     autocmd!
     autocmd TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch", timeout=750}
-augroup END
-
-" Configure vim-signify.
-let g:signify_priority = 5
-let g:signify_sign_change = '~'
-let g:signify_sign_show_count = 0
-let g:signify_update_on_focusgained = 1
-let g:signify_vcs_list = ['git']
-augroup signify
-    autocmd!
-    autocmd BufEnter * SignifyRefresh
 augroup END
 
 " Configure vista.
