@@ -246,10 +246,11 @@ let g:fzf_preview_window = ['right:50%:hidden:+{2}-/2', 'ctrl-/']
 let g:UltiSnipsSnippetsDir = stdpath('config') . '/UltiSnips'
 let g:UltiSnipsEditSplit = 'context'
 
-" Configure LSP, completion and treesitter.
+" Configure Lua plugins.
 lua require('lsp')
 lua require('completion')
 lua require('treesitter')
+lua require('settings')
 
 " Configure vim-test.
 let g:test#preserve_screen = 1
