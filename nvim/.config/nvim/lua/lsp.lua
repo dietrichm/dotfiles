@@ -25,6 +25,7 @@ local on_attach = function(_, bufnr)
 end
 
 local flags = {
+  allow_incremental_sync = false,
 }
 
 lspconfig.gopls.setup{
