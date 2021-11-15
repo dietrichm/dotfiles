@@ -24,9 +24,13 @@ local on_attach = function(_, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>lf', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
+local flags = {
+}
+
 lspconfig.gopls.setup{
   cmd = {"gopls", "-remote=auto"},
   on_attach = on_attach,
+  flags = flags,
   root_dir = function()
     return vim.fn.getcwd()
   end,
@@ -34,6 +38,7 @@ lspconfig.gopls.setup{
 
 lspconfig.pyright.setup{
   on_attach = on_attach,
+  flags = flags,
   settings = {
     pyright = {
       disableOrganizeImports = true,
@@ -48,14 +53,17 @@ lspconfig.pyright.setup{
 
 lspconfig.intelephense.setup{
   on_attach = on_attach,
+  flags = flags,
 }
 
 lspconfig.fsautocomplete.setup{
   on_attach = on_attach,
+  flags = flags,
 }
 
 lspconfig.tsserver.setup{
   on_attach = on_attach,
+  flags = flags,
 }
 
 local vista_executive_for = vim.g.vista_executive_for
