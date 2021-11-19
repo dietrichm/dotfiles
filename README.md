@@ -56,6 +56,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
          * [Pyright](https://github.com/Microsoft/pyright) (for Python intelligence)
          * [Intelephense](https://intelephense.com/) (for PHP intelligence)
          * TypeScript and [TypeScript Language Server](https://github.com/theia-ide/typescript-language-server) (for TypeScript and JavaScript intelligence)
+         * [lua-language-server](https://github.com/sumneko/lua-language-server) (for Lua intelligence)
          * [.NET SDK](https://docs.microsoft.com/en-us/dotnet/core/sdk) 5.0 and [FsAutoComplete](https://github.com/fsharp/FsAutoComplete) (for F# intelligence)
  * `ssh`: OpenSSH
  * `tig`: [tig](https://jonas.github.io/tig/)
@@ -115,6 +116,7 @@ Depending on the languages used, the following language server binaries need to 
 * Python ([Pyright](https://github.com/Microsoft/pyright)): `npm i -g pyright`
 * PHP ([Intelephense](https://intelephense.com/)): `npm i -g intelephense`
 * TypeScript and JavaScript ([tsserver](https://github.com/theia-ide/typescript-language-server)): `npm install -g typescript typescript-language-server`
+* Lua ([lua-language-server](https://github.com/sumneko/lua-language-server)): see [installation instructions](https://github.com/sumneko/lua-language-server/wiki/Build-and-Run). Install into `~/repos/lua-language-server`.
 * F# ([FsAutoComplete](https://github.com/fsharp/FsAutoComplete)): `dotnet tool install --global fsautocomplete`
 
 `gopls` (for Go) is installed by default through the [vim-go](https://github.com/fatih/vim-go) Neovim plugin.
