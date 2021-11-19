@@ -65,7 +65,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
 ## Installation
 
  * In the repo, execute `git submodule update --init`.
- * Edit `~/.zshenv` to read `export ZDOTDIR="$HOME/my-repos/dotfiles/zsh"` (adapt directory).
+ * Edit `~/.zshenv` to read `export ZDOTDIR="$HOME/repos/dotfiles/zsh"` (adapt directory).
  * Execute `config-install.sh` to install all [config packages](#config-packages).
  * Opening Neovim for the first time will install _vim-plug_ and all plugins.
  * In Tmux, execute `prefix` + <kbd>I</kbd>.
