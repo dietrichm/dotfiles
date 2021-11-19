@@ -30,6 +30,7 @@ At the moment, the configuration is tailored to developing in Python, PHP, Go, J
 
 The following is required for installing and using these dotfiles:
 
+ * Linux
  * git
  * zsh
  * Bash
