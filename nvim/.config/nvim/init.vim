@@ -103,40 +103,6 @@ set undofile
 set signcolumn=auto:1-2
 set termguicolors
 
-" Custom statusline with ALE and spell status.
-function! LSPStatusCounts() abort
-    if get(g:, 'force_ale_linting') == 1
-        return {'errors': 0, 'warnings': 0}
-    endif
-
-    return {
-      \ 'errors': luaeval('#vim.diagnostic.get(0, {severity = vim.diagnostic.severity.ERROR})'),
-      \ 'warnings': luaeval('#vim.diagnostic.get(0, {severity = vim.diagnostic.severity.WARN})'),
-    \ }
-endfunction
-function! ALEStatusCounts() abort
-    let l:counts = ale#statusline#Count(bufnr(''))
-
-    return {
-      \ 'errors': l:counts.error + l:counts.style_error,
-      \ 'warnings': l:counts.warning + l:counts.style_warning,
-    \ }
-endfunction
-function! DiagnosticStatusLine() abort
-    let l:lsp = LSPStatusCounts()
-    let l:ale = ALEStatusCounts()
-
-    if l:lsp.errors + l:ale.errors + l:lsp.warnings + l:ale.warnings == 0
-        return ''
-    endif
-
-    return printf('❌%d ❗%d', l:lsp.errors + l:ale.errors, l:lsp.warnings + l:ale.warnings)
-endfunction
-function! SpellStatusLine() abort
-    return &spell ? printf('[%s]', &spelllang) : ''
-endfunction
-set statusline=%<%f\ %y%{SpellStatusLine()}%m%r\ %{DiagnosticStatusLine()}\ %=%-14.(%l,%c%V%)\ %P
-
 " Configure netrw.
 let g:netrw_banner = 0
 let g:netrw_bufsettings = 'noma nomod nonu nowrap ro nobl nolist'
