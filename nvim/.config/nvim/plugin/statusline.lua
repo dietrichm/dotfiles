@@ -1,4 +1,4 @@
-function SpellStatusLine()
+function _G.SpellStatusLine()
   if not vim.o.spell then
     return ''
   end
@@ -29,7 +29,7 @@ local function ALEStatusCounts()
   }
 end
 
-function DiagnosticStatusLine()
+function _G.DiagnosticStatusLine()
   local lsp = LSPStatusCounts()
   local ale = ALEStatusCounts()
 
