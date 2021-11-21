@@ -56,9 +56,6 @@ Plug 'vim-test/vim-test'
 if s:load_go_plugins
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 endif
-if s:load_php_plugins
-    Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
-endif
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'

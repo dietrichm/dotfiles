@@ -20,14 +20,3 @@ nnoremap <silent> <buffer> <Leader>sce :execute "Rg \\bclass .+ (extends\|implem
 nnoremap <silent> <buffer> <Leader>sci :execute "Rg \\bnew\\s+" . expand("<cword>") . "\\b"<CR>
 nnoremap <silent> <buffer> <Leader>scr :execute "Rg \\b" . expand("<cword>") . "::class\\b"<CR>
 nnoremap <silent> <buffer> <Leader>smc :execute "Rg (->\|::)" . expand("<cword>") . "\\b"<CR>
-
-" Phpactor
-nnoremap <silent> <buffer> <Leader>u :call phpactor#ImportClass()<CR>
-nnoremap <silent> <buffer> <Leader>e :call phpactor#ClassExpand()<CR>
-nnoremap <silent> <buffer> <Leader>mm :call phpactor#ContextMenu()<CR>
-nnoremap <silent> <buffer> <Leader>nn :call phpactor#Navigate()<CR>
-nnoremap <silent> <buffer> <Leader>tt :call phpactor#Transform()<CR>
-nnoremap <silent> <buffer> <Leader>ee :call phpactor#ExtractExpression(v:false)<CR>
-nnoremap <silent> <buffer> <Leader>ec :call phpactor#ExtractConstant()<CR>
-vnoremap <silent> <buffer> <Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
-vnoremap <silent> <buffer> <Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
