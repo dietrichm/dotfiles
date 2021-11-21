@@ -2,7 +2,6 @@ scriptencoding utf-8
 
 let s:load_line_plugins = 0
 let s:load_go_plugins = executable('go') == 1
-let s:load_php_plugins = executable('php') == 1
 
 let s:vim_plug_script = stdpath('config') . '/autoload/plug.vim'
 if empty(glob(s:vim_plug_script))
