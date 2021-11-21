@@ -16,7 +16,6 @@ path=(
     $MY_CONFIG_ROOT/bin
     /usr/local/go/bin
     $path
-    $MY_CONFIG_ROOT/bin/fallback
 )
 export PATH
 
