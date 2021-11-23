@@ -18,7 +18,8 @@ local on_attach = function(_, bufnr)
     return
   end
 
-  vim.call('ale#toggle#DisableBuffer', bufnr)
+  vim.fn['ale#toggle#DisableBuffer'](bufnr)
+
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>lf', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
