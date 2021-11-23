@@ -1,5 +1,5 @@
 [alias]
-	addn = add -N
+	addn = add -Nv
 	addp = add -p
 	br = branch -vv
 	bra = branch -vva
