@@ -25,9 +25,7 @@ local on_attach = function(_, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>lf', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
-local flags = {
-  allow_incremental_sync = false,
-}
+local flags = {}
 
 lspconfig.gopls.setup{
   cmd = {"gopls", "-remote=auto"},
