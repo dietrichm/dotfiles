@@ -61,3 +61,5 @@
 	diffFilter = delta
 [include]
 	path = local.inc
+[advice]
+	detachedHead = false
