@@ -110,6 +110,8 @@ In Tmux, execute `prefix` + <kbd>U</kbd> regularly.
 
 Neovim's internal LSP client is used to provide code intelligence and completion using [language servers](https://langserver.org/).
 
+`gopls` (for Go) is installed by default through the [vim-go](https://github.com/fatih/vim-go) Neovim plugin.
+
 Depending on the languages used, the following language server binaries need to be installed manually:
 
 * Python ([Pyright](https://github.com/Microsoft/pyright)): `npm i -g pyright`
@@ -117,8 +119,6 @@ Depending on the languages used, the following language server binaries need to 
 * TypeScript and JavaScript ([tsserver](https://github.com/theia-ide/typescript-language-server)): `npm i -g typescript typescript-language-server`
 * Lua ([lua-language-server](https://github.com/sumneko/lua-language-server)): see [installation instructions](https://github.com/sumneko/lua-language-server/wiki/Build-and-Run). Install into `~/repos/lua-language-server`.
 * F# ([FsAutoComplete](https://github.com/fsharp/FsAutoComplete)): `dotnet tool install --global fsautocomplete`
-
-`gopls` (for Go) is installed by default through the [vim-go](https://github.com/fatih/vim-go) Neovim plugin.
 
 ## Custom configuration
 
