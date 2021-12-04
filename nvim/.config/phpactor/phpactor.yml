@@ -1,4 +1,0 @@
-navigator.destinations:
-    source: src/<kernel>.php
-    unit_test: tests/Unit/<kernel>Test.php
-    integration_test: tests/Integration/<kernel>Test.php
