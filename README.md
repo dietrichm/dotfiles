@@ -52,7 +52,6 @@ Depending on which [config packages](#config-packages) are installed, these depe
      * [universal-ctags](http://ctags.io/)
      * _Optional_
          * Go (Golang)
-         * PHP 7 and Composer
          * [Pyright](https://github.com/Microsoft/pyright) (for Python intelligence)
          * [Intelephense](https://intelephense.com/) (for PHP intelligence)
          * TypeScript and [TypeScript Language Server](https://github.com/theia-ide/typescript-language-server) (for TypeScript and JavaScript intelligence)
