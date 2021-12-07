@@ -47,7 +47,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
      * [kitty](https://sw.kovidgoyal.net/kitty/)
      * [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
  * `nvim`
-     * [Neovim](https://neovim.io/) HEAD (>= 0.6.0) -- see [install instructions](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+     * [Neovim](https://neovim.io/) HEAD -- see [install instructions](https://github.com/neovim/neovim/wiki/Installing-Neovim)
      * [ripgrep](https://github.com/BurntSushi/ripgrep)
      * [universal-ctags](http://ctags.io/)
      * _Optional_
