@@ -51,12 +51,8 @@ Depending on which [config packages](#config-packages) are installed, these depe
      * [ripgrep](https://github.com/BurntSushi/ripgrep)
      * [universal-ctags](http://ctags.io/)
      * _Optional_
-         * Go (Golang)
-         * [Pyright](https://github.com/Microsoft/pyright) (for Python intelligence)
-         * [Intelephense](https://intelephense.com/) (for PHP intelligence)
-         * TypeScript and [TypeScript Language Server](https://github.com/theia-ide/typescript-language-server) (for TypeScript and JavaScript intelligence)
-         * [lua-language-server](https://github.com/sumneko/lua-language-server) (for Lua intelligence)
-         * [.NET SDK](https://docs.microsoft.com/en-us/dotnet/core/sdk) 5.0 and [FsAutoComplete](https://github.com/fsharp/FsAutoComplete) (for F# intelligence)
+         * Go (Golang) - will install [vim-go](https://github.com/fatih/vim-go)
+         * [Language servers](#language-servers-lsp) depending on the desired languages
  * `ssh`: OpenSSH
  * `tig`: [tig](https://jonas.github.io/tig/)
  * `tmux`: [Tmux](https://github.com/tmux/tmux)
