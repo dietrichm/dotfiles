@@ -63,3 +63,5 @@
 	path = local.inc
 [advice]
 	detachedHead = false
+[tag]
+	gpgSign = true
