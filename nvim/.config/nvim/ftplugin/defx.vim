@@ -2,7 +2,7 @@ setlocal nonumber
 setlocal cursorline
 
 nnoremap <silent> <buffer> <expr> <CR> defx#is_directory() ?
-    \ defx#do_action('open_or_close_tree') :
+    \ defx#do_action('open_tree', ['toggle']) :
     \ defx#do_action('multi', ['drop', 'quit'])
 nnoremap <silent> <buffer> <nowait> <expr> c defx#do_action('copy')
 nnoremap <silent> <buffer> <expr> m defx#do_action('move')
