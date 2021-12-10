@@ -25,11 +25,15 @@ local on_attach = function(_, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>lf', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 local flags = {}
 
 lspconfig.gopls.setup{
   cmd = {"gopls", "-remote=auto"},
   on_attach = on_attach,
+  capabilities = capabilities,
   flags = flags,
   root_dir = function()
     return vim.fn.getcwd()
@@ -38,6 +42,7 @@ lspconfig.gopls.setup{
 
 lspconfig.pyright.setup{
   on_attach = on_attach,
+  capabilities = capabilities,
   flags = flags,
   settings = {
     pyright = {
@@ -53,16 +58,19 @@ lspconfig.pyright.setup{
 
 lspconfig.intelephense.setup{
   on_attach = on_attach,
+  capabilities = capabilities,
   flags = flags,
 }
 
 lspconfig.fsautocomplete.setup{
   on_attach = on_attach,
+  capabilities = capabilities,
   flags = flags,
 }
 
 lspconfig.tsserver.setup{
   on_attach = on_attach,
+  capabilities = capabilities,
   flags = flags,
 }
 
@@ -76,6 +84,7 @@ table.insert(runtime_path, 'lua/?/init.lua')
 lspconfig.sumneko_lua.setup{
   cmd = {sumneko_binary, '-E', sumneko_root_path .. '/main.lua'};
   on_attach = on_attach,
+  capabilities = capabilities,
   flags = flags,
   settings = {
     Lua = {
