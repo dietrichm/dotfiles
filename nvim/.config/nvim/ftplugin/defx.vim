@@ -17,6 +17,8 @@ nnoremap <silent> <buffer> <expr> r defx#do_action('rename')
 nnoremap <silent> <buffer> <expr> . defx#do_action('toggle_ignored_files')
 nnoremap <silent> <buffer> <expr> o defx#do_action('open')
 nnoremap <silent> <buffer> <expr> yy defx#do_action('yank_path', [':.'])
-nnoremap <silent> <buffer> <expr> - defx#do_action('cd', ['..'])
+nnoremap <silent> <buffer> <expr> - line('.') == 1 ?
+    \ defx#do_action('cd', ['..']) :
+    \ defx#do_action('close_tree')
 nnoremap <silent> <buffer> <expr> ~ defx#do_action('cd', [getcwd()])
 nnoremap <silent> <buffer> <expr> q defx#do_action('quit')
