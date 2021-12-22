@@ -21,4 +21,5 @@ nnoremap <silent> <buffer> <expr> - line('.') == 1 ?
     \ defx#do_action('cd', ['..']) :
     \ defx#do_action('close_tree')
 nnoremap <silent> <buffer> <expr> ~ defx#do_action('cd', [getcwd()])
+nnoremap <silent> <buffer> <expr> R defx#do_action('redraw')
 nnoremap <silent> <buffer> <expr> q defx#do_action('quit')
