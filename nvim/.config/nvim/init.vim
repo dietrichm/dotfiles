@@ -38,7 +38,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'SirVer/ultisnips'
 Plug 'neovim/nvim-lspconfig'
 Plug 'ojroques/nvim-lspfuzzy'
-" Plug 'hrsh7th/nvim-compe'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'dense-analysis/ale'
 Plug 'Raimondi/delimitMate'
@@ -222,7 +221,6 @@ let g:UltiSnipsEditSplit = 'context'
 
 " Configure Lua plugins.
 lua require('lsp')
-" lua require('completion')
 lua require('completion_cmp')
 lua require('treesitter')
 lua require('settings')
