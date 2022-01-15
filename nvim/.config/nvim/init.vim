@@ -221,7 +221,7 @@ let g:UltiSnipsEditSplit = 'context'
 
 " Configure Lua plugins.
 lua require('lsp')
-lua require('completion_cmp')
+lua require('completion')
 lua require('treesitter')
 lua require('settings')
 
