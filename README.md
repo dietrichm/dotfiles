@@ -8,6 +8,7 @@ At the moment, the configuration is tailored to developing in Python, PHP, Go, J
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [Screenshot](#screenshot)
 - [Dependencies](#dependencies)
   - [Optional](#optional)
 - [Installation](#installation)
@@ -24,6 +25,10 @@ At the moment, the configuration is tailored to developing in Python, PHP, Go, J
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Screenshot
+
+![Tmux running Neovim while working on a software project](https://repository-images.githubusercontent.com/222291363/62316e00-9b8e-11eb-85a4-74bf9b11aeda)
 
 ## Dependencies
 
