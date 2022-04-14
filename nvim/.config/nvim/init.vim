@@ -52,7 +52,6 @@ Plug 'hrsh7th/nvim-cmp'
 
 " Git.
 Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-rhubarb'
 Plug 'lewis6991/gitsigns.nvim'
 
 " Development.
