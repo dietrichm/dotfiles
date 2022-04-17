@@ -228,6 +228,9 @@ lua require('lsp')
 lua require('completion')
 lua require('treesitter')
 lua require('settings')
+if s:load_telescope
+    lua require('fuzzy')
+endif
 
 " Configure vim-test.
 let g:test#preserve_screen = 1
