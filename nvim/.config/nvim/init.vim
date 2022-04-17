@@ -303,12 +303,16 @@ nnoremap <silent> g] g<C-]>
 nnoremap <silent> <C-W>g] <C-W>g<C-]>
 
 " Searching using ripgrep.
-command! -bang -nargs=* Rgi call fzf#vim#grep(
-    \ 'rg --ignore-vcs --column --line-number --no-heading --color=always --smart-case -- ' . shellescape(<q-args>),
-    \ 1,
-    \ call('fzf#vim#with_preview', g:fzf_preview_window),
-    \ <bang>0
-\ )
+if s:load_telescope
+    command! -nargs=* Rg lua require('telescope.builtin').grep_string({search=<q-args>, use_regex=true})
+else
+    command! -bang -nargs=* Rgi call fzf#vim#grep(
+        \ 'rg --ignore-vcs --column --line-number --no-heading --color=always --smart-case -- ' . shellescape(<q-args>),
+        \ 1,
+        \ call('fzf#vim#with_preview', g:fzf_preview_window),
+        \ <bang>0
+    \ )
+endif
 
 " Delete all buffers.
 nnoremap <silent> <Leader>da :%bd<CR>
