@@ -1,5 +1,6 @@
 scriptencoding utf-8
 
+let s:load_telescope = $NVIM_TELESCOPE == 1
 let s:load_line_plugins = 0
 let s:load_go_plugins = executable('go') == 1
 
@@ -16,6 +17,10 @@ call plug#begin()
 " Tools.
 Plug 'junegunn/fzf', {'do': './install --all'}
     Plug 'junegunn/fzf.vim'
+if s:load_telescope
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
+endif
 Plug 'Shougo/defx.nvim'
 Plug 'liuchengxu/vista.vim'
 Plug 'christoomey/vim-tmux-navigator'
