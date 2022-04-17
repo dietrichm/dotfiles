@@ -215,11 +215,21 @@ let $FZF_DEFAULT_OPTS .= ' --reverse'
 let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.8}}
 let g:fzf_preview_window = ['right:50%:hidden:+{2}-/2', 'ctrl-/']
 
-" Bind FZF mappings.
-nnoremap <silent> <Leader>o :Files<CR>
-nnoremap <silent> <Leader>b :Buffers<CR>
-nnoremap <silent> <Leader>w :Windows<CR>
-nnoremap <silent> <Leader>fh :History<CR>
+if s:load_telescope
+    " Bind Telescope mappings.
+    nnoremap <silent> <Leader>o <cmd>lua require('telescope.builtin').find_files({hidden=true})<CR>
+    nnoremap <silent> <Leader>b <cmd>lua require('telescope.builtin').buffers()<CR>
+    " TODO: <Leader>w
+    nnoremap <silent> <Leader>fh <cmd>lua require('telescope.builtin').oldfiles()<CR>
+    nnoremap <silent> <Leader>sw <cmd>lua require('telescope.builtin').grep_string()<CR>
+else
+    " Bind FZF mappings.
+    nnoremap <silent> <Leader>o :Files<CR>
+    nnoremap <silent> <Leader>b :Buffers<CR>
+    nnoremap <silent> <Leader>w :Windows<CR>
+    nnoremap <silent> <Leader>fh :History<CR>
+    nnoremap <silent> <Leader>sw :execute "Rg \\b" . expand("<cword>") . "\\b"<CR>
+endif
 
 " Configure UltiSnips.
 let g:UltiSnipsSnippetsDir = stdpath('config') . '/UltiSnips'
@@ -293,7 +303,6 @@ nnoremap <silent> g] g<C-]>
 nnoremap <silent> <C-W>g] <C-W>g<C-]>
 
 " Searching using ripgrep.
-nnoremap <silent> <Leader>sw :execute "Rg \\b" . expand("<cword>") . "\\b"<CR>
 command! -bang -nargs=* Rgi call fzf#vim#grep(
     \ 'rg --ignore-vcs --column --line-number --no-heading --color=always --smart-case -- ' . shellescape(<q-args>),
     \ 1,
