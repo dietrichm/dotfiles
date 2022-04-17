@@ -22,9 +22,9 @@ else
     Plug 'junegunn/fzf', {'do': './install --all'}
     Plug 'junegunn/fzf.vim'
     Plug 'ojroques/nvim-lspfuzzy'
+    Plug 'liuchengxu/vista.vim'
 endif
 Plug 'Shougo/defx.nvim'
-Plug 'liuchengxu/vista.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'embear/vim-localvimrc'
 Plug 'preservim/vimux'
@@ -209,7 +209,12 @@ let g:vista_executive_for = {
 \ }
 let g:vista_ignore_kinds = ['Variable', 'Unknown']
 let g:vista_sidebar_width = 45
-nnoremap <silent> <Leader>tb :Vista<CR>
+
+if s:load_telescope
+    nnoremap <silent> <Leader>tb <cmd>lua require('telescope.builtin').lsp_document_symbols({ignore_symbols={'variable'}})<CR>
+else
+    nnoremap <silent> <Leader>tb :Vista<CR>
+endif
 
 " Configure FZF.
 let $FZF_DEFAULT_OPTS .= ' --reverse'

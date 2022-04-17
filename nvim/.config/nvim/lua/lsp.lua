@@ -116,15 +116,6 @@ lspconfig.sumneko_lua.setup{
   },
 }
 
-local vista_executive_for = vim.g.vista_executive_for
-vista_executive_for.fsharp = 'nvim_lsp'
-vista_executive_for.go = 'nvim_lsp'
-vista_executive_for.javascript = 'nvim_lsp'
-vista_executive_for.php = 'nvim_lsp'
-vista_executive_for.python = 'nvim_lsp'
-vista_executive_for.typescript = 'nvim_lsp'
-vim.g.vista_executive_for = vista_executive_for
-
 vim.fn.sign_define('DiagnosticSignError', {
   text='❌',
 })
@@ -140,4 +131,13 @@ vim.fn.sign_define('DiagnosticSignHint', {
 
 if not load_telescope then
   require('lspfuzzy').setup{}
+
+  local vista_executive_for = vim.g.vista_executive_for
+  vista_executive_for.fsharp = 'nvim_lsp'
+  vista_executive_for.go = 'nvim_lsp'
+  vista_executive_for.javascript = 'nvim_lsp'
+  vista_executive_for.php = 'nvim_lsp'
+  vista_executive_for.python = 'nvim_lsp'
+  vista_executive_for.typescript = 'nvim_lsp'
+  vim.g.vista_executive_for = vista_executive_for
 end
