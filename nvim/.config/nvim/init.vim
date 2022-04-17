@@ -306,6 +306,10 @@ nnoremap <silent> <C-W>g] <C-W>g<C-]>
 " Searching using ripgrep.
 if s:load_telescope
     command! -nargs=* Rg lua require('telescope.builtin').grep_string({search=<q-args>, use_regex=true})
+    command! -nargs=* Rgi lua require('telescope.builtin').grep_string({search=<q-args>, use_regex=true, additional_args=function(opts)
+        \ table.insert(opts, '--ignore-vcs')
+        \ return opts
+    \ end})
 else
     command! -bang -nargs=* Rgi call fzf#vim#grep(
         \ 'rg --ignore-vcs --column --line-number --no-heading --color=always --smart-case -- ' . shellescape(<q-args>),
