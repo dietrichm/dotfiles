@@ -21,6 +21,7 @@ if s:load_telescope
 else
     Plug 'junegunn/fzf', {'do': './install --all'}
     Plug 'junegunn/fzf.vim'
+    Plug 'ojroques/nvim-lspfuzzy'
 endif
 Plug 'Shougo/defx.nvim'
 Plug 'liuchengxu/vista.vim'
@@ -43,7 +44,6 @@ endif
 Plug 'editorconfig/editorconfig-vim'
 Plug 'SirVer/ultisnips'
 Plug 'neovim/nvim-lspconfig'
-Plug 'ojroques/nvim-lspfuzzy'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'dense-analysis/ale'
 Plug 'Raimondi/delimitMate'

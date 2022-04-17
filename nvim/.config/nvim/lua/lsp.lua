@@ -1,4 +1,5 @@
 local lspconfig = require('lspconfig')
+local load_telescope = vim.env.NVIM_TELESCOPE == '1'
 
 local on_attach = function(_, bufnr)
   local opts = {noremap = true, silent = true}
@@ -125,4 +126,6 @@ vim.fn.sign_define('DiagnosticSignHint', {
   text='💭',
 })
 
-require('lspfuzzy').setup{}
+if not load_telescope then
+  require('lspfuzzy').setup{}
+end
