@@ -223,7 +223,7 @@ let g:fzf_preview_window = ['right:50%:hidden:+{2}-/2', 'ctrl-/']
 
 if s:load_telescope
     " Bind Telescope mappings.
-    nnoremap <silent> <Leader>o <cmd>lua require('telescope.builtin').find_files({hidden=true})<CR>
+    nnoremap <silent> <Leader>o <cmd>lua require('telescope.builtin').find_files({hidden=true, no_ignore=true})<CR>
     nnoremap <silent> <Leader>b <cmd>lua require('telescope.builtin').buffers()<CR>
     " TODO: <Leader>w
     nnoremap <silent> <Leader>fh <cmd>lua require('telescope.builtin').oldfiles()<CR>
