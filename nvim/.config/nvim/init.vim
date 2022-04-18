@@ -15,11 +15,11 @@ endif
 call plug#begin()
 
 " Tools.
+Plug 'junegunn/fzf', {'do': './install --all'}
 if s:load_telescope
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
 else
-    Plug 'junegunn/fzf', {'do': './install --all'}
     Plug 'junegunn/fzf.vim'
     Plug 'ojroques/nvim-lspfuzzy'
     Plug 'liuchengxu/vista.vim'
