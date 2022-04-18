@@ -227,7 +227,7 @@ if s:load_telescope
     nnoremap <silent> <Leader>b <cmd>lua require('telescope.builtin').buffers()<CR>
     " TODO: <Leader>w
     nnoremap <silent> <Leader>fh <cmd>lua require('telescope.builtin').oldfiles()<CR>
-    nnoremap <silent> <Leader>sw <cmd>lua require('telescope.builtin').grep_string()<CR>
+    nnoremap <silent> <Leader>sw <cmd>lua require('telescope.builtin').grep_string({word_match='-w'})<CR>
 else
     " Bind FZF mappings.
     nnoremap <silent> <Leader>o :Files<CR>
