@@ -148,6 +148,9 @@ nnoremap <silent> [d :ALEPrevious<CR>
 nnoremap <silent> ]d :ALENext<CR>
 nnoremap <silent> <Leader>lf :ALEFix<CR>
 
+" Configure delimitMate.
+let delimitMate_excluded_ft = 'TelescopePrompt'
+
 " Configure Airline.
 let g:airline_disable_statusline = 1
 let g:airline_powerline_fonts = 1
