@@ -210,9 +210,7 @@ let g:vista_executive_for = {
 let g:vista_ignore_kinds = ['Variable', 'Unknown']
 let g:vista_sidebar_width = 45
 
-if s:load_telescope
-    nnoremap <silent> <Leader>tb <cmd>lua require('telescope.builtin').lsp_document_symbols({ignore_symbols={'variable'}})<CR>
-else
+if !s:load_telescope
     nnoremap <silent> <Leader>tb :Vista<CR>
 endif
 
@@ -221,14 +219,7 @@ let $FZF_DEFAULT_OPTS .= ' --reverse'
 let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.8}}
 let g:fzf_preview_window = ['right:50%:hidden:+{2}-/2', 'ctrl-/']
 
-if s:load_telescope
-    " Bind Telescope mappings.
-    nnoremap <silent> <Leader>o <cmd>lua require('telescope.builtin').find_files({hidden=true, no_ignore=true})<CR>
-    nnoremap <silent> <Leader>b <cmd>lua require('telescope.builtin').buffers()<CR>
-    " TODO: <Leader>w
-    nnoremap <silent> <Leader>fh <cmd>lua require('telescope.builtin').oldfiles()<CR>
-    nnoremap <silent> <Leader>sw <cmd>lua require('telescope.builtin').grep_string({word_match='-w'})<CR>
-else
+if !s:load_telescope
     " Bind FZF mappings.
     nnoremap <silent> <Leader>o :Files<CR>
     nnoremap <silent> <Leader>b :Buffers<CR>

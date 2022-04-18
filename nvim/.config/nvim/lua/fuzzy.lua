@@ -26,3 +26,16 @@ telescope.setup{
 }
 
 telescope.load_extension('fzf')
+
+local opts = {noremap = true, silent = true}
+
+vim.api.nvim_set_keymap('n', '<Leader>o',
+  [[<cmd>lua require('telescope.builtin').find_files({hidden=true, no_ignore=true})<CR>]], opts)
+vim.api.nvim_set_keymap('n', '<Leader>b',
+  [[<cmd>lua require('telescope.builtin').buffers()<CR>]], opts)
+vim.api.nvim_set_keymap('n', '<Leader>fh',
+  [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]], opts)
+vim.api.nvim_set_keymap('n', '<Leader>sw',
+  [[<cmd>lua require('telescope.builtin').grep_string({word_match='-w'})<CR>]], opts)
+vim.api.nvim_set_keymap('n', '<Leader>tb',
+  [[<cmd>lua require('telescope.builtin').lsp_document_symbols({ignore_symbols={'variable'}})<CR>]], opts)
