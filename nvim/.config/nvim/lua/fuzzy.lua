@@ -39,3 +39,24 @@ vim.api.nvim_set_keymap('n', '<Leader>sw',
   [[<cmd>lua require('telescope.builtin').grep_string({word_match='-w'})<CR>]], opts)
 vim.api.nvim_set_keymap('n', '<Leader>tb',
   [[<cmd>lua require('telescope.builtin').lsp_document_symbols({ignore_symbols={'variable'}})<CR>]], opts)
+
+local builtin = require('telescope.builtin')
+
+vim.api.nvim_create_user_command(
+  'Rg',
+  function(options)
+    builtin.grep_string({search=options.args, use_regex=true})
+  end,
+  {nargs='*'}
+)
+
+vim.api.nvim_create_user_command(
+  'Rgi',
+  function(options)
+    builtin.grep_string({search=options.args, use_regex=true, additional_args=function(rg_options)
+      table.insert(rg_options, '--ignore-vcs')
+      return rg_options
+    end})
+  end,
+  {nargs='*'}
+)
