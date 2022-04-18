@@ -16,3 +16,4 @@ catch /^Vim\%((\a\+)\)\=:E185/
 endtry
 
 hi SignColumn guibg=NONE
+hi TelescopeMatching gui=bold,underline
