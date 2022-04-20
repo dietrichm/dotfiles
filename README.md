@@ -53,10 +53,11 @@ Depending on which [config packages](#config-packages) are installed, these depe
      * [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
  * `nvim`
      * [Neovim](https://neovim.io/) HEAD -- see [install instructions](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+     * [fd](https://github.com/sharkdp/fd)
      * [ripgrep](https://github.com/BurntSushi/ripgrep)
      * [universal-ctags](http://ctags.io/)
      * _Optional_
-         * Go (Golang) - will install [vim-go](https://github.com/fatih/vim-go)
+         * Go (Golang) -- will install [vim-go](https://github.com/fatih/vim-go)
          * [Language servers](#language-servers-lsp) depending on the desired languages
  * `ssh`: OpenSSH
  * `tig`: [tig](https://jonas.github.io/tig/)
