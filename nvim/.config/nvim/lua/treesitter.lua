@@ -1,4 +1,4 @@
-require('nvim-treesitter.configs').setup{
+require('nvim-treesitter.configs').setup {
   ensure_installed = {
     'css',
     'go',
@@ -15,6 +15,6 @@ require('nvim-treesitter.configs').setup{
   },
   highlight = {
     enable = true,
-    additional_vim_regex_highlighting = {'php'},
+    additional_vim_regex_highlighting = { 'php' },
   },
 }

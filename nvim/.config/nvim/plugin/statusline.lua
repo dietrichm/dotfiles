@@ -10,12 +10,12 @@ local function LSPStatusCounts()
   local has_force_ale_linting, force_ale_linting = pcall(vim.api.nvim_get_var, 'force_ale_linting')
 
   if has_force_ale_linting and force_ale_linting == 1 then
-    return {errors = 0, warnings = 0}
+    return { errors = 0, warnings = 0 }
   end
 
   return {
-    errors = #vim.diagnostic.get(0, {severity = vim.diagnostic.severity.ERROR}),
-    warnings = #vim.diagnostic.get(0, {severity = vim.diagnostic.severity.WARN}),
+    errors = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR }),
+    warnings = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN }),
   }
 end
 
@@ -40,4 +40,4 @@ function _G.DiagnosticStatusLine()
   return string.format('❌%d ❗%d', lsp.errors + ale.errors, lsp.warnings + ale.warnings)
 end
 
-vim.o.statusline=[[%<%f %y%{v:lua.SpellStatusLine()}%m%r %{v:lua.DiagnosticStatusLine()} %=%-14.(%l,%c%V%) %P]]
+vim.o.statusline = [[%<%f %y%{v:lua.SpellStatusLine()}%m%r %{v:lua.DiagnosticStatusLine()} %=%-14.(%l,%c%V%) %P]]

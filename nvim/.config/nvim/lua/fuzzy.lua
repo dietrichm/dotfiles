@@ -2,7 +2,7 @@ local telescope = require('telescope')
 local actions = require('telescope.actions')
 local actions_layout = require('telescope.actions.layout')
 
-telescope.setup{
+telescope.setup {
   defaults = {
     sorting_strategy = 'ascending',
     layout_config = {
@@ -27,7 +27,7 @@ telescope.setup{
 
 telescope.load_extension('fzf')
 
-local opts = {noremap = true, silent = true}
+local opts = { noremap = true, silent = true }
 
 vim.api.nvim_set_keymap('n', '<Leader>o',
   [[<cmd>lua require('telescope.builtin').find_files({hidden=true})<CR>]], opts)
@@ -47,18 +47,18 @@ local builtin = require('telescope.builtin')
 vim.api.nvim_create_user_command(
   'Rg',
   function(options)
-    builtin.grep_string({search=options.args, use_regex=true})
+    builtin.grep_string({ search = options.args, use_regex = true })
   end,
-  {nargs='*'}
+  { nargs = '*' }
 )
 
 vim.api.nvim_create_user_command(
   'Rgi',
   function(options)
-    builtin.grep_string({search=options.args, use_regex=true, additional_args=function(rg_options)
+    builtin.grep_string({ search = options.args, use_regex = true, additional_args = function(rg_options)
       table.insert(rg_options, '--ignore-vcs')
       return rg_options
-    end})
+    end })
   end,
-  {nargs='*'}
+  { nargs = '*' }
 )

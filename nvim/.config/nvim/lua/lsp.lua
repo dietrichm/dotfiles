@@ -2,7 +2,7 @@ local lspconfig = require('lspconfig')
 local load_telescope = vim.env.NVIM_TELESCOPE == '1'
 
 local on_attach = function(_, bufnr)
-  local opts = {noremap = true, silent = true}
+  local opts = { noremap = true, silent = true }
 
   if load_telescope then
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-]>',
@@ -41,8 +41,8 @@ end
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 local flags = {}
 
-lspconfig.gopls.setup{
-  cmd = {"gopls", "-remote=auto"},
+lspconfig.gopls.setup {
+  cmd = { 'gopls', '-remote=auto' },
   on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
@@ -51,7 +51,7 @@ lspconfig.gopls.setup{
   end,
 }
 
-lspconfig.pyright.setup{
+lspconfig.pyright.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
@@ -61,25 +61,25 @@ lspconfig.pyright.setup{
     },
     python = {
       analysis = {
-        diagnosticMode = "workspace",
+        diagnosticMode = 'workspace',
       }
     }
   },
 }
 
-lspconfig.intelephense.setup{
+lspconfig.intelephense.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
 }
 
-lspconfig.fsautocomplete.setup{
+lspconfig.fsautocomplete.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
 }
 
-lspconfig.tsserver.setup{
+lspconfig.tsserver.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
@@ -89,7 +89,7 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 
-lspconfig.sumneko_lua.setup{
+lspconfig.sumneko_lua.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
@@ -100,7 +100,7 @@ lspconfig.sumneko_lua.setup{
         path = runtime_path,
       },
       diagnostics = {
-        globals = {'vim'},
+        globals = { 'vim' },
       },
       workspace = {
         library = vim.api.nvim_get_runtime_file('', true),
@@ -113,20 +113,20 @@ lspconfig.sumneko_lua.setup{
 }
 
 vim.fn.sign_define('DiagnosticSignError', {
-  text='❌',
+  text = '❌',
 })
 vim.fn.sign_define('DiagnosticSignWarn', {
-  text='❗',
+  text = '❗',
 })
 vim.fn.sign_define('DiagnosticSignInfo', {
-  text='💡',
+  text = '💡',
 })
 vim.fn.sign_define('DiagnosticSignHint', {
-  text='💭',
+  text = '💭',
 })
 
 if not load_telescope then
-  require('lspfuzzy').setup{}
+  require('lspfuzzy').setup {}
 
   local vista_executive_for = vim.g.vista_executive_for
   vista_executive_for.fsharp = 'nvim_lsp'
