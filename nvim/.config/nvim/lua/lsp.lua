@@ -85,15 +85,11 @@ lspconfig.tsserver.setup{
   flags = flags,
 }
 
-local sumneko_root_path = vim.fn.getenv('HOME') .. '/repos/lua-language-server'
-local sumneko_binary = sumneko_root_path .. '/bin/Linux/lua-language-server'
-
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 
 lspconfig.sumneko_lua.setup{
-  cmd = {sumneko_binary, '-E', sumneko_root_path .. '/main.lua'};
   on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
