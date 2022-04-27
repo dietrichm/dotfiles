@@ -1,6 +1,5 @@
 scriptencoding utf-8
 
-let s:load_telescope = $NVIM_TELESCOPE == 1
 let s:load_line_plugins = 0
 let s:load_go_plugins = executable('go') == 1
 
@@ -16,14 +15,8 @@ call plug#begin()
 
 " Tools.
 Plug 'junegunn/fzf', {'do': './install --all'}
-if s:load_telescope
-    Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
-else
-    Plug 'junegunn/fzf.vim'
-    Plug 'ojroques/nvim-lspfuzzy'
-    Plug 'liuchengxu/vista.vim'
-endif
 Plug 'Shougo/defx.nvim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'embear/vim-localvimrc'
@@ -213,23 +206,10 @@ let g:vista_executive_for = {
 let g:vista_ignore_kinds = ['Variable', 'Unknown']
 let g:vista_sidebar_width = 45
 
-if !s:load_telescope
-    nnoremap <silent> <Leader>tb :Vista<CR>
-endif
-
 " Configure FZF.
 let $FZF_DEFAULT_OPTS .= ' --reverse'
 let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.8}}
 let g:fzf_preview_window = ['right:50%:hidden:+{2}-/2', 'ctrl-/']
-
-if !s:load_telescope
-    " Bind FZF mappings.
-    nnoremap <silent> <Leader>o :Files<CR>
-    nnoremap <silent> <Leader>b :Buffers<CR>
-    nnoremap <silent> <Leader>w :Windows<CR>
-    nnoremap <silent> <Leader>fh :History<CR>
-    nnoremap <silent> <Leader>sw :execute "Rg \\b" . expand("<cword>") . "\\b"<CR>
-endif
 
 " Configure UltiSnips.
 let g:UltiSnipsSnippetsDir = stdpath('config') . '/UltiSnips'
@@ -240,9 +220,7 @@ lua require('lsp')
 lua require('completion')
 lua require('treesitter')
 lua require('settings')
-if s:load_telescope
-    lua require('fuzzy')
-endif
+lua require('fuzzy')
 
 " Configure vim-test.
 let g:test#preserve_screen = 1
@@ -301,16 +279,6 @@ nnoremap <silent> [L :lfirst<CR>
 " Use g] for :tjump.
 nnoremap <silent> g] g<C-]>
 nnoremap <silent> <C-W>g] <C-W>g<C-]>
-
-" Searching using ripgrep.
-if !s:load_telescope
-    command! -bang -nargs=* Rgi call fzf#vim#grep(
-        \ 'rg --ignore-vcs --column --line-number --no-heading --color=always --smart-case -- ' . shellescape(<q-args>),
-        \ 1,
-        \ call('fzf#vim#with_preview', g:fzf_preview_window),
-        \ <bang>0
-    \ )
-endif
 
 " Delete all buffers.
 nnoremap <silent> <Leader>da :%bd<CR>
