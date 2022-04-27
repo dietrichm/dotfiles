@@ -58,9 +58,9 @@
 	color-only = true
 [interactive]
 	diffFilter = delta
-[include]
-	path = local.inc
 [advice]
 	detachedHead = false
 [tag]
 	gpgSign = true
+[include]
+	path = local.inc
