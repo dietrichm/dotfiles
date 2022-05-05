@@ -114,7 +114,6 @@ let g:netrw_sort_direction = 'reverse'
 " Configure defx.
 call defx#custom#column('indent', 'indent', '  ')
 call defx#custom#column('time', 'format', '%a %d/%m/%Y %H:%M')
-command DefxScratch :Defx -columns=mark:indent:icon:filename:time -sort=Time
 
 " Configure nvim-tree.
 let g:nvim_tree_show_icons = {
