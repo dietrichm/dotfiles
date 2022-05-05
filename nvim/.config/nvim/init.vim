@@ -17,7 +17,6 @@ call plug#begin()
 Plug 'junegunn/fzf', {'do': './install --all'}
 Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
-Plug 'Shougo/defx.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'embear/vim-localvimrc'
@@ -110,10 +109,6 @@ let g:netrw_liststyle = 1
 let g:netrw_sizestyle = 'H'
 let g:netrw_sort_by = 'time'
 let g:netrw_sort_direction = 'reverse'
-
-" Configure defx.
-call defx#custom#column('indent', 'indent', '  ')
-call defx#custom#column('time', 'format', '%a %d/%m/%Y %H:%M')
 
 " Configure nvim-tree.
 let g:nvim_tree_show_icons = {
