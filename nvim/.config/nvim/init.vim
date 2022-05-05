@@ -110,12 +110,6 @@ let g:netrw_bufsettings = 'noma nomod nonu nowrap ro nobl nolist'
 " Configure defx.
 call defx#custom#column('indent', 'indent', '  ')
 call defx#custom#column('time', 'format', '%a %d/%m/%Y %H:%M')
-nnoremap <silent> <Leader>ft :Defx
-    \ -search-recursive=`expand('%:p')`
-    \ -show-ignored-files
-    \ -split=vertical
-    \ -winwidth=45
-    \ -direction=topleft<CR>
 nnoremap <silent> <Leader>ff :Defx `expand('%:p:h')`
     \ -search=`expand('%:p')`
     \ -show-ignored-files
@@ -141,6 +135,7 @@ let g:nvim_tree_icons = {
         \ 'symlink_open': '-',
     \ }
 \ }
+nnoremap <silent> <Leader>ft :NvimTreeFindFileToggle<CR>
 
 " Configure Localvimrc.
 let g:localvimrc_persistent = 1
