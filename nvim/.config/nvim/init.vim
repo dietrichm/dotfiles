@@ -18,6 +18,7 @@ Plug 'junegunn/fzf', {'do': './install --all'}
 Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
 Plug 'Shougo/defx.nvim'
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'embear/vim-localvimrc'
 Plug 'preservim/vimux'
@@ -122,6 +123,24 @@ nnoremap <silent> <Leader>ff :Defx `expand('%:p:h')`
     \ -winwidth=45
     \ -direction=topleft<CR>
 command DefxScratch :Defx -columns=mark:indent:icon:filename:time -sort=Time
+
+" Configure nvim-tree.
+let g:nvim_tree_show_icons = {
+    \ 'git': 0,
+    \ 'folders': 1,
+    \ 'files': 0,
+    \ 'folder_arrows': 0,
+\ }
+let g:nvim_tree_icons = {
+    \ 'folder': {
+        \ 'default': '+',
+        \ 'open': '-',
+        \ 'empty': '+',
+        \ 'empty_open': '-',
+        \ 'symlink': '+',
+        \ 'symlink_open': '-',
+    \ }
+\ }
 
 " Configure Localvimrc.
 let g:localvimrc_persistent = 1
