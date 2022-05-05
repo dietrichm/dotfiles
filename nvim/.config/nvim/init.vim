@@ -110,12 +110,6 @@ let g:netrw_bufsettings = 'noma nomod nonu nowrap ro nobl nolist'
 " Configure defx.
 call defx#custom#column('indent', 'indent', '  ')
 call defx#custom#column('time', 'format', '%a %d/%m/%Y %H:%M')
-nnoremap <silent> <Leader>ff :Defx `expand('%:p:h')`
-    \ -search=`expand('%:p')`
-    \ -show-ignored-files
-    \ -split=vertical
-    \ -winwidth=45
-    \ -direction=topleft<CR>
 command DefxScratch :Defx -columns=mark:indent:icon:filename:time -sort=Time
 
 " Configure nvim-tree.
