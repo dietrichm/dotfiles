@@ -111,6 +111,7 @@ let g:netrw_sort_by = 'time'
 let g:netrw_sort_direction = 'reverse'
 
 " Configure nvim-tree.
+let g:nvim_tree_symlink_arrow = ' -> '
 let g:nvim_tree_show_icons = {
     \ 'git': 0,
     \ 'folders': 1,
@@ -118,6 +119,8 @@ let g:nvim_tree_show_icons = {
     \ 'folder_arrows': 0,
 \ }
 let g:nvim_tree_icons = {
+    \ 'default': '',
+    \ 'symlink': '',
     \ 'folder': {
         \ 'default': '+',
         \ 'open': '-',
