@@ -45,7 +45,8 @@ The following is required for installing and using these dotfiles:
 
 Depending on which [config packages](#config-packages) are installed, these dependencies are also required:
 
- * `git`:
+ * `direnv`: [direnv](https://direnv.net/)
+ * `git`
      * GnuPG
      * [Delta](https://github.com/dandavison/delta)
  * `kitty`
@@ -86,6 +87,7 @@ The following themes are available:
 
 The following (Stow based) config packages are available:
 
+* `direnv`
 * `git`
 * `kitty`
 * `nvim`
