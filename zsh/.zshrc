@@ -17,6 +17,9 @@ bindkey -v
 # Load FZF.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Load direnv.
+[ -f ~/.config/direnv/direnv.toml ] && eval "$(direnv hook zsh)"
+
 # Autocompletion.
 zstyle :compinstall filename "$ZDOTDIR/.zshrc"
 zstyle ':completion:*' group-name ''
