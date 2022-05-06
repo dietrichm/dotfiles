@@ -1,4 +1,5 @@
 local lspconfig = require('lspconfig')
+local use_null_ls = vim.env.NVIM_USE_NULL_LS == '1'
 
 local on_attach = function(_, bufnr)
   local opts = { noremap = true, silent = true }
@@ -23,7 +24,9 @@ local on_attach = function(_, bufnr)
     return
   end
 
-  vim.fn['ale#toggle#DisableBuffer'](bufnr)
+  if not use_null_ls then
+    vim.fn['ale#toggle#DisableBuffer'](bufnr)
+  end
 
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
@@ -103,6 +106,12 @@ lspconfig.sumneko_lua.setup {
     },
   },
 }
+
+if use_null_ls then
+  local null_ls = require('null-ls')
+
+  null_ls.setup {}
+end
 
 vim.fn.sign_define('DiagnosticSignError', {
   text = '❌',

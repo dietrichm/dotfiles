@@ -2,6 +2,7 @@ scriptencoding utf-8
 
 let s:load_line_plugins = 0
 let s:load_go_plugins = executable('go') == 1
+let s:use_null_ls = $NVIM_USE_NULL_LS == 1
 
 let s:vim_plug_script = stdpath('config') . '/autoload/plug.vim'
 if empty(glob(s:vim_plug_script))
@@ -38,7 +39,11 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'SirVer/ultisnips'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'dense-analysis/ale'
+if s:use_null_ls
+    Plug 'jose-elias-alvarez/null-ls.nvim'
+else
+    Plug 'dense-analysis/ale'
+endif
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -139,16 +144,18 @@ let g:localvimrc_persistent = 1
 let g:PHP_noArrowMatching = 1
 
 " Configure ALE.
-let g:ale_sign_error = '❌'
-let g:ale_sign_warning = '❗'
-let g:ale_disable_lsp = 1
-augroup ale
-    autocmd!
-    autocmd QuitPre * if empty(&buftype) | lclose | endif
-augroup END
-nnoremap <silent> [d :ALEPrevious<CR>
-nnoremap <silent> ]d :ALENext<CR>
-nnoremap <silent> <Leader>lf :ALEFix<CR>
+if !s:use_null_ls
+    let g:ale_sign_error = '❌'
+    let g:ale_sign_warning = '❗'
+    let g:ale_disable_lsp = 1
+    augroup ale
+        autocmd!
+        autocmd QuitPre * if empty(&buftype) | lclose | endif
+    augroup END
+    nnoremap <silent> [d :ALEPrevious<CR>
+    nnoremap <silent> ]d :ALENext<CR>
+    nnoremap <silent> <Leader>lf :ALEFix<CR>
+endif
 
 " Configure delimitMate.
 let delimitMate_excluded_ft = 'TelescopePrompt'

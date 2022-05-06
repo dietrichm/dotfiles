@@ -1,3 +1,5 @@
+local use_null_ls = vim.env.NVIM_USE_NULL_LS == '1'
+
 function _G.SpellStatusLine()
   if not vim.o.spell then
     return ''
@@ -20,6 +22,10 @@ local function LSPStatusCounts()
 end
 
 local function ALEStatusCounts()
+  if use_null_ls then
+    return { errors = 0, warnings = 0 }
+  end
+
   local buffer = vim.api.nvim_buf_get_number(0)
   local counts = vim.fn['ale#statusline#Count'](buffer)
 
