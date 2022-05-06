@@ -6,18 +6,6 @@ snippet mockgen "//go:generate mockgen" b
 //go:generate mockgen -source `!p snip.rv = fn` -destination `!p snip.rv = snip.basename`_mock.go -package `!p snip.rv = os.path.basename(os.path.dirname(path))`
 endsnippet
 
-snippet any "gomock.Any()" w
-gomock.Any()
-endsnippet
-
-snippet expect "Expect(...).To(...)" b
-Expect(${1}).To(${2})
-endsnippet
-
-snippet expectn "Expect(...).ToNot(...)" b
-Expect(${1}).ToNot(${2})
-endsnippet
-
 snippet dump "fmt.Printf('%+v\n', ...)" b
 fmt.Printf("%+v\n", ${1:variable})
 endsnippet
