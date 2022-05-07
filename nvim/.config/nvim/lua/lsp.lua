@@ -114,6 +114,9 @@ if use_null_ls then
 
   null_ls.setup {
     on_attach = on_attach,
+    sources = {
+      null_ls.builtins.diagnostics.staticcheck,
+    },
   }
 end
 
