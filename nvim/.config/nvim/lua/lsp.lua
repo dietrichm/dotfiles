@@ -110,7 +110,9 @@ lspconfig.sumneko_lua.setup {
 if use_null_ls then
   local null_ls = require('null-ls')
 
-  null_ls.setup {}
+  null_ls.setup {
+    on_attach = on_attach,
+  }
 end
 
 vim.fn.sign_define('DiagnosticSignError', {
