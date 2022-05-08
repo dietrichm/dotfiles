@@ -232,11 +232,11 @@ let g:UltiSnipsSnippetsDir = stdpath('config') . '/UltiSnips'
 let g:UltiSnipsEditSplit = 'context'
 
 " Configure Lua plugins.
-lua require('lsp')
-lua require('completion')
-lua require('treesitter')
-lua require('settings')
-lua require('fuzzy')
+lua require('dietrichm.lsp')
+lua require('dietrichm.completion')
+lua require('dietrichm.treesitter')
+lua require('dietrichm.telescope')
+lua require('dietrichm.settings')
 
 " Configure vim-test.
 let g:test#preserve_screen = 1
