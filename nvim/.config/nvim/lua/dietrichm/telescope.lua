@@ -40,7 +40,7 @@ vim.api.nvim_set_keymap('n', '<Leader>fh',
 vim.api.nvim_set_keymap('n', '<Leader>sw',
   [[<cmd>lua require('telescope.builtin').grep_string({word_match='-w'})<CR>]], opts)
 vim.api.nvim_set_keymap('n', '<Leader>tb',
-  [[<cmd>lua require('telescope.builtin').lsp_document_symbols({ignore_symbols={'variable'}})<CR>]], opts)
+  [[<cmd>lua require('telescope.builtin').lsp_document_symbols({ignore_symbols={'variable', 'property'}})<CR>]], opts)
 
 local builtin = require('telescope.builtin')
 
