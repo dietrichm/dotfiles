@@ -18,6 +18,7 @@ At the moment, the configuration is tailored to developing in Python, PHP, Go, J
 - [Language Servers (LSP)](#language-servers-lsp)
 - [Custom configuration](#custom-configuration)
   - [Neovim](#neovim)
+  - [zsh](#zsh)
   - [git](#git)
   - [isort](#isort)
   - [universal-ctags](#universal-ctags)
@@ -140,6 +141,10 @@ let g:ale_fixers = {'typescript': ['prettier']}
 let g:test#python#runner = 'pytest'
 let g:test#python#pytest#executable = 'make'
 ```
+
+### zsh
+
+Specific environment variables can be exported in `.envrc` files which are loaded automatically upon entering the (sub)directory.
 
 ### git
 
