@@ -46,6 +46,11 @@ lspconfig.gopls.setup {
   root_dir = function()
     return vim.fn.getcwd()
   end,
+  settings = {
+    gopls = {
+      staticcheck = true,
+    },
+  },
 }
 
 lspconfig.pyright.setup {
@@ -114,9 +119,6 @@ if use_null_ls then
 
   null_ls.setup {
     on_attach = on_attach,
-    sources = {
-      null_ls.builtins.diagnostics.staticcheck,
-    },
   }
 end
 
