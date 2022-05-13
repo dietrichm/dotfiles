@@ -18,7 +18,6 @@ local.settings.php
 www/sites/*.local
 www/sites/*.local.*
 settings.local.php
-*.ale-php-cs-fixer
 .vim/
 docker-compose.override.yml
 container-compose.override.yml
