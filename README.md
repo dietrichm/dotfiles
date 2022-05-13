@@ -132,12 +132,9 @@ Some projects require or can benefit from some custom configuration for some of 
 ### Neovim
 
 Project local configuration can be set in `.lvimrc`.
-This allows for example to force ALE linting/fixing over LSP and configure default fixers, and set the default Python test tool and its executable:
+This allows for example to set the default Python test tool and its executable:
 
 ```viml
-let g:force_ale_linting = 1
-let g:ale_fixers = {'typescript': ['prettier']}
-
 let g:test#python#runner = 'pytest'
 let g:test#python#pytest#executable = 'make'
 ```
