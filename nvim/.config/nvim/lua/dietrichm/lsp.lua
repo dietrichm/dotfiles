@@ -1,5 +1,4 @@
 local lspconfig = require('lspconfig')
-local use_null_ls = vim.env.NVIM_USE_NULL_LS == '1'
 
 local on_attach = function(_, bufnr)
   local opts = { noremap = true, silent = true }
@@ -102,17 +101,15 @@ lspconfig.sumneko_lua.setup {
   },
 }
 
-if use_null_ls then
-  local null_ls = require('null-ls')
+local null_ls = require('null-ls')
 
-  null_ls.setup {
-    on_attach = on_attach,
-    sources = {
-      null_ls.builtins.diagnostics.flake8,
-      null_ls.builtins.formatting.isort,
-    }
+null_ls.setup {
+  on_attach = on_attach,
+  sources = {
+    null_ls.builtins.diagnostics.flake8,
+    null_ls.builtins.formatting.isort,
   }
-end
+}
 
 vim.fn.sign_define('DiagnosticSignError', {
   text = '❌',
