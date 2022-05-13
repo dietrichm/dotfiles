@@ -162,7 +162,7 @@ Here you can use [conditional includes](https://git-scm.com/docs/git-config#_con
 
 ### isort
 
-Sorting Python imports happens through [isort](https://pycqa.github.io/isort/) and is triggered using <kbd>&lt;Space&gt;so</kbd> in normal mode.
+Sorting Python imports happens through [isort](https://pycqa.github.io/isort/) and is triggered using <kbd>&lt;Space&gt;lf</kbd> (lint-fix or formatting) in normal mode.
 
 isort specific configuration can be set per project in a `pyproject.toml` file (as specified in [PEP 518](https://www.python.org/dev/peps/pep-0518/)):
 
