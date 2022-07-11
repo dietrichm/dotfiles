@@ -36,6 +36,7 @@ lspconfig.gopls.setup {
   settings = {
     gopls = {
       staticcheck = true,
+      buildFlags = { '-tags=tools,wireinject' },
     },
   },
 }
