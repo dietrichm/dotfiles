@@ -22,7 +22,15 @@ telescope.setup {
         ['<M-p>'] = actions_layout.toggle_preview,
       },
     },
-  }
+  },
+  pickers = {
+    lsp_implementations = {
+      fname_width = 80,
+    },
+    lsp_references = {
+      fname_width = 80,
+    },
+  },
 }
 
 telescope.load_extension('fzf')
