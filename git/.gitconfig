@@ -46,6 +46,7 @@
 	xfuncname = "^#+.*$"
 [stash]
 	showPatch = true
+	showIncludeUntracked = true
 [init]
 	defaultBranch = main
 [pager]
