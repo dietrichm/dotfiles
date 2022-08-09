@@ -24,3 +24,4 @@ container-compose.override.yml
 .ignore
 .envrc
 go.work
+go.work.sum
