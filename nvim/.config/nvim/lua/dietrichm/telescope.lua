@@ -30,6 +30,9 @@ telescope.setup {
     lsp_references = {
       fname_width = 80,
     },
+    lsp_document_symbols = {
+      show_line = true,
+    },
   },
 }
 
