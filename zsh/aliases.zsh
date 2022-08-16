@@ -1,6 +1,6 @@
 alias ctagsp='ctags . ${VIRTUAL_ENV:-$CONDA_PREFIX}/lib/python*/site-packages'
-alias go-updates-direct='go list -m -mod=mod -u -f "{{if and .Update (not .Indirect)}}{{.}}{{end}}" all'
-alias go-updates='go list -m -mod=mod -u -f "{{if .Update}}{{.}}{{end}}" all'
+alias go-updates-direct='go list -m -mod=readonly -u -f "{{if and .Update (not .Indirect)}}{{.}}{{end}}" all'
+alias go-updates='go list -m -mod=readonly -u -f "{{if .Update}}{{.}}{{end}}" all'
 alias info='info --vi-keys'
 alias largest='du -hsx * | sort -rh | head -15'
 alias ls='ls --color=auto'
