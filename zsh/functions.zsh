@@ -2,10 +2,6 @@ precmd() {
     echo -ne "\033]0;${PWD/#$HOME/~}\007"
 }
 
-ca() {
-    conda activate "$(basename "$PWD")"
-}
-
 repos() {
     local name="repos"
     local dir=~/repos
