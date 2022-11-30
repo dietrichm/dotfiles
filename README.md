@@ -46,6 +46,7 @@ The following is required for installing and using these dotfiles:
 
 Depending on which [config packages](#config-packages) are installed, these dependencies are also required:
 
+ * `dig`: [bind-utils](https://github.com/tigeli/bind-utils)
  * `direnv`: [direnv](https://direnv.net/)
  * `git`
      * GnuPG
@@ -88,6 +89,7 @@ The following themes are available:
 
 The following (Stow based) config packages are available:
 
+* `dig`
 * `direnv`
 * `git`
 * `kitty`

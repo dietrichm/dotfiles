@@ -8,6 +8,7 @@ fi
 set -e
 
 all_packages=(
+    dig
     direnv
     git
     kitty
