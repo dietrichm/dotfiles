@@ -42,6 +42,7 @@ Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'alvan/vim-closetag'
 
 " Completion.
 Plug 'hrsh7th/nvim-cmp'
