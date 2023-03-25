@@ -13,6 +13,7 @@
 	main = "!git checkout $(git default) && git pull --ff-only && git gone-remove && echo && git br"
 	merged = branch -a --merged
 	no-merged = branch -a --no-merged
+	pushff = push --force-with-lease
 	st = status -sb
 [pull]
 	ff = only
