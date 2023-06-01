@@ -23,7 +23,6 @@ export CLICOLOR=1
 export DELTA_PAGER="less --tabs=4 -RFX"
 export EDITOR=nvim
 export FZF_DEFAULT_COMMAND="rg --files"
-export FZF_DEFAULT_OPTS="--no-mouse"
 export GPG_TTY=$(tty)
 export LANG=en_GB.UTF-8
 export LANGUAGE=en_GB:en
