@@ -75,11 +75,7 @@ lspconfig.tsserver.setup {
   flags = flags,
 }
 
-local runtime_path = vim.split(package.path, ';')
-table.insert(runtime_path, 'lua/?.lua')
-table.insert(runtime_path, 'lua/?/init.lua')
-
-lspconfig.sumneko_lua.setup {
+lspconfig.lua_ls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
@@ -87,7 +83,6 @@ lspconfig.sumneko_lua.setup {
     Lua = {
       runtime = {
         version = 'LuaJIT',
-        path = runtime_path,
       },
       diagnostics = {
         globals = { 'vim' },
