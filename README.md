@@ -125,7 +125,6 @@ Depending on the languages used, the following language server binaries need to 
 * PHP ([Intelephense](https://intelephense.com/)): `npm i -g intelephense`
 * TypeScript and JavaScript ([tsserver](https://github.com/theia-ide/typescript-language-server)): `npm i -g typescript typescript-language-server`
 * Lua ([lua-language-server](https://github.com/sumneko/lua-language-server)): see [installation instructions](https://github.com/sumneko/lua-language-server/wiki/Build-and-Run). Symlink the binary to `~/bin/lua-language-server`.
-* F# ([FsAutoComplete](https://github.com/fsharp/FsAutoComplete)): `dotnet tool install --global fsautocomplete`
 
 ## Custom configuration
 

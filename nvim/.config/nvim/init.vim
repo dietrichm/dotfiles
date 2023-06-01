@@ -63,7 +63,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'adelarsq/neofsharp.vim'
 
 " Other syntax.
 Plug 'cespare/vim-toml', {'branch': 'main'}
