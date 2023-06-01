@@ -61,7 +61,6 @@ if s:load_go_plugins
 endif
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'maxmellon/vim-jsx-pretty'
 Plug 'Vimjas/vim-python-pep8-indent'
 
 " Other syntax.
