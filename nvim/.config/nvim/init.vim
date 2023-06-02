@@ -101,6 +101,10 @@ set undofile
 set signcolumn=auto:1-2
 set termguicolors
 
+" Remove "disable mouse" pop-up menu item.
+aunmenu PopUp.How-to\ disable\ mouse
+aunmenu PopUp.-1-
+
 " Configure netrw.
 let g:netrw_banner = 0
 let g:netrw_bufsettings = 'noma nomod nonu nowrap ro nobl nolist'
