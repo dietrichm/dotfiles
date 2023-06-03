@@ -64,12 +64,6 @@ lspconfig.intelephense.setup {
   flags = flags,
 }
 
-lspconfig.fsautocomplete.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  flags = flags,
-}
-
 lspconfig.tsserver.setup {
   on_attach = on_attach,
   capabilities = capabilities,
