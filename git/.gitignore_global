@@ -25,3 +25,4 @@ container-compose.override.yml
 .envrc
 go.work
 go.work.sum
+.idea/
