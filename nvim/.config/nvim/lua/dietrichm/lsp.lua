@@ -62,6 +62,14 @@ lspconfig.intelephense.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
+  autostart = false,
+}
+
+lspconfig.phpactor.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = flags,
+  autostart = false,
 }
 
 lspconfig.tsserver.setup {

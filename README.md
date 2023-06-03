@@ -122,7 +122,9 @@ Neovim's internal LSP client is used to provide code intelligence and completion
 Depending on the languages used, the following language server binaries need to be installed manually:
 
 * Python ([Pyright](https://github.com/Microsoft/pyright)): `npm i -g pyright`
-* PHP ([Intelephense](https://intelephense.com/)): `npm i -g intelephense`
+* PHP (desired server must be manually started using `:LspStart`):
+  * [Intelephense](https://intelephense.com/): `npm i -g intelephense`
+  * [Phpactor](https://github.com/phpactor/phpactor): see [installation instructions](https://phpactor.readthedocs.io/en/master/usage/standalone.html#global-installation)
 * TypeScript and JavaScript ([tsserver](https://github.com/theia-ide/typescript-language-server)): `npm i -g typescript typescript-language-server`
 * Lua ([lua-language-server](https://github.com/luals/lua-language-server)): see [installation instructions](https://github.com/luals/lua-language-server/wiki/Getting-Started#command-line). Create the wrapper script as `~/bin/lua-language-server`.
 
