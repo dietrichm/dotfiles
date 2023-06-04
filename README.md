@@ -16,6 +16,7 @@ If you are looking for my Neovim config, you can find it in [`nvim/.config/nvim`
   - [Config packages](#config-packages)
   - [Updating](#updating)
 - [Language Servers (LSP)](#language-servers-lsp)
+  - [Switching servers](#switching-servers)
 - [Custom configuration](#custom-configuration)
   - [Neovim](#neovim)
   - [zsh](#zsh)
@@ -122,11 +123,18 @@ Neovim's internal LSP client is used to provide code intelligence and completion
 Depending on the languages used, the following language server binaries need to be installed manually:
 
 * Python ([Pyright](https://github.com/Microsoft/pyright)): `npm i -g pyright`
-* PHP (desired server must be started manually using `:LspStart <name>`):
+* PHP:
   * [Intelephense](https://intelephense.com/): `npm i -g intelephense`
-  * [Phpactor](https://github.com/phpactor/phpactor): see [installation instructions](https://phpactor.readthedocs.io/en/master/usage/standalone.html#global-installation)
+  * [Phpactor](https://github.com/phpactor/phpactor) (started manually): see [installation instructions](https://phpactor.readthedocs.io/en/master/usage/standalone.html#global-installation)
 * TypeScript and JavaScript ([tsserver](https://github.com/theia-ide/typescript-language-server)): `npm i -g typescript typescript-language-server`
 * Lua ([lua-language-server](https://github.com/luals/lua-language-server)): see [installation instructions](https://github.com/luals/lua-language-server/wiki/Getting-Started#command-line). Create the wrapper script as `~/bin/lua-language-server`.
+
+### Switching servers
+
+To disable current servers and start a single one, you can use `:LspSwitch <name>`.
+
+This is especially useful for PHP, where only Intelephense is auto-started and you can switch to Phpactor using `:LspSwitch phpactor`.
+The command also avoids the stopped servers from spinning up again when new buffers are loaded.
 
 ## Custom configuration
 
