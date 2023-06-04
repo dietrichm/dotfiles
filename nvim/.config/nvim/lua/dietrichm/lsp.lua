@@ -32,6 +32,11 @@ local on_attach = function(_, bufnr)
     end,
     {
       nargs = 1,
+      complete = function()
+        local items = require('lspconfig.util').available_servers()
+        table.sort(items)
+        return items
+      end,
     }
   )
 end
