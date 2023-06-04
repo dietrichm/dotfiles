@@ -21,6 +21,19 @@ local on_attach = function(_, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>lf', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', opts)
+
+  vim.api.nvim_buf_create_user_command(
+    bufnr,
+    'LspSwitch',
+    function(options)
+      vim.cmd.LspStop()
+      vim.api.nvim_clear_autocmds({ group = 'lspconfig' })
+      vim.cmd.LspStart(options.fargs[1])
+    end,
+    {
+      nargs = 1,
+    }
+  )
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
