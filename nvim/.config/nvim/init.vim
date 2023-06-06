@@ -62,6 +62,7 @@ endif
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'jwalton512/vim-blade'
 
 " Other syntax.
 Plug 'cespare/vim-toml', {'branch': 'main'}
