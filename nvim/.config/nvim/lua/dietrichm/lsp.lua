@@ -80,6 +80,13 @@ lspconfig.intelephense.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
+  settings = {
+    intelephense = {
+      files = {
+        maxSize = 6000000,
+      },
+    },
+  },
 }
 
 lspconfig.phpactor.setup {
