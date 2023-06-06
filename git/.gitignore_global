@@ -11,6 +11,7 @@ tags
 .ctags.d/*.ctags
 .padawan/
 .phpactor.yml
+.phpactor.json
 puphpet/
 .vagrant/
 dead.letter
