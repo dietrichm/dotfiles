@@ -126,6 +126,9 @@ let g:PHP_noArrowMatching = 1
 " Configure delimitMate.
 let delimitMate_excluded_ft = 'TelescopePrompt'
 
+" Configure vim-closetag.
+let g:closetag_filetypes = 'html,xhtml,phtml,blade'
+
 " Configure Airline.
 let g:airline_disable_statusline = 1
 let g:airline_powerline_fonts = 1
