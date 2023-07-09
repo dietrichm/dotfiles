@@ -7,7 +7,7 @@ set tab-size = 4
 set vertical-split = false
 
 # Colours.
-color cursor black blue
+color cursor white blue
 color title-focus black cyan
 color title-blur black cyan
 
