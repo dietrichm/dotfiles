@@ -85,6 +85,7 @@ The following themes are available:
 
 * `papercolor` (default)
 * `base16-bright`
+* `plain` (unstyled)
 
 ### Config packages
 
