@@ -56,7 +56,6 @@
 	reflog = delta
 	show = delta
 [delta]
-	syntax-theme = GitHub
 	color-only = true
 [interactive]
 	diffFilter = delta
