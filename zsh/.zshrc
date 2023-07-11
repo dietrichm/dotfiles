@@ -6,6 +6,7 @@ SAVEHIST=30000
 # Options.
 setopt appendhistory
 setopt beep
+unsetopt list_beep
 setopt globdots
 
 # Disable right prompt indent.
