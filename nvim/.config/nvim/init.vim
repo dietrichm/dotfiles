@@ -106,10 +106,6 @@ set termguicolors
 aunmenu PopUp.How-to\ disable\ mouse
 aunmenu PopUp.-1-
 
-" Configure netrw.
-let g:netrw_banner = 0
-let g:netrw_bufsettings = 'noma nomod nonu nowrap ro nobl nolist'
-
 " Configure nvim-tree.
 nnoremap <silent> <Leader>ft :NvimTreeFindFileToggle<CR>
 
