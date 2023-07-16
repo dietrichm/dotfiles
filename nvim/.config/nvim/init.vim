@@ -109,10 +109,6 @@ aunmenu PopUp.-1-
 " Configure netrw.
 let g:netrw_banner = 0
 let g:netrw_bufsettings = 'noma nomod nonu nowrap ro nobl nolist'
-let g:netrw_liststyle = 1
-let g:netrw_sizestyle = 'H'
-let g:netrw_sort_by = 'time'
-let g:netrw_sort_direction = 'reverse'
 
 " Configure nvim-tree.
 nnoremap <silent> <Leader>ft :NvimTreeFindFileToggle<CR>
