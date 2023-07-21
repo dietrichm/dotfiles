@@ -1,7 +1,3 @@
-precmd() {
-    echo -ne "\033]0;${PWD/#$HOME/~}\007"
-}
-
 loadkey() {
     local key="id_rsa"
 
