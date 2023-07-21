@@ -84,6 +84,9 @@ lspconfig.intelephense.setup {
       files = {
         maxSize = 6000000,
       },
+      format = {
+        enable = false,
+      },
     },
   },
 }
