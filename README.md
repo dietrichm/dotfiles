@@ -1,7 +1,7 @@
 # 💻 dotfiles
 
 This repository contains configuration files, Vimscript and [Lua](https://neovim.io/doc/user/lua.html) code, and shell scripts for my programming environment on Linux.
-The centrepieces of this environment are [kitty](https://sw.kovidgoyal.net/kitty/) and [Tmux](https://github.com/tmux/tmux) running one [Neovim](https://neovim.io/) instance and any number of zsh shells per project.
+The centrepieces of this environment are [kitty](https://sw.kovidgoyal.net/kitty/) running one [Neovim](https://neovim.io/) instance and any number of zsh shells per project.
 
 If you are looking for my Neovim config, you can find it in [`nvim/.config/nvim`](nvim/.config/nvim).
 
@@ -65,7 +65,6 @@ Depending on which [config packages](#config-packages) are installed, these depe
          * [Language servers](#language-servers-lsp) depending on the desired languages
  * `ssh`: OpenSSH
  * `tig`: [tig](https://jonas.github.io/tig/)
- * `tmux`: [Tmux](https://github.com/tmux/tmux)
 
 ## Installation
 
@@ -73,11 +72,10 @@ Depending on which [config packages](#config-packages) are installed, these depe
  * Edit `~/.zshenv` to read `export ZDOTDIR="$HOME/repos/dotfiles/zsh"` (adapt directory).
  * Execute `config-install.sh` to install all [config packages](#config-packages).
  * Opening Neovim for the first time will install _vim-plug_ and all plugins.
- * In Tmux, execute `prefix` + <kbd>I</kbd>.
 
 ### Themes
 
-Multiple themes are supported by installing specific config file variants for the desired theme. This way colours are configured for kitty, zsh, Tmux, Neovim and FZF.
+Multiple themes are supported by installing specific config file variants for the desired theme. This way colours are configured for kitty, zsh, Neovim and FZF.
 
 These files are installed through the `config-install.sh` script. Pass the theme name as first argument to the script to install a specific one.
 
@@ -98,7 +96,6 @@ The following (Stow based) config packages are available:
 * `nvim`
 * `ssh`
 * `tig`
-* `tmux`
 
 By default, running `config-install.sh` installs all of them.
 If you wish to only install specific packages, pass them as a second argument (after the theme name) to the script.
@@ -112,8 +109,6 @@ While in Neovim, execute regularly:
 :PlugUpgrade
 :PlugUpdate
 ```
-
-In Tmux, execute `prefix` + <kbd>U</kbd> regularly.
 
 ## Language Servers (LSP)
 
