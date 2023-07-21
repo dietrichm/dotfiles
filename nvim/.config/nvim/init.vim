@@ -184,6 +184,7 @@ lua require('dietrichm.telescope')
 lua require('dietrichm.settings')
 
 " Configure vim-test.
+let g:test#strategy = 'kitty'
 let g:test#echo_command = 0
 let g:test#preserve_screen = 1
 let g:test#python#runner = 'pytest'
