@@ -18,7 +18,6 @@ Plug 'junegunn/fzf', {'do': './install --all'}
 Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'embear/vim-localvimrc'
 Plug 'nvim-lua/plenary.nvim'
 
