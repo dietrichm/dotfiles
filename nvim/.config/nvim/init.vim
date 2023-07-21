@@ -20,7 +20,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'embear/vim-localvimrc'
-Plug 'preservim/vimux'
 Plug 'nvim-lua/plenary.nvim'
 
 " UI and colours.
@@ -190,7 +189,6 @@ let g:test#echo_command = 0
 let g:test#preserve_screen = 1
 let g:test#python#runner = 'pytest'
 let g:test#runner_commands = ['PyTest']
-let g:test#strategy = 'vimux'
 nnoremap <silent> <Leader>rc :update \| :TestFile<CR>
 nnoremap <silent> <Leader>rt :update \| :TestNearest<CR>
 nnoremap <silent> <Leader>rr :update \| :TestLast<CR>
