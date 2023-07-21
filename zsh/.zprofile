@@ -27,5 +27,4 @@ export GPG_TTY=$(tty)
 export LANG=en_GB.UTF-8
 export LANGUAGE=en_GB:en
 export LC_ALL=en_GB.UTF-8
-export RESTIC_REPOSITORY=sftp:nas:/shares/Data/dietrich-restic
 export RIPGREP_CONFIG_PATH=$HOME/.ripgrep.conf
