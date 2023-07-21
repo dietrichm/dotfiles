@@ -30,7 +30,6 @@ if s:load_line_plugins
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'edkolev/promptline.vim'
-    Plug 'edkolev/tmuxline.vim'
 endif
 
 " Editing.
@@ -143,19 +142,6 @@ try
     \ }
 catch
 endtry
-
-" Configure tmuxline.
-let g:tmuxline_theme = 'airline'
-let g:tmuxline_preset = {
-    \ 'a': '#S',
-    \ 'win': '#I#F #W',
-    \ 'cwin': '#I#F #W',
-    \ 'y': '#{battery_percentage}',
-    \ 'z': '%R',
-    \ 'options': {
-        \ 'status-justify': 'left'
-    \ }
-\ }
 
 augroup terminal
     autocmd!
