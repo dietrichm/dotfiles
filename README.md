@@ -65,6 +65,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
      * _Optional_
          * Go (Golang) -- will install [vim-go](https://github.com/fatih/vim-go)
          * [Language servers](#language-servers-lsp) depending on the desired languages
+ * `ranger`: [ranger](https://github.com/ranger/ranger)
  * `ssh`: OpenSSH
  * `tig`: [tig](https://jonas.github.io/tig/)
 
@@ -96,6 +97,7 @@ The following (Stow based) config packages are available:
 * `git`
 * `kitty`
 * `nvim`
+* `ranger`
 * `ssh`
 * `tig`
 
