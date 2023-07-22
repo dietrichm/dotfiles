@@ -11,5 +11,9 @@ loadkey() {
 stt() {
     local title="${PWD##*/}"
 
+    if [ $# -ge 1 ]; then
+        title="$title $1"
+    fi
+
     kitty @ set-tab-title "$title"
 }
