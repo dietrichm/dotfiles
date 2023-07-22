@@ -86,7 +86,7 @@ The following themes are available:
 
 * `papercolor` (default)
 * `base16-bright`
-* `plain` (unstyled)
+* `plain` (unstyled with default [Oh My Posh](https://ohmyposh.dev/) prompt when installed)
 
 ### Config packages
 
