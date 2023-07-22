@@ -24,7 +24,7 @@ else
 fi
 
 # Install Python dependencies.
-pip3 install --user -U -r "$MY_CONFIG_ROOT/etc/requirements.txt"
+pip3 install --user -U -r "$MY_CONFIG_ROOT/requirements.txt"
 echo
 
 # Install desired theme.
