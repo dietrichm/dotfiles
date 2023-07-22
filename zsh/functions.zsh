@@ -7,3 +7,9 @@ loadkey() {
 
     ssh-add ~/.ssh/"$key" < /dev/null
 }
+
+stt() {
+    local title="${PWD##*/}"
+
+    kitty @ set-tab-title "$title"
+}
