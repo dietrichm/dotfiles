@@ -13,6 +13,7 @@ all_packages=(
     git
     kitty
     nvim
+    ranger
     ssh
     tig
 )
