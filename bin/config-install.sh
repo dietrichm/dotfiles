@@ -29,7 +29,7 @@ pip3 install --user -U -r "$MY_CONFIG_ROOT/requirements.txt"
 echo
 
 # Install desired theme.
-theme=${1:-papercolor}
+theme=${1:-plain}
 stow -v2 --override='.*' -d "$MY_CONFIG_ROOT/themes" "$theme"
 echo -e "Installed $theme theme.\n"
 
