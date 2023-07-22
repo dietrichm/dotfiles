@@ -32,6 +32,8 @@ If you are looking for my Neovim config, you can find it in [`nvim/.config/nvim`
 
 ![Tmux running Neovim while working on a software project](https://repository-images.githubusercontent.com/222291363/62316e00-9b8e-11eb-85a4-74bf9b11aeda)
 
+_Note: this is an outdated screenshot from when I was still running Tmux._
+
 ## Dependencies
 
 The following is required for installing and using these dotfiles:
