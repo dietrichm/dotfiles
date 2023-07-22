@@ -12,4 +12,4 @@ color title-focus black cyan
 color title-blur black cyan
 
 # Keybindings.
-bind generic I !@bash -c "echo -n %(commit) | copy-to-clipboard.sh"
+bind generic I !@bash -c "echo -n %(commit) | xsel -i --clipboard"

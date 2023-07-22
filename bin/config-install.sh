@@ -15,7 +15,6 @@ all_packages=(
     nvim
     ssh
     tig
-    tmux
 )
 
 if [ -n "$2" ]; then

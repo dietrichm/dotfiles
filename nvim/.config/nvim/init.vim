@@ -18,9 +18,7 @@ Plug 'junegunn/fzf', {'do': './install --all'}
 Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'embear/vim-localvimrc'
-Plug 'preservim/vimux'
 Plug 'nvim-lua/plenary.nvim'
 
 " UI and colours.
@@ -30,7 +28,6 @@ if s:load_line_plugins
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'edkolev/promptline.vim'
-    Plug 'edkolev/tmuxline.vim'
 endif
 
 " Editing.
@@ -144,19 +141,6 @@ try
 catch
 endtry
 
-" Configure tmuxline.
-let g:tmuxline_theme = 'airline'
-let g:tmuxline_preset = {
-    \ 'a': '#S',
-    \ 'win': '#I#F #W',
-    \ 'cwin': '#I#F #W',
-    \ 'y': '#{battery_percentage}',
-    \ 'z': '%R',
-    \ 'options': {
-        \ 'status-justify': 'left'
-    \ }
-\ }
-
 augroup terminal
     autocmd!
     autocmd TermOpen * setlocal nonumber
@@ -200,11 +184,11 @@ lua require('dietrichm.telescope')
 lua require('dietrichm.settings')
 
 " Configure vim-test.
+let g:test#strategy = 'kitty'
 let g:test#echo_command = 0
 let g:test#preserve_screen = 1
 let g:test#python#runner = 'pytest'
 let g:test#runner_commands = ['PyTest']
-let g:test#strategy = 'vimux'
 nnoremap <silent> <Leader>rc :update \| :TestFile<CR>
 nnoremap <silent> <Leader>rt :update \| :TestNearest<CR>
 nnoremap <silent> <Leader>rr :update \| :TestLast<CR>
