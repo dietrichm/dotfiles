@@ -156,16 +156,6 @@ augroup yank
     autocmd TextYankPost * lua vim.highlight.on_yank {timeout=500}
 augroup END
 
-" Configure vista.
-let g:vista#renderer#enable_icon = 0
-let g:vista_close_on_jump = 1
-let g:vista_echo_cursor = 0
-let g:vista_executive_for = {
-    \ 'markdown': 'toc',
-\ }
-let g:vista_ignore_kinds = ['Variable', 'Unknown']
-let g:vista_sidebar_width = 45
-
 " Configure FZF.
 let $FZF_DEFAULT_OPTS .= ' --reverse'
 let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.8}}
