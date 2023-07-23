@@ -141,8 +141,6 @@ lua require('dietrichm.settings')
 " Configure vim-test.
 let g:test#strategy = 'neovim'
 let g:test#neovim#term_position = 'botright 12'
-let g:test#python#runner = 'pytest'
-let g:test#runner_commands = ['PyTest']
 nnoremap <silent> <Leader>rc :update \| :TestFile<CR>
 nnoremap <silent> <Leader>rt :update \| :TestNearest<CR>
 nnoremap <silent> <Leader>rr :update \| :TestLast<CR>
