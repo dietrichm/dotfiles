@@ -1,6 +1,5 @@
 scriptencoding utf-8
 
-let s:load_line_plugins = 0
 let s:load_go_plugins = executable('go') == 1
 
 let s:vim_plug_script = stdpath('config') . '/autoload/plug.vim'
@@ -24,11 +23,6 @@ Plug 'nvim-lua/plenary.nvim'
 " UI and colours.
 Plug 'chriskempson/base16-vim'
 Plug 'NLKNguyen/papercolor-theme'
-if s:load_line_plugins
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'edkolev/promptline.vim'
-endif
 
 " Editing.
 Plug 'SirVer/ultisnips'
@@ -116,29 +110,6 @@ let delimitMate_excluded_ft = 'TelescopePrompt'
 
 " Configure vim-closetag.
 let g:closetag_filetypes = 'html,xhtml,phtml,blade'
-
-" Configure Airline.
-let g:airline_disable_statusline = 1
-let g:airline_powerline_fonts = 1
-let g:airline_extensions = []
-
-" Configure Promptline.
-try
-    let g:promptline_theme = 'airline_insert'
-    let g:promptline_preset = {
-        \ 'a': [ promptline#slices#host({ 'only_if_ssh': 1 }), promptline#slices#user() ],
-        \ 'b': [ promptline#slices#cwd() ],
-        \ 'c': [ '%#' ],
-        \ 'x': [ promptline#slices#git_status() ],
-        \ 'y': [ promptline#slices#vcs_branch(), promptline#slices#conda_env() ],
-        \ 'warn': [ promptline#slices#last_exit_code() ],
-        \ 'options': {
-            \ 'left_sections': [ 'a', 'b', 'c' ],
-            \ 'right_sections': [ 'warn', 'x', 'y' ]
-        \ }
-    \ }
-catch
-endtry
 
 augroup terminal
     autocmd!
