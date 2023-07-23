@@ -127,11 +127,6 @@ augroup yank
     autocmd TextYankPost * lua vim.highlight.on_yank {timeout=500}
 augroup END
 
-" Configure FZF.
-let $FZF_DEFAULT_OPTS .= ' --reverse'
-let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.8}}
-let g:fzf_preview_window = ['right:50%:hidden:+{2}-/2', 'ctrl-/']
-
 " Configure UltiSnips.
 let g:UltiSnipsSnippetsDir = stdpath('config') . '/UltiSnips'
 let g:UltiSnipsEditSplit = 'context'
