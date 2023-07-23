@@ -200,9 +200,3 @@ nnoremap <silent> <Leader>da :%bd<CR>
 " Path copy mappings.
 nnoremap <silent> <Leader>pc :let @+ = @%<CR>
 nnoremap <silent> <Leader>Pc :let @+ = @% . ":" . line(".")<CR>
-
-" Use arrow keys for resizing splits.
-nnoremap <silent> <Up>    :resize +1<CR>
-nnoremap <silent> <Down>  :resize -1<CR>
-nnoremap <silent> <Left>  :vertical resize +2<CR>
-nnoremap <silent> <Right> :vertical resize -2<CR>
