@@ -1,11 +1,4 @@
 require('gitsigns').setup {
-  signs = {
-    add          = { hl = 'GitSignsAdd', text = '+', numhl = 'GitSignsAddNr', linehl = 'GitSignsAddLn' },
-    change       = { hl = 'GitSignsChange', text = '~', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
-    delete       = { hl = 'GitSignsDelete', text = '_', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
-    topdelete    = { hl = 'GitSignsDelete', text = '‾', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
-    changedelete = { hl = 'GitSignsChange', text = '~', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
-  },
   attach_to_untracked = false,
   on_attach = function(bufnr)
     local gs = package.loaded.gitsigns
@@ -33,31 +26,6 @@ require('gitsigns').setup {
 require('nvim-tree').setup {
   view = {
     width = 45,
-  },
-  renderer = {
-    icons = {
-      symlink_arrow = ' -> ',
-      show = {
-        file = false,
-        folder = true,
-        folder_arrow = false,
-        git = false,
-      },
-      glyphs = {
-        default = '',
-        symlink = '',
-        folder = {
-          arrow_closed = '',
-          arrow_open = '',
-          default = '+',
-          open = '-',
-          empty = '+',
-          empty_open = '-',
-          symlink = '+',
-          symlink_open = '-',
-        },
-      },
-    },
   },
   git = {
     ignore = false,
