@@ -192,6 +192,9 @@ nnoremap <silent> <C-W>g] <C-W>g<C-]>
 " Delete all buffers.
 nnoremap <silent> <Leader>da :%bd<CR>
 
+" Map <Esc> to exit terminal-mode.
+tnoremap <Esc> <C-\><C-n>
+
 " Path copy mappings.
 nnoremap <silent> <Leader>pc :let @+ = @%<CR>
 nnoremap <silent> <Leader>Pc :let @+ = @% . ":" . line(".")<CR>
