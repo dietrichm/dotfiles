@@ -139,11 +139,8 @@ lua require('dietrichm.telescope')
 lua require('dietrichm.settings')
 
 " Configure vim-test.
-if !empty($KITTY_LISTEN_ON)
-    let g:test#strategy = 'kitty'
-endif
-let g:test#echo_command = 0
-let g:test#preserve_screen = 1
+let g:test#strategy = 'neovim'
+let g:test#neovim#term_position = 'botright 12'
 let g:test#python#runner = 'pytest'
 let g:test#runner_commands = ['PyTest']
 nnoremap <silent> <Leader>rc :update \| :TestFile<CR>
