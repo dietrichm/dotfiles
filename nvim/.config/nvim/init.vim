@@ -113,7 +113,7 @@ let g:closetag_filetypes = 'html,xhtml,phtml,blade'
 
 augroup terminal
     autocmd!
-    autocmd TermOpen * setlocal nonumber
+    autocmd TermOpen * setlocal nonumber signcolumn=auto
 augroup END
 
 augroup fugitive
