@@ -80,7 +80,6 @@ set smartcase
 set nowrapscan
 set linebreak
 set title
-set titlestring=%F
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
 set list
 set updatetime=100
