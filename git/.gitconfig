@@ -38,7 +38,7 @@
 	conflictstyle = diff3
 	tool = nfugitive
 [mergetool "nfugitive"]
-	cmd = nvim +Gdiff "$MERGED"
+	cmd = nvim -c "Gvdiffsplit!" "$MERGED"
 [diff]
 	tool = nvimdiff
 [difftool "nvimdiff"]
