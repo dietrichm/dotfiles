@@ -30,9 +30,7 @@ If you are looking for my Neovim config, you can find it in [`nvim/.config/nvim`
 
 ## Screenshot
 
-![Tmux running Neovim while working on a software project](https://repository-images.githubusercontent.com/222291363/62316e00-9b8e-11eb-85a4-74bf9b11aeda)
-
-_Note: this is an outdated screenshot from when I was still running Tmux._
+![kitty running Neovim and zsh while working on a software project](https://github.com/dietrichm/dotfiles/assets/214730/3f4b0135-7984-4bb3-b44e-1528cc797d5d)
 
 ## Dependencies
 
