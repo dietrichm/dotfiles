@@ -19,6 +19,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'embear/vim-localvimrc'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'knubie/vim-kitty-navigator', {'do': 'cp ./*.py ' . shellescape($MY_CONFIG_ROOT . '/kitty/.config/kitty')}
 
 " UI and colours.
 Plug 'chriskempson/base16-vim'
