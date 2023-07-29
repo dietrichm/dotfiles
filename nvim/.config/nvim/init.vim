@@ -48,7 +48,7 @@ Plug 'lewis6991/gitsigns.nvim'
 " Development.
 Plug 'vim-test/vim-test'
 if s:load_go_plugins
-    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 endif
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
