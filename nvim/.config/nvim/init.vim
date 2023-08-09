@@ -17,7 +17,6 @@ Plug 'junegunn/fzf', {'do': './install --all'}
 Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'embear/vim-localvimrc'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'knubie/vim-kitty-navigator', {'do': 'cp ./*.py ' . shellescape($MY_CONFIG_ROOT . '/kitty/.config/kitty')}
 
@@ -98,9 +97,6 @@ aunmenu PopUp.-1-
 
 " Configure nvim-tree.
 nnoremap <silent> <Leader>ft :NvimTreeFindFileToggle<CR>
-
-" Configure Localvimrc.
-let g:localvimrc_persistent = 1
 
 " Configure PHP syntax.
 let g:PHP_noArrowMatching = 1
