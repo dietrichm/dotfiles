@@ -78,7 +78,6 @@ set smartindent
 set nohlsearch
 set ignorecase
 set smartcase
-set nowrapscan
 set linebreak
 set title
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
