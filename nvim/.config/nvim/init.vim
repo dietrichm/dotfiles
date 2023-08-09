@@ -90,6 +90,7 @@ set grepprg=rg\ --vimgrep
 set undofile
 set signcolumn=auto:1-2
 set termguicolors
+set exrc
 
 " Remove "disable mouse" pop-up menu item.
 aunmenu PopUp.How-to\ disable\ mouse

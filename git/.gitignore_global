@@ -8,6 +8,8 @@ FirePHPCore/
 tags
 !tags/
 .lvimrc
+.nvim.lua
+.nvimrc
 .ctags.d/*.ctags
 .padawan/
 .phpactor.yml
