@@ -2,7 +2,7 @@ scriptencoding utf-8
 
 let s:load_go_plugins = executable('go') == 1
 
-let s:vim_plug_script = stdpath('config') . '/autoload/plug.vim'
+let s:vim_plug_script = stdpath('data') . '/site/autoload/plug.vim'
 if empty(glob(s:vim_plug_script))
     execute '!curl -fLo ' . shellescape(s:vim_plug_script) . ' --create-dirs '
         \ . 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

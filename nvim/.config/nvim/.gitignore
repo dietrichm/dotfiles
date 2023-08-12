@@ -1,5 +1,4 @@
 plugged/
 .netrwhist
-autoload/plug.vim*
 spell/
 plugin/theme.vim
