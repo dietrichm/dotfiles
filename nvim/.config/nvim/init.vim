@@ -91,10 +91,6 @@ set signcolumn=auto:1-2
 set termguicolors
 set exrc
 
-" Remove "disable mouse" pop-up menu item.
-aunmenu PopUp.How-to\ disable\ mouse
-aunmenu PopUp.-1-
-
 " Configure nvim-tree.
 nnoremap <silent> <Leader>ft :NvimTreeFindFileToggle<CR>
 
