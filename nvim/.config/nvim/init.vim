@@ -23,6 +23,7 @@ Plug 'knubie/vim-kitty-navigator', {'do': 'cp ./*.py ' . shellescape($MY_CONFIG_
 " UI and colours.
 Plug 'chriskempson/base16-vim'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'justinmk/molokai'
 
 " Editing.
 Plug 'SirVer/ultisnips'
