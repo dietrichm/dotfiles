@@ -2,7 +2,6 @@ setlocal textwidth=80
 setlocal colorcolumn=121
 
 " Include and gf file matching.
-setlocal suffixesadd+=.php
 setlocal includeexpr=substitute(v:fname,'^/','','')
 
 augroup php
