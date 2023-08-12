@@ -57,7 +57,6 @@ Plug 'jwalton512/vim-blade'
 
 " Other syntax.
 Plug 'cespare/vim-toml', {'branch': 'main'}
-Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
@@ -149,11 +148,6 @@ let g:go_doc_keywordprg_enabled = 0
 let g:go_fmt_fail_silently = 1
 let g:go_imports_autosave = 0
 let g:go_jump_to_error = 0
-
-" Configure vim-markdown.
-let g:vim_markdown_frontmatter = 1
-let g:vim_markdown_folding_style_pythonic = 1
-map <Plug> <Plug>Markdown_MoveToCurHeader
 
 " Enable search highlight when searching for symbols.
 nnoremap <silent> * :setlocal hlsearch \| :normal! *<CR>
