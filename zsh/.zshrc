@@ -15,8 +15,10 @@ ZLE_RPROMPT_INDENT=0
 # Key bindings.
 bindkey -v
 
-# Load FZF.
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Load fzf.
+# https://bugzilla.redhat.com/show_bug.cgi?id=1513913
+[ -f /usr/share/zsh/site-functions/fzf ] && source /usr/share/zsh/site-functions/fzf
+[ -f /usr/share/fzf/shell/key-bindings.zsh ] && source /usr/share/fzf/shell/key-bindings.zsh
 
 # Load direnv.
 [ -f ~/.config/direnv/direnv.toml ] && eval "$(direnv hook zsh)"

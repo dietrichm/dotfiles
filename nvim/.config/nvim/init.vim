@@ -13,7 +13,6 @@ endif
 call plug#begin()
 
 " Tools.
-Plug 'junegunn/fzf', {'do': './install --all'}
 Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
 Plug 'kyazdani42/nvim-tree.lua'

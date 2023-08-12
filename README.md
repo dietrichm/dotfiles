@@ -45,6 +45,8 @@ The following is required for installing and using these dotfiles:
 
 ### Optional
 
+[fzf](https://github.com/junegunn/fzf) will be used when installed (i.e. using a package manager).
+
 Depending on which [config packages](#config-packages) are installed, these dependencies are also required:
 
  * `dig`: [bind-utils](https://github.com/tigeli/bind-utils)
@@ -77,7 +79,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
 
 ### Themes
 
-Multiple themes are supported by installing specific config file variants for the desired theme. This way colours are configured for kitty, zsh, Neovim and FZF.
+Multiple themes are supported by installing specific config file variants for the desired theme. This way colours are configured for kitty, zsh, Neovim and fzf.
 
 These files are installed through the `config-install.sh` script. Pass the theme name as first argument to the script to install a specific one.
 
