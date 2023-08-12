@@ -124,11 +124,13 @@ let g:UltiSnipsSnippetsDir = stdpath('config') . '/UltiSnips'
 let g:UltiSnipsEditSplit = 'context'
 
 " Configure Lua plugins.
-lua require('dietrichm.lsp')
-lua require('dietrichm.completion')
-lua require('dietrichm.treesitter')
-lua require('dietrichm.telescope')
-lua require('dietrichm.settings')
+try
+    lua require('dietrichm.lsp')
+    lua require('dietrichm.completion')
+    lua require('dietrichm.treesitter')
+    lua require('dietrichm.telescope')
+    lua require('dietrichm.settings')
+endtry
 
 " Configure vim-test.
 let g:test#strategy = 'neovim'
