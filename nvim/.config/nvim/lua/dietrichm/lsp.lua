@@ -9,6 +9,8 @@ local on_attach = function(_, bufnr)
     [[<cmd>lua require('telescope.builtin').lsp_implementations()<CR>]], opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>sr',
     [[<cmd>lua require('telescope.builtin').lsp_references()<CR>]], opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>st',
+    [[<cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>]], opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>ca',
     [[<cmd>lua vim.lsp.buf.code_action()<CR>]], opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'v', '<Leader>ca',
