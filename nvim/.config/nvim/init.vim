@@ -33,6 +33,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'alvan/vim-closetag'
+Plug 'justinmk/vim-sneak'
 
 " Completion.
 Plug 'hrsh7th/nvim-cmp'
