@@ -75,6 +75,7 @@ set ignorecase
 set smartcase
 set linebreak
 set title
+set titlestring=nvim\ in\ %{substitute(getcwd(),'.*/','','')}
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
 set list
 set updatetime=100
