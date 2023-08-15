@@ -38,3 +38,16 @@ require('nvim-tree').setup {
 }
 
 require('nvim-tree.view').View.winopts.cursorline = true
+
+vim.fn.sign_define('DiagnosticSignError', {
+  text = '❌',
+})
+vim.fn.sign_define('DiagnosticSignWarn', {
+  text = '❗',
+})
+vim.fn.sign_define('DiagnosticSignInfo', {
+  text = '💡',
+})
+vim.fn.sign_define('DiagnosticSignHint', {
+  text = '💭',
+})

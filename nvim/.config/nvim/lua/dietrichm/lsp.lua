@@ -138,16 +138,3 @@ null_ls.setup {
     null_ls.builtins.formatting.pint,
   }
 }
-
-vim.fn.sign_define('DiagnosticSignError', {
-  text = '❌',
-})
-vim.fn.sign_define('DiagnosticSignWarn', {
-  text = '❗',
-})
-vim.fn.sign_define('DiagnosticSignInfo', {
-  text = '💡',
-})
-vim.fn.sign_define('DiagnosticSignHint', {
-  text = '💭',
-})
