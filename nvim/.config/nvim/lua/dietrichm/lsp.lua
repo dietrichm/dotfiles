@@ -1,25 +1,19 @@
 local lspconfig = require('lspconfig')
 
 local on_attach = function(_, bufnr)
-  local opts = { noremap = true, silent = true }
+  local opts = { buffer = bufnr, silent = true }
+  local telescope = require('telescope.builtin')
 
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-]>',
-    [[<cmd>lua require('telescope.builtin').lsp_definitions()<CR>]], opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>si',
-    [[<cmd>lua require('telescope.builtin').lsp_implementations()<CR>]], opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>sr',
-    [[<cmd>lua require('telescope.builtin').lsp_references()<CR>]], opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>st',
-    [[<cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>]], opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>ca',
-    [[<cmd>lua vim.lsp.buf.code_action()<CR>]], opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'v', '<Leader>ca',
-    [[<cmd>lua vim.lsp.buf.code_action()<CR>]], opts)
-
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'i', '<C-S>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>lf', '<cmd>lua vim.lsp.buf.format()<CR>', opts)
+  vim.keymap.set('n', '<C-]>', telescope.lsp_definitions, opts)
+  vim.keymap.set('n', '<Leader>si', telescope.lsp_implementations, opts)
+  vim.keymap.set('n', '<Leader>sr', telescope.lsp_references, opts)
+  vim.keymap.set('n', '<Leader>st', telescope.lsp_type_definitions, opts)
+  vim.keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action, opts)
+  vim.keymap.set('v', '<Leader>ca', vim.lsp.buf.code_action, opts)
+  vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+  vim.keymap.set('i', '<C-S>', vim.lsp.buf.signature_help, opts)
+  vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, opts)
+  vim.keymap.set('n', '<Leader>lf', vim.lsp.buf.format, opts)
 
   vim.api.nvim_buf_create_user_command(
     bufnr,
