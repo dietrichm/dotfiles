@@ -128,6 +128,7 @@ try
     lua require('dietrichm.treesitter')
     lua require('dietrichm.telescope')
     lua require('dietrichm.settings')
+    lua require('dietrichm.mappings')
 endtry
 
 " Configure vim-test.
