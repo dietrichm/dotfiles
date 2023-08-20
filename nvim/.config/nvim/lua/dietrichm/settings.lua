@@ -37,7 +37,7 @@ require('nvim-tree').setup {
   },
 }
 
-require('nvim-tree.view').View.winopts.cursorline = true
+require('nvim-tree.view').View.winopts.signcolumn = 'auto'
 
 vim.fn.sign_define('DiagnosticSignError', {
   text = '❌',
