@@ -88,6 +88,8 @@ set undofile
 set signcolumn=auto:1-2
 set termguicolors
 set exrc
+set cursorline
+set cursorlineopt=number
 
 " Configure nvim-tree.
 nnoremap <silent> <Leader>ft :NvimTreeFindFileToggle<CR>
