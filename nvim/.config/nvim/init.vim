@@ -34,6 +34,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'alvan/vim-closetag'
 Plug 'justinmk/vim-sneak'
+Plug 'AndrewRadev/splitjoin.vim'
 
 " Completion.
 Plug 'hrsh7th/nvim-cmp'

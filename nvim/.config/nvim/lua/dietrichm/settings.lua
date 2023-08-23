@@ -39,6 +39,8 @@ require('nvim-tree').setup {
 
 require('nvim-tree.view').View.winopts.signcolumn = 'auto'
 
+vim.g.splitjoin_php_method_chain_full = 1
+
 vim.fn.sign_define('DiagnosticSignError', {
   text = '❌',
 })
