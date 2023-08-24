@@ -60,38 +60,37 @@ call plug#end()
 
 let mapleader = "\<Space>"
 
-" General settings
-set scrolloff=2
-set number
-set numberwidth=1
-set fileformats=unix
-set showmode
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set smartindent
-set nohlsearch
-set ignorecase
-set smartcase
-set linebreak
-set title
-set titlestring=nvim\ in\ %{substitute(getcwd(),'.*/','','')}
-set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
-set list
-set updatetime=100
-set shortmess+=cIW
-set spelllang=en_gb
-set path=.,*
-set grepprg=rg\ --vimgrep
-set undofile
-set signcolumn=auto:1-2
-set termguicolors
-set exrc
-set cursorline
-set cursorlineopt=number
-
 lua << EOF
+
+vim.opt.scrolloff = 2
+vim.opt.number = true
+vim.opt.numberwidth = 1
+vim.opt.fileformats = 'unix'
+vim.opt.showmode = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.hlsearch = false
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.linebreak = true
+vim.opt.title = true
+vim.opt.titlestring = [[nvim in %{substitute(getcwd(),'.*/','','')}]]
+vim.opt.listchars = 'tab:→ ,extends:»,precedes:«,trail:▒,nbsp:·'
+vim.opt.list = true
+vim.opt.updatetime = 100
+vim.opt.shortmess:append({ c = true, I = true, W = true })
+vim.opt.spelllang = 'en_gb'
+vim.opt.path = '.,*'
+vim.opt.grepprg = [[rg --vimgrep]]
+vim.opt.undofile = true
+vim.opt.signcolumn = 'auto:1-2'
+vim.opt.termguicolors = true
+vim.opt.exrc = true
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = 'number'
 
 local keymap_opts = { silent = true }
 
