@@ -92,9 +92,6 @@ set exrc
 set cursorline
 set cursorlineopt=number
 
-" Configure nvim-tree.
-nnoremap <silent> <Leader>ft :NvimTreeFindFileToggle<CR>
-
 lua << EOF
 
 local keymap_opts = { silent = true }
