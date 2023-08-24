@@ -196,9 +196,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end
 })
 
-EOF
+-- Lua plugins.
+require('dietrichm')
 
-" Configure Lua plugins.
-try
-    lua require('dietrichm')
-endtry
+EOF
