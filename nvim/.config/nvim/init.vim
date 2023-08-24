@@ -97,6 +97,8 @@ nnoremap <silent> <Leader>ft :NvimTreeFindFileToggle<CR>
 
 lua << EOF
 
+local keymap_opts = { silent = true }
+
 -- Configure PHP syntax.
 vim.g.PHP_noArrowMatching = 1
 
@@ -125,11 +127,14 @@ vim.g.go_fmt_fail_silently = 1
 vim.g.go_imports_autosave = 0
 vim.g.go_jump_to_error = 0
 
--- Diagnostic signs.
+-- Diagnostics.
 vim.fn.sign_define('DiagnosticSignError', { text = '❌' })
 vim.fn.sign_define('DiagnosticSignWarn', { text = '❗' })
 vim.fn.sign_define('DiagnosticSignInfo', { text = '💡' })
 vim.fn.sign_define('DiagnosticSignHint', { text = '💭' })
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, keymap_opts)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, keymap_opts)
+vim.keymap.set('n', '<Leader>q', vim.diagnostic.setloclist, keymap_opts)
 
 EOF
 
@@ -157,7 +162,6 @@ try
     lua require('dietrichm.telescope')
     lua require('dietrichm.gitsigns')
     lua require('dietrichm.tree')
-    lua require('dietrichm.mappings')
 endtry
 
 " Configure vim-test.
