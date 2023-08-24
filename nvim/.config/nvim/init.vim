@@ -58,7 +58,6 @@ Plug 'jwalton512/vim-blade'
 
 call plug#end()
 
-nnoremap <Space> <Nop>
 let mapleader = "\<Space>"
 
 " General settings
@@ -96,6 +95,9 @@ lua << EOF
 
 local keymap_opts = { silent = true }
 
+-- Disable space (leader).
+vim.keymap.set('n', '<Space>', '', keymap_opts)
+
 -- Configure PHP syntax.
 vim.g.PHP_noArrowMatching = 1
 
@@ -115,6 +117,9 @@ vim.g.UltiSnipsEditSplit = 'context'
 -- Configure vim-test.
 vim.g['test#strategy'] = 'neovim'
 vim.g['test#neovim#term_position'] = 'botright 15'
+vim.keymap.set('n', '<Leader>rc', [[:update | :TestFile<CR>]], keymap_opts)
+vim.keymap.set('n', '<Leader>rt', [[:update | :TestNearest<CR>]], keymap_opts)
+vim.keymap.set('n', '<Leader>rr', [[:update | :TestLast<CR>]], keymap_opts)
 
 -- Configure vim-go.
 vim.g.go_code_completion_enabled = 0
@@ -132,6 +137,47 @@ vim.fn.sign_define('DiagnosticSignHint', { text = '💭' })
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, keymap_opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, keymap_opts)
 vim.keymap.set('n', '<Leader>q', vim.diagnostic.setloclist, keymap_opts)
+
+-- Enable search highlight when searching for symbols.
+vim.keymap.set('n', '*', [[:setlocal hlsearch | :normal! *<CR>]], keymap_opts)
+vim.keymap.set('n', '#', [[:setlocal hlsearch | :normal! #<CR>]], keymap_opts)
+vim.keymap.set('n', 'g*', [[:setlocal hlsearch | :normal! g*<CR>]], keymap_opts)
+vim.keymap.set('n', 'g#', [[:setlocal hlsearch | :normal! g#<CR>]], keymap_opts)
+
+-- Toggle search highlight.
+vim.keymap.set('n', '\\', [[:setlocal hlsearch!<CR>]], keymap_opts)
+
+-- Up and down by visible lines.
+vim.keymap.set('n', 'j', [[v:count == 0 ? 'gj' : 'j']], { expr = true })
+vim.keymap.set('n', 'k', [[v:count == 0 ? 'gk' : 'k']], { expr = true })
+
+-- Paragraph motions do not change jumplist.
+vim.keymap.set('n', '}', [[:keepjumps normal! }<CR>]], keymap_opts)
+vim.keymap.set('n', '{', [[:keepjumps normal! {<CR>]], keymap_opts)
+
+-- Move through quickfix and location list.
+vim.keymap.set('n', ']q', [[:cnext<CR>]], keymap_opts)
+vim.keymap.set('n', '[q', [[:cprevious<CR>]], keymap_opts)
+vim.keymap.set('n', ']Q', [[:clast<CR>]], keymap_opts)
+vim.keymap.set('n', '[Q', [[:cfirst<CR>]], keymap_opts)
+vim.keymap.set('n', ']l', [[:lnext<CR>]], keymap_opts)
+vim.keymap.set('n', '[l', [[:lprevious<CR>]], keymap_opts)
+vim.keymap.set('n', ']L', [[:llast<CR>]], keymap_opts)
+vim.keymap.set('n', '[L', [[:lfirst<CR>]], keymap_opts)
+
+-- Use g] for :tjump.
+vim.keymap.set('n', 'g]', [[g<C-]>]], keymap_opts)
+vim.keymap.set('n', '<C-W>g]', [[<C-W>g<C-]>]], keymap_opts)
+
+-- Delete all buffers.
+vim.keymap.set('n', '<Leader>da', [[:%bd<CR>]], keymap_opts)
+
+-- Map <Esc> to exit terminal-mode.
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], keymap_opts)
+
+-- Path copy mappings.
+vim.keymap.set('n', '<Leader>pc', [[:let @+ = @%<CR>]], keymap_opts)
+vim.keymap.set('n', '<Leader>Pc', [[:let @+ = @% . ":" . line(".")<CR>]], keymap_opts)
 
 EOF
 
@@ -155,49 +201,3 @@ augroup END
 try
     lua require('dietrichm')
 endtry
-
-" Configure vim-test.
-nnoremap <silent> <Leader>rc :update \| :TestFile<CR>
-nnoremap <silent> <Leader>rt :update \| :TestNearest<CR>
-nnoremap <silent> <Leader>rr :update \| :TestLast<CR>
-
-" Enable search highlight when searching for symbols.
-nnoremap <silent> * :setlocal hlsearch \| :normal! *<CR>
-nnoremap <silent> # :setlocal hlsearch \| :normal! #<CR>
-nnoremap <silent> g* :setlocal hlsearch \| :normal! g*<CR>
-nnoremap <silent> g# :setlocal hlsearch \| :normal! g#<CR>
-
-" Toggle search highlight.
-nnoremap <silent> \ :setlocal hlsearch!<CR>
-
-" Up and down by visible lines.
-nnoremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
-nnoremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-
-" Paragraph motions do not change jumplist.
-nnoremap <silent> } :keepjumps normal! }<CR>
-nnoremap <silent> { :keepjumps normal! {<CR>
-
-" Move through quickfix and location list.
-nnoremap <silent> ]q :cnext<CR>
-nnoremap <silent> [q :cprevious<CR>
-nnoremap <silent> ]Q :clast<CR>
-nnoremap <silent> [Q :cfirst<CR>
-nnoremap <silent> ]l :lnext<CR>
-nnoremap <silent> [l :lprevious<CR>
-nnoremap <silent> ]L :llast<CR>
-nnoremap <silent> [L :lfirst<CR>
-
-" Use g] for :tjump.
-nnoremap <silent> g] g<C-]>
-nnoremap <silent> <C-W>g] <C-W>g<C-]>
-
-" Delete all buffers.
-nnoremap <silent> <Leader>da :%bd<CR>
-
-" Map <Esc> to exit terminal-mode.
-tnoremap <Esc> <C-\><C-n>
-
-" Path copy mappings.
-nnoremap <silent> <Leader>pc :let @+ = @%<CR>
-nnoremap <silent> <Leader>Pc :let @+ = @% . ":" . line(".")<CR>
