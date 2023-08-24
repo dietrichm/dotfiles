@@ -178,23 +178,26 @@ vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], keymap_opts)
 vim.keymap.set('n', '<Leader>pc', [[:let @+ = @%<CR>]], keymap_opts)
 vim.keymap.set('n', '<Leader>Pc', [[:let @+ = @% . ":" . line(".")<CR>]], keymap_opts)
 
+local augroup = vim.api.nvim_create_augroup('vimrc', { clear = true })
+
+vim.api.nvim_create_autocmd('TermOpen', {
+  pattern = '*',
+  group = augroup,
+  callback = function(args)
+    vim.opt_local.number = false
+    vim.opt_local.signcolumn = 'auto'
+  end
+})
+
+vim.api.nvim_create_autocmd('TextYankPost', {
+  pattern = '*',
+  group = augroup,
+  callback = function(args)
+    vim.highlight.on_yank({ timeout = 500 })
+  end
+})
+
 EOF
-
-augroup terminal
-    autocmd!
-    autocmd TermOpen * setlocal nonumber signcolumn=auto
-augroup END
-
-augroup fugitive
-    autocmd!
-    autocmd BufReadPost fugitive://* set bufhidden=delete
-augroup END
-
-" Yank highlighting.
-augroup yank
-    autocmd!
-    autocmd TextYankPost * lua vim.highlight.on_yank {timeout=500}
-augroup END
 
 " Configure Lua plugins.
 try
