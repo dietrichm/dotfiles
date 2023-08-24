@@ -58,8 +58,6 @@ Plug 'jwalton512/vim-blade'
 
 call plug#end()
 
-let mapleader = "\<Space>"
-
 lua << EOF
 
 vim.opt.scrolloff = 2
@@ -94,7 +92,8 @@ vim.opt.cursorlineopt = 'number'
 
 local keymap_opts = { silent = true }
 
--- Disable space (leader).
+-- Leader.
+vim.g.mapleader = ' '
 vim.keymap.set('n', '<Space>', '', keymap_opts)
 
 -- Configure PHP syntax.
