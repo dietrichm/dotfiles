@@ -155,7 +155,8 @@ try
     lua require('dietrichm.completion')
     lua require('dietrichm.treesitter')
     lua require('dietrichm.telescope')
-    lua require('dietrichm.settings')
+    lua require('dietrichm.gitsigns')
+    lua require('dietrichm.tree')
     lua require('dietrichm.mappings')
 endtry
 
