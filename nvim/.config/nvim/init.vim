@@ -125,6 +125,12 @@ vim.g.go_fmt_fail_silently = 1
 vim.g.go_imports_autosave = 0
 vim.g.go_jump_to_error = 0
 
+-- Diagnostic signs.
+vim.fn.sign_define('DiagnosticSignError', { text = '❌' })
+vim.fn.sign_define('DiagnosticSignWarn', { text = '❗' })
+vim.fn.sign_define('DiagnosticSignInfo', { text = '💡' })
+vim.fn.sign_define('DiagnosticSignHint', { text = '💭' })
+
 EOF
 
 augroup terminal
