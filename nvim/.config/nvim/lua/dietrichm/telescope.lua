@@ -1,6 +1,7 @@
 local telescope = require('telescope')
 local actions = require('telescope.actions')
 local actions_layout = require('telescope.actions.layout')
+local builtin = require('telescope.builtin')
 
 telescope.setup {
   defaults = {
@@ -38,22 +39,16 @@ telescope.setup {
 
 telescope.load_extension('fzf')
 
-local opts = { noremap = true, silent = true }
+local opts = { silent = true }
 
-vim.api.nvim_set_keymap('n', '<Leader>o',
-  [[<cmd>lua require('telescope.builtin').find_files({hidden=true})<CR>]], opts)
-vim.api.nvim_set_keymap('n', '<Leader>O',
-  [[<cmd>lua require('telescope.builtin').find_files({hidden=true, no_ignore=true})<CR>]], opts)
-vim.api.nvim_set_keymap('n', '<Leader>b',
-  [[<cmd>lua require('telescope.builtin').buffers()<CR>]], opts)
-vim.api.nvim_set_keymap('n', '<Leader>fh',
-  [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]], opts)
-vim.api.nvim_set_keymap('n', '<Leader>sw',
-  [[<cmd>lua require('telescope.builtin').grep_string({word_match='-w'})<CR>]], opts)
-vim.api.nvim_set_keymap('n', '<Leader>tb',
-  [[<cmd>lua require('telescope.builtin').lsp_document_symbols({ignore_symbols={'variable', 'property'}})<CR>]], opts)
-
-local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<Leader>o', function() builtin.find_files({ hidden = true }) end, opts)
+vim.keymap.set('n', '<Leader>O', function() builtin.find_files({ hidden = true, no_ignore = true }) end, opts)
+vim.keymap.set('n', '<Leader>b', builtin.buffers, opts)
+vim.keymap.set('n', '<Leader>fh', builtin.oldfiles, opts)
+vim.keymap.set('n', '<Leader>sw', function() builtin.grep_string({ word_match = '-w' }) end, opts)
+vim.keymap.set('n', '<Leader>tb', function()
+  builtin.lsp_document_symbols({ ignore_symbols = { 'variable', 'property' } })
+end, opts)
 
 vim.api.nvim_create_user_command(
   'Rg',
