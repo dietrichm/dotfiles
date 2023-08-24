@@ -109,6 +109,22 @@ vim.g.closetag_filetypes = 'html,xhtml,phtml,blade'
 -- Configure splitjoin.vim.
 vim.g.splitjoin_php_method_chain_full = 1
 
+-- Configure UltiSnips.
+vim.g.UltiSnipsSnippetsDir = vim.fn.stdpath('config') .. '/UltiSnips'
+vim.g.UltiSnipsEditSplit = 'context'
+
+-- Configure vim-test.
+vim.g['test#strategy'] = 'neovim'
+vim.g['test#neovim#term_position'] = 'botright 15'
+
+-- Configure vim-go.
+vim.g.go_code_completion_enabled = 0
+vim.g.go_def_mapping_enabled = 0
+vim.g.go_doc_keywordprg_enabled = 0
+vim.g.go_fmt_fail_silently = 1
+vim.g.go_imports_autosave = 0
+vim.g.go_jump_to_error = 0
+
 EOF
 
 augroup terminal
@@ -127,10 +143,6 @@ augroup yank
     autocmd TextYankPost * lua vim.highlight.on_yank {timeout=500}
 augroup END
 
-" Configure UltiSnips.
-let g:UltiSnipsSnippetsDir = stdpath('config') . '/UltiSnips'
-let g:UltiSnipsEditSplit = 'context'
-
 " Configure Lua plugins.
 try
     lua require('dietrichm.lsp')
@@ -142,19 +154,9 @@ try
 endtry
 
 " Configure vim-test.
-let g:test#strategy = 'neovim'
-let g:test#neovim#term_position = 'botright 15'
 nnoremap <silent> <Leader>rc :update \| :TestFile<CR>
 nnoremap <silent> <Leader>rt :update \| :TestNearest<CR>
 nnoremap <silent> <Leader>rr :update \| :TestLast<CR>
-
-" Configure vim-go.
-let g:go_code_completion_enabled = 0
-let g:go_def_mapping_enabled = 0
-let g:go_doc_keywordprg_enabled = 0
-let g:go_fmt_fail_silently = 1
-let g:go_imports_autosave = 0
-let g:go_jump_to_error = 0
 
 " Enable search highlight when searching for symbols.
 nnoremap <silent> * :setlocal hlsearch \| :normal! *<CR>
