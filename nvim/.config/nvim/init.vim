@@ -156,12 +156,7 @@ augroup END
 
 " Configure Lua plugins.
 try
-    lua require('dietrichm.lsp')
-    lua require('dietrichm.completion')
-    lua require('dietrichm.treesitter')
-    lua require('dietrichm.telescope')
-    lua require('dietrichm.gitsigns')
-    lua require('dietrichm.tree')
+    lua require('dietrichm')
 endtry
 
 " Configure vim-test.

@@ -1,0 +1,6 @@
+require('dietrichm.lsp')
+require('dietrichm.completion')
+require('dietrichm.treesitter')
+require('dietrichm.telescope')
+require('dietrichm.gitsigns')
+require('dietrichm.tree')
