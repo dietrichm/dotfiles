@@ -53,7 +53,10 @@ end, opts)
 vim.api.nvim_create_user_command(
   'Rg',
   function(options)
-    builtin.grep_string({ search = options.args, use_regex = true })
+    builtin.grep_string({
+      search = options.args,
+      use_regex = true,
+    })
   end,
   { nargs = '*' }
 )
@@ -61,10 +64,14 @@ vim.api.nvim_create_user_command(
 vim.api.nvim_create_user_command(
   'Rgi',
   function(options)
-    builtin.grep_string({ search = options.args, use_regex = true, additional_args = function(rg_options)
-      table.insert(rg_options, '--ignore-vcs')
-      return rg_options
-    end })
+    builtin.grep_string({
+      search = options.args,
+      use_regex = true,
+      additional_args = function(rg_options)
+        table.insert(rg_options, '--ignore-vcs')
+        return rg_options
+      end
+    })
   end,
   { nargs = '*' }
 )
