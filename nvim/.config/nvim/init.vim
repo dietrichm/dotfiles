@@ -95,14 +95,21 @@ set cursorlineopt=number
 " Configure nvim-tree.
 nnoremap <silent> <Leader>ft :NvimTreeFindFileToggle<CR>
 
-" Configure PHP syntax.
-let g:PHP_noArrowMatching = 1
+lua << EOF
 
-" Configure delimitMate.
-let delimitMate_excluded_ft = 'TelescopePrompt'
+-- Configure PHP syntax.
+vim.g.PHP_noArrowMatching = 1
 
-" Configure vim-closetag.
-let g:closetag_filetypes = 'html,xhtml,phtml,blade'
+-- Configure delimitMate.
+vim.g.delimitMate_excluded_ft = 'TelescopePrompt'
+
+-- Configure vim-closetag.
+vim.g.closetag_filetypes = 'html,xhtml,phtml,blade'
+
+-- Configure splitjoin.vim.
+vim.g.splitjoin_php_method_chain_full = 1
+
+EOF
 
 augroup terminal
     autocmd!
