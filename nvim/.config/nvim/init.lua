@@ -1,4 +1,4 @@
-scriptencoding utf-8
+vim.cmd([[
 
 let s:load_go_plugins = executable('go') == 1
 
@@ -58,7 +58,7 @@ Plug 'jwalton512/vim-blade'
 
 call plug#end()
 
-lua << EOF
+]])
 
 vim.opt.scrolloff = 2
 vim.opt.number = true
@@ -198,5 +198,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- Lua plugins.
 require('dietrichm')
-
-EOF
