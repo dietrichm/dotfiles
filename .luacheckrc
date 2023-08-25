@@ -6,4 +6,5 @@ globals = {
 
 exclude_files = {
   '.luarocks/',
+  'nvim/.config/nvim/plugin/theme.lua',
 }
