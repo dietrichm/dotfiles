@@ -9,9 +9,3 @@ augroup php
     " Colour column 81 only for PHP source files and tests.
     autocmd BufEnter */{app,domain,src,tests}/*.php setlocal colorcolumn=+1,121
 augroup END
-
-" Searching using ripgrep.
-nnoremap <silent> <buffer> <Leader>sce :execute "Rg \\bclass .+ (extends\|implements) .*\\b" . expand("<cword>") . "\\b"<CR>
-nnoremap <silent> <buffer> <Leader>sci :execute "Rg \\bnew\\s+" . expand("<cword>") . "\\b"<CR>
-nnoremap <silent> <buffer> <Leader>scr :execute "Rg \\b" . expand("<cword>") . "::class\\b"<CR>
-nnoremap <silent> <buffer> <Leader>smc :execute "Rg (->\|::)" . expand("<cword>") . "\\b"<CR>
