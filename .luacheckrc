@@ -1,5 +1,9 @@
 -- vim:ft=lua
 
 globals = {
-  "vim",
+  'vim',
+}
+
+exclude_files = {
+  '.luarocks/',
 }
