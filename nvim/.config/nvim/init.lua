@@ -182,7 +182,7 @@ local augroup = vim.api.nvim_create_augroup('vimrc', { clear = true })
 vim.api.nvim_create_autocmd('TermOpen', {
   pattern = '*',
   group = augroup,
-  callback = function(args)
+  callback = function()
     vim.opt_local.number = false
     vim.opt_local.signcolumn = 'auto'
   end
@@ -191,7 +191,7 @@ vim.api.nvim_create_autocmd('TermOpen', {
 vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
   group = augroup,
-  callback = function(args)
+  callback = function()
     vim.highlight.on_yank({ timeout = 500 })
   end
 })
