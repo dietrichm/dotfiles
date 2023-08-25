@@ -75,13 +75,13 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.linebreak = true
 vim.opt.title = true
-vim.opt.titlestring = [[nvim in %{substitute(getcwd(),'.*/','','')}]]
-vim.opt.listchars = 'tab:→ ,extends:»,precedes:«,trail:▒,nbsp:·'
+vim.opt.titlestring = [[nvim in %{substitute(getcwd(), '.*/', '', '')}]]
 vim.opt.list = true
+vim.opt.listchars = { tab = '→ ', extends = '»', precedes = '«', trail = '▒', nbsp = '·' }
 vim.opt.updatetime = 100
 vim.opt.shortmess:append({ c = true, I = true, W = true })
 vim.opt.spelllang = 'en_gb'
-vim.opt.path = '.,*'
+vim.opt.path = { '.', '*' }
 vim.opt.grepprg = [[rg --vimgrep]]
 vim.opt.undofile = true
 vim.opt.signcolumn = 'auto:1-2'
