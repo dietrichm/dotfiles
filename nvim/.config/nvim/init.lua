@@ -210,5 +210,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end
 })
 
+-- Global abbreviations.
+vim.cmd.iabbrev('uuid', [[<C-R>=luaeval('io.open("/proc/sys/kernel/random/uuid"):read()')<CR>]])
+
 -- Lua plugins.
 require('dietrichm')
