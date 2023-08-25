@@ -1,6 +1,6 @@
 # 💻 dotfiles
 
-This repository contains configuration files and Vimscript/[Lua](https://neovim.io/doc/user/lua.html) code for my programming environment on Linux.
+This repository contains configuration files and [Lua](https://neovim.io/doc/user/lua.html) code for my programming environment on Linux.
 The centrepieces of this environment are [kitty](https://sw.kovidgoyal.net/kitty/) running one [Neovim](https://neovim.io/) instance and any number of zsh shells per project.
 
 If you are looking for my Neovim config, you can find it in [`nvim/.config/nvim`](nvim/.config/nvim).
