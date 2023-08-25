@@ -1,7 +1,5 @@
 vim.cmd([[
 
-let s:load_go_plugins = executable('go') == 1
-
 let s:vim_plug_script = stdpath('data') . '/site/autoload/plug.vim'
 if empty(glob(s:vim_plug_script))
     execute '!curl -fLo ' . shellescape(s:vim_plug_script) . ' --create-dirs '
@@ -9,24 +7,28 @@ if empty(glob(s:vim_plug_script))
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin()
+]])
 
-" Tools.
+vim.fn['plug#begin']()
+local Plug = vim.fn['plug#']
+
+-- Tools.
 Plug 'nvim-telescope/telescope.nvim'
-    Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
+Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = 'make' })
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'knubie/vim-kitty-navigator', {'do': 'cp ./*.py ' . shellescape($MY_CONFIG_ROOT . '/kitty/.config/kitty')}
+Plug('knubie/vim-kitty-navigator',
+  { ['do'] = 'cp ./*.py ' .. vim.fn.shellescape(vim.fn.expand('$MY_CONFIG_ROOT/kitty/.config/kitty')) })
 
-" UI and colours.
+-- UI and colours.
 Plug 'chriskempson/base16-vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'justinmk/molokai'
 
-" Editing.
+-- Editing.
 Plug 'SirVer/ultisnips'
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
@@ -35,30 +37,29 @@ Plug 'alvan/vim-closetag'
 Plug 'justinmk/vim-sneak'
 Plug 'AndrewRadev/splitjoin.vim'
 
-" Completion.
+-- Completion.
 Plug 'hrsh7th/nvim-cmp'
-    Plug 'hrsh7th/cmp-nvim-lsp'
-    Plug 'hrsh7th/cmp-buffer'
-    Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
-" Git.
+-- Git.
 Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
 
-" Development.
+-- Development.
 Plug 'vim-test/vim-test'
-if s:load_go_plugins
-    Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
-endif
+if vim.fn.executable('go') then
+  Plug('fatih/vim-go', { ['do'] = ':GoUpdateBinaries' })
+end
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'jwalton512/vim-blade'
 
-call plug#end()
+vim.fn['plug#end']()
 
-]])
-
+-- Options.
 vim.opt.scrolloff = 2
 vim.opt.number = true
 vim.opt.numberwidth = 1
