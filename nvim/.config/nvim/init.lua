@@ -90,6 +90,7 @@ vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
 
 local keymap_opts = { silent = true }
+local augroup = vim.api.nvim_create_augroup('vimrc', { clear = true })
 
 -- Leader.
 vim.g.mapleader = ' '
@@ -100,6 +101,23 @@ vim.g.PHP_noArrowMatching = 1
 
 -- Configure delimitMate.
 vim.g.delimitMate_excluded_ft = 'TelescopePrompt'
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = {
+    'css',
+    'go',
+    'javascript',
+    'lua',
+    'php',
+    'python',
+    'sh',
+    'typescript',
+  },
+  group = augroup,
+  callback = function()
+    vim.b.delimitMate_expand_space = 1
+    vim.b.delimitMate_expand_cr = 1
+  end
+})
 
 -- Configure vim-closetag.
 vim.g.closetag_filetypes = 'html,xhtml,phtml,blade'
@@ -176,8 +194,7 @@ vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], keymap_opts)
 vim.keymap.set('n', '<Leader>pc', [[:let @+ = @%<CR>]], keymap_opts)
 vim.keymap.set('n', '<Leader>Pc', [[:let @+ = @% . ":" . line(".")<CR>]], keymap_opts)
 
-local augroup = vim.api.nvim_create_augroup('vimrc', { clear = true })
-
+-- Terminals.
 vim.api.nvim_create_autocmd('TermOpen', {
   pattern = '*',
   group = augroup,
@@ -187,6 +204,7 @@ vim.api.nvim_create_autocmd('TermOpen', {
   end
 })
 
+-- Yank highlighting.
 vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
   group = augroup,
