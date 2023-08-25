@@ -7,6 +7,13 @@ vim.cmd([[
   endif
 ]])
 
+local keymap_opts = { silent = true }
+local augroup = vim.api.nvim_create_augroup('vimrc', { clear = true })
+
+-- Leader.
+vim.g.mapleader = ' '
+vim.keymap.set('n', '<Space>', '', keymap_opts)
+
 vim.fn['plug#begin']()
 local Plug = vim.fn['plug#']
 
@@ -87,13 +94,6 @@ vim.opt.termguicolors = true
 vim.opt.exrc = true
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
-
-local keymap_opts = { silent = true }
-local augroup = vim.api.nvim_create_augroup('vimrc', { clear = true })
-
--- Leader.
-vim.g.mapleader = ' '
-vim.keymap.set('n', '<Space>', '', keymap_opts)
 
 -- Configure PHP syntax.
 vim.g.PHP_noArrowMatching = 1
