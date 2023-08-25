@@ -187,14 +187,8 @@ vim.keymap.set('n', '<C-W>g]', [[<C-W>g<C-]>]], keymap_opts)
 -- Delete all buffers.
 vim.keymap.set('n', '<Leader>da', [[:%bd<CR>]], keymap_opts)
 
--- Map <Esc> to exit terminal-mode.
-vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], keymap_opts)
-
--- Path copy mappings.
-vim.keymap.set('n', '<Leader>pc', [[:let @+ = @%<CR>]], keymap_opts)
-vim.keymap.set('n', '<Leader>Pc', [[:let @+ = @% . ":" . line(".")<CR>]], keymap_opts)
-
 -- Terminals.
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], keymap_opts)
 vim.api.nvim_create_autocmd('TermOpen', {
   pattern = '*',
   group = augroup,
@@ -203,6 +197,10 @@ vim.api.nvim_create_autocmd('TermOpen', {
     vim.opt_local.signcolumn = 'auto'
   end
 })
+
+-- Path copy mappings.
+vim.keymap.set('n', '<Leader>pc', [[:let @+ = @%<CR>]], keymap_opts)
+vim.keymap.set('n', '<Leader>Pc', [[:let @+ = @% . ":" . line(".")<CR>]], keymap_opts)
 
 -- Yank highlighting.
 vim.api.nvim_create_autocmd('TextYankPost', {
