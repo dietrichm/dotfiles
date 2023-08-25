@@ -1,3 +1,2 @@
 pynvim
-vim-vint >= 0.4a3
 isort

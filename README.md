@@ -186,9 +186,9 @@ Aside from common global configuration options set in `nvim/.config/ctags/global
 
 ## Linting source files
 
-Vimscript files can be linted using [Vint](https://github.com/Vimjas/vint), while Lua files are linted using [Luacheck](https://github.com/luarocks/luacheck).
+Lua files are linted using [Luacheck](https://github.com/luarocks/luacheck).
 
-To lint all source files, run `make lint`. VimL or Lua files can be linted separately using `make lint-vim` or `make lint-lua`.
+To lint all source files, run `make lint`. Lua files can be linted separately using `make lint-lua`.
 
 ## License
 
