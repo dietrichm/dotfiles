@@ -1,4 +1,4 @@
-vim.opt_local.nonumber = true
+vim.opt_local.number = false
 vim.opt_local.signcolumn = 'no'
 
 vim.cmd([[
