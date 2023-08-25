@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Set up Lua
-      uses: leafo/gh-actions-lua@v8
+      uses: leafo/gh-actions-lua@v10
     - name: Set up Luarocks
       uses: leafo/gh-actions-luarocks@v4
     - name: Install Luacheck
