@@ -15,3 +15,6 @@ vim.api.nvim_create_autocmd('BufEnter', {
     vim.opt_local.colorcolumn:append('+1')
   end
 })
+
+-- Partial namespace from path.
+vim.cmd.iabbrev('<expr>', 'ns', [[substitute(tr(expand('%:p:h'), '/', '\'), '\v^.*\\\l[^\\]*\\?', '', '')]])
