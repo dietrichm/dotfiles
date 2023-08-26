@@ -124,10 +124,6 @@ vim.g.closetag_filetypes = 'html,xhtml,phtml,blade'
 -- Configure splitjoin.vim.
 vim.g.splitjoin_php_method_chain_full = 1
 
--- Configure UltiSnips.
-vim.g.UltiSnipsSnippetsDir = vim.fn.stdpath('config') .. '/UltiSnips'
-vim.g.UltiSnipsEditSplit = 'context'
-
 -- Configure vim-test.
 vim.g['test#strategy'] = 'neovim'
 vim.g['test#neovim#term_position'] = 'botright 15'
