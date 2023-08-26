@@ -3,4 +3,4 @@
 lint: lint-lua
 
 lint-lua:
-	luacheck .
+	luacheck -q .
