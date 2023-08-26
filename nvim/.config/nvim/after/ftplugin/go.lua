@@ -1,3 +1,5 @@
+-- luacheck: globals GoMockgen
+
 local opts = { buffer = true, silent = true }
 
 -- Commands provided by vim-go.
