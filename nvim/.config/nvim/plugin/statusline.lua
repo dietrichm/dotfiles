@@ -1,4 +1,6 @@
-function _G.SpellStatusLine()
+-- luacheck: globals SpellStatusLine DiagnosticStatusLine
+
+function SpellStatusLine()
   if not vim.o.spell then
     return ''
   end
@@ -13,7 +15,7 @@ local function LSPStatusCounts()
   }
 end
 
-function _G.DiagnosticStatusLine()
+function DiagnosticStatusLine()
   local lsp = LSPStatusCounts()
 
   if lsp.errors + lsp.warnings == 0 then
