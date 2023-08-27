@@ -1,5 +1,5 @@
 vim.opt_local.textwidth = 80
-vim.opt_local.colorcolumn = { 121 }
+vim.opt_local.colorcolumn = { '121' }
 vim.bo.commentstring = '// %s'
 
 -- Include and gf file matching.

@@ -94,6 +94,7 @@ vim.opt.termguicolors = true
 vim.opt.exrc = true
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
+vim.opt.colorcolumn = { '+1' }
 
 -- Configure PHP syntax.
 vim.g.PHP_noArrowMatching = 1
