@@ -67,7 +67,6 @@ vim.fn['plug#end']()
 -- Options.
 vim.opt.scrolloff = 2
 vim.opt.number = true
-vim.opt.numberwidth = 1
 vim.opt.fileformats = 'unix'
 vim.opt.showmode = true
 vim.opt.tabstop = 4
