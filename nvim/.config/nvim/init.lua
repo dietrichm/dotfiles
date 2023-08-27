@@ -89,7 +89,6 @@ vim.opt.spelllang = 'en_gb'
 vim.opt.path = { '.', '*' }
 vim.opt.grepprg = [[rg --vimgrep]]
 vim.opt.undofile = true
-vim.opt.signcolumn = 'auto:1-2'
 vim.opt.termguicolors = true
 vim.opt.exrc = true
 vim.opt.cursorline = true
@@ -190,7 +189,6 @@ vim.api.nvim_create_autocmd('TermOpen', {
   group = augroup,
   callback = function()
     vim.opt_local.number = false
-    vim.opt_local.signcolumn = 'auto'
   end
 })
 

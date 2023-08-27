@@ -15,6 +15,9 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, opts)
   vim.keymap.set('n', '<Leader>lf', vim.lsp.buf.format, opts)
 
+  -- Avoid jumping text when (diagnostic) signs are (un)set.
+  vim.opt_local.signcolumn = 'auto:1-2'
+
   vim.api.nvim_buf_create_user_command(
     bufnr,
     'LspSwitch',
