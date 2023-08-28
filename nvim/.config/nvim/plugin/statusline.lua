@@ -8,21 +8,24 @@ function SpellStatusLine()
   return string.format('[%s]', vim.o.spelllang)
 end
 
-local function LSPStatusCounts()
-  return {
-    errors = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR }),
-    warnings = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN }),
-  }
-end
-
 function DiagnosticStatusLine()
-  local lsp = LSPStatusCounts()
+  local severities = {
+    [vim.diagnostic.severity.ERROR] = vim.fn.sign_getdefined('DiagnosticSignError')[1],
+    [vim.diagnostic.severity.WARN] = vim.fn.sign_getdefined('DiagnosticSignWarn')[1],
+    [vim.diagnostic.severity.INFO] = vim.fn.sign_getdefined('DiagnosticSignInfo')[1],
+    [vim.diagnostic.severity.HINT] = vim.fn.sign_getdefined('DiagnosticSignHint')[1],
+  }
+  local items = {}
 
-  if lsp.errors + lsp.warnings == 0 then
-    return ''
+  for severity, sign in ipairs(severities) do
+    local count = #vim.diagnostic.get(0, { severity = severity })
+
+    if count > 0 then
+      table.insert(items, string.format('%s%d', sign.text, count))
+    end
   end
 
-  return string.format('❌%d ❗%d', lsp.errors, lsp.warnings)
+  return table.concat(items, ' ')
 end
 
 vim.o.statusline = [[%<%f %y%{v:lua.SpellStatusLine()}%m%r %{v:lua.DiagnosticStatusLine()} %=%-14.(%l,%c%V%) %P]]
