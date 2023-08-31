@@ -21,5 +21,6 @@ function GoMockgen()
 end
 
 vim.cmd.iabbrev('mctrl', [[ctrl := gomock.NewController(t)]])
+vim.cmd.iabbrev('gnew', [[g := NewWithT(t)]])
 vim.cmd.iabbrev('<expr>', 'mockgen', [[v:lua.GoMockgen()]])
 vim.cmd.iabbrev('dump', [[fmt.Printf("%+v\n", ]])
