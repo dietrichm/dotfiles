@@ -8,16 +8,17 @@ function SpellStatusLine()
   return string.format('[%s]', vim.o.spelllang)
 end
 
+local diagnosticSeverities = {
+  [vim.diagnostic.severity.ERROR] = vim.fn.sign_getdefined('DiagnosticSignError')[1],
+  [vim.diagnostic.severity.WARN] = vim.fn.sign_getdefined('DiagnosticSignWarn')[1],
+  [vim.diagnostic.severity.INFO] = vim.fn.sign_getdefined('DiagnosticSignInfo')[1],
+  [vim.diagnostic.severity.HINT] = vim.fn.sign_getdefined('DiagnosticSignHint')[1],
+}
+
 function DiagnosticStatusLine()
-  local severities = {
-    [vim.diagnostic.severity.ERROR] = vim.fn.sign_getdefined('DiagnosticSignError')[1],
-    [vim.diagnostic.severity.WARN] = vim.fn.sign_getdefined('DiagnosticSignWarn')[1],
-    [vim.diagnostic.severity.INFO] = vim.fn.sign_getdefined('DiagnosticSignInfo')[1],
-    [vim.diagnostic.severity.HINT] = vim.fn.sign_getdefined('DiagnosticSignHint')[1],
-  }
   local items = {}
 
-  for severity, sign in ipairs(severities) do
+  for severity, sign in ipairs(diagnosticSeverities) do
     local count = #vim.diagnostic.get(0, { severity = severity })
 
     if count > 0 then
