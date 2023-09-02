@@ -85,7 +85,6 @@ vim.opt.listchars = { tab = '→ ', extends = '»', precedes = '«', trail = '�
 vim.opt.updatetime = 100
 vim.opt.shortmess:append({ c = true, I = true, W = true })
 vim.opt.spelllang = 'en_gb'
-vim.opt.path = { '.', '*' }
 vim.opt.grepprg = [[rg --vimgrep]]
 vim.opt.undofile = true
 vim.opt.termguicolors = true
