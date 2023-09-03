@@ -40,6 +40,7 @@ Plug 'tpope/vim-commentary'
 Plug 'alvan/vim-closetag'
 Plug 'justinmk/vim-sneak'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'mhartington/formatter.nvim'
 
 -- Completion.
 Plug 'hrsh7th/nvim-cmp'
