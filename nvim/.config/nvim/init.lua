@@ -81,7 +81,6 @@ vim.opt.title = true
 vim.opt.titlestring = [[nvim in %{substitute(getcwd(), '.*/', '', '')}]]
 vim.opt.list = true
 vim.opt.listchars = { tab = '→ ', extends = '»', precedes = '«', trail = '▒', nbsp = '·' }
-vim.opt.updatetime = 100
 vim.opt.shortmess:append({ c = true, I = true, W = true })
 vim.opt.spelllang = 'en_gb'
 vim.opt.grepprg = [[rg --vimgrep]]
