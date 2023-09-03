@@ -92,6 +92,10 @@ vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
 vim.opt.colorcolumn = { '+1' }
 
+-- Disable netrw.
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Configure PHP syntax.
 vim.g.PHP_noArrowMatching = 1
 
