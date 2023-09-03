@@ -61,9 +61,6 @@ lspconfig.pyright.setup {
   capabilities = capabilities,
   flags = flags,
   settings = {
-    pyright = {
-      disableOrganizeImports = true,
-    },
     python = {
       analysis = {
         diagnosticMode = 'workspace',
@@ -130,7 +127,6 @@ null_ls.setup {
   on_attach = on_attach,
   sources = {
     null_ls.builtins.diagnostics.flake8,
-    null_ls.builtins.formatting.isort,
     null_ls.builtins.diagnostics.vint,
     null_ls.builtins.formatting.pint,
   }

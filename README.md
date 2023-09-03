@@ -21,7 +21,6 @@ If you are looking for my Neovim config, you can find it in [`nvim/.config/nvim`
   - [Neovim](#neovim)
   - [zsh](#zsh)
   - [git](#git)
-  - [isort](#isort)
   - [universal-ctags](#universal-ctags)
 - [Linting source files](#linting-source-files)
 - [License](#license)
@@ -166,18 +165,6 @@ Here you can use [conditional includes](https://git-scm.com/docs/git-config#_con
 	email = me@example.com
 [includeIf "gitdir:~/foo/bar/"]
 	path = ~/foo/bar/.gitconfig
-```
-
-### isort
-
-Sorting Python imports happens through [isort](https://pycqa.github.io/isort/) and is triggered using <kbd>&lt;Space&gt;lf</kbd> (lint-fix or formatting) in normal mode.
-
-isort specific configuration can be set per project in a `pyproject.toml` file (as specified in [PEP 518](https://www.python.org/dev/peps/pep-0518/)):
-
-```toml
-[tool.isort]
-known_first_party = ['my_module']
-line_length = 99
 ```
 
 ### universal-ctags
