@@ -4,6 +4,7 @@ require('formatter').setup {
       function()
         return {
           exe = 'pint',
+          ignore_exitcode = true,
         }
       end
     }
