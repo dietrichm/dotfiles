@@ -210,6 +210,3 @@ vim.cmd.iabbrev('<expr>', 'uuid', [[luaeval('io.open("/proc/sys/kernel/random/uu
 -- Write without triggering autocommands.
 vim.api.nvim_create_user_command('Nw', [[:noautocmd w]], {})
 vim.api.nvim_create_user_command('Nwa', [[:noautocmd wa]], {})
-
--- Lua plugins.
-require('dietrichm')
