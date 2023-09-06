@@ -4,7 +4,6 @@ local on_attach = function(_, bufnr)
   local opts = { buffer = bufnr, silent = true }
   local telescope = require('telescope.builtin')
 
-  vim.keymap.set('n', '<C-]>', telescope.lsp_definitions, opts)
   vim.keymap.set('n', '<Leader>si', telescope.lsp_implementations, opts)
   vim.keymap.set('n', '<Leader>sr', telescope.lsp_references, opts)
   vim.keymap.set('n', '<Leader>st', telescope.lsp_type_definitions, opts)

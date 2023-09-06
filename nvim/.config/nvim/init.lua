@@ -175,10 +175,6 @@ vim.keymap.set('n', '[l', [[:lprevious<CR>]], keymap_opts)
 vim.keymap.set('n', ']L', [[:llast<CR>]], keymap_opts)
 vim.keymap.set('n', '[L', [[:lfirst<CR>]], keymap_opts)
 
--- Use g] for :tjump.
-vim.keymap.set('n', 'g]', [[g<C-]>]], keymap_opts)
-vim.keymap.set('n', '<C-W>g]', [[<C-W>g<C-]>]], keymap_opts)
-
 -- Delete all buffers.
 vim.keymap.set('n', '<Leader>da', [[:%bd<CR>]], keymap_opts)
 
