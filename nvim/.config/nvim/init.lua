@@ -30,7 +30,6 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'justinmk/molokai'
 
 -- Editing.
-Plug 'SirVer/ultisnips'
 Plug 'neovim/nvim-lspconfig'
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug 'Raimondi/delimitMate'
