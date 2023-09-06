@@ -39,7 +39,6 @@ The following is required for installing and using these dotfiles:
  * git
  * zsh
  * Bash
- * Python >= 3.8 and pip
  * [Stow](http://www.gnu.org/software/stow/)
 
 ### Optional
