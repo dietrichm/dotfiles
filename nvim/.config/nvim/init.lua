@@ -91,6 +91,12 @@ vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
 vim.opt.colorcolumn = { '+1' }
 
+-- Completion.
+vim.opt.complete = { '.' }
+vim.opt.completeopt = { 'menuone', 'noinsert' }
+vim.opt.pumwidth = 20
+vim.keymap.set('i', '<C-Space>', '<C-X><C-O>', keymap_opts)
+
 -- Disable netrw.
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
