@@ -90,9 +90,13 @@ vim.opt.completeopt = { 'menuone', 'noinsert' }
 vim.opt.pumwidth = 20
 vim.keymap.set('i', '<C-Space>', '<C-X><C-O>', keymap_opts)
 
--- Disable netrw.
+-- Disable netrw and providers.
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_node_provider = 0
+vim.g.loaded_perl_provider = 0
 
 -- Configure PHP syntax.
 vim.g.PHP_noArrowMatching = 1
