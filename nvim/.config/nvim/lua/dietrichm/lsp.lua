@@ -37,13 +37,11 @@ local on_attach = function(_, bufnr)
   )
 end
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local flags = {}
 
 lspconfig.gopls.setup {
   cmd = { 'gopls', '-remote=auto' },
   on_attach = on_attach,
-  capabilities = capabilities,
   flags = flags,
   root_dir = function()
     return vim.fn.getcwd()
@@ -58,7 +56,6 @@ lspconfig.gopls.setup {
 
 lspconfig.pyright.setup {
   on_attach = on_attach,
-  capabilities = capabilities,
   flags = flags,
   settings = {
     python = {
@@ -71,7 +68,6 @@ lspconfig.pyright.setup {
 
 lspconfig.intelephense.setup {
   on_attach = on_attach,
-  capabilities = capabilities,
   flags = flags,
   settings = {
     intelephense = {
@@ -84,20 +80,17 @@ lspconfig.intelephense.setup {
 
 lspconfig.phpactor.setup {
   on_attach = on_attach,
-  capabilities = capabilities,
   flags = flags,
   autostart = false,
 }
 
 lspconfig.tsserver.setup {
   on_attach = on_attach,
-  capabilities = capabilities,
   flags = flags,
 }
 
 lspconfig.lua_ls.setup {
   on_attach = on_attach,
-  capabilities = capabilities,
   flags = flags,
   settings = {
     Lua = {
