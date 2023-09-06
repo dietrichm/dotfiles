@@ -41,12 +41,6 @@ Plug 'justinmk/vim-sneak'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'mhartington/formatter.nvim'
 
--- Completion.
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-
 -- Git.
 Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
