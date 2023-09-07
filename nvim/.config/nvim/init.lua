@@ -26,7 +26,6 @@ Plug('knubie/vim-kitty-navigator',
   { ['do'] = 'cp ./*.py ' .. vim.fn.shellescape(vim.fn.expand('$MY_CONFIG_ROOT/kitty/.config/kitty')) })
 
 -- UI and colours.
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'justinmk/molokai'
 
 -- Editing.

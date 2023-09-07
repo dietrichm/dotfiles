@@ -81,10 +81,9 @@ Multiple themes are supported by installing specific config file variants for th
 
 These files are installed through the `config-install.sh` script. Pass the theme name as first argument to the script to install a specific one.
 
-The following themes are available:
+Currently, I only use and maintain one theme:
 
-* `plain` (default; uses [Oh My Posh](https://ohmyposh.dev/) prompt when installed)
-* `papercolor`
+* `plain` (uses [Oh My Posh](https://ohmyposh.dev/) prompt when installed)
 
 ### Config packages
 
