@@ -9,10 +9,10 @@ loadkey() {
 }
 
 stt() {
-    local title="${PWD##*/}"
+    local title=""
 
     if [ $# -ge 1 ]; then
-        title="$title $1"
+        title="$1 in ${PWD##*/}"
     fi
 
     kitty @ set-tab-title "$title"
