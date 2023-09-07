@@ -25,7 +25,7 @@ else
 fi
 
 # Install desired theme.
-theme=${1:-plain}
+theme=${1:-default}
 stow -v2 --override='.*' -d "$MY_CONFIG_ROOT/themes" "$theme"
 echo -e "Installed $theme theme.\n"
 

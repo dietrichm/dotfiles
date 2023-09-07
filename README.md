@@ -83,7 +83,7 @@ These files are installed through the `config-install.sh` script. Pass the theme
 
 Currently, I only use and maintain one theme:
 
-* `plain` (uses [Oh My Posh](https://ohmyposh.dev/) prompt when installed)
+* `default` (uses [Oh My Posh](https://ohmyposh.dev/) prompt when installed)
 
 ### Config packages
 
@@ -100,7 +100,7 @@ The following (Stow based) config packages are available:
 
 By default, running `config-install.sh` installs all of them.
 If you wish to only install specific packages, pass them as a second argument (after the theme name) to the script.
-Separate multiple packages using commas: `config-install.sh plain ssh,git`.
+Separate multiple packages using commas: `config-install.sh default ssh,git`.
 
 ### Updating
 
