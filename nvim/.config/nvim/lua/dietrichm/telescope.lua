@@ -75,3 +75,18 @@ vim.api.nvim_create_user_command(
   end,
   { nargs = '*' }
 )
+
+vim.api.nvim_create_user_command(
+  'Rgw',
+  function(options)
+    builtin.grep_string({
+      search = options.args,
+      use_regex = true,
+      additional_args = function(rg_options)
+        table.insert(rg_options, '--word-regexp')
+        return rg_options
+      end
+    })
+  end,
+  { nargs = '*' }
+)
