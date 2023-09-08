@@ -1,6 +1,4 @@
 .git/
-.*.swp
-.~lock.*#
 tags
 !tags/
 .php_cs.cache
