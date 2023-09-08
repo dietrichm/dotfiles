@@ -58,7 +58,6 @@ Depending on which [config packages](#config-packages) are installed, these depe
      * [Symbols Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases)
  * `nvim`
      * [Neovim](https://neovim.io/) >= 0.9.1
-     * [fd](https://github.com/sharkdp/fd)
      * [ripgrep](https://github.com/BurntSushi/ripgrep)
      * [universal-ctags](http://ctags.io/)
      * _Optional_
