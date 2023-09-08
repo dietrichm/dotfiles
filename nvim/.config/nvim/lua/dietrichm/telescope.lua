@@ -68,7 +68,7 @@ vim.api.nvim_create_user_command(
       search = options.args,
       use_regex = true,
       additional_args = function(rg_options)
-        table.insert(rg_options, '--ignore-vcs')
+        table.insert(rg_options, '--no-ignore-vcs')
         return rg_options
       end
     })
