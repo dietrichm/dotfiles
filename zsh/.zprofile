@@ -13,7 +13,6 @@ path=(
     $HOME/.local/bin
     $HOME/.luarocks/bin
     $GOPATH/bin
-    $MY_CONFIG_ROOT/bin
     /usr/local/go/bin
     $path
 )
