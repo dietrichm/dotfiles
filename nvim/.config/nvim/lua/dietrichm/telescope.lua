@@ -65,20 +65,6 @@ local function rg(add_options)
   end
 end
 
-vim.api.nvim_create_user_command(
-  'Rg',
-  rg({}),
-  { nargs = '*' }
-)
-
-vim.api.nvim_create_user_command(
-  'Rgi',
-  rg({ '--no-ignore-vcs' }),
-  { nargs = '*' }
-)
-
-vim.api.nvim_create_user_command(
-  'Rgw',
-  rg({ '--word-regexp' }),
-  { nargs = '*' }
-)
+vim.api.nvim_create_user_command('Rg', rg({}), { nargs = '*' })
+vim.api.nvim_create_user_command('Rgi', rg({ '--no-ignore-vcs' }), { nargs = '*' })
+vim.api.nvim_create_user_command('Rgw', rg({ '--word-regexp' }), { nargs = '*' })
