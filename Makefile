@@ -1,5 +1,5 @@
-THEME = stow -v2 --override='.*' -d "$(MY_CONFIG_ROOT)/themes"
-PKG = stow -v2 -d "$(MY_CONFIG_ROOT)" -t "$(HOME)"
+THEME = stow -v --override='.*' -d "$(MY_CONFIG_ROOT)/themes"
+PKG = stow -v -d "$(MY_CONFIG_ROOT)" -t "$(HOME)"
 
 .PHONY: install
 install: default all
