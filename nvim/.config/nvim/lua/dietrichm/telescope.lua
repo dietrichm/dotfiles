@@ -50,43 +50,35 @@ vim.keymap.set('n', '<Leader>tb', function()
   builtin.lsp_document_symbols({ ignore_symbols = { 'variable', 'property' } })
 end, opts)
 
-vim.api.nvim_create_user_command(
-  'Rg',
-  function(options)
+local function rg(add_options)
+  return function(options)
     builtin.grep_string({
       search = options.args,
       use_regex = true,
+      additional_args = function(rg_options)
+        for _, add_option in ipairs(add_options) do
+          table.insert(rg_options, add_option)
+        end
+        return rg_options
+      end
     })
-  end,
+  end
+end
+
+vim.api.nvim_create_user_command(
+  'Rg',
+  rg({}),
   { nargs = '*' }
 )
 
 vim.api.nvim_create_user_command(
   'Rgi',
-  function(options)
-    builtin.grep_string({
-      search = options.args,
-      use_regex = true,
-      additional_args = function(rg_options)
-        table.insert(rg_options, '--no-ignore-vcs')
-        return rg_options
-      end
-    })
-  end,
+  rg({ '--no-ignore-vcs' }),
   { nargs = '*' }
 )
 
 vim.api.nvim_create_user_command(
   'Rgw',
-  function(options)
-    builtin.grep_string({
-      search = options.args,
-      use_regex = true,
-      additional_args = function(rg_options)
-        table.insert(rg_options, '--word-regexp')
-        return rg_options
-      end
-    })
-  end,
+  rg({ '--word-regexp' }),
   { nargs = '*' }
 )
