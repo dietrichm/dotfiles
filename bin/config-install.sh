@@ -7,6 +7,9 @@ fi
 
 set -e
 
+theme=${1:-default}
+shift || true
+
 all_packages=(
     dig
     direnv
@@ -18,14 +21,13 @@ all_packages=(
     tig
 )
 
-if [ -n "$2" ]; then
-    IFS=',' read -r -a selected_packages <<< "$2"
+if [ $# -ge 1 ]; then
+    selected_packages=("$@")
 else
     selected_packages=("${all_packages[@]}")
 fi
 
 # Install desired theme.
-theme=${1:-default}
 stow -v2 --override='.*' -d "$MY_CONFIG_ROOT/themes" "$theme"
 echo -e "Installed $theme theme.\n"
 

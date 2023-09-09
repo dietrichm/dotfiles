@@ -98,8 +98,7 @@ The following (Stow based) config packages are available:
 * `tig`
 
 By default, running `config-install.sh` installs all of them.
-If you wish to only install specific packages, pass them as a second argument (after the theme name) to the script.
-Separate multiple packages using commas: `config-install.sh default ssh,git`.
+If you wish to only install specific packages, pass them as additional arguments (after the theme name) to the script, i.e.: `config-install.sh default ssh git`.
 
 ### Updating
 
