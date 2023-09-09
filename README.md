@@ -39,6 +39,7 @@ The following is required for installing and using these dotfiles:
  * git
  * zsh
  * [Stow](http://www.gnu.org/software/stow/)
+ * make
 
 ### Optional
 
@@ -70,14 +71,14 @@ Depending on which [config packages](#config-packages) are installed, these depe
 
  * In the repo, execute `git submodule update --init`.
  * Edit `~/.zshenv` to read `export ZDOTDIR="$HOME/repos/dotfiles/zsh"` (adapt directory).
- * Execute `config-install.sh` to install all [config packages](#config-packages).
+ * Execute `make` in the repo to install all [config packages](#config-packages).
  * Opening Neovim for the first time will install _vim-plug_ and all plugins.
 
 ### Themes
 
 Multiple themes are supported by installing specific config file variants for the desired theme. This way colours are configured for kitty, zsh, Neovim and fzf.
 
-These files are installed through the `config-install.sh` script. Pass the theme name as first argument to the script to install a specific one.
+These files are also installed through make. Pass the theme name as an argument to `make` to install a specific one.
 
 Currently, I only use and maintain one theme:
 
@@ -96,8 +97,10 @@ The following (Stow based) config packages are available:
 * `ssh`
 * `tig`
 
-By default, running `config-install.sh` installs all of them.
-If you wish to only install specific packages, pass them as additional arguments (after the theme name) to the script, i.e.: `config-install.sh default ssh git`.
+Running `make` installs all of them.
+If you wish to only install specific packages, pass them as additional arguments (besides the theme name) to make, i.e.: `make default ssh git`.
+
+Additionally, `make all` installs all config packages, which is useful when installing a specific theme along with all packages: `make theme-name all`.
 
 ### Updating
 
