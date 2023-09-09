@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 if [ -z "$MY_CONFIG_ROOT" ]; then
     echo "Please follow install instructions in README.md first."
@@ -7,8 +7,12 @@ fi
 
 set -e
 
-theme=${1:-default}
-shift || true
+theme=default
+
+if [ $# -ge 1 ]; then
+    theme="$1"
+    shift
+fi
 
 all_packages=(
     dig
@@ -20,11 +24,10 @@ all_packages=(
     ssh
     tig
 )
+selected_packages=("${all_packages[@]}")
 
 if [ $# -ge 1 ]; then
     selected_packages=("$@")
-else
-    selected_packages=("${all_packages[@]}")
 fi
 
 # Install desired theme.
