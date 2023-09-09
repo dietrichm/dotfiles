@@ -38,7 +38,6 @@ The following is required for installing and using these dotfiles:
  * Linux
  * git
  * zsh
- * Bash
  * [Stow](http://www.gnu.org/software/stow/)
 
 ### Optional
