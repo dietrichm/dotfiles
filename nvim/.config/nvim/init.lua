@@ -39,6 +39,12 @@ Plug 'justinmk/vim-sneak'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'mhartington/formatter.nvim'
 
+-- Completion.
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
 -- Git.
 Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
@@ -82,12 +88,9 @@ vim.opt.exrc = true
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
 vim.opt.colorcolumn = { '+1' }
-
--- Completion.
 vim.opt.complete = { '.' }
 vim.opt.completeopt = { 'menuone', 'noinsert' }
 vim.opt.pumwidth = 20
-vim.keymap.set('i', '<C-Space>', '<C-X><C-O>', keymap_opts)
 
 -- Disable netrw and providers.
 vim.g.loaded_netrw = 1
