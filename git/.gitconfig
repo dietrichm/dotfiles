@@ -19,6 +19,7 @@
 	ff = only
 [push]
 	default = current
+	autoSetupRemote = true
 [user]
 	useconfigonly = true
 	name = Dietrich Moerman
