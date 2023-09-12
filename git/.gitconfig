@@ -20,6 +20,8 @@
 [push]
 	default = current
 	autoSetupRemote = true
+[rebase]
+	autoStash = true
 [user]
 	useconfigonly = true
 	name = Dietrich Moerman
