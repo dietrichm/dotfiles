@@ -3,6 +3,7 @@ local cmp = require('cmp')
 cmp.setup {
   completion = {
     autocomplete = false,
+    completeopt = vim.o.completeopt,
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-Space>'] = cmp.mapping.complete(),
