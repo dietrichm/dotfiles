@@ -39,16 +39,16 @@ telescope.setup {
 
 telescope.load_extension('fzf')
 
-local opts = { silent = true }
+local function map(mode, lhs, rhs)
+  vim.keymap.set(mode, lhs, rhs, { silent = true })
+end
 
-vim.keymap.set('n', '<Leader>o', function() builtin.find_files({ hidden = true }) end, opts)
-vim.keymap.set('n', '<Leader>O', function() builtin.find_files({ hidden = true, no_ignore = true }) end, opts)
-vim.keymap.set('n', '<Leader>b', builtin.buffers, opts)
-vim.keymap.set('n', '<Leader>fh', builtin.oldfiles, opts)
-vim.keymap.set('n', '<Leader>sw', function() builtin.grep_string({ word_match = '-w' }) end, opts)
-vim.keymap.set('n', '<Leader>tb', function()
-  builtin.lsp_document_symbols({ ignore_symbols = { 'variable', 'property' } })
-end, opts)
+map('n', '<Leader>o', function() builtin.find_files({ hidden = true }) end)
+map('n', '<Leader>O', function() builtin.find_files({ hidden = true, no_ignore = true }) end)
+map('n', '<Leader>b', builtin.buffers)
+map('n', '<Leader>fh', builtin.oldfiles)
+map('n', '<Leader>sw', function() builtin.grep_string({ word_match = '-w' }) end)
+map('n', '<Leader>tb', function() builtin.lsp_document_symbols({ ignore_symbols = { 'variable', 'property' } }) end)
 
 local function rg(add_options)
   return function(options)

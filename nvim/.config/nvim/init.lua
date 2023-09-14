@@ -7,12 +7,14 @@ vim.cmd([[
   endif
 ]])
 
-local keymap_opts = { silent = true }
+local function map(mode, lhs, rhs)
+  vim.keymap.set(mode, lhs, rhs, { silent = true })
+end
 local augroup = vim.api.nvim_create_augroup('vimrc', { clear = true })
 
 -- Leader.
 vim.g.mapleader = ' '
-vim.keymap.set('n', '<Space>', '', keymap_opts)
+map('n', '<Space>', '')
 
 vim.fn['plug#begin']()
 local Plug = vim.fn['plug#']
@@ -134,9 +136,9 @@ vim.g.splitjoin_php_method_chain_full = 1
 -- Configure vim-test.
 vim.g['test#strategy'] = 'neovim'
 vim.g['test#neovim#term_position'] = 'botright 15'
-vim.keymap.set('n', '<Leader>rc', [[:update | :TestFile<CR>]], keymap_opts)
-vim.keymap.set('n', '<Leader>rt', [[:update | :TestNearest<CR>]], keymap_opts)
-vim.keymap.set('n', '<Leader>rr', [[:update | :TestLast<CR>]], keymap_opts)
+map('n', '<Leader>rc', [[:update | :TestFile<CR>]])
+map('n', '<Leader>rt', [[:update | :TestNearest<CR>]])
+map('n', '<Leader>rr', [[:update | :TestLast<CR>]])
 
 -- Configure vim-go.
 vim.g.go_code_completion_enabled = 0
@@ -151,42 +153,42 @@ vim.fn.sign_define('DiagnosticSignError', { text = '❌' })
 vim.fn.sign_define('DiagnosticSignWarn', { text = '❗' })
 vim.fn.sign_define('DiagnosticSignInfo', { text = '💡' })
 vim.fn.sign_define('DiagnosticSignHint', { text = '💭' })
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, keymap_opts)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, keymap_opts)
-vim.keymap.set('n', '<Leader>q', vim.diagnostic.setloclist, keymap_opts)
+map('n', '[d', vim.diagnostic.goto_prev)
+map('n', ']d', vim.diagnostic.goto_next)
+map('n', '<Leader>q', vim.diagnostic.setloclist)
 
 -- Enable search highlight when searching for symbols.
-vim.keymap.set('n', '*', [[:setlocal hlsearch | :normal! *<CR>]], keymap_opts)
-vim.keymap.set('n', '#', [[:setlocal hlsearch | :normal! #<CR>]], keymap_opts)
-vim.keymap.set('n', 'g*', [[:setlocal hlsearch | :normal! g*<CR>]], keymap_opts)
-vim.keymap.set('n', 'g#', [[:setlocal hlsearch | :normal! g#<CR>]], keymap_opts)
+map('n', '*', [[:setlocal hlsearch | :normal! *<CR>]])
+map('n', '#', [[:setlocal hlsearch | :normal! #<CR>]])
+map('n', 'g*', [[:setlocal hlsearch | :normal! g*<CR>]])
+map('n', 'g#', [[:setlocal hlsearch | :normal! g#<CR>]])
 
 -- Toggle search highlight.
-vim.keymap.set('n', '\\', [[:setlocal hlsearch!<CR>]], keymap_opts)
+map('n', '\\', [[:setlocal hlsearch!<CR>]])
 
 -- Up and down by visible lines.
 vim.keymap.set('n', 'j', [[v:count == 0 ? 'gj' : 'j']], { expr = true })
 vim.keymap.set('n', 'k', [[v:count == 0 ? 'gk' : 'k']], { expr = true })
 
 -- Paragraph motions do not change jumplist.
-vim.keymap.set('n', '}', [[:keepjumps normal! }<CR>]], keymap_opts)
-vim.keymap.set('n', '{', [[:keepjumps normal! {<CR>]], keymap_opts)
+map('n', '}', [[:keepjumps normal! }<CR>]])
+map('n', '{', [[:keepjumps normal! {<CR>]])
 
 -- Move through quickfix and location list.
-vim.keymap.set('n', ']q', [[:cnext<CR>]], keymap_opts)
-vim.keymap.set('n', '[q', [[:cprevious<CR>]], keymap_opts)
-vim.keymap.set('n', ']Q', [[:clast<CR>]], keymap_opts)
-vim.keymap.set('n', '[Q', [[:cfirst<CR>]], keymap_opts)
-vim.keymap.set('n', ']l', [[:lnext<CR>]], keymap_opts)
-vim.keymap.set('n', '[l', [[:lprevious<CR>]], keymap_opts)
-vim.keymap.set('n', ']L', [[:llast<CR>]], keymap_opts)
-vim.keymap.set('n', '[L', [[:lfirst<CR>]], keymap_opts)
+map('n', ']q', [[:cnext<CR>]])
+map('n', '[q', [[:cprevious<CR>]])
+map('n', ']Q', [[:clast<CR>]])
+map('n', '[Q', [[:cfirst<CR>]])
+map('n', ']l', [[:lnext<CR>]])
+map('n', '[l', [[:lprevious<CR>]])
+map('n', ']L', [[:llast<CR>]])
+map('n', '[L', [[:lfirst<CR>]])
 
 -- Delete all buffers.
-vim.keymap.set('n', '<Leader>da', [[:%bd<CR>]], keymap_opts)
+map('n', '<Leader>da', [[:%bd<CR>]])
 
 -- Terminals.
-vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], keymap_opts)
+map('t', '<Esc>', [[<C-\><C-n>]])
 vim.api.nvim_create_autocmd('TermOpen', {
   pattern = '*',
   group = augroup,
@@ -196,8 +198,8 @@ vim.api.nvim_create_autocmd('TermOpen', {
 })
 
 -- Path copy mappings.
-vim.keymap.set('n', '<Leader>pc', [[:let @+ = @%<CR>]], keymap_opts)
-vim.keymap.set('n', '<Leader>Pc', [[:let @+ = @% . ":" . line(".")<CR>]], keymap_opts)
+map('n', '<Leader>pc', [[:let @+ = @%<CR>]])
+map('n', '<Leader>Pc', [[:let @+ = @% . ":" . line(".")<CR>]])
 
 -- Yank highlighting.
 vim.api.nvim_create_autocmd('TextYankPost', {

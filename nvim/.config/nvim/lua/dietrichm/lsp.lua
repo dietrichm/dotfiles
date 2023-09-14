@@ -1,18 +1,20 @@
 local lspconfig = require('lspconfig')
 
 local on_attach = function(_, bufnr)
-  local opts = { buffer = bufnr, silent = true }
+  local function map(mode, lhs, rhs)
+    vim.keymap.set(mode, lhs, rhs, { buffer = bufnr, silent = true })
+  end
   local telescope = require('telescope.builtin')
 
-  vim.keymap.set('n', '<Leader>si', telescope.lsp_implementations, opts)
-  vim.keymap.set('n', '<Leader>sr', telescope.lsp_references, opts)
-  vim.keymap.set('n', '<Leader>st', telescope.lsp_type_definitions, opts)
-  vim.keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action, opts)
-  vim.keymap.set('v', '<Leader>ca', vim.lsp.buf.code_action, opts)
-  vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-  vim.keymap.set('i', '<C-S>', vim.lsp.buf.signature_help, opts)
-  vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, opts)
-  vim.keymap.set('n', '<Leader>lf', vim.lsp.buf.format, opts)
+  map('n', '<Leader>si', telescope.lsp_implementations)
+  map('n', '<Leader>sr', telescope.lsp_references)
+  map('n', '<Leader>st', telescope.lsp_type_definitions)
+  map('n', '<Leader>ca', vim.lsp.buf.code_action)
+  map('v', '<Leader>ca', vim.lsp.buf.code_action)
+  map('n', 'K', vim.lsp.buf.hover)
+  map('i', '<C-S>', vim.lsp.buf.signature_help)
+  map('n', '<Leader>rn', vim.lsp.buf.rename)
+  map('n', '<Leader>lf', vim.lsp.buf.format)
 
   -- Avoid jumping text when (diagnostic) signs are (un)set.
   vim.opt_local.signcolumn = 'auto:1-2'
