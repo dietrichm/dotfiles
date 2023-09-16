@@ -1,5 +1,9 @@
 local cmp = require('cmp')
 
+vim.opt.complete = { '.' }
+vim.opt.completeopt = { 'menuone', 'noinsert' }
+vim.opt.pumwidth = 20
+
 cmp.setup {
   completion = {
     autocomplete = false,

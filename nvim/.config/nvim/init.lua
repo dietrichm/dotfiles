@@ -90,9 +90,6 @@ vim.opt.exrc = true
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
 vim.opt.colorcolumn = { '+1' }
-vim.opt.complete = { '.' }
-vim.opt.completeopt = { 'menuone', 'noinsert' }
-vim.opt.pumwidth = 20
 
 -- Disable netrw and providers.
 vim.g.loaded_netrw = 1
