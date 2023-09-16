@@ -25,15 +25,6 @@ telescope.setup {
     },
   },
   pickers = {
-    lsp_implementations = {
-      fname_width = 80,
-    },
-    lsp_references = {
-      fname_width = 80,
-    },
-    lsp_type_definitions = {
-      fname_width = 80,
-    },
     find_files = {
       hidden = true,
     },
@@ -44,14 +35,23 @@ telescope.setup {
     oldfiles = {
       only_cwd = true,
     },
+    tagstack = {
+      fname_width = 80,
+    },
+    lsp_implementations = {
+      fname_width = 80,
+    },
+    lsp_references = {
+      fname_width = 80,
+    },
+    lsp_type_definitions = {
+      fname_width = 80,
+    },
     lsp_document_symbols = {
       symbol_width = 60,
       symbol_type_width = 10,
       show_line = true,
       ignore_symbols = { 'variable', 'property' },
-    },
-    tagstack = {
-      fname_width = 80,
     },
   },
 }
@@ -68,7 +68,6 @@ map('n', '<Leader>b', builtin.buffers)
 map('n', '<Leader>fh', builtin.oldfiles)
 map('n', '<Leader>fH', function() builtin.oldfiles({ only_cwd = false }) end)
 map('n', '<Leader>sw', function() builtin.grep_string({ word_match = '-w' }) end)
-map('n', '<Leader>tb', builtin.lsp_document_symbols)
 map('n', '<Leader>ts', builtin.tagstack)
 
 local function rg(add_options)
