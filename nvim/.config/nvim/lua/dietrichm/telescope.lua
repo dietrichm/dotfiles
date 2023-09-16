@@ -45,6 +45,8 @@ telescope.setup {
       only_cwd = true,
     },
     lsp_document_symbols = {
+      symbol_width = 60,
+      symbol_type_width = 10,
       show_line = true,
       ignore_symbols = { 'variable', 'property' },
     },
