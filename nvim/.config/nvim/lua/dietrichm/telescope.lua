@@ -67,6 +67,7 @@ map('n', '<Leader>O', function() builtin.find_files({ no_ignore = true }) end)
 map('n', '<Leader>b', builtin.buffers)
 map('n', '<Leader>fh', builtin.oldfiles)
 map('n', '<Leader>fH', function() builtin.oldfiles({ only_cwd = false }) end)
+map('n', '<Leader>fs', function() builtin.find_files({ search_file = vim.fn.expand('%:t:r') }) end)
 map('n', '<Leader>sw', function() builtin.grep_string({ word_match = '-w' }) end)
 map('n', '<Leader>ts', builtin.tagstack)
 
