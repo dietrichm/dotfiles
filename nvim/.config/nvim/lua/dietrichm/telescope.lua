@@ -31,8 +31,22 @@ telescope.setup {
     lsp_references = {
       fname_width = 80,
     },
+    lsp_type_definitions = {
+      fname_width = 80,
+    },
+    find_files = {
+      hidden = true,
+    },
+    buffers = {
+      sort_lastused = true,
+      sort_mru = true,
+    },
+    oldfiles = {
+      only_cwd = true,
+    },
     lsp_document_symbols = {
       show_line = true,
+      ignore_symbols = { 'variable', 'property' },
     },
   },
 }
@@ -43,12 +57,12 @@ local function map(mode, lhs, rhs)
   vim.keymap.set(mode, lhs, rhs, { silent = true })
 end
 
-map('n', '<Leader>o', function() builtin.find_files({ hidden = true }) end)
-map('n', '<Leader>O', function() builtin.find_files({ hidden = true, no_ignore = true }) end)
-map('n', '<Leader>b', function() builtin.buffers({ sort_lastused = true, sort_mru = true }) end)
-map('n', '<Leader>fh', function() builtin.oldfiles({ only_cwd = true }) end)
+map('n', '<Leader>o', builtin.find_files)
+map('n', '<Leader>O', function() builtin.find_files({ no_ignore = true }) end)
+map('n', '<Leader>b', builtin.buffers)
+map('n', '<Leader>fh', builtin.oldfiles)
 map('n', '<Leader>sw', function() builtin.grep_string({ word_match = '-w' }) end)
-map('n', '<Leader>tb', function() builtin.lsp_document_symbols({ ignore_symbols = { 'variable', 'property' } }) end)
+map('n', '<Leader>tb', builtin.lsp_document_symbols)
 
 local function rg(add_options)
   return function(options)
