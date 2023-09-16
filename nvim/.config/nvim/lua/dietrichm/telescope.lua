@@ -50,6 +50,9 @@ telescope.setup {
       show_line = true,
       ignore_symbols = { 'variable', 'property' },
     },
+    tagstack = {
+      fname_width = 80,
+    },
   },
 }
 
@@ -65,6 +68,7 @@ map('n', '<Leader>b', builtin.buffers)
 map('n', '<Leader>fh', builtin.oldfiles)
 map('n', '<Leader>sw', function() builtin.grep_string({ word_match = '-w' }) end)
 map('n', '<Leader>tb', builtin.lsp_document_symbols)
+map('n', '<Leader>ts', builtin.tagstack)
 
 local function rg(add_options)
   return function(options)
