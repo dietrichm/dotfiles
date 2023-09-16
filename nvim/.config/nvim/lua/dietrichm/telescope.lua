@@ -45,7 +45,7 @@ end
 
 map('n', '<Leader>o', function() builtin.find_files({ hidden = true }) end)
 map('n', '<Leader>O', function() builtin.find_files({ hidden = true, no_ignore = true }) end)
-map('n', '<Leader>b', builtin.buffers)
+map('n', '<Leader>b', function() builtin.buffers({ sort_lastused = true, sort_mru = true }) end)
 map('n', '<Leader>fh', builtin.oldfiles)
 map('n', '<Leader>sw', function() builtin.grep_string({ word_match = '-w' }) end)
 map('n', '<Leader>tb', function() builtin.lsp_document_symbols({ ignore_symbols = { 'variable', 'property' } }) end)
