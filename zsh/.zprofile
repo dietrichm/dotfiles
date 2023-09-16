@@ -7,13 +7,11 @@ path=(
     vendor/bin
     node_modules/.bin
     $HOME/.config/composer/vendor/bin
-    $HOME/.yarn/bin
     $HOME/.config/yarn/global/node_modules/.bin
     $HOME/bin
     $HOME/.local/bin
     $HOME/.luarocks/bin
     $GOPATH/bin
-    /usr/local/go/bin
     $path
 )
 export PATH
