@@ -82,7 +82,7 @@ These files are also installed through make. Pass the theme name as an argument 
 
 Currently, I only use and maintain one theme:
 
-* `default` (uses [Oh My Posh](https://ohmyposh.dev/) prompt when installed)
+* `default` (uses [Oh My Posh](https://ohmyposh.dev/) prompt in Kitty when installed)
 
 ### Config packages
 
