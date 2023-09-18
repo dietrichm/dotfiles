@@ -29,7 +29,6 @@ telescope.setup {
       hidden = true,
     },
     buffers = {
-      sort_lastused = true,
       sort_mru = true,
     },
     oldfiles = {
