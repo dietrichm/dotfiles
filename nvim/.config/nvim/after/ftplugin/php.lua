@@ -7,3 +7,5 @@ vim.opt_local.includeexpr = [[substitute(v:fname, '^/', '', '')]]
 
 -- Partial namespace from path.
 vim.cmd.iabbrev('<expr>', 'ns', [[substitute(tr(expand('%:p:h'), '/', '\'), '\v^.*\\\l[^\\]*\\?', '', '')]])
+
+vim.cmd.iabbrev('<expr>', 'cls', [[expand('%:t:r')]])
