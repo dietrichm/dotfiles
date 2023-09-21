@@ -11,7 +11,19 @@ cmp.setup {
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-Space>'] = cmp.mapping.complete(),
+    ['<M-p>'] = function()
+      if cmp.visible_docs() then
+        cmp.close_docs()
+      else
+        cmp.open_docs()
+      end
+    end
   }),
+  view = {
+    docs = {
+      auto_open = false,
+    },
+  },
   snippet = {
     expand = function(args)
       vim.fn["vsnip#anonymous"](args.body)
