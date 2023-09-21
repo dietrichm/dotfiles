@@ -6,7 +6,6 @@ vim.opt.pumwidth = 20
 
 cmp.setup {
   completion = {
-    autocomplete = false,
     completeopt = vim.o.completeopt,
   },
   mapping = cmp.mapping.preset.insert({
