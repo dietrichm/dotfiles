@@ -1,6 +1,7 @@
 vim.opt_local.textwidth = 80
 vim.opt_local.colorcolumn:append('121')
 vim.bo.commentstring = '// %s'
+vim.b.delimitMate_matchpairs = '(:),[:],{:}'
 
 -- Include and gf file matching.
 vim.opt_local.includeexpr = [[substitute(v:fname, '^/', '', '')]]
