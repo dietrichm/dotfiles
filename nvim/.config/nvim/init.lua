@@ -195,8 +195,9 @@ vim.api.nvim_create_autocmd('TermOpen', {
 })
 
 -- Path copy mappings.
-map('n', '<Leader>pc', [[:let @+ = @%<CR>]])
-map('n', '<Leader>Pc', [[:let @+ = @% . ":" . line(".")<CR>]])
+map('n', '<Leader>pc', [[:let @+ = expand('%:.')<CR>]])
+map('n', '<Leader>pC', [[:let @+ = expand('%:.') . ":" . line(".")<CR>]])
+map('n', '<Leader>Pc', [[:let @+ = expand('%:p:~')<CR>]])
 
 -- Yank highlighting.
 vim.api.nvim_create_autocmd('TextYankPost', {
