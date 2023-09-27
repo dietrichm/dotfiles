@@ -18,7 +18,7 @@ local on_attach = function(_, bufnr)
   map('n', '<Leader>lf', vim.lsp.buf.format)
 
   -- Avoid jumping text when (diagnostic) signs are (un)set.
-  vim.opt_local.signcolumn = 'auto:1-2'
+  vim.opt_local.signcolumn = 'yes'
 
   vim.api.nvim_buf_create_user_command(
     bufnr,
