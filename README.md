@@ -38,8 +38,9 @@ The following is required for installing and using these dotfiles:
  * Linux
  * git
  * zsh
- * [Stow](http://www.gnu.org/software/stow/)
  * make
+ * curl
+ * [Stow](http://www.gnu.org/software/stow/)
 
 ### Optional
 
@@ -72,7 +73,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
  * In the repo, execute `git submodule update --init`.
  * Edit `~/.zshenv` to read `export ZDOTDIR="$HOME/repos/dotfiles/zsh"` (adapt directory).
  * Execute `make` in the repo to install all [config packages](#config-packages).
- * Opening Neovim for the first time will install _vim-plug_ and all plugins.
+ * Run `nvim +PlugInstall` to install all plugins.
 
 ### Themes
 

@@ -1,12 +1,3 @@
-vim.cmd([[
-  let s:vim_plug_script = stdpath('data') . '/site/autoload/plug.vim'
-  if empty(glob(s:vim_plug_script))
-    execute '!curl -fLo ' . shellescape(s:vim_plug_script) . ' --create-dirs '
-      \ . 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-  endif
-]])
-
 local function map(mode, lhs, rhs)
   vim.keymap.set(mode, lhs, rhs, { silent = true })
 end
