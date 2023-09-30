@@ -39,7 +39,6 @@ The following is required for installing and using these dotfiles:
  * git
  * zsh
  * make
- * curl
  * [Stow](http://www.gnu.org/software/stow/)
 
 ### Optional
