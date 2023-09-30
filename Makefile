@@ -28,7 +28,7 @@ kitty: env
 	$(PKG) kitty
 
 .PHONY: nvim
-nvim: env vim-plug
+nvim: env $(HOME)/.local/share/nvim/site/pack/paqs/start/paq-nvim
 	$(PKG) nvim
 
 .PHONY: ranger
@@ -49,11 +49,8 @@ ifndef MY_CONFIG_ROOT
 	$(error Please follow install instructions in README.md first)
 endif
 
-.PHONY: vim-plug
-vim-plug: DEST="$(HOME)/.local/share/nvim/site/autoload/plug.vim"
-vim-plug:
-	curl -fLo "$(DEST)" --create-dirs \
-		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+$(HOME)/.local/share/nvim/site/pack/paqs/start/paq-nvim:
+	git clone --depth=1 https://github.com/savq/paq-nvim.git "$@"
 
 .PHONY: lint
 lint: lint-lua

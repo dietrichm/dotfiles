@@ -7,52 +7,60 @@ local augroup = vim.api.nvim_create_augroup('vimrc', { clear = true })
 vim.g.mapleader = ' '
 map('n', '<Space>', '')
 
-vim.fn['plug#begin']()
-local Plug = vim.fn['plug#']
+require 'paq' {
+  'savq/paq-nvim',
 
--- Tools.
-Plug 'nvim-telescope/telescope.nvim'
-Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = 'make' })
-Plug 'kyazdani42/nvim-tree.lua'
-Plug 'nvim-lua/plenary.nvim'
-Plug('knubie/vim-kitty-navigator',
-  { ['do'] = 'cp ./*.py ' .. vim.fn.shellescape(vim.fn.expand('$MY_CONFIG_ROOT/kitty/.config/kitty')) })
+  -- Tools.
+  'nvim-telescope/telescope.nvim',
+  {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'make',
+  },
+  'kyazdani42/nvim-tree.lua',
+  'nvim-lua/plenary.nvim',
+  {
+    'knubie/vim-kitty-navigator',
+    run = 'cp neighboring_window.py pass_keys.py ' .. vim.fn.expand('$MY_CONFIG_ROOT/kitty/.config/kitty'),
+  },
 
--- UI and colours.
-Plug 'justinmk/molokai'
+  -- UI and colours.
+  'justinmk/molokai',
 
--- Editing.
-Plug 'neovim/nvim-lspconfig'
-Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
-Plug 'Raimondi/delimitMate'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'alvan/vim-closetag'
-Plug 'justinmk/vim-sneak'
-Plug 'AndrewRadev/splitjoin.vim'
-Plug 'mhartington/formatter.nvim'
+  -- Editing.
+  'neovim/nvim-lspconfig',
+  {
+    'nvim-treesitter/nvim-treesitter',
+    run = function() pcall(vim.cmd.TSUpdate) end,
+  },
+  'Raimondi/delimitMate',
+  'tpope/vim-surround',
+  'tpope/vim-commentary',
+  'alvan/vim-closetag',
+  'justinmk/vim-sneak',
+  'AndrewRadev/splitjoin.vim',
+  'mhartington/formatter.nvim',
 
--- Completion.
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/vim-vsnip'
+  -- Completion.
+  'hrsh7th/nvim-cmp',
+  'hrsh7th/cmp-nvim-lsp',
+  'hrsh7th/cmp-vsnip',
+  'hrsh7th/vim-vsnip',
 
--- Git.
-Plug 'tpope/vim-fugitive'
-Plug 'lewis6991/gitsigns.nvim'
+  -- Git.
+  'tpope/vim-fugitive',
+  'lewis6991/gitsigns.nvim',
 
--- Development.
-Plug 'vim-test/vim-test'
-if vim.fn.executable('go') then
-  Plug('fatih/vim-go', { ['do'] = ':GoUpdateBinaries' })
-end
-Plug 'pangloss/vim-javascript'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'jwalton512/vim-blade'
-
-vim.fn['plug#end']()
+  -- Development.
+  'vim-test/vim-test',
+  {
+    'fatih/vim-go',
+    run = function() pcall(vim.cmd.GoUpdateBinaries) end,
+  },
+  'pangloss/vim-javascript',
+  'HerringtonDarkholme/yats.vim',
+  'Vimjas/vim-python-pep8-indent',
+  'jwalton512/vim-blade',
+}
 
 -- Options.
 vim.opt.scrolloff = 2

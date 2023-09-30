@@ -62,7 +62,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
      * [ripgrep](https://github.com/BurntSushi/ripgrep)
      * [universal-ctags](http://ctags.io/)
      * _Optional_
-         * Go (Golang) -- will install [vim-go](https://github.com/fatih/vim-go)
+         * Go (Golang) for use with [vim-go](https://github.com/fatih/vim-go)
          * [Language servers](#language-servers-lsp) depending on the desired languages
  * `ranger`: [ranger](https://github.com/ranger/ranger)
  * `ssh`: OpenSSH
@@ -73,7 +73,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
  * In the repo, execute `git submodule update --init`.
  * Edit `~/.zshenv` to read `export ZDOTDIR="$HOME/repos/dotfiles/zsh"` (adapt directory).
  * Execute `make` in the repo to install all [config packages](#config-packages).
- * Run `nvim +PlugInstall` to install all plugins.
+ * Run `nvim +PaqInstall` to install all plugins. Ignore errors about missing ones before all have been installed.
 
 ### Themes
 
@@ -105,18 +105,13 @@ Additionally, `make all` installs all config packages, which is useful when inst
 
 ### Updating
 
-While in Neovim, execute regularly:
-
-```
-:PlugUpgrade
-:PlugUpdate
-```
+In Neovim, execute `:PaqUpdate`.
 
 ## Language Servers (LSP)
 
 Neovim's internal LSP client is used to provide code intelligence and completion using [language servers](https://langserver.org/).
 
-`gopls` (for Go) is installed by default through the [vim-go](https://github.com/fatih/vim-go) Neovim plugin.
+`gopls` (for Go) is installed through the [vim-go](https://github.com/fatih/vim-go) Neovim plugin (using `:GoInstallBinaries`).
 
 Depending on the languages used, the following language server binaries need to be installed manually:
 
