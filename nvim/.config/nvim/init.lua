@@ -7,7 +7,7 @@ local augroup = vim.api.nvim_create_augroup('vimrc', { clear = true })
 vim.g.mapleader = ' '
 map('n', '<Space>', '')
 
-require 'paq' {
+require('paq'):setup { verbose = true } {
   'savq/paq-nvim',
 
   -- Tools.
