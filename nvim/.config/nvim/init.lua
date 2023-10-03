@@ -39,6 +39,7 @@ require('paq'):setup { verbose = true } {
   'justinmk/vim-sneak',
   'AndrewRadev/splitjoin.vim',
   'mhartington/formatter.nvim',
+  'Wansmer/treesj',
 
   -- Completion.
   'hrsh7th/nvim-cmp',
