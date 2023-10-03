@@ -37,7 +37,6 @@ require('paq'):setup { verbose = true } {
   'tpope/vim-commentary',
   'alvan/vim-closetag',
   'justinmk/vim-sneak',
-  'AndrewRadev/splitjoin.vim',
   'mhartington/formatter.nvim',
   'Wansmer/treesj',
 
@@ -126,9 +125,6 @@ vim.api.nvim_create_autocmd('FileType', {
 
 -- Configure vim-closetag.
 vim.g.closetag_filetypes = 'html,xhtml,phtml,blade'
-
--- Configure splitjoin.vim.
-vim.g.splitjoin_php_method_chain_full = 1
 
 -- Configure vim-test.
 vim.g['test#strategy'] = 'neovim'
