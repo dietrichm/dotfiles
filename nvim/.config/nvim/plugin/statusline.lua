@@ -1,4 +1,8 @@
--- luacheck: globals SpellStatusLine DiagnosticStatusLine
+-- luacheck: globals FilenameStatusLine SpellStatusLine DiagnosticStatusLine
+
+function FilenameStatusLine()
+  return vim.fn.expand('%:~:.')
+end
 
 function SpellStatusLine()
   if not vim.o.spell then
@@ -29,5 +33,5 @@ function DiagnosticStatusLine()
   return table.concat(items, ' ')
 end
 
-vim.o.statusline =
-[[%<%{expand('%:~:.')} %y%{v:lua.SpellStatusLine()}%m%r %{v:lua.DiagnosticStatusLine()} %=%-14.(%l,%c%V%) %P]]
+vim.o.statusline = [[%<%{v:lua.FilenameStatusLine()} %y%{v:lua.SpellStatusLine()}%m%r]]
+    .. [[ %{v:lua.DiagnosticStatusLine()} %=%-14.(%l,%c%V%) %P]]
