@@ -104,7 +104,7 @@ Additionally, `make all` installs all config packages, which is useful when inst
 
 ### Updating
 
-In Neovim, execute `:PaqUpdate`.
+Run `nvim +PaqUpdate` to update all plugins.
 
 ## Language Servers (LSP)
 
@@ -144,7 +144,7 @@ let g:test#python#pytest#executable = 'make'
 
 ### zsh
 
-Specific environment variables can be exported in `.envrc` files which are loaded automatically upon entering the (sub)directory.
+Given direnv is installed, specific environment variables can be exported in `.envrc` files which are loaded automatically upon entering the (sub)directory.
 
 ### git
 
