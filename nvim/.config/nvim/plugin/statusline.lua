@@ -1,7 +1,13 @@
 -- luacheck: globals FilenameStatusLine SpellStatusLine DiagnosticStatusLine
 
 function FilenameStatusLine()
-  return vim.fn.expand('%:~:.')
+  local filename = vim.fn.expand('%:~:.')
+
+  if string.len(filename) == 0 then
+    return '%f'
+  end
+
+  return string.gsub(filename, '%%', '%%%%')
 end
 
 function SpellStatusLine()
@@ -33,5 +39,5 @@ function DiagnosticStatusLine()
   return table.concat(items, ' ')
 end
 
-vim.o.statusline = [[%<%{v:lua.FilenameStatusLine()} %y%{v:lua.SpellStatusLine()}%m%r]]
+vim.o.statusline = [[%<%{%v:lua.FilenameStatusLine()%} %y%{v:lua.SpellStatusLine()}%m%r]]
     .. [[ %{v:lua.DiagnosticStatusLine()} %=%-14.(%l,%c%V%) %P]]
