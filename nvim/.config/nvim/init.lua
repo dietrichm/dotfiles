@@ -160,8 +160,8 @@ map('n', 'g#', [[:setlocal hlsearch | :normal! g#<CR>]])
 map('n', '\\', [[:setlocal hlsearch!<CR>]])
 
 -- Up and down by visible lines.
-vim.keymap.set('n', 'j', [[v:count == 0 ? 'gj' : 'j']], { expr = true })
-vim.keymap.set('n', 'k', [[v:count == 0 ? 'gk' : 'k']], { expr = true })
+vim.keymap.set('n', 'j', [[v:count == 0 ? 'gj' : 'j']], { silent = true, expr = true })
+vim.keymap.set('n', 'k', [[v:count == 0 ? 'gk' : 'k']], { silent = true, expr = true })
 
 -- Paragraph motions do not change jumplist.
 map('n', '}', [[:keepjumps normal! }<CR>]])
