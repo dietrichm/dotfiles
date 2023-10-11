@@ -16,16 +16,18 @@ local on_attach = function(_, bufnr)
   map('i', '<C-S>', vim.lsp.buf.signature_help)
   map('n', '<Leader>rn', vim.lsp.buf.rename)
   map('n', '<Leader>lf', vim.lsp.buf.format)
-  map('n', '+', vim.lsp.buf.document_highlight)
+
+  map('n', '+', function()
+    vim.lsp.buf.document_highlight()
+    vim.api.nvim_create_autocmd('CursorMoved', {
+      buffer = bufnr,
+      once = true,
+      callback = vim.lsp.buf.clear_references,
+    })
+  end)
 
   -- Avoid jumping text when (diagnostic) signs are (un)set.
   vim.opt_local.signcolumn = 'yes'
-
-  vim.api.nvim_create_autocmd('CursorMoved', {
-    group = 'vimrc',
-    buffer = bufnr,
-    callback = vim.lsp.buf.clear_references,
-  })
 
   vim.api.nvim_buf_create_user_command(
     bufnr,
