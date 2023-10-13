@@ -34,6 +34,9 @@ telescope.setup {
     oldfiles = {
       only_cwd = true,
     },
+    current_buffer_tags = {
+      show_line = true,
+    },
     tagstack = {
       fname_width = 80,
     },
@@ -67,6 +70,7 @@ map('n', '<Leader>b', builtin.buffers)
 map('n', '<Leader>fh', builtin.oldfiles)
 map('n', '<Leader>fH', function() builtin.oldfiles({ only_cwd = false }) end)
 map('n', '<Leader>sw', function() builtin.grep_string({ word_match = '-w' }) end)
+map('n', '<Leader>tb', builtin.current_buffer_tags)
 map('n', '<Leader>ts', builtin.tagstack)
 
 map('n', '<Leader>fs', function()
