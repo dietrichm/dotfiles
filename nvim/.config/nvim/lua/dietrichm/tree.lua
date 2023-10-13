@@ -2,6 +2,13 @@ require('nvim-tree').setup {
   view = {
     width = 45,
   },
+  renderer = {
+    icons = {
+      show = {
+        folder_arrow = false,
+      },
+    },
+  },
   git = {
     ignore = false,
   },
