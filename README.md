@@ -120,6 +120,7 @@ Depending on the languages used, the following language server binaries need to 
   * [Phpactor](https://github.com/phpactor/phpactor) (started manually): see [installation instructions](https://phpactor.readthedocs.io/en/master/usage/standalone.html#global-installation)
 * TypeScript and JavaScript ([tsserver](https://github.com/theia-ide/typescript-language-server)): `npm i -g typescript typescript-language-server`
 * Lua ([lua-language-server](https://github.com/luals/lua-language-server)): see [installation instructions](https://github.com/luals/lua-language-server/wiki/Getting-Started#command-line). Create the wrapper script as `~/bin/lua-language-server`.
+* Markdown ([Marksman](https://github.com/artempyanykh/marksman)): see [installation instructions](https://github.com/artempyanykh/marksman/blob/main/docs/install.md)
 
 ### Switching servers
 
