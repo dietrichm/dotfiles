@@ -134,3 +134,9 @@ lspconfig.marksman.setup {
   capabilities = capabilities,
   flags = flags,
 }
+
+lspconfig.tailwindcss.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = flags,
+}
