@@ -6,3 +6,11 @@ vim.cmd.iabbrev('dump', [[print(vim.inspect(]])
 
 -- Surround text with `]` places double brackets.
 vim.b.surround_93 = '[[\r]]'
+
+vim.api.nvim_create_autocmd('BufWritePost', {
+  buffer = 0,
+  group = 'vimrc',
+  callback = function()
+    vim.cmd.FormatWrite()
+  end,
+})
