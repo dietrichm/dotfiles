@@ -8,5 +8,8 @@ require('formatter').setup {
         }
       end,
     },
+    lua = {
+      require('formatter.filetypes.lua').stylua,
+    },
   },
 }
