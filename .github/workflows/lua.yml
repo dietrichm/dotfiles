@@ -25,6 +25,6 @@ jobs:
         wget -q https://github.com/JohnnyMorganz/StyLua/releases/download/v0.18.2/stylua-linux-x86_64.zip
         unzip stylua-linux-x86_64.zip
         chmod u+x stylua
-    - name: Lint with Luacheck
+    - name: Lint Lua files
       run: |
         PATH="$PATH:." make lint-lua
