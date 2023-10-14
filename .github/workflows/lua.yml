@@ -20,6 +20,11 @@ jobs:
     - name: Install Luacheck
       run: |
         luarocks install luacheck
+    - name: Install StyLua
+      run: |
+        wget https://github.com/JohnnyMorganz/StyLua/releases/download/v0.18.2/stylua-linux-x86_64.zip
+        unzip stylua-linux-x86_64.zip
+        chmod u+x stylua
     - name: Lint with Luacheck
       run: |
-        make lint-lua
+        PATH="$PATH:." make lint-lua
