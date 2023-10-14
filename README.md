@@ -168,9 +168,10 @@ Aside from common global configuration options set in `nvim/.config/ctags/global
 
 ## Linting source files
 
-Lua files are linted using [Luacheck](https://github.com/luarocks/luacheck).
+Lua files in this repository are linted using [Luacheck](https://github.com/luarocks/luacheck) and [StyLua](https://github.com/JohnnyMorganz/StyLua).
+You need to install these tools yourself.
 
-To lint all source files, run `make lint`. Lua files can be linted separately using `make lint-lua`.
+To lint all Lua files, run `make lint` or `make lint-lua`.
 
 ## License
 

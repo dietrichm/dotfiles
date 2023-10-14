@@ -58,3 +58,4 @@ lint: lint-lua
 .PHONY: lint-lua
 lint-lua:
 	luacheck -q .
+	stylua --check --allow-hidden .
