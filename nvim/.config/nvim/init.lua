@@ -30,7 +30,9 @@ require('paq'):setup { verbose = true } {
   'neovim/nvim-lspconfig',
   {
     'nvim-treesitter/nvim-treesitter',
-    run = function() pcall(vim.cmd.TSUpdate) end,
+    run = function()
+      pcall(vim.cmd.TSUpdate)
+    end,
   },
   'Raimondi/delimitMate',
   'tpope/vim-surround',
@@ -54,7 +56,9 @@ require('paq'):setup { verbose = true } {
   'vim-test/vim-test',
   {
     'fatih/vim-go',
-    run = function() pcall(vim.cmd.GoUpdateBinaries) end,
+    run = function()
+      pcall(vim.cmd.GoUpdateBinaries)
+    end,
   },
   'pangloss/vim-javascript',
   'HerringtonDarkholme/yats.vim',
@@ -120,7 +124,7 @@ vim.api.nvim_create_autocmd('FileType', {
   callback = function()
     vim.b.delimitMate_expand_space = 1
     vim.b.delimitMate_expand_cr = 1
-  end
+  end,
 })
 
 -- Configure vim-closetag.
@@ -187,7 +191,7 @@ vim.api.nvim_create_autocmd('TermOpen', {
   group = augroup,
   callback = function()
     vim.opt_local.number = false
-  end
+  end,
 })
 
 -- Path copy mappings.
@@ -201,7 +205,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = augroup,
   callback = function()
     vim.highlight.on_yank({ timeout = 500 })
-  end
+  end,
 })
 
 -- Global abbreviations.

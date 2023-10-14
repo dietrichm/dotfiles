@@ -1,11 +1,11 @@
 require('gitsigns').setup {
   signs = {
-    add          = { text = '+' },
-    change       = { text = '~' },
-    delete       = { text = '_' },
-    topdelete    = { text = '‾' },
+    add = { text = '+' },
+    change = { text = '~' },
+    delete = { text = '_' },
+    topdelete = { text = '‾' },
     changedelete = { text = '~' },
-    untracked    = { text = '┆' },
+    untracked = { text = '┆' },
   },
   attach_to_untracked = false,
   on_attach = function(bufnr)
@@ -18,15 +18,23 @@ require('gitsigns').setup {
     end
 
     map('n', ']c', function()
-      if vim.wo.diff then return ']c' end
-      vim.schedule(function() gs.next_hunk() end)
+      if vim.wo.diff then
+        return ']c'
+      end
+      vim.schedule(function()
+        gs.next_hunk()
+      end)
       return '<Ignore>'
     end, { expr = true })
 
     map('n', '[c', function()
-      if vim.wo.diff then return '[c' end
-      vim.schedule(function() gs.prev_hunk() end)
+      if vim.wo.diff then
+        return '[c'
+      end
+      vim.schedule(function()
+        gs.prev_hunk()
+      end)
       return '<Ignore>'
     end, { expr = true })
-  end
+  end,
 }

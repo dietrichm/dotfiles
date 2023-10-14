@@ -29,23 +29,18 @@ local on_attach = function(_, bufnr)
   -- Avoid jumping text when (diagnostic) signs are (un)set.
   vim.opt_local.signcolumn = 'yes'
 
-  vim.api.nvim_buf_create_user_command(
-    bufnr,
-    'LspSwitch',
-    function(options)
-      vim.cmd.LspStop()
-      vim.api.nvim_clear_autocmds({ group = 'lspconfig' })
-      vim.cmd.LspStart(options.fargs[1])
+  vim.api.nvim_buf_create_user_command(bufnr, 'LspSwitch', function(options)
+    vim.cmd.LspStop()
+    vim.api.nvim_clear_autocmds({ group = 'lspconfig' })
+    vim.cmd.LspStart(options.fargs[1])
+  end, {
+    nargs = 1,
+    complete = function()
+      local items = require('lspconfig.util').available_servers()
+      table.sort(items)
+      return items
     end,
-    {
-      nargs = 1,
-      complete = function()
-        local items = require('lspconfig.util').available_servers()
-        table.sort(items)
-        return items
-      end,
-    }
-  )
+  })
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -75,8 +70,8 @@ lspconfig.pyright.setup {
     python = {
       analysis = {
         diagnosticMode = 'workspace',
-      }
-    }
+      },
+    },
   },
 }
 

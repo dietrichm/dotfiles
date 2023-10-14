@@ -65,11 +65,17 @@ local function map(mode, lhs, rhs)
 end
 
 map('n', '<Leader>o', builtin.find_files)
-map('n', '<Leader>O', function() builtin.find_files({ no_ignore = true }) end)
+map('n', '<Leader>O', function()
+  builtin.find_files({ no_ignore = true })
+end)
 map('n', '<Leader>b', builtin.buffers)
 map('n', '<Leader>fh', builtin.oldfiles)
-map('n', '<Leader>fH', function() builtin.oldfiles({ only_cwd = false }) end)
-map('n', '<Leader>sw', function() builtin.grep_string({ word_match = '-w' }) end)
+map('n', '<Leader>fH', function()
+  builtin.oldfiles({ only_cwd = false })
+end)
+map('n', '<Leader>sw', function()
+  builtin.grep_string({ word_match = '-w' })
+end)
 map('n', '<Leader>tb', builtin.current_buffer_tags)
 map('n', '<Leader>ts', builtin.tagstack)
 
@@ -89,7 +95,7 @@ local function rg(add_options)
           table.insert(rg_options, add_option)
         end
         return rg_options
-      end
+      end,
     })
   end
 end

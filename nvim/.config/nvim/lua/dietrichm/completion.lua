@@ -16,7 +16,7 @@ cmp.setup {
       else
         cmp.open_docs()
       end
-    end
+    end,
   }),
   view = {
     docs = {
@@ -25,11 +25,11 @@ cmp.setup {
   },
   snippet = {
     expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body)
+      vim.fn['vsnip#anonymous'](args.body)
     end,
   },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'vsnip' },
-  })
+  }),
 }

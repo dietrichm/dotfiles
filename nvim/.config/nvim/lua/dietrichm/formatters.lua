@@ -6,7 +6,7 @@ require('formatter').setup {
           exe = 'pint',
           ignore_exitcode = true,
         }
-      end
-    }
-  }
+      end,
+    },
+  },
 }
