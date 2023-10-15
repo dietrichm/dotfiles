@@ -30,6 +30,10 @@ kitty: env
 .PHONY: nvim
 nvim: env $(HOME)/.local/share/nvim/site/pack/paqs/start/paq-nvim
 	$(PKG) nvim
+	@echo -e "\n❗ Neovim will now start and install all plug-ins. Quit when installation is finished.\n"
+	@echo -n "Press any key to continue."
+	@read
+	nvim +PaqInstall
 
 .PHONY: ranger
 ranger: env

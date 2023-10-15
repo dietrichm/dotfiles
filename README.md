@@ -72,7 +72,6 @@ Depending on which [config packages](#config-packages) are installed, these depe
  * In the repo, execute `git submodule update --init`.
  * Edit `~/.zshenv` to read `export ZDOTDIR="$HOME/repos/dotfiles/zsh"` (adapt directory).
  * Execute `make` in the repo to install all [config packages](#config-packages).
- * Run `nvim +PaqInstall` to install all plugins. Ignore errors about missing ones before all have been installed.
 
 ### Themes
 
