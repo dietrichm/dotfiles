@@ -13,6 +13,7 @@ treesitter.setup {
     'javascript',
     'json',
     'lua',
+    'make',
     'markdown',
     'markdown_inline',
     'php',
