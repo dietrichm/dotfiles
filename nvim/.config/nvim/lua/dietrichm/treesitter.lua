@@ -14,6 +14,7 @@ treesitter.setup {
     'json',
     'lua',
     'markdown',
+    'markdown_inline',
     'php',
     'python',
     'scss',
