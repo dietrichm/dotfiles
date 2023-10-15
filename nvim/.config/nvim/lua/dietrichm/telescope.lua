@@ -1,4 +1,8 @@
-local telescope = require('telescope')
+local loaded, telescope = pcall(require, 'telescope')
+if not loaded then
+  return
+end
+
 local actions = require('telescope.actions')
 local actions_layout = require('telescope.actions.layout')
 local builtin = require('telescope.builtin')

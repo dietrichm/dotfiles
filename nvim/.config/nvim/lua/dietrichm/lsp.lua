@@ -1,4 +1,7 @@
-local lspconfig = require('lspconfig')
+local loaded, lspconfig = pcall(require, 'lspconfig')
+if not loaded then
+  return
+end
 
 local on_attach = function(_, bufnr)
   local function map(mode, lhs, rhs)

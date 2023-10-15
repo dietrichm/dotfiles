@@ -1,4 +1,7 @@
-local cmp = require('cmp')
+local loaded, cmp = pcall(require, 'cmp')
+if not loaded then
+  return
+end
 
 vim.opt.complete = { '.' }
 vim.opt.completeopt = { 'menuone', 'noinsert' }

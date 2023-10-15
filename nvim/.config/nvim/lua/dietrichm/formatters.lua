@@ -1,4 +1,9 @@
-require('formatter').setup {
+local loaded, formatter = pcall(require, 'formatter')
+if not loaded then
+  return
+end
+
+formatter.setup {
   filetype = {
     php = {
       function()

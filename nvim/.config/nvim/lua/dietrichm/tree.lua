@@ -1,4 +1,9 @@
-require('nvim-tree').setup {
+local loaded, tree = pcall(require, 'nvim-tree')
+if not loaded then
+  return
+end
+
+tree.setup {
   view = {
     width = 45,
   },

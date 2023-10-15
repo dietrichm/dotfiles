@@ -8,4 +8,4 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   end,
 })
 
-vim.cmd.colorscheme('molokai')
+pcall(vim.cmd.colorscheme, 'molokai')
