@@ -94,9 +94,10 @@ vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
 vim.opt.colorcolumn = { '+1' }
 
--- Disable netrw and providers.
+-- Disable various plugins and providers.
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_fzf = 1
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
