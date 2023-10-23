@@ -28,7 +28,6 @@ treesitter.setup {
     enable = true,
     additional_vim_regex_highlighting = {
       'php',
-      'markdown',
     },
   },
 }
