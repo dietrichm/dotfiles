@@ -14,13 +14,13 @@ require('paq'):setup { verbose = true } {
   'nvim-telescope/telescope.nvim',
   {
     'nvim-telescope/telescope-fzf-native.nvim',
-    run = 'make',
+    build = 'make',
   },
   'kyazdani42/nvim-tree.lua',
   'nvim-lua/plenary.nvim',
   {
     'knubie/vim-kitty-navigator',
-    run = 'cp neighboring_window.py pass_keys.py ' .. vim.fn.expand('$MY_CONFIG_ROOT/kitty/.config/kitty'),
+    build = 'cp neighboring_window.py pass_keys.py ' .. vim.fn.expand('$MY_CONFIG_ROOT/kitty/.config/kitty'),
   },
 
   -- UI and colours.
@@ -30,7 +30,7 @@ require('paq'):setup { verbose = true } {
   'neovim/nvim-lspconfig',
   {
     'nvim-treesitter/nvim-treesitter',
-    run = function()
+    build = function()
       pcall(vim.cmd.TSUpdate)
     end,
   },
@@ -56,7 +56,7 @@ require('paq'):setup { verbose = true } {
   'vim-test/vim-test',
   {
     'fatih/vim-go',
-    run = function()
+    build = function()
       pcall(vim.cmd.GoUpdateBinaries)
     end,
   },
