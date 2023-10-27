@@ -30,9 +30,7 @@ require('paq'):setup { verbose = true } {
   'neovim/nvim-lspconfig',
   {
     'nvim-treesitter/nvim-treesitter',
-    build = function()
-      pcall(vim.cmd.TSUpdate)
-    end,
+    build = ':TSUpdate',
   },
   'Raimondi/delimitMate',
   'tpope/vim-surround',
@@ -56,9 +54,7 @@ require('paq'):setup { verbose = true } {
   'vim-test/vim-test',
   {
     'fatih/vim-go',
-    build = function()
-      pcall(vim.cmd.GoUpdateBinaries)
-    end,
+    build = ':GoUpdateBinaries',
   },
   'pangloss/vim-javascript',
   'HerringtonDarkholme/yats.vim',
