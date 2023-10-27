@@ -1,6 +1,5 @@
 [alias]
 	addn = add -Nv
-	addp = add -p
 	br = branch -vv
 	bra = branch -vva
 	c = "!git add -p && git commit"
