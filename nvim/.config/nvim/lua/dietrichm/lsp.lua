@@ -46,6 +46,10 @@ local on_attach = function(_, bufnr)
   })
 end
 
+vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
+  silent = true,
+})
+
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local flags = {}
 
