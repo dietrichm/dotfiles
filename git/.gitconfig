@@ -9,6 +9,7 @@
 	diffc = diff --cached
 	gone = "!git branch -v | grep ' \\[gone\\] ' | awk '{print $1}'"
 	gone-remove = "!git gone | xargs -r git branch -d"
+	gone-remove-force = "!git gone | xargs -r git branch -D"
 	main = "!git checkout $(git default) && git pull --ff-only && git gone-remove; echo && git br"
 	merged = branch -a --merged
 	no-merged = branch -a --no-merged
