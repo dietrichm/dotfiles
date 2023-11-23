@@ -39,5 +39,5 @@ function DiagnosticStatusLine()
   return table.concat(items, ' ')
 end
 
-vim.o.statusline = [[%<%{%v:lua.FilenameStatusLine()%} %y%{v:lua.SpellStatusLine()}%m%r]]
-  .. [[ %{v:lua.DiagnosticStatusLine()} %=%-14.(%l,%c%V%) %P]]
+vim.o.statusline = [[%{%v:lua.FilenameStatusLine()%} %y%{v:lua.SpellStatusLine()}%m%r]]
+  .. [[ %{v:lua.DiagnosticStatusLine()} %=%P]]
