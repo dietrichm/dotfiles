@@ -24,4 +24,6 @@ export GPG_TTY=$(tty)
 export LANG=en_GB.UTF-8
 export LANGUAGE=en_GB:en
 export LC_ALL=en_GB.UTF-8
+export MANPAGER="nvim +Man!"
+export MANWIDTH=999
 export RIPGREP_CONFIG_PATH=$HOME/.ripgrep.conf
