@@ -6,12 +6,7 @@ end
 formatter.setup {
   filetype = {
     php = {
-      function()
-        return {
-          exe = 'pint',
-          ignore_exitcode = true,
-        }
-      end,
+      require('formatter.filetypes.php').pint,
     },
     lua = {
       require('formatter.filetypes.lua').stylua,
