@@ -15,7 +15,9 @@ local on_attach = function(_, bufnr)
   map('n', '<Leader>tb', telescope.lsp_document_symbols)
   map('n', '<Leader>ca', vim.lsp.buf.code_action)
   map('v', '<Leader>ca', vim.lsp.buf.code_action)
-  map('n', 'K', vim.lsp.buf.hover)
+  if vim.fn.has('nvim-0.10') == 0 then
+    map('n', 'K', vim.lsp.buf.hover)
+  end
   map('i', '<C-S>', vim.lsp.buf.signature_help)
   map('n', '<Leader>rn', vim.lsp.buf.rename)
   map('n', '<Leader>lf', vim.lsp.buf.format)
