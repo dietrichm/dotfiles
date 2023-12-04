@@ -10,4 +10,6 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   end,
 })
 
-pcall(vim.cmd.colorscheme, 'molokai')
+if vim.fn.has('nvim-0.10') == 0 then
+  pcall(vim.cmd.colorscheme, 'molokai')
+end
