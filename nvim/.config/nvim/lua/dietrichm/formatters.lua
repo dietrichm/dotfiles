@@ -8,6 +8,9 @@ formatter.setup {
     php = {
       require('formatter.filetypes.php').pint,
     },
+    javascript = {
+      require('formatter.filetypes.javascript').prettier,
+    },
     lua = {
       require('formatter.filetypes.lua').stylua,
     },
