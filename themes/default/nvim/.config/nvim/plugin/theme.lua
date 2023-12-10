@@ -17,6 +17,8 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   end,
 })
 
-if vim.fn.has('nvim-0.10') == 0 then
+if vim.fn.has('nvim-0.10') == 1 then
+  vim.cmd.colorscheme 'default'
+else
   pcall(vim.cmd.colorscheme, 'molokai')
 end
