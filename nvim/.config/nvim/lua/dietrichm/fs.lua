@@ -12,6 +12,8 @@ oil.setup {
     ['<C-v>'] = 'actions.select_vsplit',
     ['<C-h>'] = false,
     ['<C-x>'] = 'actions.select_split',
+    ['<C-c>'] = false,
+    ['q'] = 'actions.close',
     ['<C-l>'] = false,
     ['<C-r>'] = 'actions.refresh',
   },
