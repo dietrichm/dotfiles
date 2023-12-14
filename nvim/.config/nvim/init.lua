@@ -16,7 +16,6 @@ require('paq'):setup { verbose = true } {
     'nvim-telescope/telescope-fzf-native.nvim',
     build = 'make',
   },
-  'kyazdani42/nvim-tree.lua',
   'stevearc/oil.nvim',
   'nvim-lua/plenary.nvim',
   {
