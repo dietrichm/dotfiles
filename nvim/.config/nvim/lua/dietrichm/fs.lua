@@ -16,6 +16,8 @@ oil.setup {
     ['q'] = 'actions.close',
     ['<C-l>'] = false,
     ['<C-r>'] = 'actions.refresh',
+    ['<C-p>'] = false,
+    ['<M-p>'] = 'actions.preview',
   },
 }
 
