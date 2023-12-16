@@ -144,10 +144,23 @@ vim.g.go_imports_autosave = 0
 vim.g.go_jump_to_error = 0
 
 -- Diagnostics.
-vim.fn.sign_define('DiagnosticSignError', { text = '❌' })
-vim.fn.sign_define('DiagnosticSignWarn', { text = '❗' })
-vim.fn.sign_define('DiagnosticSignInfo', { text = '💡' })
-vim.fn.sign_define('DiagnosticSignHint', { text = '💭' })
+if vim.fn.has('nvim-0.10') == 1 then
+  vim.diagnostic.config({
+    signs = {
+      text = {
+        [vim.diagnostic.severity.ERROR] = '❌',
+        [vim.diagnostic.severity.WARN] = '❗',
+        [vim.diagnostic.severity.INFO] = '💡',
+        [vim.diagnostic.severity.HINT] = '💭',
+      },
+    },
+  })
+else
+  vim.fn.sign_define('DiagnosticSignError', { text = '❌' })
+  vim.fn.sign_define('DiagnosticSignWarn', { text = '❗' })
+  vim.fn.sign_define('DiagnosticSignInfo', { text = '💡' })
+  vim.fn.sign_define('DiagnosticSignHint', { text = '💭' })
+end
 map('n', '[d', vim.diagnostic.goto_prev)
 map('n', ']d', vim.diagnostic.goto_next)
 map('n', '<Leader>q', vim.diagnostic.setloclist)
