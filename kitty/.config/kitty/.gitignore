@@ -1,5 +1,5 @@
 theme.conf
 
 # Installed by vim-kitty-navigator.
-neighboring_window.py
 pass_keys.py
+get_layout.py

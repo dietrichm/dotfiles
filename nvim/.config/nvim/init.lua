@@ -20,7 +20,7 @@ require('paq'):setup { verbose = true } {
   'nvim-lua/plenary.nvim',
   {
     'knubie/vim-kitty-navigator',
-    build = 'cp neighboring_window.py pass_keys.py ' .. vim.fn.expand('$MY_CONFIG_ROOT/kitty/.config/kitty'),
+    build = 'cp pass_keys.py get_layout.py ' .. vim.fn.expand('$MY_CONFIG_ROOT/kitty/.config/kitty'),
   },
 
   -- UI and colours.
