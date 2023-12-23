@@ -82,6 +82,7 @@ map('n', '<Leader>sw', function()
 end)
 map('n', '<Leader>tb', builtin.current_buffer_tags)
 map('n', '<Leader>ts', builtin.tagstack)
+map('n', '<Leader>tr', builtin.resume)
 
 map('n', '<Leader>fs', function()
   local file_root = vim.fn.expand('%:t:r')
