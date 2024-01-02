@@ -126,7 +126,7 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 -- Configure vim-closetag.
-vim.g.closetag_filetypes = 'html,xhtml,phtml,blade'
+vim.g.closetag_filetypes = 'html,xhtml,phtml,blade,gohtmltmpl'
 
 -- Configure vim-test.
 vim.g['test#strategy'] = 'neovim'
