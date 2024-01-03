@@ -1,5 +1,7 @@
 -- luacheck: globals GoMockgen
 
+vim.opt_local.colorcolumn:append('100')
+
 local function map(mode, lhs, rhs)
   vim.keymap.set(mode, lhs, rhs, { buffer = true, silent = true })
 end
