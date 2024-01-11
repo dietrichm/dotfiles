@@ -131,9 +131,9 @@ vim.g.closetag_filetypes = 'html,xhtml,phtml,blade,gohtmltmpl'
 -- Configure vim-test.
 vim.g['test#strategy'] = 'neovim'
 vim.g['test#neovim#term_position'] = 'botright 15'
-map('n', '<Leader>rc', [[:update | :TestFile<CR>]])
-map('n', '<Leader>rt', [[:update | :TestNearest<CR>]])
-map('n', '<Leader>rr', [[:update | :TestLast<CR>]])
+map('n', '<Leader>rc', [[:noautocmd update | :TestFile<CR>]])
+map('n', '<Leader>rt', [[:noautocmd update | :TestNearest<CR>]])
+map('n', '<Leader>rr', [[:noautocmd update | :TestLast<CR>]])
 
 -- Configure vim-go.
 vim.g.go_code_completion_enabled = 0
