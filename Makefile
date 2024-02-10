@@ -9,7 +9,7 @@ default: env
 	$(THEME) default
 
 .PHONY: all
-all: dig direnv git kitty nvim ranger ssh tig
+all: dig direnv git helix kitty nvim ranger ssh tig
 
 .PHONY: dig
 dig: env
@@ -22,6 +22,10 @@ direnv: env
 .PHONY: git
 git: env
 	$(PKG) git
+
+.PHONY: helix
+helix: env
+	$(PKG) helix
 
 .PHONY: kitty
 kitty: env

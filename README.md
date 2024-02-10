@@ -52,6 +52,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
  * `git`
      * GnuPG
      * [Delta](https://github.com/dandavison/delta)
+ * `helix`: [Helix](https://helix-editor.com/)
  * `kitty`
      * [kitty](https://sw.kovidgoyal.net/kitty/)
      * [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
