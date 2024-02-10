@@ -1,1 +1,4 @@
 theme = "molokai"
+
+[editor.cursor-shape]
+insert = "bar"
