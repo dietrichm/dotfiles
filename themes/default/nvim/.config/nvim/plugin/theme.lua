@@ -22,6 +22,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   pattern = 'molokai',
   group = 'vimrc',
   callback = function()
+    vim.cmd.highlight { 'StatusLine', 'gui=reverse' } -- Unset bold.
     vim.cmd.highlight { 'link', 'WinBar', 'StatusLine', bang = true }
     vim.cmd.highlight { 'link', 'WinBarNC', 'StatusLineNC', bang = true }
   end,
