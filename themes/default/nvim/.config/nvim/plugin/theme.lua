@@ -6,6 +6,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.cmd.highlight { 'link', 'LspReferenceRead', 'IncSearch' }
     vim.cmd.highlight { 'link', 'LspReferenceWrite', 'IncSearch' }
     vim.cmd.highlight { 'link', 'avoidKeyword', 'DiagnosticUnderlineWarn' }
+    vim.cmd.highlight { 'DiagnosticUnderlineError', 'gui=undercurl' }
   end,
 })
 
