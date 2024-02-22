@@ -30,6 +30,7 @@ require('paq'):setup { verbose = true } {
   'neovim/nvim-lspconfig',
   {
     'nvim-treesitter/nvim-treesitter',
+    branch = 'v0.9.2',
     build = ':TSUpdate',
   },
   'Raimondi/delimitMate',
