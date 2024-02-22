@@ -220,6 +220,19 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- General highlight groups.
+vim.api.nvim_create_autocmd('ColorScheme', {
+  pattern = '*',
+  group = 'vimrc',
+  callback = function()
+    vim.cmd.highlight { 'link', 'LspReferenceText', 'IncSearch' }
+    vim.cmd.highlight { 'link', 'LspReferenceRead', 'IncSearch' }
+    vim.cmd.highlight { 'link', 'LspReferenceWrite', 'IncSearch' }
+    vim.cmd.highlight { 'link', 'avoidKeyword', 'DiagnosticUnderlineWarn' }
+    vim.cmd.highlight { 'DiagnosticUnderlineError', 'gui=undercurl' }
+  end,
+})
+
 -- Global abbreviations.
 vim.cmd.iabbrev('<expr>', 'ruuid', [[luaeval('io.open("/proc/sys/kernel/random/uuid"):read()')]])
 
