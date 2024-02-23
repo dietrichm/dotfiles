@@ -29,7 +29,8 @@ If you are looking for my Neovim config, you can find it in [`nvim/.config/nvim`
 
 ## Screenshot
 
-![kitty running Neovim and zsh while working on a software project](https://github.com/dietrichm/dotfiles/assets/214730/b53a9e18-07de-45bc-9ea6-b5f1186a866e)
+![kitty running Neovim and zsh while working on a software project](https://github.com/dietrichm/dotfiles/assets/214730/4cb52cbe-2d90-491a-8c6f-052c5acd34bb)
+
 
 ## Dependencies
 
