@@ -13,7 +13,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.cmd.highlight { 'StatusLine', 'gui=reverse' } -- Unset bold.
     vim.cmd.highlight { 'link', 'WinBar', 'StatusLine', bang = true }
     vim.cmd.highlight { 'link', 'WinBarNC', 'StatusLineNC', bang = true }
-    vim.cmd.highlight { 'link', 'Identifier', 'Normal', bang = true }
+    vim.cmd.highlight { 'clear', 'Identifier' }
   end,
 })
 
