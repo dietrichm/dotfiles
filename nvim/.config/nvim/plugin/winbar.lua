@@ -24,7 +24,7 @@ treesitter.define_modules {
   vimrc_winbar = {
     enable = true,
     attach = function()
-      vim.wo.winbar = [[%{v:lua.TreesitterWinbar()}]]
+      vim.wo.winbar = [[ %{v:lua.TreesitterWinbar()} ]]
     end,
     detach = function()
       vim.wo.winbar = nil
