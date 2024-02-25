@@ -31,6 +31,17 @@ treesitter.setup {
       'php',
     },
   },
+  textobjects = {
+    select = {
+      enable = true,
+      lookahead = true,
+      include_surrounding_whitespace = true,
+      keymaps = {
+        ['af'] = '@function.outer',
+        ['if'] = '@function.inner',
+      },
+    },
+  },
 }
 
 local treesj = require('treesj')
