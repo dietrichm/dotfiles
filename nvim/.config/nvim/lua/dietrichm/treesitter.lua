@@ -40,6 +40,9 @@ treesitter.setup {
         ['af'] = '@function.outer',
         ['if'] = '@function.inner',
       },
+      selection_modes = {
+        ['@function.outer'] = 'V',
+      },
     },
     move = {
       enable = true,
