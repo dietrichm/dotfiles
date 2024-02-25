@@ -31,6 +31,7 @@ require('paq'):setup { verbose = true } {
   {
     'nvim-treesitter/nvim-treesitter',
     branch = 'v0.9.2',
+    pin = true,
     build = ':TSUpdate',
   },
   'nvim-treesitter/nvim-treesitter-textobjects',
