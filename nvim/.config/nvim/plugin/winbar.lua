@@ -11,6 +11,7 @@ function TreesitterWinbar()
       'function_declaration',
       'method_declaration',
     },
+    indicator_size = 9999,
   }
 
   if line == nil then
