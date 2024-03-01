@@ -64,6 +64,7 @@
 	diffFilter = delta
 [advice]
 	detachedHead = false
+	forceDeleteBranch = false
 [tag]
 	gpgSign = true
 [include]
