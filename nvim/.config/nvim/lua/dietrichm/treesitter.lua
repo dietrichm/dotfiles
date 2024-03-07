@@ -35,13 +35,14 @@ treesitter.setup {
     select = {
       enable = true,
       lookahead = true,
-      include_surrounding_whitespace = true,
+      include_surrounding_whitespace = false,
       keymaps = {
         ['af'] = '@function.outer',
         ['if'] = '@function.inner',
       },
       selection_modes = {
         ['@function.outer'] = 'V',
+        ['@function.inner'] = 'V',
       },
     },
     move = {
