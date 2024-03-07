@@ -35,6 +35,7 @@ require('paq'):setup { verbose = true } {
     build = ':TSUpdate',
   },
   'nvim-treesitter/nvim-treesitter-textobjects',
+  'nvim-treesitter/nvim-treesitter-context',
   'Raimondi/delimitMate',
   'tpope/vim-surround',
   'tpope/vim-commentary',
