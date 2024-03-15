@@ -16,12 +16,14 @@ local on_attach = function(_, bufnr)
   map('n', '<Leader>tb', telescope.lsp_document_symbols)
   map('n', '<Leader>ca', vim.lsp.buf.code_action)
   map('v', '<Leader>ca', vim.lsp.buf.code_action)
-  if vim.fn.has('nvim-0.10') == 0 then
-    map('n', 'K', vim.lsp.buf.hover)
-  end
   map('i', '<C-S>', vim.lsp.buf.signature_help)
   map('n', '<Leader>rn', vim.lsp.buf.rename)
   map('n', '<Leader>lf', vim.lsp.buf.format)
+
+  map('n', 'K', function()
+    vim.fn['sneak#cancel']()
+    vim.lsp.buf.hover()
+  end)
 
   map('n', '+', function()
     vim.lsp.buf.document_highlight()
