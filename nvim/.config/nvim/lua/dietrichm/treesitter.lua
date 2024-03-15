@@ -68,6 +68,7 @@ local treesj = require('treesj')
 
 treesj.setup {
   use_default_keymaps = false,
+  max_join_length = 200,
 }
 
 vim.keymap.set('n', '<Leader>x', treesj.toggle, { silent = true })
