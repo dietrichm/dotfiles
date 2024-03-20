@@ -60,6 +60,10 @@ require('paq'):setup { verbose = true } {
     'fatih/vim-go',
     build = ':GoUpdateBinaries',
   },
+  {
+    'ThePrimeagen/refactoring.nvim',
+    pin = true,
+  },
   'pangloss/vim-javascript',
   'HerringtonDarkholme/yats.vim',
   'Vimjas/vim-python-pep8-indent',
