@@ -59,7 +59,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
      * [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
      * [Symbols Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases)
  * `nvim`
-     * [Neovim](https://neovim.io/) >= 0.9.1
+     * [Neovim](https://neovim.io/) (latest stable version)
      * [ripgrep](https://github.com/BurntSushi/ripgrep)
      * [universal-ctags](http://ctags.io/)
      * _Optional_
