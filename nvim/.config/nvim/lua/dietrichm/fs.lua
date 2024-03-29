@@ -4,6 +4,10 @@ if not loaded then
 end
 
 oil.setup {
+  columns = {
+    { 'permissions', highlight = 'Comment' },
+    { 'size', highlight = 'Number' },
+  },
   view_options = {
     show_hidden = true,
   },
@@ -21,4 +25,4 @@ oil.setup {
   },
 }
 
-vim.keymap.set('n', '-', [[:Oil<CR>]], { silent = true })
+vim.keymap.set('n', '-', oil.open, { silent = true })
