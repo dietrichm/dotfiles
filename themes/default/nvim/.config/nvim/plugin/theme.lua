@@ -3,6 +3,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   group = 'vimrc',
   callback = function()
     vim.cmd.highlight { 'link', 'ColorColumn', 'CursorLine', bang = true }
+    vim.cmd.highlight { 'Special', 'gui=italic' }
   end,
 })
 
@@ -14,6 +15,9 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.cmd.highlight { 'link', 'WinBar', 'StatusLine', bang = true }
     vim.cmd.highlight { 'link', 'WinBarNC', 'StatusLineNC', bang = true }
     vim.cmd.highlight { 'clear', 'Identifier' }
+    vim.cmd.highlight { 'SignColumn', 'guibg=NONE' }
+    vim.cmd.highlight { 'LineNr', 'guibg=NONE' }
+    vim.cmd.highlight { 'link', 'GitSignsChange', 'Normal' }
   end,
 })
 
