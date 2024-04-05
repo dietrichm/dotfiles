@@ -10,6 +10,7 @@ local on_attach = function(_, bufnr)
   local telescope = require('telescope.builtin')
 
   map('n', 'gd', telescope.lsp_definitions)
+  map('n', 'gD', vim.lsp.buf.declaration)
   map('n', '<Leader>si', telescope.lsp_implementations)
   map('n', '<Leader>sr', telescope.lsp_references)
   map('n', '<Leader>st', telescope.lsp_type_definitions)
