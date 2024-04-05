@@ -95,6 +95,13 @@ lspconfig.intelephense.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
+  settings = {
+    intelephense = {
+      references = {
+        exclude = {},
+      },
+    },
+  },
 }
 
 lspconfig.phpactor.setup {
