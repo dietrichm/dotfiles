@@ -49,6 +49,7 @@ telescope.setup {
     },
     lsp_references = {
       fname_width = 80,
+      include_declaration = false,
     },
     lsp_type_definitions = {
       fname_width = 80,
