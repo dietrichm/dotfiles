@@ -5,7 +5,7 @@ loadkey() {
         key="$1"
     fi
 
-    ssh-add ~/.ssh/"$key" < /dev/null
+    SSH_ASKPASS=ksshaskpass ssh-add ~/.ssh/"$key" < /dev/null
 }
 
 stt() {
