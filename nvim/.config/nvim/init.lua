@@ -45,7 +45,10 @@ require('paq'):setup { verbose = true } {
   'nvim-treesitter/nvim-treesitter-context',
   'Raimondi/delimitMate',
   'tpope/vim-surround',
-  'tpope/vim-commentary',
+  {
+    'tpope/vim-commentary',
+    opt = true,
+  },
   'alvan/vim-closetag',
   'justinmk/vim-sneak',
   'mhartington/formatter.nvim',
@@ -78,6 +81,7 @@ if vim.fn.has('nvim-0.10') == 1 then
   pcall(vim.cmd.packadd, { 'nvim-treesitter', bang = true })
 else
   pcall(vim.cmd.packadd, { 'nvim-treesitter-0.9', bang = true })
+  pcall(vim.cmd.packadd, { 'vim-commentary', bang = true })
 end
 
 -- Options.
