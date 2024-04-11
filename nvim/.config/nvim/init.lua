@@ -74,6 +74,12 @@ require('paq'):setup { verbose = true } {
   'jwalton512/vim-blade',
 }
 
+if vim.fn.has('nvim-0.10') == 1 then
+  pcall(vim.cmd.packadd, { 'nvim-treesitter', bang = true })
+else
+  pcall(vim.cmd.packadd, { 'nvim-treesitter-0.9', bang = true })
+end
+
 -- Options.
 vim.opt.scrolloff = 2
 vim.opt.number = true
