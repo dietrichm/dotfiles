@@ -1,3 +1,9 @@
+if vim.fn.has('nvim-0.10') == 1 then
+  pcall(vim.cmd.packadd, 'nvim-treesitter')
+else
+  pcall(vim.cmd.packadd, 'nvim-treesitter-0.9')
+end
+
 local loaded, treesitter = pcall(require, 'nvim-treesitter.configs')
 if not loaded then
   return

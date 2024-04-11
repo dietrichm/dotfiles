@@ -30,7 +30,14 @@ require('paq'):setup { verbose = true } {
   'neovim/nvim-lspconfig',
   {
     'nvim-treesitter/nvim-treesitter',
+    opt = true,
+    build = ':TSUpdate',
+  },
+  {
+    'nvim-treesitter/nvim-treesitter',
     branch = 'v0.9.2',
+    as = 'nvim-treesitter-0.9',
+    opt = true,
     pin = true,
     build = ':TSUpdate',
   },
