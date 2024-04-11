@@ -22,6 +22,7 @@ treesitter.setup {
     'toml',
     'typescript',
     'vim',
+    'vimdoc',
     'yaml',
   },
   highlight = {
