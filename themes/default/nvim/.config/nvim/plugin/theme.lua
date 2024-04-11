@@ -15,6 +15,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.cmd.highlight { 'link', 'WinBar', 'StatusLine', bang = true }
     vim.cmd.highlight { 'link', 'WinBarNC', 'StatusLineNC', bang = true }
     vim.cmd.highlight { 'clear', 'Identifier' }
+    vim.cmd.highlight { 'helpHyperTextJump', 'guifg=#FD971F' }
     vim.cmd.highlight { 'SignColumn', 'guibg=NONE' }
     vim.cmd.highlight { 'LineNr', 'guibg=NONE' }
     vim.cmd.highlight { 'link', 'GitSignsChange', 'Normal' }
