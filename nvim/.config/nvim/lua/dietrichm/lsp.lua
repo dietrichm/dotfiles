@@ -56,6 +56,15 @@ vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
   silent = true,
 })
 
+if vim.fn.has('nvim-0.10') == 1 then
+  vim.api.nvim_create_autocmd('LspProgress', {
+    group = 'vimrc',
+    callback = function()
+      vim.print('LSP: ' .. vim.lsp.status())
+    end,
+  })
+end
+
 local capabilities = vim.tbl_deep_extend(
   'force',
   vim.lsp.protocol.make_client_capabilities(),
@@ -152,12 +161,3 @@ lspconfig.tailwindcss.setup {
   capabilities = capabilities,
   flags = flags,
 }
-
-if vim.fn.has('nvim-0.10') == 1 then
-  vim.api.nvim_create_autocmd('LspProgress', {
-    group = 'vimrc',
-    callback = function()
-      vim.print('LSP: ' .. vim.lsp.status())
-    end,
-  })
-end
