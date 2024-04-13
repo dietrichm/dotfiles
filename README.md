@@ -52,7 +52,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
  * `direnv`: [direnv](https://direnv.net/)
  * `git`
      * GnuPG
-     * [Delta](https://github.com/dandavison/delta)
+     * [Delta](https://github.com/dandavison/delta) (with optional [bat](https://github.com/sharkdp/bat) for updated syntax files)
  * `helix`: [Helix](https://helix-editor.com/)
  * `kitty`
      * [kitty](https://sw.kovidgoyal.net/kitty/)
