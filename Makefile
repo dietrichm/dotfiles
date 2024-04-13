@@ -22,6 +22,7 @@ direnv: env
 .PHONY: git
 git: env
 	$(PKG) git
+	-bat cache --build
 
 .PHONY: helix
 helix: env
