@@ -19,6 +19,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.cmd.highlight { 'SignColumn', 'guibg=NONE' }
     vim.cmd.highlight { 'LineNr', 'guibg=NONE' }
     vim.cmd.highlight { 'link', 'GitSignsChange', 'Normal' }
+    vim.cmd.highlight { 'link', 'CurSearch', 'IncSearch' }
   end,
 })
 
