@@ -18,7 +18,9 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.cmd.highlight { 'helpHyperTextJump', 'guifg=#FD971F' }
     vim.cmd.highlight { 'SignColumn', 'guibg=NONE' }
     vim.cmd.highlight { 'LineNr', 'guibg=NONE' }
+    vim.cmd.highlight { 'link', 'GitSignsAdd', 'diffAdded' }
     vim.cmd.highlight { 'link', 'GitSignsChange', 'Normal' }
+    vim.cmd.highlight { 'link', 'GitSignsDelete', 'diffRemoved' }
     vim.cmd.highlight { 'link', 'CurSearch', 'IncSearch' }
   end,
 })
