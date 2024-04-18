@@ -41,8 +41,14 @@ require('paq'):setup { verbose = true } {
     pin = true,
     build = ':TSUpdate',
   },
-  'nvim-treesitter/nvim-treesitter-textobjects',
-  'nvim-treesitter/nvim-treesitter-context',
+  {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    opt = true,
+  },
+  {
+    'nvim-treesitter/nvim-treesitter-context',
+    opt = true,
+  },
   'Raimondi/delimitMate',
   'tpope/vim-surround',
   {
@@ -83,6 +89,8 @@ else
   pcall(vim.cmd.packadd, { 'nvim-treesitter-0.9', bang = true })
   pcall(vim.cmd.packadd, { 'vim-commentary', bang = true })
 end
+pcall(vim.cmd.packadd, { 'nvim-treesitter-textobjects', bang = true })
+pcall(vim.cmd.packadd, { 'nvim-treesitter-context', bang = true })
 
 -- Options.
 vim.opt.scrolloff = 2
