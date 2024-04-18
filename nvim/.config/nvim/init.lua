@@ -76,7 +76,10 @@ require('paq'):setup { verbose = true } {
     'fatih/vim-go',
     build = ':GoUpdateBinaries',
   },
-  'ThePrimeagen/refactoring.nvim',
+  {
+    'ThePrimeagen/refactoring.nvim',
+    opt = true,
+  },
   'pangloss/vim-javascript',
   'HerringtonDarkholme/yats.vim',
   'Vimjas/vim-python-pep8-indent',
@@ -85,6 +88,7 @@ require('paq'):setup { verbose = true } {
 
 if vim.fn.has('nvim-0.10') == 1 then
   pcall(vim.cmd.packadd, { 'nvim-treesitter', bang = true })
+  pcall(vim.cmd.packadd, { 'refactoring.nvim', bang = true })
 else
   pcall(vim.cmd.packadd, { 'nvim-treesitter-0.9', bang = true })
   pcall(vim.cmd.packadd, { 'vim-commentary', bang = true })
