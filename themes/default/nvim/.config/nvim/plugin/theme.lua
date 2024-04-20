@@ -4,6 +4,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   callback = function()
     vim.cmd.highlight { 'link', 'ColorColumn', 'CursorLine', bang = true }
     vim.cmd.highlight { 'Special', 'gui=italic' }
+    vim.cmd.highlight { 'TelescopeMatching', 'gui=underline', 'guifg=NvimLightYellow' }
   end,
 })
 
@@ -22,6 +23,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.cmd.highlight { 'link', 'GitSignsChange', 'Normal' }
     vim.cmd.highlight { 'link', 'GitSignsDelete', 'diffRemoved' }
     vim.cmd.highlight { 'link', 'CurSearch', 'IncSearch' }
+    vim.cmd.highlight { 'TelescopeMatching', 'gui=underline', 'guifg=#a6e22e' }
   end,
 })
 
