@@ -6,6 +6,9 @@ set split-view-height = 80%
 set tab-size = 4
 set vertical-split = false
 
+# Behaviour.
+set ignore-case = smart-case
+
 # Colours.
 color cursor white blue
 color title-focus black cyan
