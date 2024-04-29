@@ -187,16 +187,16 @@ if vim.fn.has('nvim-0.10') == 1 then
   vim.diagnostic.config({
     signs = {
       text = {
-        [vim.diagnostic.severity.ERROR] = '❌',
-        [vim.diagnostic.severity.WARN] = '❗',
+        [vim.diagnostic.severity.ERROR] = '🪲',
+        [vim.diagnostic.severity.WARN] = '🚨',
         [vim.diagnostic.severity.INFO] = '💡',
         [vim.diagnostic.severity.HINT] = '💭',
       },
     },
   })
 else
-  vim.fn.sign_define('DiagnosticSignError', { text = '❌' })
-  vim.fn.sign_define('DiagnosticSignWarn', { text = '❗' })
+  vim.fn.sign_define('DiagnosticSignError', { text = '🪲' })
+  vim.fn.sign_define('DiagnosticSignWarn', { text = '🚨' })
   vim.fn.sign_define('DiagnosticSignInfo', { text = '💡' })
   vim.fn.sign_define('DiagnosticSignHint', { text = '💭' })
 end
