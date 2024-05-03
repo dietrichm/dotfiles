@@ -16,3 +16,4 @@ color title-blur black cyan
 
 # Keybindings.
 bind generic I !@zsh -c "echo -n %(commit) | xsel -i --clipboard"
+bind generic T !@zsh -c "git show -s --format=%s %(commit) | tr -d '\\n' | xsel -i --clipboard"
