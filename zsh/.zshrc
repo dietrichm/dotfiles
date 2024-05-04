@@ -1,3 +1,5 @@
+[ -z "$MY_CONFIG_ROOT" ] && source "$ZDOTDIR/.zprofile"
+
 # History.
 HISTFILE="$ZDOTDIR/.zhistory"
 HISTSIZE=30000
