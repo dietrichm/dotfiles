@@ -3,7 +3,6 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   group = 'vimrc',
   callback = function()
     vim.cmd.highlight { 'link', 'ColorColumn', 'CursorLine', bang = true }
-    vim.cmd.highlight { 'Special', 'gui=italic' }
   end,
 })
 
