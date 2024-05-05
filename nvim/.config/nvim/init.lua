@@ -263,11 +263,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   pattern = '*',
   group = 'vimrc',
   callback = function()
-    vim.cmd.highlight { 'link', 'LspReferenceText', 'IncSearch' }
-    vim.cmd.highlight { 'link', 'LspReferenceRead', 'IncSearch' }
-    vim.cmd.highlight { 'link', 'LspReferenceWrite', 'IncSearch' }
     vim.cmd.highlight { 'DiagnosticUnderlineError', 'gui=undercurl' }
-    vim.cmd.highlight { 'LspSignatureActiveParameter', 'gui=underline' }
     vim.cmd.highlight { 'link', 'TelescopeNormal', 'NormalFloat' }
     vim.cmd.highlight { 'link', 'TelescopeMatching', 'IncSearch' }
     vim.cmd.highlight { 'link', 'TelescopeSelection', 'CursorLine' }

@@ -22,6 +22,10 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.cmd.highlight { 'link', 'GitSignsChange', 'Normal' }
     vim.cmd.highlight { 'link', 'GitSignsDelete', 'diffRemoved' }
     vim.cmd.highlight { 'link', 'CurSearch', 'IncSearch' }
+    vim.cmd.highlight { 'link', 'LspReferenceText', 'Visual' }
+    vim.cmd.highlight { 'link', 'LspReferenceRead', 'Visual' }
+    vim.cmd.highlight { 'link', 'LspReferenceWrite', 'Visual' }
+    vim.cmd.highlight { 'link', 'LspSignatureActiveParameter', 'Visual' }
   end,
 })
 
