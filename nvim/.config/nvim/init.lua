@@ -193,6 +193,12 @@ if vim.fn.has('nvim-0.10') == 1 then
         [vim.diagnostic.severity.HINT] = '💭',
       },
     },
+    virtual_text = {
+      severity = {
+        min = vim.diagnostic.severity.INFO,
+      },
+      prefix = '●',
+    },
   })
 else
   vim.fn.sign_define('DiagnosticSignError', { text = '🪲' })
