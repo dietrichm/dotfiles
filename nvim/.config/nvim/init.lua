@@ -27,17 +27,10 @@ require('paq'):setup { verbose = true } {
   'neovim/nvim-lspconfig',
   {
     'nvim-treesitter/nvim-treesitter',
-    opt = true,
     build = ':TSUpdate',
   },
-  {
-    'nvim-treesitter/nvim-treesitter-textobjects',
-    opt = true,
-  },
-  {
-    'nvim-treesitter/nvim-treesitter-context',
-    opt = true,
-  },
+  'nvim-treesitter/nvim-treesitter-textobjects',
+  'nvim-treesitter/nvim-treesitter-context',
   'Raimondi/delimitMate',
   'tpope/vim-surround',
   'alvan/vim-closetag',
@@ -61,20 +54,12 @@ require('paq'):setup { verbose = true } {
     'fatih/vim-go',
     build = ':GoUpdateBinaries',
   },
-  {
-    'ThePrimeagen/refactoring.nvim',
-    opt = true,
-  },
+  'ThePrimeagen/refactoring.nvim',
   'pangloss/vim-javascript',
   'HerringtonDarkholme/yats.vim',
   'Vimjas/vim-python-pep8-indent',
   'jwalton512/vim-blade',
 }
-
-pcall(vim.cmd.packadd, { 'nvim-treesitter', bang = true })
-pcall(vim.cmd.packadd, { 'refactoring.nvim', bang = true })
-pcall(vim.cmd.packadd, { 'nvim-treesitter-textobjects', bang = true })
-pcall(vim.cmd.packadd, { 'nvim-treesitter-context', bang = true })
 
 -- Options.
 vim.opt.scrolloff = 2
