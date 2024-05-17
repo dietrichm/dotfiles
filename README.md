@@ -29,8 +29,9 @@ If you are looking for my Neovim config, you can find it in [`nvim/.config/nvim`
 
 ## Screenshot
 
-![kitty running Neovim and zsh while working on a software project](https://github.com/dietrichm/dotfiles/assets/214730/4cb52cbe-2d90-491a-8c6f-052c5acd34bb)
+_(outdated)_
 
+![kitty running Neovim and zsh while working on a software project](https://github.com/dietrichm/dotfiles/assets/214730/4cb52cbe-2d90-491a-8c6f-052c5acd34bb)
 
 ## Dependencies
 
@@ -59,7 +60,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
      * [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
      * [Symbols Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases)
  * `nvim`
-     * [Neovim](https://neovim.io/) (latest stable version)
+     * [Neovim](https://neovim.io/) 0.10
      * [ripgrep](https://github.com/BurntSushi/ripgrep)
      * [universal-ctags](http://ctags.io/)
      * _Optional_
