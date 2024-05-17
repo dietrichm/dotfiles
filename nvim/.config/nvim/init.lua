@@ -31,14 +31,6 @@ require('paq'):setup { verbose = true } {
     build = ':TSUpdate',
   },
   {
-    'nvim-treesitter/nvim-treesitter',
-    branch = 'v0.9.2',
-    as = 'nvim-treesitter-0.9',
-    opt = true,
-    pin = true,
-    build = ':TSUpdate',
-  },
-  {
     'nvim-treesitter/nvim-treesitter-textobjects',
     opt = true,
   },
@@ -48,10 +40,6 @@ require('paq'):setup { verbose = true } {
   },
   'Raimondi/delimitMate',
   'tpope/vim-surround',
-  {
-    'tpope/vim-commentary',
-    opt = true,
-  },
   'alvan/vim-closetag',
   'justinmk/vim-sneak',
   'mhartington/formatter.nvim',
@@ -83,13 +71,8 @@ require('paq'):setup { verbose = true } {
   'jwalton512/vim-blade',
 }
 
-if vim.fn.has('nvim-0.10') == 1 then
-  pcall(vim.cmd.packadd, { 'nvim-treesitter', bang = true })
-  pcall(vim.cmd.packadd, { 'refactoring.nvim', bang = true })
-else
-  pcall(vim.cmd.packadd, { 'nvim-treesitter-0.9', bang = true })
-  pcall(vim.cmd.packadd, { 'vim-commentary', bang = true })
-end
+pcall(vim.cmd.packadd, { 'nvim-treesitter', bang = true })
+pcall(vim.cmd.packadd, { 'refactoring.nvim', bang = true })
 pcall(vim.cmd.packadd, { 'nvim-treesitter-textobjects', bang = true })
 pcall(vim.cmd.packadd, { 'nvim-treesitter-context', bang = true })
 
