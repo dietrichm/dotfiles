@@ -82,7 +82,6 @@ vim.opt.listchars = { tab = '→ ', extends = '»', precedes = '«', trail = '�
 vim.opt.shortmess:append({ I = true })
 vim.opt.spelllang = 'en_gb'
 vim.opt.undofile = true
-vim.opt.termguicolors = true
 vim.opt.exrc = true
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
