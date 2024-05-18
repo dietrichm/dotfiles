@@ -26,12 +26,11 @@ function DiagnosticStatusLine()
   end
 
   local items = {}
+  local counts = vim.diagnostic.count(0)
 
   for severity, text in ipairs(diagnosticSeverities) do
-    local count = #vim.diagnostic.get(0, { severity = severity })
-
-    if count > 0 then
-      table.insert(items, string.format('%s%d', text, count))
+    if counts[severity] ~= nil then
+      table.insert(items, string.format('%s%d', text, counts[severity]))
     end
   end
 
