@@ -23,7 +23,7 @@ cmp.setup {
   }),
   view = {
     docs = {
-      auto_open = false,
+      auto_open = true,
     },
   },
   snippet = {
