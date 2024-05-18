@@ -11,7 +11,10 @@ require('paq'):setup { verbose = true } {
   'savq/paq-nvim',
 
   -- Tools.
-  'nvim-telescope/telescope.nvim',
+  {
+    'nvim-telescope/telescope.nvim',
+    branch = '0.1.x',
+  },
   {
     'nvim-telescope/telescope-fzf-native.nvim',
     build = 'make',
