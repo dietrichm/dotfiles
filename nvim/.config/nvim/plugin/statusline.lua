@@ -19,8 +19,13 @@ function SpellStatusLine()
 end
 
 function DiagnosticStatusLine()
-  local items = {}
   local diagnosticSeverities = vim.diagnostic.config().signs.text
+
+  if diagnosticSeverities == nil then
+    return ''
+  end
+
+  local items = {}
 
   for severity, text in ipairs(diagnosticSeverities) do
     local count = #vim.diagnostic.get(0, { severity = severity })
