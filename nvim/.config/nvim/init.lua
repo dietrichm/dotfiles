@@ -164,8 +164,6 @@ vim.diagnostic.config({
     prefix = '●',
   },
 })
-map('n', '[d', vim.diagnostic.goto_prev)
-map('n', ']d', vim.diagnostic.goto_next)
 map('n', '<Leader>q', vim.diagnostic.setloclist)
 
 -- Enable search highlight when searching for symbols.
