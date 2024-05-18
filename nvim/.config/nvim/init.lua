@@ -163,6 +163,12 @@ vim.diagnostic.config({
   },
 })
 map('n', '<Leader>q', vim.diagnostic.setloclist)
+vim.api.nvim_create_autocmd('DiagnosticChanged', {
+  group = augroup,
+  callback = function()
+    vim.cmd.redrawstatus()
+  end,
+})
 
 -- Enable search highlight when searching for symbols.
 map('n', '*', [[:setlocal hlsearch | :normal! *<CR>]])
