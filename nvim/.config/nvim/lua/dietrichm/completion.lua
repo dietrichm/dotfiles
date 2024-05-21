@@ -9,6 +9,10 @@ vim.opt.pumwidth = 20
 
 local luasnip = require('luasnip')
 
+local function feedkeys(keys)
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(keys, true, false, true), 'm', false)
+end
+
 cmp.setup {
   completion = {
     completeopt = vim.o.completeopt,
@@ -31,6 +35,8 @@ cmp.setup {
     ['<S-Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
+      elseif vim.fn['delimitMate#ShouldJump']() then
+        feedkeys('<Plug>delimitMateS-Tab')
       elseif luasnip.jumpable(-1) then
         luasnip.jump(-1)
       else
