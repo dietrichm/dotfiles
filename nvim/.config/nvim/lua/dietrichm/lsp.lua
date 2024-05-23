@@ -61,12 +61,10 @@ vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
 })
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-local flags = {}
 
 lspconfig.gopls.setup {
   cmd = { 'gopls', '-remote=auto' },
   capabilities = capabilities,
-  flags = flags,
   root_dir = function()
     return vim.fn.getcwd()
   end,
@@ -84,7 +82,6 @@ lspconfig.gopls.setup {
 
 lspconfig.pyright.setup {
   capabilities = capabilities,
-  flags = flags,
   settings = {
     python = {
       analysis = {
@@ -96,7 +93,6 @@ lspconfig.pyright.setup {
 
 lspconfig.intelephense.setup {
   capabilities = capabilities,
-  flags = flags,
   settings = {
     intelephense = {
       references = {
@@ -108,18 +104,15 @@ lspconfig.intelephense.setup {
 
 lspconfig.phpactor.setup {
   capabilities = capabilities,
-  flags = flags,
   autostart = false,
 }
 
 lspconfig.tsserver.setup {
   capabilities = capabilities,
-  flags = flags,
 }
 
 lspconfig.lua_ls.setup {
   capabilities = capabilities,
-  flags = flags,
   settings = {
     Lua = {
       runtime = {
@@ -144,10 +137,8 @@ lspconfig.lua_ls.setup {
 
 lspconfig.marksman.setup {
   capabilities = capabilities,
-  flags = flags,
 }
 
 lspconfig.tailwindcss.setup {
   capabilities = capabilities,
-  flags = flags,
 }
