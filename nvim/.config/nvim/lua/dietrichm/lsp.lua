@@ -37,20 +37,20 @@ local on_attach = function(_, bufnr)
 
   -- Avoid jumping text when (diagnostic) signs are (un)set.
   vim.opt_local.signcolumn = 'yes'
-
-  vim.api.nvim_buf_create_user_command(bufnr, 'LspSwitch', function(options)
-    vim.cmd.LspStop()
-    vim.api.nvim_clear_autocmds({ group = 'lspconfig' })
-    vim.cmd.LspStart(options.fargs[1])
-  end, {
-    nargs = 1,
-    complete = function()
-      local items = require('lspconfig.util').available_servers()
-      table.sort(items)
-      return items
-    end,
-  })
 end
+
+vim.api.nvim_create_user_command('LspSwitch', function(options)
+  vim.cmd.LspStop()
+  vim.api.nvim_clear_autocmds({ group = 'lspconfig' })
+  vim.cmd.LspStart(options.fargs[1])
+end, {
+  nargs = 1,
+  complete = function()
+    local items = require('lspconfig.util').available_servers()
+    table.sort(items)
+    return items
+  end,
+})
 
 vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
   silent = true,
