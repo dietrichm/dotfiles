@@ -3,41 +3,45 @@ if not loaded then
   return
 end
 
-local on_attach = function(_, bufnr)
-  local function map(mode, lhs, rhs)
-    vim.keymap.set(mode, lhs, rhs, { buffer = bufnr, silent = true })
-  end
-  local telescope = require('telescope.builtin')
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = 'vimrc',
+  callback = function(args)
+    local bufnr = args.buf
+    local function map(mode, lhs, rhs)
+      vim.keymap.set(mode, lhs, rhs, { buffer = bufnr, silent = true })
+    end
+    local telescope = require('telescope.builtin')
 
-  map('n', 'gd', telescope.lsp_definitions)
-  map('n', 'gD', vim.lsp.buf.declaration)
-  map('n', '<Leader>si', telescope.lsp_implementations)
-  map('n', '<Leader>sr', telescope.lsp_references)
-  map('n', '<Leader>st', telescope.lsp_type_definitions)
-  map('n', '<Leader>tb', telescope.lsp_document_symbols)
-  map('n', '<Leader>ca', vim.lsp.buf.code_action)
-  map('v', '<Leader>ca', vim.lsp.buf.code_action)
-  map('i', '<C-S>', vim.lsp.buf.signature_help)
-  map('n', '<Leader>rn', vim.lsp.buf.rename)
-  map('n', '<Leader>lf', vim.lsp.buf.format)
+    map('n', 'gd', telescope.lsp_definitions)
+    map('n', 'gD', vim.lsp.buf.declaration)
+    map('n', '<Leader>si', telescope.lsp_implementations)
+    map('n', '<Leader>sr', telescope.lsp_references)
+    map('n', '<Leader>st', telescope.lsp_type_definitions)
+    map('n', '<Leader>tb', telescope.lsp_document_symbols)
+    map('n', '<Leader>ca', vim.lsp.buf.code_action)
+    map('v', '<Leader>ca', vim.lsp.buf.code_action)
+    map('i', '<C-S>', vim.lsp.buf.signature_help)
+    map('n', '<Leader>rn', vim.lsp.buf.rename)
+    map('n', '<Leader>lf', vim.lsp.buf.format)
 
-  map('n', 'K', function()
-    vim.fn['sneak#cancel']()
-    vim.lsp.buf.hover()
-  end)
+    map('n', 'K', function()
+      vim.fn['sneak#cancel']()
+      vim.lsp.buf.hover()
+    end)
 
-  map('n', '+', function()
-    vim.lsp.buf.document_highlight()
-    vim.api.nvim_create_autocmd('CursorMoved', {
-      buffer = bufnr,
-      once = true,
-      callback = vim.lsp.buf.clear_references,
-    })
-  end)
+    map('n', '+', function()
+      vim.lsp.buf.document_highlight()
+      vim.api.nvim_create_autocmd('CursorMoved', {
+        buffer = bufnr,
+        once = true,
+        callback = vim.lsp.buf.clear_references,
+      })
+    end)
 
-  -- Avoid jumping text when (diagnostic) signs are (un)set.
-  vim.opt_local.signcolumn = 'yes'
-end
+    -- Avoid jumping text when (diagnostic) signs are (un)set.
+    vim.opt_local.signcolumn = 'yes'
+  end,
+})
 
 vim.api.nvim_create_user_command('LspSwitch', function(options)
   vim.cmd.LspStop()
@@ -61,7 +65,6 @@ local flags = {}
 
 lspconfig.gopls.setup {
   cmd = { 'gopls', '-remote=auto' },
-  on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
   root_dir = function()
@@ -80,7 +83,6 @@ lspconfig.gopls.setup {
 }
 
 lspconfig.pyright.setup {
-  on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
   settings = {
@@ -93,7 +95,6 @@ lspconfig.pyright.setup {
 }
 
 lspconfig.intelephense.setup {
-  on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
   settings = {
@@ -106,20 +107,17 @@ lspconfig.intelephense.setup {
 }
 
 lspconfig.phpactor.setup {
-  on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
   autostart = false,
 }
 
 lspconfig.tsserver.setup {
-  on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
 }
 
 lspconfig.lua_ls.setup {
-  on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
   settings = {
@@ -145,13 +143,11 @@ lspconfig.lua_ls.setup {
 }
 
 lspconfig.marksman.setup {
-  on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
 }
 
 lspconfig.tailwindcss.setup {
-  on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,
 }
