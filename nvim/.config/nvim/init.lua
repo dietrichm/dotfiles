@@ -76,7 +76,6 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.linebreak = true
 vim.opt.title = true
-vim.opt.titlestring = [[nvim in %{substitute(getcwd(), '.*/', '', '')}]]
 vim.opt.list = true
 vim.opt.listchars = { tab = '→ ', extends = '»', precedes = '«', trail = '▒', nbsp = '·' }
 vim.opt.shortmess:append({ I = true })
