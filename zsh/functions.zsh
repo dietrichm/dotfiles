@@ -8,16 +8,6 @@ loadkey() {
     SSH_ASKPASS=ksshaskpass ssh-add ~/.ssh/"$key" < /dev/null
 }
 
-stt() {
-    local title=""
-
-    if [ $# -ge 1 ]; then
-        title="$1 in ${PWD##*/}"
-    fi
-
-    kitty @ set-tab-title "$title"
-}
-
 pdfcompress() {
     if [ $# -lt 2 ]; then
         echo "Usage: $0 <input-file> <output-file>"
