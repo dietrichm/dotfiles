@@ -133,12 +133,6 @@ Some projects require or can benefit from some custom configuration for some of 
 ### Neovim
 
 Project local configuration can be set in `.nvim.lua` or `.nvimrc`.
-This allows for example to set the default Python test tool and its executable:
-
-```viml
-let g:test#python#runner = 'pytest'
-let g:test#python#pytest#executable = 'make'
-```
 
 ### zsh
 
