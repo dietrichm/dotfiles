@@ -8,7 +8,6 @@ If you are looking for my Neovim config, you can find it in [`nvim/.config/nvim`
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Screenshot](#screenshot)
 - [Dependencies](#dependencies)
   - [Optional](#optional)
 - [Installation](#installation)
@@ -26,12 +25,6 @@ If you are looking for my Neovim config, you can find it in [`nvim/.config/nvim`
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Screenshot
-
-_(outdated)_
-
-![kitty running Neovim and zsh while working on a software project](https://github.com/dietrichm/dotfiles/assets/214730/4cb52cbe-2d90-491a-8c6f-052c5acd34bb)
 
 ## Dependencies
 
