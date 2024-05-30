@@ -101,12 +101,6 @@ vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
 
--- Configure PHP syntax.
-vim.g.php_special_functions = 0
-vim.g.php_alt_comparisons = 0
-vim.g.php_alt_assignByReference = 0
-vim.g.PHP_noArrowMatching = 1
-
 -- Configure delimitMate.
 vim.g.delimitMate_excluded_ft = 'TelescopePrompt'
 vim.api.nvim_create_autocmd('FileType', {
