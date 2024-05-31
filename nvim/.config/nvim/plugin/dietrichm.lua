@@ -1,3 +1,4 @@
+require('dietrichm.diagnostics')
 require('dietrichm.lsp')
 require('dietrichm.completion')
 require('dietrichm.treesitter')

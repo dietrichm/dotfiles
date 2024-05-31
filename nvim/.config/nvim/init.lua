@@ -141,31 +141,6 @@ vim.g.go_fmt_fail_silently = 1
 vim.g.go_jump_to_error = 0
 vim.g.go_textobj_enabled = 0
 
--- Diagnostics.
-vim.diagnostic.config({
-  signs = {
-    text = {
-      [vim.diagnostic.severity.ERROR] = '🪲',
-      [vim.diagnostic.severity.WARN] = '🚨',
-      [vim.diagnostic.severity.INFO] = '💡',
-      [vim.diagnostic.severity.HINT] = '💭',
-    },
-  },
-  virtual_text = {
-    severity = {
-      min = vim.diagnostic.severity.INFO,
-    },
-    prefix = '●',
-  },
-})
-map('n', '<Leader>q', vim.diagnostic.setloclist)
-vim.api.nvim_create_autocmd('DiagnosticChanged', {
-  group = augroup,
-  callback = function()
-    vim.cmd.redrawstatus()
-  end,
-})
-
 -- Enable search highlight when searching for symbols.
 map('n', '*', [[:setlocal hlsearch | :normal! *<CR>]])
 map('n', '#', [[:setlocal hlsearch | :normal! #<CR>]])
