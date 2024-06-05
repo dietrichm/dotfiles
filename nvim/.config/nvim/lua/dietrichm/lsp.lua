@@ -80,8 +80,13 @@ lspconfig.gopls.setup {
   },
 }
 
+lspconfig.basedpyright.setup {
+  capabilities = capabilities,
+}
+
 lspconfig.pyright.setup {
   capabilities = capabilities,
+  autostart = false,
   settings = {
     python = {
       analysis = {
