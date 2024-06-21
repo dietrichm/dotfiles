@@ -84,18 +84,6 @@ lspconfig.basedpyright.setup {
   capabilities = capabilities,
 }
 
-lspconfig.pyright.setup {
-  capabilities = capabilities,
-  autostart = false,
-  settings = {
-    python = {
-      analysis = {
-        diagnosticMode = 'workspace',
-      },
-    },
-  },
-}
-
 lspconfig.intelephense.setup {
   capabilities = capabilities,
   settings = {

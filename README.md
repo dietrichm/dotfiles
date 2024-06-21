@@ -110,7 +110,7 @@ Neovim's internal LSP client is used to provide code intelligence and completion
 
 Depending on the languages used, the following language server binaries need to be installed manually:
 
-* Python ([Pyright](https://github.com/Microsoft/pyright)): `npm i -g pyright`
+* Python ([Basedpyright](https://docs.basedpyright.com/)): `pip install basedpyright`
 * PHP:
   * [Intelephense](https://intelephense.com/): `npm i -g intelephense`
   * [Phpactor](https://github.com/phpactor/phpactor) (started manually): see [installation instructions](https://phpactor.readthedocs.io/en/master/usage/standalone.html#global-installation)
