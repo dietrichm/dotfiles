@@ -19,10 +19,18 @@ cmp.setup {
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-Space>'] = cmp.mapping.complete(),
-    ['<CR>'] = cmp.mapping.confirm {
-      behavior = cmp.ConfirmBehavior.Insert,
-      select = true,
-    },
+    ['<CR>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.confirm {
+          behavior = cmp.ConfirmBehavior.Insert,
+          select = true,
+        }
+      elseif vim.b.delimitMate_expand_cr then
+        feedkeys('<Plug>delimitMateCR')
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
