@@ -91,6 +91,9 @@ lspconfig.intelephense.setup {
       references = {
         exclude = {},
       },
+      completion = {
+        suggestObjectOperatorStaticMethods = false,
+      },
     },
   },
 }
