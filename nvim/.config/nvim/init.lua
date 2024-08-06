@@ -111,6 +111,7 @@ vim.api.nvim_create_autocmd('FileType', {
     'python',
     'scss',
     'sh',
+    'twig',
     'typescript',
   },
   group = augroup,
@@ -121,7 +122,7 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 -- Configure vim-closetag.
-vim.g.closetag_filetypes = 'html,xhtml,phtml,blade,gohtmltmpl'
+vim.g.closetag_filetypes = 'html,xhtml,phtml,blade,gohtmltmpl,twig'
 
 -- Configure vim-test.
 vim.g['test#strategy'] = 'neovim'
