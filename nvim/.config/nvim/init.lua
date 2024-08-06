@@ -3,7 +3,6 @@ local function map(mode, lhs, rhs)
 end
 local augroup = vim.api.nvim_create_augroup('vimrc', { clear = true })
 
--- Leader.
 vim.g.mapleader = ' '
 map('n', '<Space>', '')
 
