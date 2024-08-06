@@ -3,6 +3,10 @@ if not loaded then
   return
 end
 
+vim.o.foldlevelstart = 99
+vim.o.foldmethod = 'expr'
+vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+
 treesitter.setup {
   ensure_installed = {
     'bash',
