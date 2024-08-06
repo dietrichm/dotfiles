@@ -52,7 +52,6 @@ require('paq'):setup { verbose = true } {
     build = ':GoUpdateBinaries',
   },
   'ThePrimeagen/refactoring.nvim',
-  'Vimjas/vim-python-pep8-indent',
   'jwalton512/vim-blade',
 }
 
