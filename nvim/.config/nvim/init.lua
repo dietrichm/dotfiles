@@ -75,8 +75,8 @@ vim.opt.listchars = {
   tab = '▏ ',
   extends = '»',
   precedes = '«',
-  trail = '▒',
-  nbsp = '·',
+  trail = '·',
+  nbsp = '␣',
 }
 vim.opt.shortmess:append({ I = true })
 vim.opt.spelllang = 'en_gb'
