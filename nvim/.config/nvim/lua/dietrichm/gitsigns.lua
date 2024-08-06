@@ -13,6 +13,7 @@ gitsigns.setup {
     untracked = { text = '┆' },
   },
   attach_to_untracked = false,
+  signs_staged_enable = false,
   on_attach = function(bufnr)
     local gs = package.loaded.gitsigns
 
