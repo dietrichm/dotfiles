@@ -4,13 +4,10 @@ if not loaded then
 end
 
 vim.opt.complete = { '.' }
-vim.opt.completeopt = { 'menuone', 'noinsert' }
+vim.opt.completeopt = { 'menu', 'menuone', 'popup' }
 vim.opt.pumwidth = 20
 
 cmp.setup {
-  completion = {
-    completeopt = vim.o.completeopt,
-  },
   mapping = cmp.mapping.preset.insert({
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<M-p>'] = function()
