@@ -9,48 +9,12 @@ vim.opt.pumwidth = 20
 
 local luasnip = require('luasnip')
 
-local function feedkeys(keys)
-  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(keys, true, false, true), 'm', false)
-end
-
 cmp.setup {
   completion = {
     completeopt = vim.o.completeopt,
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-Space>'] = cmp.mapping.complete(),
-    ['<CR>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.confirm {
-          behavior = cmp.ConfirmBehavior.Insert,
-          select = true,
-        }
-      elseif vim.b.delimitMate_expand_cr then
-        feedkeys('<Plug>delimitMateCR')
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
-    ['<Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif vim.fn['delimitMate#ShouldJump']() then
-        feedkeys('<Plug>delimitMateS-Tab')
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
     ['<M-p>'] = function()
       if cmp.visible_docs() then
         cmp.close_docs()
