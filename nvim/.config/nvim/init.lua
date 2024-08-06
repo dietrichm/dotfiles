@@ -71,7 +71,13 @@ vim.opt.smartcase = true
 vim.opt.linebreak = true
 vim.opt.title = true
 vim.opt.list = true
-vim.opt.listchars = { tab = '→ ', extends = '»', precedes = '«', trail = '▒', nbsp = '·' }
+vim.opt.listchars = {
+  tab = '▏ ',
+  extends = '»',
+  precedes = '«',
+  trail = '▒',
+  nbsp = '·',
+}
 vim.opt.shortmess:append({ I = true })
 vim.opt.spelllang = 'en_gb'
 vim.opt.undofile = true
