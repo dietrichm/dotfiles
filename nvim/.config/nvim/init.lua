@@ -40,11 +40,6 @@ require('paq'):setup { verbose = true } {
   -- Completion.
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-nvim-lsp',
-  'saadparwaiz1/cmp_luasnip',
-  {
-    'L3MON4D3/LuaSnip',
-    build = 'make install_jsregexp',
-  },
 
   -- Git.
   'tpope/vim-fugitive',

@@ -7,8 +7,6 @@ vim.opt.complete = { '.' }
 vim.opt.completeopt = { 'menuone', 'noinsert' }
 vim.opt.pumwidth = 20
 
-local luasnip = require('luasnip')
-
 cmp.setup {
   completion = {
     completeopt = vim.o.completeopt,
@@ -30,11 +28,10 @@ cmp.setup {
   },
   snippet = {
     expand = function(args)
-      luasnip.lsp_expand(args.body)
+      vim.snippet.expand(args.body)
     end,
   },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'luasnip' },
   }),
 }
