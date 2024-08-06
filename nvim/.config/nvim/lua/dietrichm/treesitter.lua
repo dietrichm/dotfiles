@@ -20,6 +20,7 @@ treesitter.setup {
     'python',
     'scss',
     'toml',
+    'twig',
     'typescript',
     'vim',
     'vimdoc',
