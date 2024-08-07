@@ -37,9 +37,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
         callback = vim.lsp.buf.clear_references,
       })
     end)
-
-    -- Avoid jumping text when (diagnostic) signs are (un)set.
-    vim.opt_local.signcolumn = 'yes'
   end,
 })
 
