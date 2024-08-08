@@ -8,28 +8,7 @@ vim.o.foldmethod = 'expr'
 vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 
 treesitter.setup {
-  ensure_installed = {
-    'bash',
-    'css',
-    'dockerfile',
-    'go',
-    'html',
-    'javascript',
-    'json',
-    'lua',
-    'make',
-    'markdown',
-    'markdown_inline',
-    'php',
-    'python',
-    'scss',
-    'toml',
-    'twig',
-    'typescript',
-    'vim',
-    'vimdoc',
-    'yaml',
-  },
+  auto_install = true,
   highlight = {
     enable = true,
   },
