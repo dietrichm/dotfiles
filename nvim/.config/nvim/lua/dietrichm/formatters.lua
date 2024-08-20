@@ -6,6 +6,7 @@ end
 formatter.setup {
   filetype = {
     php = {
+      require('formatter.filetypes.php').php_cs_fixer,
       require('formatter.filetypes.php').pint,
     },
     javascript = {
