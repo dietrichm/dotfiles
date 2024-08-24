@@ -21,3 +21,12 @@ formatter.setup {
     },
   },
 }
+
+vim.api.nvim_create_autocmd('BufWritePost', {
+  pattern = '*',
+  group = 'vimrc',
+  desc = 'Run formatter on save',
+  callback = function()
+    vim.cmd.FormatWrite()
+  end,
+})
