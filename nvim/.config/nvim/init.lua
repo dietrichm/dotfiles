@@ -209,6 +209,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 
 -- Global abbreviations.
 vim.cmd.iabbrev('<expr>', 'ruuid', [[luaeval('io.open("/proc/sys/kernel/random/uuid"):read()')]])
+vim.cmd.iabbrev('<expr>', 'ctime', [[luaeval('os.date("%FT%T%z")')]])
 
 -- Write without triggering autocommands.
 vim.api.nvim_create_user_command('Nw', [[:noautocmd w]], {})
