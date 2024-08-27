@@ -164,6 +164,7 @@ lspconfig.intelephense.setup {
         'sockets',
         'sodium',
         'sqlite3',
+        'ssh2',
         'standard',
         'superglobals',
         'sysvmsg',
