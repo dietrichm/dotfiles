@@ -4,8 +4,12 @@ if not loaded then
 end
 
 vim.opt.complete = { '.' }
-vim.opt.completeopt = { 'menu', 'menuone', 'popup' }
+vim.opt.completeopt = { 'menu', 'menuone', 'popup', 'noinsert' }
 vim.opt.pumwidth = 20
+
+if vim.fn.has('nvim-0.11') == 1 then
+  vim.opt.completeopt:append('fuzzy')
+end
 
 cmp.setup {
   mapping = cmp.mapping.preset.insert({
