@@ -219,3 +219,7 @@ vim.cmd.iabbrev('<expr>', 'ctime', [[luaeval('os.date("%FT%T%z")')]])
 -- Write without triggering autocommands.
 vim.api.nvim_create_user_command('Nw', [[:noautocmd w]], {})
 vim.api.nvim_create_user_command('Nwa', [[:noautocmd wa]], {})
+
+-- Aliases for writing.
+vim.api.nvim_create_user_command('W', [[:w]], {})
+vim.api.nvim_create_user_command('Wa', [[:wa]], {})
