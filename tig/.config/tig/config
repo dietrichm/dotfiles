@@ -1,4 +1,5 @@
 # Configure views.
+set main-view-id = yes
 set blob-view = line-number:yes,interval=1 text
 set diff-options = -C --show-signature
 set line-graphics = utf-8
