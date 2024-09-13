@@ -189,7 +189,7 @@ lspconfig.phpactor.setup {
   autostart = false,
 }
 
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
   capabilities = capabilities,
 }
 
