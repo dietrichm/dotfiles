@@ -104,8 +104,19 @@ vim.g.loaded_perl_provider = 0
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
 
+-- Configure vim-closetag.
+vim.g.closetag_filetypes = 'html,xhtml,phtml,blade,gohtmltmpl,twig'
+
 -- Configure delimitMate.
 vim.g.delimitMate_excluded_ft = 'TelescopePrompt'
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = vim.g.closetag_filetypes,
+  group = augroup,
+  callback = function()
+    -- Remove angled brackets.
+    vim.b.delimitMate_matchpairs = '(:),[:],{:}'
+  end,
+})
 vim.api.nvim_create_autocmd('FileType', {
   pattern = {
     'css',
@@ -126,9 +137,6 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.b.delimitMate_expand_cr = 1
   end,
 })
-
--- Configure vim-closetag.
-vim.g.closetag_filetypes = 'html,xhtml,phtml,blade,gohtmltmpl,twig'
 
 -- Configure vim-test.
 vim.g['test#strategy'] = 'neovim'
