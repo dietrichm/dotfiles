@@ -1,8 +1,5 @@
 -- luacheck: globals GoMockgen
 
-vim.opt_local.expandtab = false
-vim.opt_local.colorcolumn:append('100')
-
 function GoMockgen()
   return string.format(
     '//go:generate go run github.com/golang/mock/mockgen -source %s -destination %s -package %s',

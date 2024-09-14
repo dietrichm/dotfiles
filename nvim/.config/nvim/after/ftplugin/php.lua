@@ -1,5 +1,3 @@
-vim.opt_local.textwidth = 80
-vim.opt_local.colorcolumn:append('121')
 vim.opt_local.matchpairs:remove('<:>')
 vim.bo.commentstring = '// %s'
 vim.b.delimitMate_matchpairs = '(:),[:],{:}'
