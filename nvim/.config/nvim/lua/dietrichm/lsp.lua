@@ -171,11 +171,6 @@ lspconfig.intelephense.setup {
   },
 }
 
-lspconfig.phpactor.setup {
-  capabilities = capabilities,
-  autostart = false,
-}
-
 lspconfig.ts_ls.setup {
   capabilities = capabilities,
 }
