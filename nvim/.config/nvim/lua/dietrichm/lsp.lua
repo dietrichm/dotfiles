@@ -40,19 +40,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-vim.api.nvim_create_user_command('LspSwitch', function(options)
-  vim.cmd.LspStop()
-  vim.api.nvim_clear_autocmds({ group = 'lspconfig' })
-  vim.cmd.LspStart(options.fargs[1])
-end, {
-  nargs = 1,
-  complete = function()
-    local items = require('lspconfig.util').available_servers()
-    table.sort(items)
-    return items
-  end,
-})
-
 vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
   silent = true,
 })

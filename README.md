@@ -15,7 +15,6 @@ If you are looking for my Neovim config, you can find it in [`nvim/.config/nvim`
   - [Config packages](#config-packages)
   - [Updating](#updating)
 - [Language Servers (LSP)](#language-servers-lsp)
-  - [Switching servers](#switching-servers)
 - [Custom configuration](#custom-configuration)
   - [Neovim](#neovim)
   - [zsh](#zsh)
@@ -118,13 +117,6 @@ Depending on the languages used, the following language server binaries need to 
 * Lua ([lua-language-server](https://github.com/luals/lua-language-server)): see [installation instructions](https://github.com/luals/lua-language-server/wiki/Getting-Started#command-line). Create the wrapper script as `~/bin/lua-language-server`.
 * Markdown ([Marksman](https://github.com/artempyanykh/marksman)): see [installation instructions](https://github.com/artempyanykh/marksman/blob/main/docs/install.md)
 * Tailwind CSS ([tailwindcss/language-server](https://github.com/tailwindlabs/tailwindcss-intellisense)): `npm i -g @tailwindcss/language-server`
-
-### Switching servers
-
-To disable current servers and start a single one, you can use `:LspSwitch <name>`.
-
-This is especially useful for PHP, where only Intelephense is auto-started and you can switch to Phpactor using `:LspSwitch phpactor`.
-The command also avoids the stopped servers from spinning up again when new buffers are loaded.
 
 ## Custom configuration
 
