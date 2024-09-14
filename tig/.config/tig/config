@@ -4,7 +4,6 @@ set blob-view = line-number:yes,interval=1 text
 set diff-options = -C --show-signature
 set line-graphics = utf-8
 set split-view-height = 80%
-set tab-size = 4
 set vertical-split = false
 
 # Behaviour.

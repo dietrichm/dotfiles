@@ -28,7 +28,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
-	pager = less --tabs=4 -RFX
+	pager = less -RFX
 	autocrlf = input
 [color]
 	ui = true

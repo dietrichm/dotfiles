@@ -17,7 +17,7 @@ path=(
 export PATH
 
 export CLICOLOR=1
-export DELTA_PAGER="less --tabs=4 -RFX"
+export DELTA_PAGER="less -RFX"
 export EDITOR=nvim
 export FZF_DEFAULT_COMMAND="rg --files"
 export GPG_TTY=$(tty)
