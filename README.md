@@ -123,6 +123,7 @@ Some projects require or can benefit from some custom configuration for some of 
 ### Neovim
 
 Project local configuration can be set in `.nvim.lua` or `.nvimrc`.
+Neovim also reads [EditorConfig](https://editorconfig.org/) files.
 
 ### zsh
 
