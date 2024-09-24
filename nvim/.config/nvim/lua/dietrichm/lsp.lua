@@ -173,6 +173,13 @@ lspconfig.intelephense.setup {
 
 lspconfig.ts_ls.setup {
   capabilities = capabilities,
+  root_dir = require('lspconfig.util').root_pattern(
+    'tsconfig-base.json',
+    'tsconfig.json',
+    'jsconfig.json',
+    'package.json',
+    '.git'
+  ),
 }
 
 lspconfig.lua_ls.setup {
