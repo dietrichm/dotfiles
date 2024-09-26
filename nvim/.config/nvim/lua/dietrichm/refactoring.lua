@@ -4,3 +4,5 @@ if not loaded then
 end
 
 refactoring.setup()
+
+vim.keymap.set('x', '<Leader>rv', [[:Refactor extract_var ]])
