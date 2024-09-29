@@ -92,21 +92,17 @@ map('n', '<Leader>fs', function()
   builtin.find_files({ search_file = file_root_without_test })
 end)
 
-local function rg(add_options)
+local function rg(...)
+  local additional_args = { ... }
   return function(options)
     builtin.grep_string({
       search = options.args,
       use_regex = true,
-      additional_args = function(rg_options)
-        for _, add_option in ipairs(add_options) do
-          table.insert(rg_options, add_option)
-        end
-        return rg_options
-      end,
+      additional_args = additional_args,
     })
   end
 end
 
-vim.api.nvim_create_user_command('Rg', rg({}), { nargs = '*' })
-vim.api.nvim_create_user_command('Rgi', rg({ '--no-ignore-vcs' }), { nargs = '*' })
-vim.api.nvim_create_user_command('Rgw', rg({ '--word-regexp' }), { nargs = '*' })
+vim.api.nvim_create_user_command('Rg', rg(), { nargs = '*' })
+vim.api.nvim_create_user_command('Rgi', rg('--no-ignore-vcs'), { nargs = '*' })
+vim.api.nvim_create_user_command('Rgw', rg('--word-regexp'), { nargs = '*' })
