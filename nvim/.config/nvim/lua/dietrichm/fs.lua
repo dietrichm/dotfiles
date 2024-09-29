@@ -11,6 +11,11 @@ oil.setup {
   view_options = {
     show_hidden = true,
   },
+  git = {
+    mv = function()
+      return true
+    end,
+  },
   keymaps = {
     ['<C-s>'] = false,
     ['<C-v>'] = 'actions.select_vsplit',
