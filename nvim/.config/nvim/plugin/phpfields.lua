@@ -12,6 +12,7 @@ local function applyFields()
     end
 
     local label = result.signatures[1].label
+    feedkeys("vib<Esc>'<")
 
     -- Expect to be positioned on first argument with one argument per line.
     for field in string.gmatch(label, '$([^ ,)]+)') do
