@@ -9,7 +9,7 @@ function GoMockgen()
   )
 end
 
-vim.cmd.iabbrev('mctrl', [[ctrl := gomock.NewController(t)]])
-vim.cmd.iabbrev('gnew', [[g := NewWithT(t)]])
-vim.cmd.iabbrev('<expr>', 'mockgen', [[v:lua.GoMockgen()]])
-vim.cmd.iabbrev('dump', [[fmt.Printf("%+v\n",]])
+vim.cmd.iabbrev('<buffer>', 'mctrl', [[ctrl := gomock.NewController(t)]])
+vim.cmd.iabbrev('<buffer>', 'gnew', [[g := NewWithT(t)]])
+vim.cmd.iabbrev('<buffer>', '<expr>', 'mockgen', [[v:lua.GoMockgen()]])
+vim.cmd.iabbrev('<buffer>', 'dump', [[fmt.Printf("%+v\n",]])

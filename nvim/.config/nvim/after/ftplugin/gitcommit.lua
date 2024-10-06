@@ -14,4 +14,4 @@ function GitBranchIdentifier()
   return string.sub(branch_name, match_start + 1, match_end)
 end
 
-vim.cmd.iabbrev('<expr>', 'bri', [[v:lua.GitBranchIdentifier()]])
+vim.cmd.iabbrev('<buffer>', '<expr>', 'bri', [[v:lua.GitBranchIdentifier()]])
