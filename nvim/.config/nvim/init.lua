@@ -175,7 +175,8 @@ map('n', '[l', [[:lprevious<CR>]])
 map('n', ']L', [[:llast<CR>]])
 map('n', '[L', [[:lfirst<CR>]])
 
--- Open quickfix after :make.
+-- Make with auto-opened quickfix.
+map('n', '<Leader>m', [[:make %<CR>]])
 vim.api.nvim_create_autocmd('QuickFixCmdPost', {
   pattern = 'make*',
   group = augroup,
