@@ -19,7 +19,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map('n', '<Leader>st', telescope.lsp_type_definitions)
     map('n', '<Leader>tb', telescope.lsp_document_symbols)
     map({ 'n', 'v' }, '<Leader>ca', vim.lsp.buf.code_action)
-    map('i', '<C-S>', vim.lsp.buf.signature_help)
+    map({ 'n', 'i' }, '<C-S>', vim.lsp.buf.signature_help)
     map('n', '<Leader>rn', vim.lsp.buf.rename)
     map('n', '<Leader>lf', vim.lsp.buf.format)
 
