@@ -7,6 +7,7 @@
 	contains = branch -a --contains
 	default = "!git symbolic-ref --short refs/remotes/origin/HEAD | sed 's@^origin/@@'"
 	diffc = diff --cached
+	fixup = "c --fixup"
 	gone = "!git branch -v | grep ' \\[gone\\] ' | awk '{print $1}'"
 	gone-remove = "!git gone | xargs -r git branch -d"
 	gone-remove-force = "!git gone | xargs -r git branch -D"
