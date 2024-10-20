@@ -46,6 +46,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
  * `git`
      * GnuPG
      * [Delta](https://github.com/dandavison/delta) (with optional [bat](https://github.com/sharkdp/bat) for updated syntax files)
+     * [tig](https://jonas.github.io/tig/)
  * `helix`: [Helix](https://helix-editor.com/)
  * `kitty`
      * [kitty](https://sw.kovidgoyal.net/kitty/)
@@ -60,7 +61,6 @@ Depending on which [config packages](#config-packages) are installed, these depe
          * [Language servers](#language-servers-lsp) depending on the desired languages
  * `ranger`: [ranger](https://github.com/ranger/ranger)
  * `ssh`: OpenSSH
- * `tig`: [tig](https://jonas.github.io/tig/)
 
 ## Installation
 
@@ -90,7 +90,6 @@ The following (Stow based) config packages are available:
 * `nvim`
 * `ranger`
 * `ssh`
-* `tig`
 
 Running `make` installs all of them.
 If you wish to only install specific packages, pass them as additional arguments (besides the theme name) to make, i.e.: `make default ssh git`.
