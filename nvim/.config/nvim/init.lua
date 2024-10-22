@@ -36,6 +36,7 @@ require('paq'):setup { verbose = true } {
   'justinmk/vim-sneak',
   'mhartington/formatter.nvim',
   'Wansmer/treesj',
+  'folke/zen-mode.nvim',
 
   -- Completion.
   'hrsh7th/nvim-cmp',
