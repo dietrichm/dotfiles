@@ -3,8 +3,18 @@ local function feedkeys(keys)
 end
 
 local function applyFields()
-  local params = vim.lsp.util.make_position_params()
+  ---@diagnostic disable-next-line: redundant-parameter
+  local startPosition = vim.fn.searchpair('(', '', ')', 'nb')
+  ---@diagnostic disable-next-line: redundant-parameter
+  local endPosition = vim.fn.searchpair('(', '', ')', 'n')
+  local argumentCount = endPosition - startPosition - 1
 
+  if argumentCount < 1 then
+    vim.notify('Can only apply PHP fields to calls with one argument per line.', vim.log.levels.ERROR)
+    return
+  end
+
+  local params = vim.lsp.util.make_position_params()
   vim.lsp.buf_request(0, 'textDocument/signatureHelp', params, function(_, result)
     if not result or not result.signatures then
       vim.notify('No signature found to apply PHP fields.', vim.log.levels.ERROR)
@@ -12,12 +22,12 @@ local function applyFields()
     end
 
     local label = result.signatures[1].label
-    feedkeys("vib<Esc>'<")
+    local fields = vim.iter(string.gmatch(label, '$([^ ,)]+)')):take(argumentCount)
+    vim.api.nvim_win_set_cursor(0, { startPosition + 1, 0 })
 
-    -- Expect to be positioned on first argument with one argument per line.
-    for field in string.gmatch(label, '$([^ ,)]+)') do
+    fields:each(function(field)
       feedkeys('I' .. field .. ': <Esc>j')
-    end
+    end)
   end)
 end
 
