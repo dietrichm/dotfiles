@@ -22,6 +22,6 @@ vim.keymap.set('n', '<Leader>q', diagnostic.setloclist, { silent = true })
 vim.api.nvim_create_autocmd('DiagnosticChanged', {
   group = 'vimrc',
   callback = function()
-    vim.cmd.redrawstatus()
+    vim.schedule(vim.cmd.redrawstatus)
   end,
 })
