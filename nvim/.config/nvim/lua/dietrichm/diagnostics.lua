@@ -11,7 +11,7 @@ diagnostic.config({
   },
   virtual_text = {
     severity = {
-      min = diagnostic.severity.INFO,
+      min = diagnostic.severity.WARN,
     },
     prefix = '●',
   },
