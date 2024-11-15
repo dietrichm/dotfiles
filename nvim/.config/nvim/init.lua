@@ -195,6 +195,7 @@ vim.api.nvim_create_autocmd('TermOpen', {
   group = augroup,
   callback = function()
     vim.opt_local.number = false
+    vim.opt_local.signcolumn = 'auto'
     vim.opt_local.statusline = [[ %{b:term_title} ]]
   end,
 })
