@@ -41,6 +41,7 @@ The following is required for installing and using these dotfiles:
 
 Depending on which [config packages](#config-packages) are installed, these dependencies are also required:
 
+ * `containers`: [Podman](https://podman.io/)
  * `dig`: [bind-utils](https://github.com/tigeli/bind-utils)
  * `direnv`: [direnv](https://direnv.net/)
  * `git`
@@ -82,6 +83,7 @@ Currently, I only use and maintain one theme:
 
 The following (Stow based) config packages are available:
 
+* `containers`
 * `dig`
 * `direnv`
 * `git`

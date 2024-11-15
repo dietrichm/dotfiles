@@ -9,7 +9,11 @@ default: env
 	$(THEME) default
 
 .PHONY: all
-all: dig direnv git helix kitty nvim ranger ssh
+all: containers dig direnv git helix kitty nvim ranger ssh
+
+.PHONY: containers
+containers: env
+	$(PKG) containers
 
 .PHONY: dig
 dig: env
