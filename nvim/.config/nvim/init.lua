@@ -214,18 +214,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- General highlight groups.
-vim.api.nvim_create_autocmd('ColorScheme', {
-  pattern = '*',
-  group = 'vimrc',
-  callback = function()
-    vim.cmd.highlight { 'DiagnosticUnderlineError', 'gui=undercurl' }
-    vim.cmd.highlight { 'link', 'TelescopeNormal', 'NormalFloat' }
-    vim.cmd.highlight { 'link', 'TelescopeMatching', 'IncSearch' }
-    vim.cmd.highlight { 'link', 'TelescopeSelection', 'CursorLine' }
-  end,
-})
-
 -- Global abbreviations.
 vim.cmd.iabbrev('<expr>', 'ruuid', [[luaeval('io.open("/proc/sys/kernel/random/uuid"):read()')]])
 vim.cmd.iabbrev('<expr>', 'ctime', [[luaeval('os.date("%FT%T%z")')]])
