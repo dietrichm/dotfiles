@@ -11,7 +11,6 @@ If you are looking for my Neovim config, you can find it in [`nvim/.config/nvim`
 - [Dependencies](#dependencies)
   - [Optional](#optional)
 - [Installation](#installation)
-  - [Themes](#themes)
   - [Config packages](#config-packages)
   - [Updating](#updating)
 - [Language Servers (LSP)](#language-servers-lsp)
@@ -69,16 +68,6 @@ Depending on which [config packages](#config-packages) are installed, these depe
  * Edit `~/.zshenv` to read `export ZDOTDIR="$HOME/repos/dotfiles/zsh"` (adapt directory).
  * Execute `make` in the repo to install all [config packages](#config-packages).
 
-### Themes
-
-Multiple themes are supported by installing specific config file variants for the desired theme. This way colours are configured for kitty, zsh, Neovim and fzf.
-
-These files are also installed through make. Pass the theme name as an argument to `make` to install a specific one.
-
-Currently, I only use and maintain one theme:
-
-* `default`
-
 ### Config packages
 
 The following (Stow based) config packages are available:
@@ -94,9 +83,7 @@ The following (Stow based) config packages are available:
 * `ssh`
 
 Running `make` installs all of them.
-If you wish to only install specific packages, pass them as additional arguments (besides the theme name) to make, i.e.: `make default ssh git`.
-
-Additionally, `make all` installs all config packages, which is useful when installing a specific theme along with all packages: `make theme-name all`.
+If you wish to only install specific packages, pass them as additional arguments to make, i.e.: `make default ssh git`.
 
 ### Updating
 

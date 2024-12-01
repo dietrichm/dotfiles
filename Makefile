@@ -1,12 +1,4 @@
-THEME = stow -v --override='.*' -d "$(MY_CONFIG_ROOT)/themes"
 PKG = stow -v -d "$(MY_CONFIG_ROOT)" -t "$(HOME)"
-
-.PHONY: install
-install: default all
-
-.PHONY: default
-default: env
-	$(THEME) default
 
 .PHONY: all
 all: containers dig direnv git helix kitty nvim ranger ssh
