@@ -1,3 +1,4 @@
+require('dietrichm.colorscheme')
 require('dietrichm.diagnostics')
 require('dietrichm.lsp')
 require('dietrichm.completion')
