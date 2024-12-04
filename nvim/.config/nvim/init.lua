@@ -134,6 +134,10 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
+-- Configure fugitive.
+map('n', '<Leader>gb', [[:Git blame<CR>]])
+map('n', '<Leader>gd', [[:Gdiff<CR>]])
+
 -- Configure vim-test.
 vim.g['test#strategy'] = 'neovim'
 vim.g['test#neovim#term_position'] = 'botright 15'
