@@ -51,7 +51,6 @@ Depending on which [config packages](#config-packages) are installed, these depe
  * `kitty`
      * [kitty](https://sw.kovidgoyal.net/kitty/)
      * [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
-     * [Symbols Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases)
  * `nvim`
      * [Neovim](https://neovim.io/) 0.10
      * [ripgrep](https://github.com/BurntSushi/ripgrep)
