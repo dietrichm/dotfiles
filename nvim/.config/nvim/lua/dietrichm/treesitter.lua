@@ -23,10 +23,14 @@ treesitter.setup {
       keymaps = {
         ['af'] = '@function.outer',
         ['if'] = '@function.inner',
+        ['aa'] = '@parameter.outer',
+        ['ia'] = '@parameter.inner',
       },
       selection_modes = {
         ['@function.outer'] = 'V',
         ['@function.inner'] = 'V',
+        ['@parameter.outer'] = 'v',
+        ['@parameter.inner'] = 'v',
       },
     },
     move = {
