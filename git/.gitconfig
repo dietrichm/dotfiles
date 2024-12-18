@@ -67,6 +67,7 @@
 [advice]
 	detachedHead = false
 	forceDeleteBranch = false
+	skippedCherryPicks = false
 [tag]
 	gpgSign = true
 [include]
