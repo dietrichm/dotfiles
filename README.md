@@ -80,7 +80,7 @@ The following (Stow based) config packages are available:
 * `ssh`
 
 Running `make` installs all of them.
-If you wish to only install specific packages, pass them as additional arguments to make, i.e.: `make default ssh git`.
+If you wish to only install specific packages, pass them as additional arguments to make, i.e.: `make ssh git`.
 
 ### Updating
 
