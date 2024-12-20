@@ -48,11 +48,7 @@ end
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 lspconfig.gopls.setup {
-  cmd = { 'gopls', '-remote=auto' },
   capabilities = capabilities,
-  root_dir = function()
-    return vim.fn.getcwd()
-  end,
   settings = {
     gopls = {
       staticcheck = true,

@@ -48,10 +48,6 @@ require('paq'):setup { verbose = true } {
 
   -- Development.
   'vim-test/vim-test',
-  {
-    'fatih/vim-go',
-    build = ':GoUpdateBinaries',
-  },
   'ThePrimeagen/refactoring.nvim',
 }
 
@@ -143,14 +139,6 @@ vim.g['test#neovim#term_position'] = 'botright 15'
 map('n', '<Leader>rc', [[:noautocmd update | :TestFile<CR>]])
 map('n', '<Leader>rt', [[:noautocmd update | :TestNearest<CR>]])
 map('n', '<Leader>rr', [[:noautocmd update | :TestLast<CR>]])
-
--- Configure vim-go.
-vim.g.go_code_completion_enabled = 0
-vim.g.go_def_mapping_enabled = 0
-vim.g.go_doc_keywordprg_enabled = 0
-vim.g.go_fmt_fail_silently = 1
-vim.g.go_jump_to_error = 0
-vim.g.go_textobj_enabled = 0
 
 -- Enable search highlight when searching for symbols.
 map('n', '*', [[:setlocal hlsearch | :normal! *<CR>]])

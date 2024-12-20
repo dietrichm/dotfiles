@@ -55,9 +55,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
      * [Neovim](https://neovim.io/) 0.10
      * [ripgrep](https://github.com/BurntSushi/ripgrep)
      * [universal-ctags](http://ctags.io/)
-     * _Optional_
-         * Go (Golang) for use with [vim-go](https://github.com/fatih/vim-go)
-         * [Language servers](#language-servers-lsp) depending on the desired languages
+     * [Language servers](#language-servers-lsp) depending on the desired languages
  * `ranger`: [ranger](https://github.com/ranger/ranger)
  * `ssh`: OpenSSH
 
@@ -92,10 +90,9 @@ Run `nvim +PaqUpdate` to update all plugins.
 
 Neovim's internal LSP client is used to provide code intelligence and completion using [language servers](https://langserver.org/).
 
-`gopls` (for Go) is installed through the [vim-go](https://github.com/fatih/vim-go) Neovim plugin (using `:GoInstallBinaries`).
-
 Depending on the languages used, the following language server binaries need to be installed manually:
 
+* Go ([gopls](https://pkg.go.dev/golang.org/x/tools/gopls)): `go install golang.org/x/tools/gopls@latest`
 * Python ([Basedpyright](https://docs.basedpyright.com/)): `pip install basedpyright`
 * PHP ([Intelephense](https://intelephense.com/)): `npm i -g intelephense`
 * TypeScript and JavaScript ([TypeScript Language Server](https://github.com/typescript-language-server/typescript-language-server)): `npm i -g typescript typescript-language-server`

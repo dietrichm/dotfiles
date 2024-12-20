@@ -5,6 +5,9 @@ end
 
 formatter.setup {
   filetype = {
+    go = {
+      require('formatter.filetypes.go').goimports,
+    },
     php = {
       require('formatter.filetypes.php').php_cs_fixer,
       require('formatter.filetypes.php').pint,
