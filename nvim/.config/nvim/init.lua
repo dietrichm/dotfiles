@@ -171,14 +171,16 @@ map('n', '}', [[:keepjumps normal! }<CR>]])
 map('n', '{', [[:keepjumps normal! {<CR>]])
 
 -- Move through quickfix and location list.
-map('n', ']q', [[:cnext<CR>]])
-map('n', '[q', [[:cprevious<CR>]])
-map('n', ']Q', [[:clast<CR>]])
-map('n', '[Q', [[:cfirst<CR>]])
-map('n', ']l', [[:lnext<CR>]])
-map('n', '[l', [[:lprevious<CR>]])
-map('n', ']L', [[:llast<CR>]])
-map('n', '[L', [[:lfirst<CR>]])
+if vim.fn.has('nvim-0.11') == 0 then
+  map('n', ']q', [[:cnext<CR>]])
+  map('n', '[q', [[:cprevious<CR>]])
+  map('n', ']Q', [[:clast<CR>]])
+  map('n', '[Q', [[:cfirst<CR>]])
+  map('n', ']l', [[:lnext<CR>]])
+  map('n', '[l', [[:lprevious<CR>]])
+  map('n', ']L', [[:llast<CR>]])
+  map('n', '[L', [[:lfirst<CR>]])
+end
 
 -- Make with auto-opened quickfix.
 map('n', '<Leader>m', [[:make %<CR>]])
@@ -198,8 +200,10 @@ vim.api.nvim_create_autocmd('TermOpen', {
   pattern = '*',
   group = augroup,
   callback = function()
-    vim.opt_local.number = false
-    vim.opt_local.signcolumn = 'auto'
+    if vim.fn.has('nvim-0.11') == 0 then
+      vim.opt_local.number = false
+      vim.opt_local.signcolumn = 'auto'
+    end
     vim.opt_local.statusline = [[ %{b:term_title} ]]
   end,
 })

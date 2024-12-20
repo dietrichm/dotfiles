@@ -39,9 +39,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
-  silent = true,
-})
+if vim.fn.has('nvim-0.11') == 0 then
+  vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
+    silent = true,
+  })
+end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
