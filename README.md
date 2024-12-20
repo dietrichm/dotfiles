@@ -36,7 +36,7 @@ The following is required for installing and using these dotfiles:
 
 ### Optional
 
-[fzf](https://github.com/junegunn/fzf) will be used when installed (i.e. using a package manager).
+[fzf](https://github.com/junegunn/fzf) will be used in zsh when installed (i.e. using a package manager).
 
 Depending on which [config packages](#config-packages) are installed, these dependencies are also required:
 
