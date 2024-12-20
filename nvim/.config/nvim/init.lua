@@ -53,7 +53,6 @@ require('paq'):setup { verbose = true } {
     build = ':GoUpdateBinaries',
   },
   'ThePrimeagen/refactoring.nvim',
-  'jwalton512/vim-blade',
 }
 
 -- Options.
