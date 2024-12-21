@@ -96,7 +96,7 @@ vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
 
 -- Configure vim-closetag.
-vim.g.closetag_filetypes = 'html,xhtml,phtml,blade,gohtmltmpl,twig'
+vim.g.closetag_filetypes = 'html,xhtml,phtml,blade,twig'
 
 -- Configure delimitMate.
 vim.g.delimitMate_excluded_ft = 'TelescopePrompt'
