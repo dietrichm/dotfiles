@@ -40,24 +40,15 @@ The following is required for installing and using these dotfiles:
 
 Depending on which [config packages](#config-packages) are installed, these dependencies are also required:
 
- * `containers`: [Podman](https://podman.io/)
- * `dig`: [bind-utils](https://github.com/tigeli/bind-utils)
- * `direnv`: [direnv](https://direnv.net/)
  * `git`
      * GnuPG
-     * [Delta](https://github.com/dandavison/delta) (with optional [bat](https://github.com/sharkdp/bat) for updated syntax files)
-     * [tig](https://jonas.github.io/tig/)
- * `helix`: [Helix](https://helix-editor.com/)
+     * [Delta](https://github.com/dandavison/delta)
+     * [bat](https://github.com/sharkdp/bat) for updated syntax files
  * `kitty`
-     * [kitty](https://sw.kovidgoyal.net/kitty/)
      * [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
  * `nvim`
-     * [Neovim](https://neovim.io/) 0.10
      * [ripgrep](https://github.com/BurntSushi/ripgrep)
-     * [universal-ctags](http://ctags.io/)
      * [Language servers](#language-servers-lsp) depending on the desired languages
- * `ranger`: [ranger](https://github.com/ranger/ranger)
- * `ssh`: OpenSSH
 
 ## Installation
 
