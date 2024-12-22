@@ -1,7 +1,7 @@
 local function map(mode, lhs, rhs)
   vim.keymap.set(mode, lhs, rhs, { silent = true })
 end
-local augroup = vim.api.nvim_create_augroup('vimrc', { clear = true })
+local augroup = vim.api.nvim_create_augroup('dotfiles_init', { clear = true })
 
 vim.g.mapleader = ' '
 map('n', '<Space>', '')

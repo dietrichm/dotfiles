@@ -4,7 +4,7 @@ if not loaded then
 end
 
 vim.api.nvim_create_autocmd('LspAttach', {
-  group = 'vimrc',
+  group = vim.api.nvim_create_augroup('dotfiles_lsp', { clear = true }),
   callback = function(args)
     local bufnr = args.buf
     local function map(mode, lhs, rhs)

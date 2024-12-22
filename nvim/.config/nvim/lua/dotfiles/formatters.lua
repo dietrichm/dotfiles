@@ -30,7 +30,7 @@ formatter.setup {
 
 vim.api.nvim_create_autocmd('BufWritePost', {
   pattern = '*',
-  group = 'vimrc',
+  group = vim.api.nvim_create_augroup('dotfiles_formatters', { clear = true }),
   desc = 'Run formatter on save',
   callback = function()
     vim.cmd.FormatWrite()

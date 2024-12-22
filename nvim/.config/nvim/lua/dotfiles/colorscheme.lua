@@ -1,6 +1,8 @@
+local augroup = vim.api.nvim_create_augroup('dotfiles_colorscheme', { clear = true })
+
 vim.api.nvim_create_autocmd('ColorScheme', {
   pattern = '*',
-  group = 'vimrc',
+  group = augroup,
   callback = function()
     vim.cmd.highlight { 'DiagnosticUnderlineError', 'gui=undercurl' }
     vim.cmd.highlight { 'link', 'TelescopeNormal', 'NormalFloat' }
@@ -11,7 +13,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 
 vim.api.nvim_create_autocmd('ColorScheme', {
   pattern = 'default',
-  group = 'vimrc',
+  group = augroup,
   callback = function()
     vim.cmd.highlight { 'link', 'ColorColumn', 'CursorLine', bang = true }
     vim.cmd.highlight { 'TreesitterContextBottom', 'gui=underline', 'guisp=NvimDarkGrey4' }
