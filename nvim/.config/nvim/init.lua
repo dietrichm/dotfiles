@@ -1,10 +1,6 @@
-local function map(mode, lhs, rhs)
-  vim.keymap.set(mode, lhs, rhs, { silent = true })
-end
 local augroup = vim.api.nvim_create_augroup('dotfiles_init', { clear = true })
 
 vim.g.mapleader = ' '
-map('n', '<Space>', '')
 
 require('paq'):setup { verbose = true } {
   'savq/paq-nvim',
@@ -129,48 +125,11 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
--- Configure fugitive.
-map('n', '<Leader>gb', [[:Git blame<CR>]])
-map('n', '<Leader>gd', [[:Gdiff<CR>]])
-
 -- Configure vim-test.
 vim.g['test#strategy'] = 'neovim'
 vim.g['test#neovim#term_position'] = 'botright 15'
-map('n', '<Leader>rc', [[:noautocmd update | :TestFile<CR>]])
-map('n', '<Leader>rt', [[:noautocmd update | :TestNearest<CR>]])
-map('n', '<Leader>rr', [[:noautocmd update | :TestLast<CR>]])
 
--- Enable search highlight when searching for symbols.
-map('n', '*', [[:setlocal hlsearch | :normal! *<CR>]])
-map('n', '#', [[:setlocal hlsearch | :normal! #<CR>]])
-map('n', 'g*', [[:setlocal hlsearch | :normal! g*<CR>]])
-map('n', 'g#', [[:setlocal hlsearch | :normal! g#<CR>]])
-
--- Toggle search highlight.
-map('n', '\\', [[:setlocal hlsearch!<CR>]])
-
--- Up and down by visible lines (except in quickfix and location list).
-vim.keymap.set('n', 'j', [[v:count == 0 && &ft != 'qf' ? 'gj' : 'j']], { silent = true, expr = true })
-vim.keymap.set('n', 'k', [[v:count == 0 && &ft != 'qf' ? 'gk' : 'k']], { silent = true, expr = true })
-
--- Paragraph motions do not change jumplist.
-map('n', '}', [[:keepjumps normal! }<CR>]])
-map('n', '{', [[:keepjumps normal! {<CR>]])
-
--- Move through quickfix and location list.
-if vim.fn.has('nvim-0.11') == 0 then
-  map('n', ']q', [[:cnext<CR>]])
-  map('n', '[q', [[:cprevious<CR>]])
-  map('n', ']Q', [[:clast<CR>]])
-  map('n', '[Q', [[:cfirst<CR>]])
-  map('n', ']l', [[:lnext<CR>]])
-  map('n', '[l', [[:lprevious<CR>]])
-  map('n', ']L', [[:llast<CR>]])
-  map('n', '[L', [[:lfirst<CR>]])
-end
-
--- Make with auto-opened quickfix.
-map('n', '<Leader>m', [[:make %<CR>]])
+-- Auto open quickfix for make.
 vim.api.nvim_create_autocmd('QuickFixCmdPost', {
   pattern = 'make*',
   group = augroup,
@@ -178,11 +137,7 @@ vim.api.nvim_create_autocmd('QuickFixCmdPost', {
   command = [[cwindow]],
 })
 
--- Delete all buffers.
-map('n', '<Leader>da', [[:%bd<CR>]])
-
 -- Terminals.
-map('t', '<Esc>', [[<C-\><C-n>]])
 vim.api.nvim_create_autocmd('TermOpen', {
   pattern = '*',
   group = augroup,
@@ -194,11 +149,6 @@ vim.api.nvim_create_autocmd('TermOpen', {
     vim.opt_local.statusline = [[ %{b:term_title} ]]
   end,
 })
-
--- Path copy mappings.
-map('n', '<Leader>pc', [[:let @+ = expand('%:.')<CR>]])
-map('n', '<Leader>pC', [[:let @+ = expand('%:.') . ":" . line(".")<CR>]])
-map('n', '<Leader>Pc', [[:let @+ = expand('%:p:~')<CR>]])
 
 -- Yank highlighting.
 vim.api.nvim_create_autocmd('TextYankPost', {
