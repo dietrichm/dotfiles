@@ -10,9 +10,12 @@ vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 treesitter.setup {
   auto_install = true,
   ensure_installed = {
+    'css',
     'html',
+    'javascript',
     'markdown',
     'markdown_inline',
+    'yaml',
   },
   highlight = {
     enable = true,
