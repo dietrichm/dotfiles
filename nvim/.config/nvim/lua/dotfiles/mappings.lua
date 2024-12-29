@@ -1,7 +1,4 @@
-local function map(mode, lhs, rhs, opts)
-  opts = vim.tbl_extend('force', { silent = true }, opts or {})
-  vim.keymap.set(mode, lhs, rhs, opts)
-end
+local map = vim.keymap.set
 
 map('n', '#', [[:setlocal hlsearch | :normal! #<CR>]])
 map('n', '*', [[:setlocal hlsearch | :normal! *<CR>]])
@@ -21,8 +18,8 @@ map('n', 'g#', [[:setlocal hlsearch | :normal! g#<CR>]])
 map('n', 'g*', [[:setlocal hlsearch | :normal! g*<CR>]])
 map('n', 'j', [[v:count == 0 && &ft != 'qf' ? 'gj' : 'j']], { expr = true })
 map('n', 'k', [[v:count == 0 && &ft != 'qf' ? 'gk' : 'k']], { expr = true })
-map('n', '{', [[:keepjumps normal! {<CR>]])
-map('n', '}', [[:keepjumps normal! }<CR>]])
+map('n', '{', [[:keepjumps normal! {<CR>]], { silent = true })
+map('n', '}', [[:keepjumps normal! }<CR>]], { silent = true })
 map('t', '<Esc>', [[<C-\><C-n>]])
 
 if vim.fn.has('nvim-0.11') == 0 then

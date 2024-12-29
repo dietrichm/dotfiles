@@ -17,7 +17,7 @@ diagnostic.config({
   },
 })
 
-vim.keymap.set('n', '<Leader>q', diagnostic.setloclist, { silent = true })
+vim.keymap.set('n', '<Leader>q', diagnostic.setloclist)
 
 vim.api.nvim_create_autocmd('DiagnosticChanged', {
   group = vim.api.nvim_create_augroup('dotfiles_diagnostics', { clear = true }),

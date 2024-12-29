@@ -7,4 +7,4 @@ vim.cmd.iabbrev('<buffer>', '<expr>', 'ns', [[substitute(tr(expand('%:p:h'), '/'
 vim.cmd.iabbrev('<buffer>', '<expr>', 'cls', [[expand('%:t:r')]])
 vim.cmd.iabbrev('<buffer>', 'strict', [[declare(strict_types=1);]])
 
-vim.keymap.set('n', '<Leader>af', [[:PhpFields<CR>]], { buffer = true, silent = true })
+vim.keymap.set('n', '<Leader>af', [[:PhpFields<CR>]], { buffer = true })

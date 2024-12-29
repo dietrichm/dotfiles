@@ -30,4 +30,4 @@ oil.setup {
   },
 }
 
-vim.keymap.set('n', '-', oil.open, { silent = true })
+vim.keymap.set('n', '-', oil.open)

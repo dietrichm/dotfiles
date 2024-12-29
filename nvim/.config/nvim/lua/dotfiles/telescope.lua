@@ -65,9 +65,7 @@ telescope.setup {
 
 telescope.load_extension('fzf')
 
-local function map(mode, lhs, rhs)
-  vim.keymap.set(mode, lhs, rhs, { silent = true })
-end
+local map = vim.keymap.set
 
 map('n', '<Leader>o', builtin.find_files)
 map('n', '<Leader>O', function()

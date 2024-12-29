@@ -8,7 +8,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     local bufnr = args.buf
     local function map(mode, lhs, rhs)
-      vim.keymap.set(mode, lhs, rhs, { buffer = bufnr, silent = true })
+      vim.keymap.set(mode, lhs, rhs, { buffer = bufnr })
     end
     local telescope = require('telescope.builtin')
 
