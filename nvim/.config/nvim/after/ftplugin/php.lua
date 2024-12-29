@@ -5,6 +5,19 @@ vim.b.delimitMate_matchpairs = '(:),[:],{:}'
 
 vim.cmd.iabbrev('<buffer>', '<expr>', 'ns', [[substitute(tr(expand('%:p:h'), '/', '\'), '\v^.*\\\l[^\\]*\\?', '', '')]])
 vim.cmd.iabbrev('<buffer>', '<expr>', 'cls', [[expand('%:t:r')]])
-vim.cmd.iabbrev('<buffer>', 'strict', [[declare(strict_types=1);]])
+vim.cmd.iabbrev('<buffer>', 'strict', [[declare(strict_types=1)]])
 
 vim.keymap.set('n', '<Leader>af', [[:PhpFields<CR>]], { buffer = true })
+
+vim.api.nvim_create_user_command('PhpFile', function()
+  local content = [[<?php
+
+strict;
+
+namespace ns;
+
+class cls
+{
+}]]
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('i' .. content .. '<Esc>', true, false, true), 'm', false)
+end, {})
