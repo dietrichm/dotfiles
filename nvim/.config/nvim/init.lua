@@ -74,7 +74,6 @@ vim.opt.cursorlineopt = 'number'
 vim.opt.colorcolumn = { '+1' }
 vim.opt.guicursor:append('a:blinkon500-blinkoff500')
 vim.opt.guicursor:append('a:Cursor')
-vim.opt.mousescroll = 'ver:2'
 vim.opt.signcolumn = 'yes'
 
 -- Disable various standard plugins and providers.
