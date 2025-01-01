@@ -1,38 +1,33 @@
-local loaded, formatter = pcall(require, 'formatter')
+local loaded, conform = pcall(require, 'conform')
 if not loaded then
   return
 end
 
-formatter.setup {
-  filetype = {
+conform.setup {
+  formatters_by_ft = {
     go = {
-      require('formatter.filetypes.go').goimports,
+      'goimports',
     },
     php = {
-      require('formatter.filetypes.php').php_cs_fixer,
-      require('formatter.filetypes.php').pint,
+      'php_cs_fixer',
+      'pint',
     },
     javascript = {
-      require('formatter.filetypes.javascript').prettier,
+      'prettier',
     },
     lua = {
-      require('formatter.filetypes.lua').stylua,
+      'stylua',
     },
     python = {
-      require('formatter.filetypes.python').isort,
-      require('formatter.filetypes.python').black,
+      'isort',
+      'black',
     },
     typescript = {
-      require('formatter.filetypes.typescript').prettier,
+      'prettier',
     },
   },
+  format_on_save = {
+    lsp_format = 'fallback',
+    timeout_ms = 500,
+  },
 }
-
-vim.api.nvim_create_autocmd('BufWritePost', {
-  pattern = '*',
-  group = vim.api.nvim_create_augroup('dotfiles_formatters', { clear = true }),
-  desc = 'Run formatter on save',
-  callback = function()
-    vim.cmd.FormatWrite()
-  end,
-})

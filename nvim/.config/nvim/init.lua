@@ -30,7 +30,7 @@ require('paq'):setup { verbose = true } {
   'tpope/vim-surround',
   'alvan/vim-closetag',
   'justinmk/vim-sneak',
-  'mhartington/formatter.nvim',
+  'stevearc/conform.nvim',
   'Wansmer/treesj',
   'folke/zen-mode.nvim',
 
