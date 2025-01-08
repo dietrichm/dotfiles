@@ -8,6 +8,7 @@ set vertical-split = false
 
 # Behaviour.
 set ignore-case = smart-case
+set commit-order = default
 
 # Colours.
 color cursor black cyan
