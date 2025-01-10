@@ -25,16 +25,6 @@ cmp.setup {
       end
     end,
   }),
-  view = {
-    docs = {
-      auto_open = true,
-    },
-  },
-  snippet = {
-    expand = function(args)
-      vim.snippet.expand(args.body)
-    end,
-  },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
   }),
