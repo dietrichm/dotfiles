@@ -12,6 +12,9 @@ if vim.fn.has('nvim-0.11') == 1 then
 end
 
 cmp.setup {
+  completion = {
+    completeopt = vim.o.completeopt,
+  },
   mapping = cmp.mapping.preset.insert({
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<M-p>'] = function()
