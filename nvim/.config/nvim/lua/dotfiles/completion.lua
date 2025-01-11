@@ -17,13 +17,6 @@ cmp.setup {
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-Space>'] = cmp.mapping.complete(),
-    ['<M-p>'] = function()
-      if cmp.visible_docs() then
-        cmp.close_docs()
-      else
-        cmp.open_docs()
-      end
-    end,
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
