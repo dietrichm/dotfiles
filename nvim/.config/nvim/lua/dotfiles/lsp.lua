@@ -81,7 +81,7 @@ lspconfig.intelephense.setup {
           '**/vendor/**/{Tests,tests}/**',
           '**/.history/**',
           '**/vendor/**/vendor/**',
-          '**/var/cache/**',
+          '**/cache/**',
         },
       },
       references = {
