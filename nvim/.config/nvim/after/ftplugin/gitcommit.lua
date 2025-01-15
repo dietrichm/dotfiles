@@ -2,6 +2,7 @@
 
 vim.opt_local.spell = true
 vim.opt_local.list = false
+vim.b.editorconfig = false
 
 function GitBranchIdentifier()
   local branch_name = vim.fn.system({ 'git', 'rev-parse', '--abbrev-ref', 'HEAD' })
