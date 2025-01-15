@@ -25,6 +25,9 @@ conform.setup {
     typescript = {
       'prettier',
     },
+    typescriptreact = {
+      'prettier',
+    },
   },
   format_on_save = {
     lsp_format = 'fallback',
