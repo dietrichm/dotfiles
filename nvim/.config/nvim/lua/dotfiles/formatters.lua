@@ -9,8 +9,9 @@ conform.setup {
       'goimports',
     },
     php = {
-      'php_cs_fixer',
       'pint',
+      'php_cs_fixer',
+      stop_after_first = true,
     },
     javascript = {
       'prettier',
