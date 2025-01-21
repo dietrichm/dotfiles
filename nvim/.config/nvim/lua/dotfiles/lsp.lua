@@ -36,6 +36,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
         callback = vim.lsp.buf.clear_references,
       })
     end)
+
+    vim.api.nvim_create_user_command('IntelephenseIndex', function()
+      vim.lsp.buf.execute_command({ command = 'intelephense.index.workspace' })
+    end, {})
   end,
 })
 
