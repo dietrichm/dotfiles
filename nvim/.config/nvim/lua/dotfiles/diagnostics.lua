@@ -14,6 +14,7 @@ diagnostic.config({
       min = diagnostic.severity.WARN,
     },
     prefix = '●',
+    virt_text_pos = vim.fn.has('nvim-0.11') == 1 and 'eol_right_align' or 'eol',
   },
 })
 
