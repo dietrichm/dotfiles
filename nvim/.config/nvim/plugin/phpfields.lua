@@ -14,7 +14,7 @@ local function applyFields()
     return
   end
 
-  local params = vim.lsp.util.make_position_params()
+  local params = vim.lsp.util.make_position_params(0, 'utf-16')
   vim.lsp.buf_request(0, 'textDocument/signatureHelp', params, function(_, result)
     if not result or not result.signatures then
       vim.notify('No signature found to apply PHP fields.', vim.log.levels.ERROR)
