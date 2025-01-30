@@ -15,7 +15,7 @@ declare(strict_types=1);
 
 namespace ns;
 
-class cls
+final class cls
 {
 }]]
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('i' .. content .. '<Esc>', true, false, true), 'm', false)
