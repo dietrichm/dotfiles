@@ -116,6 +116,7 @@ lspconfig.lua_ls.setup {
       },
       hint = {
         enable = true,
+        arrayIndex = 'Disable',
       },
       workspace = {
         library = vim.api.nvim_get_runtime_file('', true),
