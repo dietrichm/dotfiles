@@ -6,7 +6,9 @@ end
 conform.setup {
   formatters_by_ft = {
     go = {
-      'goimports',
+      'gofumpt',
+      'gofmt',
+      stop_after_first = true,
     },
     php = {
       'pint',
