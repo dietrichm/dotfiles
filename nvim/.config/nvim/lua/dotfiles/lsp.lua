@@ -3,6 +3,8 @@ if not loaded then
   return
 end
 
+vim.lsp.inlay_hint.enable(true)
+
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('dotfiles_lsp', { clear = true }),
   callback = function(args)
@@ -35,6 +37,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
         once = true,
         callback = vim.lsp.buf.clear_references,
       })
+    end)
+
+    map('n', '<Leader>ih', function()
+      vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
     end)
   end,
 })
