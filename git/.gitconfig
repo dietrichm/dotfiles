@@ -30,7 +30,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
-	pager = less -RFX
+	pager = delta
 	autocrlf = input
 [color]
 	ui = true
@@ -55,11 +55,6 @@
 	showIncludeUntracked = true
 [init]
 	defaultBranch = main
-[pager]
-	diff = delta
-	log = delta
-	reflog = delta
-	show = delta
 [delta]
 	color-only = true
 [interactive]
