@@ -78,10 +78,6 @@ lspconfig.intelephense.setup {
       files = {
         exclude = {
           '**/.git/**',
-          '**/.svn/**',
-          '**/.hg/**',
-          '**/CVS/**',
-          '**/.DS_Store/**',
           '**/node_modules/**',
           '**/bower_components/**',
           '**/vendor/**/{Tests,tests}/**',
