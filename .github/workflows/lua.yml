@@ -27,4 +27,4 @@ jobs:
         chmod u+x stylua
     - name: Lint Lua files
       run: |
-        PATH="$PATH:." make lint-lua
+        PATH="$PATH:." make lint
