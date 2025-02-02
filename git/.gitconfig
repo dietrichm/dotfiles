@@ -57,6 +57,8 @@
 	defaultBranch = main
 [delta]
 	color-only = true
+	plus-style = syntax midnightblue
+	plus-emph-style = syntax blue
 [interactive]
 	diffFilter = delta
 [advice]
