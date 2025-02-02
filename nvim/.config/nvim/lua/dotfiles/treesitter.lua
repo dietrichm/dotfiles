@@ -71,5 +71,6 @@ vim.keymap.set('n', '<Leader>x', treesj.toggle)
 
 require('treesitter-context').setup {
   enable = false,
-  multiline_threshold = 7,
+  max_lines = 5,
+  multiline_threshold = 1,
 }
