@@ -34,6 +34,8 @@
 	autocrlf = input
 [color]
 	ui = true
+[color "diff"]
+	new = cyan
 [commit]
 	verbose = true
 	gpgsign = true
