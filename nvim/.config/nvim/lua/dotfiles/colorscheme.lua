@@ -19,6 +19,8 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.cmd.highlight { 'TreesitterContextBottom', 'gui=underline', 'guisp=NvimDarkGrey4' }
     vim.cmd.highlight { '@comment', 'guifg=NvimLightGrey4', 'gui=italic' }
     vim.cmd.highlight { 'link', 'LspInlayHint', '@comment' }
+    vim.cmd.highlight { 'Added', 'guifg=NvimLightBlue' }
+    vim.cmd.highlight { 'Changed', 'guifg=NvimLightYellow' }
   end,
 })
 
