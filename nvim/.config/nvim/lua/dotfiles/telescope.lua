@@ -60,6 +60,9 @@ telescope.setup {
       show_line = true,
       ignore_symbols = { 'variable', 'property' },
     },
+    git_status = {
+      previewer = true,
+    },
   },
 }
 
