@@ -25,6 +25,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map('n', '<Leader>rn', vim.lsp.buf.rename)
     map('n', '<Leader>lf', vim.lsp.buf.format)
 
+    if vim.fn.has('nvim-0.11') == 0 then
+      -- Nvim 0.11 defaults.
+      map('n', 'grn', vim.lsp.buf.rename)
+      map({ 'n', 'v' }, 'gra', vim.lsp.buf.code_action)
+      map('n', 'grr', telescope.lsp_references)
+      map('n', 'gri', telescope.lsp_implementations)
+      map('n', 'gO', telescope.lsp_document_symbols)
+    end
+
     map('n', 'K', function()
       vim.fn['sneak#cancel']()
       vim.lsp.buf.hover()
