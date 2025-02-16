@@ -1,4 +1,5 @@
 require('dotfiles.colorscheme')
+require('dotfiles.editing')
 require('dotfiles.diagnostics')
 require('dotfiles.lsp')
 require('dotfiles.completion')

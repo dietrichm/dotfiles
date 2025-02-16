@@ -4,6 +4,7 @@ local augroup = vim.api.nvim_create_augroup('dotfiles_init', { clear = true })
 vim.g.mapleader = ' '
 
 require('paq'):setup { verbose = true } {
+  'echasnovski/mini.nvim',
   'folke/zen-mode.nvim',
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-nvim-lsp',
