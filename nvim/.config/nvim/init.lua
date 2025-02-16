@@ -1,4 +1,3 @@
-local kitty_config = vim.fn.expand('$MY_CONFIG_ROOT/kitty/.config/kitty')
 local augroup = vim.api.nvim_create_augroup('dotfiles_init', { clear = true })
 
 vim.g.mapleader = ' '
@@ -9,7 +8,7 @@ require('paq'):setup { verbose = true } {
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-nvim-lsp',
   'justinmk/vim-sneak',
-  { 'knubie/vim-kitty-navigator', build = 'cp pass_keys.py get_layout.py ' .. kitty_config },
+  { 'knubie/vim-kitty-navigator', build = 'cp pass_keys.py get_layout.py ' .. vim.fn.expand('$HOME/.config/kitty') },
   'lewis6991/gitsigns.nvim',
   'neovim/nvim-lspconfig',
   'nvim-lua/plenary.nvim',
