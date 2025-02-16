@@ -12,23 +12,18 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
     local telescope = require('telescope.builtin')
 
-    map('n', 'gD', vim.lsp.buf.declaration)
-    map('n', '<Leader>si', telescope.lsp_implementations)
-    map('n', '<Leader>sr', telescope.lsp_references)
-    map('n', '<Leader>st', telescope.lsp_type_definitions)
-    map('n', '<Leader>tb', telescope.lsp_document_symbols)
-    map({ 'n', 'v' }, '<Leader>ca', vim.lsp.buf.code_action)
-    map({ 'n', 'i' }, '<C-S>', vim.lsp.buf.signature_help)
-    map('n', '<Leader>rn', vim.lsp.buf.rename)
+    map('n', 'gd', vim.lsp.buf.declaration)
+    map('n', 'gri', telescope.lsp_implementations)
+    map('n', 'grr', telescope.lsp_references)
+    map('n', 'gD', telescope.lsp_type_definitions)
+    map('n', 'gO', telescope.lsp_document_symbols)
+    map('n', '<C-S>', vim.lsp.buf.signature_help)
 
     if vim.fn.has('nvim-0.11') == 0 then
       map('n', 'grn', vim.lsp.buf.rename)
       map({ 'n', 'v' }, 'gra', vim.lsp.buf.code_action)
+      map('i', '<C-S>', vim.lsp.buf.signature_help)
     end
-
-    map('n', 'grr', telescope.lsp_references)
-    map('n', 'gri', telescope.lsp_implementations)
-    map('n', 'gO', telescope.lsp_document_symbols)
 
     map('n', '+', function()
       vim.lsp.buf.document_highlight()
