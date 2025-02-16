@@ -26,9 +26,7 @@ require('paq'):setup { verbose = true } {
   },
   'nvim-treesitter/nvim-treesitter-textobjects',
   'nvim-treesitter/nvim-treesitter-context',
-  'Raimondi/delimitMate',
   'tpope/vim-surround',
-  'alvan/vim-closetag',
   'justinmk/vim-sneak',
   'stevearc/conform.nvim',
   'Wansmer/treesj',
@@ -90,40 +88,6 @@ vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
-
--- Configure vim-closetag.
-vim.g.closetag_filetypes = 'html,xhtml,phtml,blade,twig'
-
--- Configure delimitMate.
-vim.g.delimitMate_excluded_ft = 'TelescopePrompt'
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = vim.g.closetag_filetypes,
-  group = augroup,
-  callback = function()
-    -- Remove angled brackets.
-    vim.b.delimitMate_matchpairs = '(:),[:],{:}'
-  end,
-})
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = {
-    'css',
-    'go',
-    'javascript',
-    'json',
-    'lua',
-    'php',
-    'python',
-    'scss',
-    'sh',
-    'twig',
-    'typescript',
-  },
-  group = augroup,
-  callback = function()
-    vim.b.delimitMate_expand_space = 1
-    vim.b.delimitMate_expand_cr = 1
-  end,
-})
 
 -- Configure vim-test.
 vim.g['test#strategy'] = 'neovim'
