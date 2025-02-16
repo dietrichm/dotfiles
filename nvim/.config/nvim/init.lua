@@ -26,6 +26,7 @@ require('paq'):setup { verbose = true } {
   'tpope/vim-surround',
   'vim-test/vim-test',
   'Wansmer/treesj',
+  'windwp/nvim-ts-autotag',
 }
 -- Sort in {...} selection using :sort /[a-z-\/]\+/ ri.
 
