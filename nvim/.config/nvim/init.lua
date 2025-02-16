@@ -1,49 +1,32 @@
+local kitty_config = vim.fn.expand('$MY_CONFIG_ROOT/kitty/.config/kitty')
 local augroup = vim.api.nvim_create_augroup('dotfiles_init', { clear = true })
 
 vim.g.mapleader = ' '
 
 require('paq'):setup { verbose = true } {
-  'savq/paq-nvim',
-
-  -- Tools.
-  'nvim-telescope/telescope.nvim',
-  {
-    'nvim-telescope/telescope-fzf-native.nvim',
-    build = 'make',
-  },
-  'stevearc/oil.nvim',
-  'nvim-lua/plenary.nvim',
-  {
-    'knubie/vim-kitty-navigator',
-    build = 'cp pass_keys.py get_layout.py ' .. vim.fn.expand('$MY_CONFIG_ROOT/kitty/.config/kitty'),
-  },
-
-  -- Editing.
-  'neovim/nvim-lspconfig',
-  {
-    'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
-  },
-  'nvim-treesitter/nvim-treesitter-textobjects',
-  'nvim-treesitter/nvim-treesitter-context',
-  'tpope/vim-surround',
-  'justinmk/vim-sneak',
-  'stevearc/conform.nvim',
-  'Wansmer/treesj',
   'folke/zen-mode.nvim',
-
-  -- Completion.
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-nvim-lsp',
-
-  -- Git.
-  'tpope/vim-fugitive',
+  'justinmk/vim-sneak',
+  { 'knubie/vim-kitty-navigator', build = 'cp pass_keys.py get_layout.py ' .. kitty_config },
   'lewis6991/gitsigns.nvim',
-
-  -- Development.
-  'vim-test/vim-test',
+  'neovim/nvim-lspconfig',
+  'nvim-lua/plenary.nvim',
+  'nvim-telescope/telescope.nvim',
+  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+  'nvim-treesitter/nvim-treesitter-context',
+  'nvim-treesitter/nvim-treesitter-textobjects',
+  'savq/paq-nvim',
+  'stevearc/conform.nvim',
+  'stevearc/oil.nvim',
   'ThePrimeagen/refactoring.nvim',
+  'tpope/vim-fugitive',
+  'tpope/vim-surround',
+  'vim-test/vim-test',
+  'Wansmer/treesj',
 }
+-- Sort in {...} selection using :sort /[a-z-\/]\+/ ri.
 
 -- Options.
 vim.opt.scrolloff = 2
