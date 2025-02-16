@@ -3,8 +3,6 @@ if not loaded then
   return
 end
 
-vim.lsp.inlay_hint.enable(true)
-
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('dotfiles_lsp', { clear = true }),
   callback = function(args)
