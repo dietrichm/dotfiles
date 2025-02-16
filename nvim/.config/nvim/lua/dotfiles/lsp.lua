@@ -21,7 +21,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map({ 'n', 'v' }, '<Leader>ca', vim.lsp.buf.code_action)
     map({ 'n', 'i' }, '<C-S>', vim.lsp.buf.signature_help)
     map('n', '<Leader>rn', vim.lsp.buf.rename)
-    map('n', '<Leader>lf', vim.lsp.buf.format)
 
     if vim.fn.has('nvim-0.11') == 0 then
       map('n', 'grn', vim.lsp.buf.rename)
