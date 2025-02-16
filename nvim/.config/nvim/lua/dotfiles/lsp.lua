@@ -32,11 +32,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map('n', 'gri', telescope.lsp_implementations)
     map('n', 'gO', telescope.lsp_document_symbols)
 
-    map('n', 'K', function()
-      vim.fn['sneak#cancel']()
-      vim.lsp.buf.hover()
-    end)
-
     map('n', '+', function()
       vim.lsp.buf.document_highlight()
       vim.api.nvim_create_autocmd('CursorMoved', {
