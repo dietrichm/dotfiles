@@ -1,5 +1,6 @@
 local map = vim.keymap.set
 
+map('i', '<S-Tab>', '<Right>')
 map('n', '#', [[:setlocal hlsearch | :normal! #<CR>]])
 map('n', '*', [[:setlocal hlsearch | :normal! *<CR>]])
 map('n', '<Leader>da', [[:%bd<CR>]])
