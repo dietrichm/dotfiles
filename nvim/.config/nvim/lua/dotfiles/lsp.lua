@@ -12,7 +12,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
     local telescope = require('telescope.builtin')
 
-    map('n', 'gd', telescope.lsp_definitions)
     map('n', 'gD', vim.lsp.buf.declaration)
     map('n', '<Leader>si', telescope.lsp_implementations)
     map('n', '<Leader>sr', telescope.lsp_references)
