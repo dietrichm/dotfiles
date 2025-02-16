@@ -75,4 +75,8 @@ require('treesitter-context').setup {
   multiline_threshold = 1,
 }
 
-require('nvim-ts-autotag').setup()
+require('nvim-ts-autotag').setup {
+  aliases = {
+    gotmpl = 'html',
+  },
+}
