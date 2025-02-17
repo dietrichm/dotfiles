@@ -11,3 +11,7 @@ max_line_length = 120
 
 [Makefile]
 indent_style = tab
+
+[*.zsh]
+indent_style = space
+indent_size = 4
