@@ -16,6 +16,7 @@ diagnostic.config({
     prefix = '●',
     virt_text_pos = vim.fn.has('nvim-0.11') == 1 and 'eol_right_align' or 'eol',
   },
+  severity_sort = true,
 })
 
 vim.keymap.set('n', '<Leader>q', diagnostic.setloclist)
