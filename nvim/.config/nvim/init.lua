@@ -86,17 +86,16 @@ vim.api.nvim_create_autocmd('QuickFixCmdPost', {
 })
 
 -- Terminals.
-vim.api.nvim_create_autocmd('TermOpen', {
-  pattern = '*',
-  group = augroup,
-  callback = function()
-    if vim.fn.has('nvim-0.11') == 0 then
+if vim.fn.has('nvim-0.11') == 0 then
+  vim.api.nvim_create_autocmd('TermOpen', {
+    pattern = '*',
+    group = augroup,
+    callback = function()
       vim.opt_local.number = false
       vim.opt_local.signcolumn = 'auto'
-    end
-    vim.opt_local.statusline = [[ %{b:term_title} ]]
-  end,
-})
+    end,
+  })
+end
 
 -- Yank highlighting.
 vim.api.nvim_create_autocmd('TextYankPost', {
