@@ -126,4 +126,5 @@ lspconfig.marksman.setup {
 
 lspconfig.tailwindcss.setup {
   capabilities = capabilities,
+  autostart = false,
 }
