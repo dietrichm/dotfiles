@@ -57,7 +57,6 @@ vim.opt.colorcolumn = { '+1' }
 vim.opt.guicursor:append('a:blinkon500-blinkoff500')
 vim.opt.guicursor:append('a:Cursor')
 vim.opt.signcolumn = 'yes'
-vim.opt.whichwrap:append(']')
 
 -- Disable various standard plugins and providers.
 vim.g.loaded_fzf = 1
