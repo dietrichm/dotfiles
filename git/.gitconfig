@@ -43,9 +43,6 @@
 	prune = true
 [merge]
 	conflictStyle = zdiff3
-	tool = nfugitive
-[mergetool "nfugitive"]
-	cmd = nvim -c "Gvdiffsplit!" "$MERGED"
 [diff]
 	tool = nvimdiff
 [difftool "nvimdiff"]

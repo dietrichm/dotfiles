@@ -19,6 +19,9 @@ gitsigns.setup {
       vim.keymap.set(mode, lhs, rhs, { buffer = bufnr })
     end
 
+    map('n', '<Leader>gb', gitsigns.blame)
+    map('n', '<Leader>gd', gitsigns.diffthis)
+
     map('n', ']c', function()
       if vim.wo.diff then
         vim.cmd.normal({ ']c', bang = true })

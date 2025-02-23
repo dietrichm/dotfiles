@@ -21,7 +21,6 @@ require('paq'):setup { verbose = true } {
   'stevearc/conform.nvim',
   'stevearc/oil.nvim',
   'ThePrimeagen/refactoring.nvim',
-  'tpope/vim-fugitive',
   'tpope/vim-surround',
   'vim-test/vim-test',
   'Wansmer/treesj',
