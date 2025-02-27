@@ -4,18 +4,19 @@ vim.opt.pumwidth = 20
 
 if vim.fn.has('nvim-0.11') == 1 then
   vim.opt.completeopt:append('fuzzy')
+end
 
-  -- vim.api.nvim_create_autocmd('LspAttach', {
-  --   group = vim.api.nvim_create_augroup('dotfiles_completion', { clear = true }),
-  --   callback = function(args)
-  --     local client_id = args.data.client_id
-  --     local bufnr = args.buf
-  --     vim.lsp.completion.enable(true, client_id, bufnr, { autotrigger = true })
-  --     vim.keymap.set('i', '<C-Space>', vim.lsp.completion.trigger, { buffer = bufnr })
-  --   end,
-  -- })
-  --
-  -- return
+if vim.env.NVIM_COMPLETION == '1' then
+  vim.api.nvim_create_autocmd('LspAttach', {
+    group = vim.api.nvim_create_augroup('dotfiles_completion', { clear = true }),
+    callback = function(args)
+      local client_id = args.data.client_id
+      local bufnr = args.buf
+      vim.lsp.completion.enable(true, client_id, bufnr, { autotrigger = true })
+      vim.keymap.set('i', '<C-Space>', vim.lsp.completion.trigger, { buffer = bufnr })
+    end,
+  })
+  return
 end
 
 local loaded, cmp = pcall(require, 'cmp')
