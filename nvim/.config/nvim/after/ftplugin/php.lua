@@ -7,7 +7,7 @@ vim.cmd.iabbrev('<buffer>', '<expr>', 'cls', [[expand('%:t:r')]])
 
 vim.keymap.set('n', '<Leader>af', [[:PhpFields<CR>]], { buffer = true })
 
-vim.api.nvim_create_user_command('PhpFile', function()
+vim.api.nvim_buf_create_user_command(0, 'PhpFile', function()
   local content = [[<?php
 
 declare(strict_types=1);
