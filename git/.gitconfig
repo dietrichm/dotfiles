@@ -66,5 +66,7 @@
 	skippedCherryPicks = false
 [tag]
 	gpgSign = true
+[branch]
+	sort = -committerdate
 [include]
 	path = local.inc
