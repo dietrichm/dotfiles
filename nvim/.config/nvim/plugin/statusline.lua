@@ -38,18 +38,23 @@ local function diagnostic()
 end
 
 function MyStatusLine()
-  return table.concat({
-    ' ',
-    name(),
-    '%m',
-    '%r',
-    '%=',
-    diagnostic(),
-    ' ',
-    '%y',
-    spell(),
-    ' ',
-  })
+  return table
+    .concat({
+      ' ',
+      name(),
+      '%m',
+      '%r',
+      '%=',
+      ---@diagnostic disable-next-line: undefined-field
+      vim.b.gitsigns_status or '',
+      ' ',
+      diagnostic(),
+      ' ',
+      '%y',
+      spell(),
+      ' ',
+    })
+    :gsub('%s+', ' ')
 end
 
 vim.o.statusline = [[%{%v:lua.MyStatusLine()%}]]
