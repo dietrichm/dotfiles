@@ -1,4 +1,4 @@
--- luacheck: globals GitBranchIdentifier
+-- luacheck: globals GitBranchIdentifier GitCachedFiles
 
 vim.opt_local.spell = true
 vim.opt_local.list = false
@@ -15,4 +15,19 @@ function GitBranchIdentifier()
   return branch_name:sub(match_start + 1, match_end)
 end
 
+function GitCachedFiles()
+  local output = vim.fn.system({ 'git', 'diff', '--cached', '--name-only' })
+  local filenames = vim.iter(vim.split(output:gsub('\n$', ''), '\n'))
+
+  return filenames
+    :map(function(filename)
+      return vim.fn.fnamemodify(filename, ':t')
+    end)
+    :map(function(filename)
+      return string.format('`%s`', filename)
+    end)
+    :join(' and ')
+end
+
 vim.cmd.iabbrev('<buffer>', '<expr>', 'bri', [[v:lua.GitBranchIdentifier()]])
+vim.cmd.iabbrev('<buffer>', '<expr>', 'cfs', [[v:lua.GitCachedFiles()]])
