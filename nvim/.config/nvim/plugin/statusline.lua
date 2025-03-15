@@ -3,11 +3,11 @@
 local function name()
   local filename = vim.fn.expand('%:~:.')
 
-  if string.len(filename) == 0 then
+  if filename:len() == 0 then
     return '%f'
   end
 
-  return string.gsub(filename, '%%', '%%%%')
+  return filename:gsub('%%', '%%%%')
 end
 
 local function spell()

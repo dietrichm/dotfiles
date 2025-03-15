@@ -12,7 +12,7 @@ function GitBranchIdentifier()
     return '?'
   end
 
-  return string.sub(branch_name, match_start + 1, match_end)
+  return branch_name:sub(match_start + 1, match_end)
 end
 
 vim.cmd.iabbrev('<buffer>', '<expr>', 'bri', [[v:lua.GitBranchIdentifier()]])

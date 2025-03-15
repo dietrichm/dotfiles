@@ -24,7 +24,7 @@ function PhpFields()
     end
 
     local label = result.signatures[1].label
-    local fields = vim.iter(string.gmatch(label, '$([^ ,)]+)')):take(argumentCount)
+    local fields = vim.iter(label:gmatch('$([^ ,)]+)')):take(argumentCount)
     vim.api.nvim_win_set_cursor(0, { startPosition + 1, 0 })
 
     fields:each(function(field)
