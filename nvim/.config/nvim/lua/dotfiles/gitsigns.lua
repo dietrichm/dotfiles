@@ -41,3 +41,11 @@ gitsigns.setup {
     vim.api.nvim_buf_create_user_command(0, 'Greset', gitsigns.reset_buffer, {})
   end,
 }
+
+vim.api.nvim_create_autocmd('User', {
+  group = vim.api.nvim_create_augroup('dotfiles_gitsigns', { clear = true }),
+  pattern = 'GitSignsUpdate',
+  callback = function()
+    vim.schedule(vim.cmd.redrawstatus)
+  end,
+})
