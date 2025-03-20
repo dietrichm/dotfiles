@@ -13,7 +13,7 @@ if vim.fn.has('nvim-0.11') == 1 and vim.env.NVIM_COMPLETION == '1' then
       local client_id = args.data.client_id
       local bufnr = args.buf
       vim.lsp.completion.enable(true, client_id, bufnr, { autotrigger = true })
-      vim.keymap.set('i', '<C-Space>', vim.lsp.completion.trigger, { buffer = bufnr })
+      vim.keymap.set('i', '<C-Space>', vim.lsp.completion.get, { buffer = bufnr })
     end,
   })
   return
