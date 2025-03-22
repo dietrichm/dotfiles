@@ -19,7 +19,8 @@ gitsigns.setup {
       vim.keymap.set(mode, lhs, rhs, { buffer = bufnr })
     end
 
-    map('n', '<Leader>gb', gitsigns.blame)
+    map('n', '<Leader>gb', gitsigns.blame_line)
+    map('n', '<Leader>gB', gitsigns.blame)
     map('n', '<Leader>gd', gitsigns.diffthis)
 
     map('n', ']c', function()

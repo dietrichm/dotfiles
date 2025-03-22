@@ -67,7 +67,8 @@ treesj.setup {
   max_join_length = 200,
 }
 
-vim.keymap.set('n', '<Leader>x', treesj.toggle)
+vim.keymap.set('n', 'grj', treesj.join)
+vim.keymap.set('n', 'grs', treesj.split)
 
 require('treesitter-context').setup {
   enable = false,
