@@ -23,6 +23,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.cmd.highlight { 'link', 'LspInlayHint', '@comment' }
     vim.cmd.highlight { 'Added', 'guifg=NvimLightBlue' }
     vim.cmd.highlight { 'Changed', 'guifg=NvimLightYellow' }
+    vim.cmd.highlight { 'FloatBorder', 'guifg=NvimDarkGrey4' }
   end,
 })
 
