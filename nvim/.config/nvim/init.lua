@@ -58,10 +58,6 @@ vim.opt.guicursor:append('a:blinkon500-blinkoff500')
 vim.opt.guicursor:append('a:Cursor')
 vim.opt.signcolumn = 'yes'
 
-if vim.fn.has('nvim-0.11') == 1 then
-  vim.opt.winborder = 'single'
-end
-
 -- Disable various standard plugins and providers.
 vim.g.loaded_fzf = 1
 vim.g.loaded_gzip = 1
