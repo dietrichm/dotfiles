@@ -22,14 +22,3 @@ map('n', 'k', [[v:count == 0 && &ft != 'qf' ? 'gk' : 'k']], { expr = true })
 map('n', '{', [[:keepjumps normal! {<CR>]], { silent = true })
 map('n', '}', [[:keepjumps normal! }<CR>]], { silent = true })
 map('t', '<Esc>', [[<C-\><C-n>]])
-
-if vim.fn.has('nvim-0.11') == 0 then
-  map('n', '[L', [[:lfirst<CR>]])
-  map('n', '[l', [[:lprevious<CR>]])
-  map('n', '[Q', [[:cfirst<CR>]])
-  map('n', '[q', [[:cprevious<CR>]])
-  map('n', ']L', [[:llast<CR>]])
-  map('n', ']l', [[:lnext<CR>]])
-  map('n', ']Q', [[:clast<CR>]])
-  map('n', ']q', [[:cnext<CR>]])
-end

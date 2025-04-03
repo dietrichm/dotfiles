@@ -1,19 +1,5 @@
 local diagnostic = vim.diagnostic
 
-local virtual_text = {
-  severity = {
-    min = diagnostic.severity.WARN,
-  },
-  prefix = '●',
-}
-
-if vim.fn.has('nvim-0.11') == 1 then
-  virtual_text = {
-    current_line = true,
-    prefix = '●',
-  }
-end
-
 diagnostic.config({
   signs = {
     text = {
@@ -23,7 +9,10 @@ diagnostic.config({
       [diagnostic.severity.HINT] = '💭',
     },
   },
-  virtual_text = virtual_text,
+  virtual_text = {
+    current_line = true,
+    prefix = '●',
+  },
   severity_sort = true,
 })
 

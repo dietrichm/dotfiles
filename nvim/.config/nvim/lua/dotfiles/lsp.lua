@@ -19,12 +19,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map('n', 'gO', telescope.lsp_document_symbols)
     map('n', '<C-S>', vim.lsp.buf.signature_help)
 
-    if vim.fn.has('nvim-0.11') == 0 then
-      map('n', 'grn', vim.lsp.buf.rename)
-      map({ 'n', 'v' }, 'gra', vim.lsp.buf.code_action)
-      map('i', '<C-S>', vim.lsp.buf.signature_help)
-    end
-
     map('n', '+', function()
       vim.lsp.buf.document_highlight()
       vim.api.nvim_create_autocmd('CursorMoved', {
@@ -39,12 +33,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end)
   end,
 })
-
-if vim.fn.has('nvim-0.11') == 0 then
-  vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
-    silent = true,
-  })
-end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
