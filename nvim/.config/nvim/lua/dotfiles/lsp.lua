@@ -17,7 +17,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map('n', 'grr', telescope.lsp_references)
     map('n', 'gD', telescope.lsp_type_definitions)
     map('n', 'gO', telescope.lsp_document_symbols)
-    map('n', '<C-S>', vim.lsp.buf.signature_help)
+
+    map({ 'i', 'n' }, '<C-S>', function()
+      vim.lsp.buf.signature_help { border = 'single' }
+    end)
+
+    map('n', 'K', function()
+      vim.lsp.buf.hover { border = 'single' }
+    end)
 
     map('n', '+', function()
       vim.lsp.buf.document_highlight()
