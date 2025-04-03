@@ -32,8 +32,18 @@ conform.setup {
       'prettier',
     },
   },
-  format_on_save = {
-    lsp_format = 'fallback',
-    timeout_ms = 1500,
-  },
+  format_on_save = function(bufnr)
+    if not vim.bo[bufnr].modifiable then
+      return
+    end
+
+    if vim.bo[bufnr].readonly then
+      return
+    end
+
+    return {
+      lsp_format = 'fallback',
+      timeout_ms = 1500,
+    }
+  end,
 }
