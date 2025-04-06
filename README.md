@@ -30,6 +30,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
  * `nvim`
      * [ripgrep](https://github.com/BurntSushi/ripgrep)
      * [Language servers](#language-servers-lsp) depending on the desired languages
+     * [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
 
 ## Installation
 
