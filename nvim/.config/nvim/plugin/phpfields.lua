@@ -1,10 +1,8 @@
--- luacheck: globals PhpFields
-
 local function feedkeys(keys)
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(keys, true, false, true), 'm', false)
 end
 
-function PhpFields()
+function _G.PhpFields()
   ---@diagnostic disable-next-line: redundant-parameter
   local startPosition = vim.fn.searchpair('(', '', ')', 'nb')
   ---@diagnostic disable-next-line: redundant-parameter

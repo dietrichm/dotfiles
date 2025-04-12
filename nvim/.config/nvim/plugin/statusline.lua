@@ -1,5 +1,3 @@
--- luacheck: globals MyStatusLine
-
 local function name()
   local filename = vim.fn.expand('%:~:.')
 
@@ -37,7 +35,7 @@ local function diagnostic()
   return table.concat(items, ' ')
 end
 
-function MyStatusLine()
+function _G.MyStatusLine()
   return table
     .concat({
       ' ',

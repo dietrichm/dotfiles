@@ -1,6 +1,4 @@
--- luacheck: globals GoMockgen
-
-function GoMockgen()
+function _G.GoMockgen()
   return string.format(
     '//go:generate go run github.com/golang/mock/mockgen -source %s -destination %s -package %s',
     vim.fn.expand('%:t'),
