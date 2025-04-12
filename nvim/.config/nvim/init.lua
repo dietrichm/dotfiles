@@ -59,15 +59,8 @@ vim.opt.guicursor:append('a:Cursor')
 vim.opt.signcolumn = 'yes'
 vim.opt.cpoptions:append({ Z = true })
 
--- Disable various standard plugins and providers.
+-- Disable some plugins and providers.
 vim.g.loaded_fzf = 1
-vim.g.loaded_gzip = 1
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-vim.g.loaded_tar = 1
-vim.g.loaded_tarPlugin = 1
-vim.g.loaded_zip = 1
-vim.g.loaded_zipPlugin = 1
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_python3_provider = 0
