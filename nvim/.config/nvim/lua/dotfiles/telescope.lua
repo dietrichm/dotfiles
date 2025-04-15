@@ -83,8 +83,6 @@ map('n', '<Leader>sw', function()
   builtin.grep_string({ word_match = '-w' })
 end)
 map('n', '<Leader>sg', builtin.live_grep)
-map('n', '<Leader>tb', builtin.current_buffer_tags)
-map('n', '<Leader>ts', builtin.tagstack)
 map('n', '<Leader>gs', builtin.git_status)
 map('n', '<Leader>tr', builtin.resume)
 
