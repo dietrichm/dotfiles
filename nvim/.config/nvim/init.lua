@@ -8,7 +8,7 @@ require('paq'):setup { verbose = true } {
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-nvim-lsp',
   'justinmk/vim-sneak',
-  { 'knubie/vim-kitty-navigator', build = 'cp pass_keys.py get_layout.py ' .. vim.fn.expand('$HOME/.config/kitty') },
+  { 'knubie/vim-kitty-navigator', build = 'cp pass_keys.py get_layout.py ' .. vim.fs.normalize('$HOME/.config/kitty') },
   'lewis6991/gitsigns.nvim',
   'neovim/nvim-lspconfig',
   'nvim-lua/plenary.nvim',
@@ -38,7 +38,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.linebreak = true
 vim.opt.title = true
-vim.opt.titlestring = 'nvim ' .. vim.fn.substitute(vim.env.PWD, '.*/', '', '')
+vim.opt.titlestring = 'nvim ' .. vim.fs.basename(vim.env.PWD)
 vim.opt.list = true
 vim.opt.listchars = {
   tab = '▏ ',
