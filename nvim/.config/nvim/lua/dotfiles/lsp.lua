@@ -38,6 +38,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map('n', '<Leader>ih', function()
       vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
     end)
+
+    map('n', '<Leader>u', function()
+      vim.lsp.buf.code_action {
+        context = {
+          only = { 'source.organizeImports' },
+        },
+        apply = true,
+      }
+    end)
   end,
 })
 
