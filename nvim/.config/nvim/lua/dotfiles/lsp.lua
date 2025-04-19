@@ -45,9 +45,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-if vim.env.NVIM_COMPLETION ~= '1' then
+local cmp_nvim_lsp_loaded, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+if vim.env.NVIM_COMPLETION ~= '1' and cmp_nvim_lsp_loaded then
   vim.lsp.config('*', {
-    capabilities = require('cmp_nvim_lsp').default_capabilities(),
+    capabilities = cmp_nvim_lsp.default_capabilities(),
   })
 end
 
