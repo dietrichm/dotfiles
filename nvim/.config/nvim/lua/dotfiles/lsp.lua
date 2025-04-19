@@ -1,8 +1,3 @@
-local loaded, lspconfig = pcall(require, 'lspconfig')
-if not loaded then
-  return
-end
-
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('dotfiles_lsp', { clear = true }),
   callback = function(args)
@@ -50,13 +45,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
 if vim.env.NVIM_COMPLETION ~= '1' then
-  capabilities = require('cmp_nvim_lsp').default_capabilities()
+  vim.lsp.config('*', {
+    capabilities = require('cmp_nvim_lsp').default_capabilities(),
+  })
 end
 
-lspconfig.gopls.setup {
-  capabilities = capabilities,
+vim.lsp.config('gopls', {
   settings = {
     gopls = {
       staticcheck = true,
@@ -67,14 +62,9 @@ lspconfig.gopls.setup {
       },
     },
   },
-}
+})
 
-lspconfig.basedpyright.setup {
-  capabilities = capabilities,
-}
-
-lspconfig.intelephense.setup {
-  capabilities = capabilities,
+vim.lsp.config('intelephense', {
   settings = {
     intelephense = {
       files = {
@@ -96,14 +86,9 @@ lspconfig.intelephense.setup {
       },
     },
   },
-}
+})
 
-lspconfig.ts_ls.setup {
-  capabilities = capabilities,
-}
-
-lspconfig.lua_ls.setup {
-  capabilities = capabilities,
+vim.lsp.config('lua_ls', {
   settings = {
     Lua = {
       runtime = {
@@ -125,13 +110,13 @@ lspconfig.lua_ls.setup {
       },
     },
   },
-}
+})
 
-lspconfig.marksman.setup {
-  capabilities = capabilities,
-}
-
-lspconfig.tailwindcss.setup {
-  capabilities = capabilities,
-  autostart = false,
+vim.lsp.enable {
+  'basedpyright',
+  'gopls',
+  'intelephense',
+  'lua_ls',
+  'marksman',
+  'ts_ls',
 }
