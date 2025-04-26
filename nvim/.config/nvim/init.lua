@@ -1,6 +1,11 @@
 local augroup = vim.api.nvim_create_augroup('dotfiles_init', { clear = true })
 
 vim.g.mapleader = ' '
+vim.g.loaded_fzf = 1
+vim.g.loaded_node_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0
 
 require('paq'):setup { verbose = true } {
   'echasnovski/mini.nvim',
@@ -28,7 +33,6 @@ require('paq'):setup { verbose = true } {
 }
 -- Sort in {...} selection using :sort /[a-z-\/]\+/ ri.
 
--- Options.
 vim.opt.scrolloff = 2
 vim.opt.number = true
 vim.opt.fileformats = 'unix'
@@ -47,7 +51,7 @@ vim.opt.listchars = {
   trail = '·',
   nbsp = '␣',
 }
-vim.opt.shortmess:append({ I = true })
+vim.opt.shortmess:append { I = true }
 vim.opt.spelllang = 'en_gb'
 vim.opt.undofile = true
 vim.opt.exrc = true
@@ -57,20 +61,11 @@ vim.opt.colorcolumn = { '+1' }
 vim.opt.guicursor:append('a:blinkon500-blinkoff500')
 vim.opt.guicursor:append('a:Cursor')
 vim.opt.signcolumn = 'yes'
-vim.opt.cpoptions:append({ Z = true })
+vim.opt.cpoptions:append { Z = true }
 
--- Disable some plugins and providers.
-vim.g.loaded_fzf = 1
-vim.g.loaded_node_provider = 0
-vim.g.loaded_perl_provider = 0
-vim.g.loaded_python3_provider = 0
-vim.g.loaded_ruby_provider = 0
-
--- Configure vim-test.
 vim.g['test#strategy'] = 'neovim'
 vim.g['test#neovim#term_position'] = 'botright 15'
 
--- Auto open quickfix for make.
 vim.api.nvim_create_autocmd('QuickFixCmdPost', {
   pattern = 'make*',
   group = augroup,
@@ -78,24 +73,19 @@ vim.api.nvim_create_autocmd('QuickFixCmdPost', {
   command = [[cwindow]],
 })
 
--- Yank highlighting.
 vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
   group = augroup,
   callback = function()
-    vim.highlight.on_yank({ timeout = 500 })
+    vim.highlight.on_yank { timeout = 500 }
   end,
 })
 
--- Global abbreviations.
 vim.cmd.iabbrev('<expr>', 'ruuid', [[luaeval('io.open("/proc/sys/kernel/random/uuid"):read()')]])
 vim.cmd.iabbrev('<expr>', 'ctime', [[luaeval('os.date("%FT%T%z")')]])
 vim.cmd.cabbrev('w;', 'w')
 
--- Write without triggering autocommands.
 vim.api.nvim_create_user_command('Nw', [[:noautocmd w]], {})
 vim.api.nvim_create_user_command('Nwa', [[:noautocmd wa]], {})
-
--- Aliases for writing.
 vim.api.nvim_create_user_command('W', [[:w]], {})
 vim.api.nvim_create_user_command('Wa', [[:wa]], {})

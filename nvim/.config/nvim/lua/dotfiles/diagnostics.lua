@@ -1,6 +1,6 @@
 local diagnostic = vim.diagnostic
 
-diagnostic.config({
+diagnostic.config {
   signs = {
     text = {
       [diagnostic.severity.ERROR] = '🪲',
@@ -14,7 +14,7 @@ diagnostic.config({
     prefix = '●',
   },
   severity_sort = true,
-})
+}
 
 vim.api.nvim_create_autocmd('DiagnosticChanged', {
   group = vim.api.nvim_create_augroup('dotfiles_diagnostics', { clear = true }),

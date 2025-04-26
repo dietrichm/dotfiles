@@ -72,15 +72,15 @@ local map = vim.keymap.set
 
 map('n', '<Leader>o', builtin.find_files)
 map('n', '<Leader>O', function()
-  builtin.find_files({ no_ignore = true })
+  builtin.find_files { no_ignore = true }
 end)
 map('n', '<Leader>b', builtin.buffers)
 map('n', '<Leader>fh', builtin.oldfiles)
 map('n', '<Leader>fH', function()
-  builtin.oldfiles({ only_cwd = false })
+  builtin.oldfiles { only_cwd = false }
 end)
 map('n', '<Leader>sw', function()
-  builtin.grep_string({ word_match = '-w' })
+  builtin.grep_string { word_match = '-w' }
 end)
 map('n', '<Leader>sg', builtin.live_grep)
 map('n', '<Leader>gs', builtin.git_status)
@@ -89,17 +89,17 @@ map('n', '<Leader>tr', builtin.resume)
 map('n', '<Leader>fs', function()
   local file_root = vim.fn.expand('%:t:r')
   local file_root_without_test = vim.fn.substitute(file_root, '_\\?test$\\c', '', '')
-  builtin.find_files({ search_file = file_root_without_test })
+  builtin.find_files { search_file = file_root_without_test }
 end)
 
 local function rg(...)
   local additional_args = { ... }
   return function(options)
-    builtin.grep_string({
+    builtin.grep_string {
       search = options.args,
       use_regex = true,
       additional_args = additional_args,
-    })
+    }
   end
 end
 
