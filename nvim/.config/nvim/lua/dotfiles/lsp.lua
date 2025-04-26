@@ -36,6 +36,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     map('n', '<Leader>u', function()
       vim.lsp.buf.code_action {
+        ---@diagnostic disable-next-line: missing-fields
         context = {
           only = { 'source.organizeImports' },
         },
@@ -103,7 +104,7 @@ vim.lsp.config('lua_ls', {
         arrayIndex = 'Disable',
       },
       workspace = {
-        library = vim.api.nvim_get_runtime_file('', true),
+        library = { vim.env.VIMRUNTIME },
         checkThirdParty = false,
       },
       telemetry = {

@@ -3,9 +3,7 @@ local function feedkeys(keys)
 end
 
 function _G.PhpFields()
-  ---@diagnostic disable-next-line: redundant-parameter
   local startPosition = vim.fn.searchpair('(', '', ')', 'nb')
-  ---@diagnostic disable-next-line: redundant-parameter
   local endPosition = vim.fn.searchpair('(', '', ')', 'n')
   local argumentCount = endPosition - startPosition - 1
 

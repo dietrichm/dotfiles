@@ -43,7 +43,6 @@ function _G.MyStatusLine()
       '%m',
       '%r',
       '%=',
-      ---@diagnostic disable-next-line: undefined-field
       vim.b.gitsigns_status or '',
       ' ',
       diagnostic(),
