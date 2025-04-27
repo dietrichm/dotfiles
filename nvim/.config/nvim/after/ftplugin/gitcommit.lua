@@ -19,7 +19,7 @@ function _G.GitCachedFiles()
 
   return filenames
     :map(function(filename)
-      return vim.fn.fnamemodify(filename, ':t')
+      return vim.fs.basename(filename)
     end)
     :map(function(filename)
       return string.format('`%s`', filename)
