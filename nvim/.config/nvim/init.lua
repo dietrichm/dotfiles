@@ -62,6 +62,7 @@ vim.opt.guicursor:append('a:blinkon500-blinkoff500')
 vim.opt.guicursor:append('a:Cursor')
 vim.opt.signcolumn = 'yes'
 vim.opt.cpoptions:append { Z = true }
+vim.opt.ruler = false
 
 vim.g['test#strategy'] = 'neovim'
 vim.g['test#neovim#term_position'] = 'botright 15'
