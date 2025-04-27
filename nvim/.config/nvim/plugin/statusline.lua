@@ -40,6 +40,7 @@ function _G.MyStatusLine()
     .concat({
       ' ',
       name(),
+      ' ',
       '%m',
       '%r',
       '%=',
