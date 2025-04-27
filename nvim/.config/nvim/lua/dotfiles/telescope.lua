@@ -60,9 +60,6 @@ telescope.setup {
       show_line = true,
       ignore_symbols = { 'variable', 'property' },
     },
-    git_status = {
-      previewer = true,
-    },
   },
 }
 
@@ -83,7 +80,9 @@ map('n', '<Leader>sw', function()
   builtin.grep_string { word_match = '-w' }
 end)
 map('n', '<Leader>sg', builtin.live_grep)
-map('n', '<Leader>gs', builtin.git_status)
+map('n', '<Leader>gs', function()
+  builtin.git_status { previewer = vim.go.columns >= 180 }
+end)
 map('n', '<Leader>tr', builtin.resume)
 
 map('n', '<Leader>fs', function()
