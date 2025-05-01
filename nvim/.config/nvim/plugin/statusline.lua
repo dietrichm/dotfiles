@@ -60,3 +60,20 @@ function _G.MyStatusLine()
 end
 
 vim.o.statusline = [[%{%v:lua.MyStatusLine()%}]]
+
+local augroup = vim.api.nvim_create_augroup('MyStatusLine', { clear = true })
+
+vim.api.nvim_create_autocmd('DiagnosticChanged', {
+  group = augroup,
+  callback = function()
+    vim.schedule(vim.cmd.redrawstatus)
+  end,
+})
+
+vim.api.nvim_create_autocmd('User', {
+  group = augroup,
+  pattern = 'GitSignsUpdate',
+  callback = function()
+    vim.schedule(vim.cmd.redrawstatus)
+  end,
+})

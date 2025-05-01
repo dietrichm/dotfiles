@@ -15,10 +15,3 @@ diagnostic.config {
   },
   severity_sort = true,
 }
-
-vim.api.nvim_create_autocmd('DiagnosticChanged', {
-  group = vim.api.nvim_create_augroup('dotfiles_diagnostics', { clear = true }),
-  callback = function()
-    vim.schedule(vim.cmd.redrawstatus)
-  end,
-})
