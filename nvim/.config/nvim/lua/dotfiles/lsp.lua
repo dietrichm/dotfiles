@@ -122,3 +122,12 @@ vim.lsp.enable {
   'marksman',
   'ts_ls',
 }
+
+local orig_relpath = vim.fs.relpath
+---@diagnostic disable-next-line: duplicate-set-field
+vim.fs.relpath = function(base, target, opts)
+  if target == nil then
+    return nil
+  end
+  return orig_relpath(base, target, opts)
+end
