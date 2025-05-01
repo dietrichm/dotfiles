@@ -3,16 +3,16 @@ local augroup = vim.api.nvim_create_augroup('statusline', { clear = true })
 vim.api.nvim_create_autocmd('DiagnosticChanged', {
   group = augroup,
   callback = function(args)
-    local diagnosticSeverities = vim.diagnostic.config().signs.text
+    local severities = vim.diagnostic.config().signs.text
 
-    if diagnosticSeverities == nil then
+    if severities == nil then
       return
     end
 
     local items = {}
     local counts = vim.diagnostic.count(args.buf)
 
-    for severity, text in ipairs(diagnosticSeverities) do
+    for severity, text in ipairs(severities) do
       if counts[severity] ~= nil then
         table.insert(items, string.format('%s%d', text, counts[severity]))
       end
