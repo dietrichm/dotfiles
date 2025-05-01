@@ -1,4 +1,8 @@
 local function name()
+  if vim.o.filetype == 'help' then
+    return '%f'
+  end
+
   local filename = vim.fn.expand('%:~:.')
 
   if filename:len() == 0 then
