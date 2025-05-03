@@ -64,6 +64,14 @@ vim.opt.signcolumn = 'yes'
 vim.opt.cpoptions:append { Z = true }
 vim.opt.ruler = false
 
+if vim.fn.has('nvim-0.12') == 1 then
+  require('vim._extui').enable {
+    msg = {
+      pos = 'cmd',
+    },
+  }
+end
+
 vim.g['test#strategy'] = 'neovim'
 vim.g['test#neovim#term_position'] = 'botright 15'
 
