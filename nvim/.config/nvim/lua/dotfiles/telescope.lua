@@ -81,7 +81,7 @@ map('n', '<Leader>sw', function()
 end)
 map('n', '<Leader>sg', builtin.live_grep)
 map('n', '<Leader>gs', function()
-  builtin.git_status { previewer = vim.go.columns >= 180 }
+  builtin.git_status { previewer = vim.go.columns >= 200 }
 end)
 map('n', '<Leader>tr', builtin.resume)
 
