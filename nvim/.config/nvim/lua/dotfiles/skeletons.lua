@@ -3,7 +3,8 @@ local augroup = vim.api.nvim_create_augroup('dotfiles_skeletons', { clear = true
 local skeletons = {
   {
     pattern = '*Test.php',
-    snippet = [[<?php
+    snippet = [[
+<?php
 
 declare(strict_types=1);
 
@@ -18,7 +19,8 @@ final class $TM_FILENAME_BASE extends TestCase
   },
   {
     pattern = '*.php',
-    snippet = [[<?php
+    snippet = [[
+<?php
 
 declare(strict_types=1);
 
@@ -31,7 +33,8 @@ final class $TM_FILENAME_BASE
   },
   {
     pattern = '*_test.go',
-    snippet = [[package $TM_DIRECTORY
+    snippet = [[
+package $TM_DIRECTORY
 
 import "testing"
 
@@ -41,7 +44,8 @@ func Test$1(t *testing.T) {
   },
   {
     pattern = '*.go',
-    snippet = [[package $TM_DIRECTORY
+    snippet = [[
+package $TM_DIRECTORY
 
 $0]],
   },
