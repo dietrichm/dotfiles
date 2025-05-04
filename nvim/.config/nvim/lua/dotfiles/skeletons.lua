@@ -48,11 +48,15 @@ $0]],
 }
 
 for _, skeleton in ipairs(skeletons) do
-  vim.api.nvim_create_autocmd('BufNewFile', {
+  vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
     group = augroup,
     pattern = skeleton.pattern,
-    desc = 'Skeleton for new ' .. skeleton.pattern .. ' files',
+    desc = 'Skeleton for ' .. skeleton.pattern .. ' files',
     callback = function(args)
+      local lines = vim.fn.getline(1, '$')
+      if #lines > 1 or lines[1] ~= '' then
+        return
+      end
       if vim.b[args.buf].skeleton_is_applied ~= nil then
         return
       end
