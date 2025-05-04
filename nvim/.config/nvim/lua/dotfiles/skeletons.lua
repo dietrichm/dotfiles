@@ -14,7 +14,10 @@ use PHPUnit\Framework\TestCase;
 
 final class $TM_FILENAME_BASE extends TestCase
 {
-    $0
+    public function test$2(): void
+    {
+        $0
+    }
 }]],
   },
   {
