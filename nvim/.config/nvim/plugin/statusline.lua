@@ -23,26 +23,6 @@ vim.api.nvim_create_autocmd('DiagnosticChanged', {
   end,
 })
 
-function _G.lspaced(key)
-  local value = vim.b[key] or vim.w[key]
-
-  if value == nil or value == '' then
-    return ''
-  end
-
-  return ' ' .. value
-end
-
-function _G.rspaced(key)
-  local value = vim.b[key] or vim.w[key]
-
-  if value == nil or value == '' then
-    return ''
-  end
-
-  return value .. ' '
-end
-
 vim.g.qf_disable_statusline = 1
-vim.o.statusline = [[ %<%f%{v:lua.lspaced('quickfix_title')} %h%m%r %=]]
-  .. [[%{v:lua.rspaced('gitsigns_status')}%{v:lua.rspaced('diagnostic_status')}]]
+vim.o.statusline = [[ %<%f%( %{get(w:, 'quickfix_title', '')}%) %h%m%r %=]]
+  .. [[%(%{get(b:, 'gitsigns_status', '')} %)%(%{get(b:, 'diagnostic_status', '')} %)]]
