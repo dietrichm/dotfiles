@@ -1,7 +1,5 @@
-local augroup = vim.api.nvim_create_augroup('statusline', { clear = true })
-
 vim.api.nvim_create_autocmd('DiagnosticChanged', {
-  group = augroup,
+  group = vim.api.nvim_create_augroup('dotfiles_statusline', { clear = true }),
   callback = function(args)
     local severities = vim.diagnostic.config().signs.text
 
