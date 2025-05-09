@@ -14,6 +14,11 @@ use PHPUnit\Framework\TestCase;
 
 final class $TM_FILENAME_BASE extends TestCase
 {
+    protected function setUp(): void
+    {
+        parent::setUp();
+    }
+
     public function test$2(): void
     {
         $0
