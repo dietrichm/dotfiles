@@ -10,7 +10,7 @@ vim.keymap.set('n', '<Leader>ft', function()
     vim.notify('Not a source file.', vim.log.levels.ERROR)
     return
   end
-  filename = filename:gsub('^src/', 'tests/')
+  filename = filename:gsub('^src/', vim.g.php_tests_prefix or 'tests/')
   filename = filename:gsub('%.php$', 'Test.php')
   vim.cmd.vsplit(filename)
 end, { buffer = true })
