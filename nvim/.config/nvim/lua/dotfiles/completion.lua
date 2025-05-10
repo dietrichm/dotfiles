@@ -1,4 +1,3 @@
-vim.opt.complete = { '.' }
 vim.opt.completeopt = { 'menu', 'menuone', 'popup', 'noinsert', 'fuzzy' }
 vim.opt.pumwidth = 20
 
