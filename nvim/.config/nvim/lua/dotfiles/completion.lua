@@ -1,3 +1,4 @@
+vim.opt.complete:remove('t')
 vim.opt.completeopt = { 'menu', 'menuone', 'popup', 'noinsert', 'fuzzy' }
 vim.opt.pumwidth = 20
 
