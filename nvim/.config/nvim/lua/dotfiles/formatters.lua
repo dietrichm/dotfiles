@@ -43,7 +43,7 @@ conform.setup {
 
     return {
       lsp_format = 'fallback',
-      timeout_ms = 1500,
+      timeout_ms = 3000,
     }
   end,
 }
