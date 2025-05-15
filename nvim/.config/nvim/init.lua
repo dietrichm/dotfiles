@@ -30,6 +30,7 @@ require('paq'):setup { verbose = true } {
   'vim-test/vim-test',
   'Wansmer/treesj',
   'windwp/nvim-ts-autotag',
+  { 'zbirenbaum/copilot.lua', opt = true },
 }
 -- Sort in {...} selection using :sort /[a-z-\/]\+/ ri.
 
@@ -108,6 +109,7 @@ require('dotfiles.editing')
 require('dotfiles.diagnostics')
 require('dotfiles.lsp')
 require('dotfiles.completion')
+require('dotfiles.copilot')
 require('dotfiles.treesitter')
 require('dotfiles.formatters')
 require('dotfiles.telescope')
