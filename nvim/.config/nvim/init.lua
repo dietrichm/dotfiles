@@ -64,7 +64,6 @@ vim.opt.guicursor:append('a:Cursor')
 vim.opt.signcolumn = 'yes'
 vim.opt.cpoptions:append { Z = true }
 vim.opt.ruler = false
-vim.opt.whichwrap = ']'
 
 if vim.fn.has('nvim-0.12') == 1 then
   require('vim._extui').enable {
