@@ -98,7 +98,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.cmd.iabbrev('<expr>', 'ruuid', [[luaeval('io.open("/proc/sys/kernel/random/uuid"):read()')]])
 vim.cmd.iabbrev('<expr>', 'rstr', [[luaeval('io.open("/dev/urandom"):read(500):gsub("[^%w]", ""):sub(0, 32)')]])
 vim.cmd.iabbrev('<expr>', 'rpwd', [[luaeval('io.open("/dev/urandom"):read(500):gsub("[^%w%p]", ""):sub(0, 32)')]])
-vim.cmd.iabbrev('<expr>', 'ctime', [[luaeval('os.date("%FT%T%z")')]])
+vim.cmd.iabbrev('<expr>', 'ctime', [[luaeval('os.date("%FT%T%z"):gsub("+(%d%d)(%d%d)$", "+%1:%2")')]])
 vim.cmd.cabbrev('w;', 'w')
 
 vim.api.nvim_create_user_command('Nw', [[:noautocmd w]], {})
