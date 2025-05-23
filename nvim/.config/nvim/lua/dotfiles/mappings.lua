@@ -1,5 +1,6 @@
 local map = vim.keymap.set
 
+map('ca', 'w;', 'w')
 map('i', '<C-;>', [[<C-O>:call searchpair('(', '', ')')<CR><Right>]], { silent = true })
 map('i', '<S-Tab>', '<Right>')
 map('n', '#', [[:setlocal hlsearch | :normal! #<CR>]])
@@ -22,3 +23,19 @@ map('n', 'k', [[v:count == 0 && &ft != 'qf' ? 'gk' : 'k']], { expr = true })
 map('n', '{', [[:keepjumps normal! {<CR>]], { silent = true })
 map('n', '}', [[:keepjumps normal! }<CR>]], { silent = true })
 map('t', '<Esc>', [[<C-\><C-n>]])
+
+map('ia', 'rstr', function()
+  return io.open('/dev/urandom'):read(500):gsub('[^%w]', ''):sub(0, 32)
+end, { expr = true })
+
+map('ia', 'rpwd', function()
+  return io.open('/dev/urandom'):read(500):gsub('[^%w%p]', ''):sub(0, 32)
+end, { expr = true })
+
+map('ia', 'ruuid', function()
+  return io.open('/proc/sys/kernel/random/uuid'):read()
+end, { expr = true })
+
+map('ia', 'ctime', function()
+  return tostring(os.date('%FT%T%z')):gsub('+(%d%d)(%d%d)$', '+%1:%2')
+end, { expr = true })
