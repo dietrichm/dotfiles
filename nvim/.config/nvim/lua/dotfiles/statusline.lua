@@ -12,7 +12,7 @@ vim.api.nvim_create_autocmd('DiagnosticChanged', {
 
     for severity, text in ipairs(severities) do
       if counts[severity] ~= nil then
-        table.insert(items, string.format('%s%d', text, counts[severity]))
+        table.insert(items, ('%s%d'):format(text, counts[severity]))
       end
     end
 
