@@ -2,7 +2,7 @@ vim.opt_local.spell = true
 vim.opt_local.list = false
 vim.b.editorconfig = false
 
-function _G.GitBranchIdentifier()
+vim.keymap.set('ia', 'bri', function()
   local branch_name = vim.fn.system { 'git', 'rev-parse', '--abbrev-ref', 'HEAD' }
   local match_start, match_end = vim.regex('[A-Z]\\+-[0-9]\\+'):match_str(branch_name)
 
@@ -11,9 +11,9 @@ function _G.GitBranchIdentifier()
   end
 
   return branch_name:sub(match_start + 1, match_end)
-end
+end, { buffer = true, expr = true })
 
-function _G.GitCachedFiles()
+vim.keymap.set('ia', 'cfs', function()
   local output = vim.fn.system { 'git', 'diff', '--cached', '--name-only' }
   local filenames = vim.iter(vim.split(output:gsub('\n$', ''), '\n'))
 
@@ -25,7 +25,4 @@ function _G.GitCachedFiles()
       return string.format('`%s`', filename)
     end)
     :join(' and ')
-end
-
-vim.cmd.iabbrev('<buffer>', '<expr>', 'bri', [[v:lua.GitBranchIdentifier()]])
-vim.cmd.iabbrev('<buffer>', '<expr>', 'cfs', [[v:lua.GitCachedFiles()]])
+end, { buffer = true, expr = true })
