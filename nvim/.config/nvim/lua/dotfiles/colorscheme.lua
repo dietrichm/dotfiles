@@ -7,7 +7,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   callback = function()
     hi { 'DiagnosticUnderlineError', 'gui=undercurl' }
     hi { 'link', 'TelescopeNormal', 'NormalFloat' }
-    hi { 'link', 'TelescopeMatching', 'IncSearch' }
+    hi { 'link', 'TelescopeMatching', 'Search' }
     hi { 'link', 'TelescopeSelection', 'CursorLine' }
   end,
 })
