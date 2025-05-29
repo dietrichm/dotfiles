@@ -9,6 +9,9 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     hi { 'link', 'TelescopeNormal', 'NormalFloat' }
     hi { 'link', 'TelescopeMatching', 'Search' }
     hi { 'link', 'TelescopeSelection', 'CursorLine' }
+    hi { 'link', 'TelescopeBorder', 'FloatBorder' }
+    hi { 'link', 'TelescopeTitle', 'FloatTitle' }
+    hi { 'link', 'TelescopePromptCounter', 'Comment' }
   end,
 })
 
