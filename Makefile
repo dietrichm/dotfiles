@@ -1,7 +1,7 @@
 PKG = stow -v -d "$(MY_CONFIG_ROOT)" -t "$(HOME)"
 
 .PHONY: all
-all: containers dig direnv git helix kitty nvim ranger ssh
+all: containers dig direnv git kitty nvim ranger ssh
 
 .PHONY: containers
 containers: env
@@ -19,10 +19,6 @@ direnv: env
 git: env
 	$(PKG) git
 	-bat cache --build
-
-.PHONY: helix
-helix: env
-	$(PKG) helix
 
 .PHONY: kitty
 kitty: env

@@ -46,7 +46,6 @@ The following (Stow based) config packages are available:
 * `dig`
 * `direnv`
 * `git`
-* `helix`
 * `kitty`
 * `nvim`
 * `ranger`
