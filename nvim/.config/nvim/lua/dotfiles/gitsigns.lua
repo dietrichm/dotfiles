@@ -15,7 +15,7 @@ gitsigns.setup {
   attach_to_untracked = false,
   signs_staged_enable = false,
   preview_config = {
-    border = 'single',
+    border = 'rounded',
   },
   on_attach = function(bufnr)
     local function map(mode, lhs, rhs)

@@ -14,11 +14,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map('n', 'gO', telescope.lsp_document_symbols)
 
     map({ 'i', 'n' }, '<C-S>', function()
-      vim.lsp.buf.signature_help { border = 'single' }
+      vim.lsp.buf.signature_help { border = 'rounded' }
     end)
 
     map('n', 'K', function()
-      vim.lsp.buf.hover { border = 'single' }
+      vim.lsp.buf.hover { border = 'rounded' }
     end)
 
     map('n', '+', function()
