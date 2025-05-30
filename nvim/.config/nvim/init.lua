@@ -9,7 +9,6 @@ vim.g.loaded_ruby_provider = 0
 
 require('paq'):setup { verbose = true } {
   'echasnovski/mini.nvim',
-  'folke/zen-mode.nvim',
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-nvim-lsp',
   'justinmk/vim-sneak',
@@ -113,6 +112,5 @@ require('dotfiles.gitsigns')
 require('dotfiles.fs')
 require('dotfiles.refactoring')
 require('dotfiles.skeletons')
-require('dotfiles.writing')
 require('dotfiles.statusline')
 require('dotfiles.mappings')
