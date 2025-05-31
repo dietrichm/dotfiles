@@ -18,7 +18,7 @@ require('paq'):setup { verbose = true } {
   'nvim-lua/plenary.nvim',
   'nvim-telescope/telescope.nvim',
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
-  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+  { 'nvim-treesitter/nvim-treesitter', branch = 'v0.10.0', build = ':TSUpdate' },
   'nvim-treesitter/nvim-treesitter-context',
   'nvim-treesitter/nvim-treesitter-textobjects',
   'savq/paq-nvim',

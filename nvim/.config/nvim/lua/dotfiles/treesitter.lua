@@ -11,6 +11,7 @@ treesitter.setup {
   auto_install = true,
   ensure_installed = {
     'css',
+    'diff',
     'html',
     'javascript',
     'markdown',
