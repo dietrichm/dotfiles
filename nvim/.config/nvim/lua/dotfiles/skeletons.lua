@@ -65,7 +65,7 @@ for _, skeleton in ipairs(skeletons) do
     pattern = skeleton.pattern,
     desc = 'Skeleton for ' .. skeleton.pattern .. ' files',
     callback = function(args)
-      local lines = vim.fn.getline(1, '$')
+      local lines = vim.api.nvim_buf_get_lines(0, 0, 2, false)
       if #lines > 1 or lines[1] ~= '' then
         return
       end
