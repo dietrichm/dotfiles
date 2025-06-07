@@ -22,7 +22,7 @@ jobs:
         luarocks install luacheck
     - name: Install StyLua
       run: |
-        wget -q https://github.com/JohnnyMorganz/StyLua/releases/download/v0.18.2/stylua-linux-x86_64.zip
+        wget -q https://github.com/JohnnyMorganz/StyLua/releases/download/v2.1.0/stylua-linux-x86_64.zip
         unzip stylua-linux-x86_64.zip
         chmod u+x stylua
     - name: Lint Lua files
