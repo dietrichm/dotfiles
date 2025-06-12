@@ -12,3 +12,4 @@ container-compose.override.yml
 go.work
 go.work.sum
 .idea/
+.conform.*
