@@ -33,11 +33,28 @@ conform.setup {
     },
   },
   format_on_save = function(bufnr)
+    if vim.bo[bufnr].buftype ~= '' then
+      return
+    end
+
     if not vim.bo[bufnr].modifiable then
       return
     end
 
     if vim.bo[bufnr].readonly then
+      return
+    end
+
+    local excluded_ft = {
+      cmdline = true,
+      msgbox = true,
+      msgcmd = true,
+      msgmore = true,
+      msgprompt = true,
+    }
+    local filetype = vim.bo[bufnr].filetype
+    if excluded_ft[filetype] ~= nil then
+      vim.notify('Excluded from formatting: ' .. filetype, vim.log.levels.WARN)
       return
     end
 
