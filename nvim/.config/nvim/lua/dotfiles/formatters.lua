@@ -34,7 +34,6 @@ conform.setup {
   },
   format_on_save = function(bufnr)
     local opts = vim.bo[bufnr]
-    local filetype = opts.filetype
 
     if opts.buftype ~= '' then
       return
@@ -45,18 +44,6 @@ conform.setup {
     end
 
     if opts.readonly then
-      return
-    end
-
-    local excluded_ft = {
-      cmdline = true,
-      msgbox = true,
-      msgcmd = true,
-      msgmore = true,
-      msgprompt = true,
-    }
-    if excluded_ft[filetype] ~= nil then
-      vim.notify('Excluded from formatting: ' .. filetype, vim.log.levels.WARN)
       return
     end
 
