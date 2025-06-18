@@ -70,6 +70,7 @@ end
 
 vim.g['test#strategy'] = 'neovim'
 vim.g['test#neovim#term_position'] = 'botright 15'
+vim.g['test#neovim#start_normal'] = 1
 
 vim.api.nvim_create_autocmd('QuickFixCmdPost', {
   pattern = 'make*',
