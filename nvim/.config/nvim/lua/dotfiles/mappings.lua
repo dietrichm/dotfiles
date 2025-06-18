@@ -24,7 +24,7 @@ map('n', '}', [[:keepjumps normal! }<CR>]], { silent = true })
 map('t', '<Esc>', [[<C-\><C-n>]])
 
 map('n', 'q', function()
-  return vim.bo.buftype == 'terminal' and '<C-W>c' or 'q'
+  return vim.bo.buftype == 'terminal' and '<C-W>c<C-W>p' or 'q'
 end, { expr = true })
 
 map('ia', 'rstr', function()
