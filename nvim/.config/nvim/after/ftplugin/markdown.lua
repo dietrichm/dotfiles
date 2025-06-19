@@ -1,7 +1,8 @@
-if vim.bo.buftype ~= 'nofile' then
-  vim.opt_local.spell = true
+if vim.bo.buftype == 'nofile' then
+  return
 end
 
+vim.opt_local.spell = true
 vim.cmd.compiler('markdown')
 
 -- Wrap visual selection in link.
