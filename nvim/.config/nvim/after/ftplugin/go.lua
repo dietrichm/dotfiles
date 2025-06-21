@@ -13,3 +13,13 @@ map('ia', 'mockgen', function()
     vim.fn.expand('%:h:t')
   )
 end, { buffer = true, expr = true })
+
+map('n', '<Leader>ft', function()
+  local filename = vim.fn.expand('%:.')
+  if filename:match('_test.go$') ~= nil then
+    vim.notify('Not a source file.', vim.log.levels.ERROR)
+    return
+  end
+  filename = filename:gsub('%.go$', '_test.go')
+  vim.cmd.vsplit(filename)
+end, { buffer = true })
