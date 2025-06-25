@@ -17,7 +17,9 @@ vim.api.nvim_create_autocmd('DiagnosticChanged', {
     end
 
     vim.b[args.buf].diagnostic_status = table.concat(items, ' ')
-    vim.api.nvim__redraw { buf = args.buf, statusline = true }
+    vim.schedule(function()
+      vim.api.nvim__redraw { buf = args.buf, statusline = true }
+    end)
   end,
 })
 
