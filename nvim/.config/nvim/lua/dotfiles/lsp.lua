@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map('n', 'gd', vim.lsp.buf.declaration)
     map('n', 'gri', telescope.lsp_implementations)
     map('n', 'grr', telescope.lsp_references)
-    map('n', 'gD', telescope.lsp_type_definitions)
+    map('n', 'grt', telescope.lsp_type_definitions)
     map('n', 'gO', telescope.lsp_document_symbols)
 
     map({ 'i', 'n' }, '<C-S>', function()
