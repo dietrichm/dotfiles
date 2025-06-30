@@ -24,8 +24,8 @@ map('n', '}', [[:keepjumps normal! }<CR>]], { silent = true })
 map('t', '<Esc>', [[<C-\><C-n>]])
 
 map('n', 'q', function()
-  return vim.bo.buftype == 'terminal' and '<C-W>c<C-W>p' or 'q'
-end, { expr = true })
+  return vim.bo.buftype == 'terminal' and ':bd<CR>' or 'q'
+end, { expr = true, silent = true })
 
 map('ia', 'rstr', function()
   return io.open('/dev/urandom'):read(500):gsub('[^%w]', ''):sub(0, 32)
