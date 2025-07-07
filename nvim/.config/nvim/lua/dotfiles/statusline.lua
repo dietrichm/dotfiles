@@ -25,4 +25,4 @@ vim.api.nvim_create_autocmd('DiagnosticChanged', {
 
 vim.g.qf_disable_statusline = 1
 vim.o.statusline = [[ %<%f%( %{get(w:, 'quickfix_title', '')}%) %h%m%r %=]]
-  .. [[%(%{get(b:, 'gitsigns_status', '')} %)%(%{get(b:, 'diagnostic_status', '')} %)]]
+  .. [[%{% &busy > 0 ? '⏳ ' : '' %}%(%{get(b:, 'gitsigns_status', '')} %)%(%{get(b:, 'diagnostic_status', '')} %)]]
