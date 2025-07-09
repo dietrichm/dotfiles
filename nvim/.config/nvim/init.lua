@@ -63,6 +63,7 @@ vim.opt.guicursor:append('a:Cursor')
 vim.opt.signcolumn = 'yes'
 vim.opt.cpoptions:append { Z = true }
 vim.opt.ruler = false
+vim.opt.timeoutlen = 3000
 
 if vim.env.NVIM_EXTUI == '1' and vim.fn.has('nvim-0.12') == 1 then
   require('vim._extui').enable {}
