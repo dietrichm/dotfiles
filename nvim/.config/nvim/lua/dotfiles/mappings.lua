@@ -1,6 +1,6 @@
 local map = vim.keymap.set
 
-map('ca', 'w;', 'w')
+-- map('ca', 'w;', 'w')
 map('i', '<C-;>', [[<C-O>:call searchpair('(', '', ')')<CR><Right>]], { silent = true })
 map('i', '<S-Tab>', '<Right>')
 map('n', '#', [[:setlocal hlsearch | :normal! #<CR>]])
