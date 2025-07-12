@@ -1,8 +1,8 @@
 local map = vim.keymap.set
 
 -- map('ca', 'w;', 'w')
-map('i', '<C-;>', [[<C-O>:call searchpair('(', '', ')')<CR><Right>]], { silent = true })
-map('i', '<S-Tab>', '<Right>')
+-- map('i', '<C-;>', [[<C-O>:call searchpair('(', '', ')')<CR><Right>]], { silent = true })
+-- map('i', '<S-Tab>', '<Right>')
 map('n', '#', [[:setlocal hlsearch | :normal! #<CR>]])
 map('n', '*', [[:setlocal hlsearch | :normal! *<CR>]])
 map('n', '<Leader>da', [[:%bd<CR>]])
@@ -21,7 +21,7 @@ map('n', 'j', [[v:count == 0 && &ft != 'qf' ? 'gj' : 'j']], { expr = true })
 map('n', 'k', [[v:count == 0 && &ft != 'qf' ? 'gk' : 'k']], { expr = true })
 map('n', '{', [[:keepjumps normal! {<CR>]], { silent = true })
 map('n', '}', [[:keepjumps normal! }<CR>]], { silent = true })
-map('t', '<Esc>', [[<C-\><C-n>]])
+-- map('t', '<Esc>', [[<C-\><C-n>]])
 
 map('n', 'q', function()
   return vim.bo.buftype == 'terminal' and ':bd<CR>' or 'q'
