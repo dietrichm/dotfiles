@@ -1,5 +1,4 @@
 vim.opt_local.matchpairs:remove('<:>')
-vim.opt_local.includeexpr = [[substitute(v:fname, '^/', '', '')]]
 vim.bo.commentstring = '// %s'
 
 vim.keymap.set('n', 'grf', _G.PhpFields, { buffer = true })
