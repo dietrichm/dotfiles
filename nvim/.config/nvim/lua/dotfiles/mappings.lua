@@ -22,6 +22,8 @@ map('n', 'k', [[v:count == 0 && &ft != 'qf' ? 'gk' : 'k']], { expr = true })
 map('n', '{', [[:keepjumps normal! {<CR>]], { silent = true })
 map('n', '}', [[:keepjumps normal! }<CR>]], { silent = true })
 -- map('t', '<Esc>', [[<C-\><C-n>]])
+map('v', '<', [[<gv]])
+map('v', '>', [[>gv]])
 
 map('n', 'q', function()
   return vim.bo.buftype == 'terminal' and ':bd<CR>' or 'q'
