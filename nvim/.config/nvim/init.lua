@@ -100,11 +100,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 vim.api.nvim_create_user_command('Nw', [[:noautocmd w]], {})
 vim.api.nvim_create_user_command('Nwa', [[:noautocmd wa]], {})
--- vim.api.nvim_create_user_command('W', [[:w]], {})
--- vim.api.nvim_create_user_command('Wa', [[:wa]], {})
 
 require('dotfiles.colorscheme')
--- require('dotfiles.editing')
+require('dotfiles.editing')
 require('dotfiles.diagnostics')
 require('dotfiles.lsp')
 require('dotfiles.completion')
