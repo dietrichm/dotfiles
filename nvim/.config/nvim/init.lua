@@ -39,6 +39,7 @@ vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
 vim.opt.exrc = true
 vim.opt.fileformats = 'unix'
+vim.opt.grepprg = 'rg --vimgrep'
 vim.opt.guicursor:append('a:Cursor')
 vim.opt.guicursor:append('a:blinkon500-blinkoff500')
 vim.opt.hlsearch = false
@@ -66,6 +67,12 @@ end
 vim.g['test#strategy'] = 'neovim'
 vim.g['test#neovim#term_position'] = 'botright 15'
 vim.g['test#neovim#start_normal'] = 1
+
+vim.api.nvim_create_autocmd('QuickFixCmdPost', {
+  pattern = 'grep',
+  group = augroup,
+  command = [[cwindow]],
+})
 
 vim.api.nvim_create_autocmd('QuickFixCmdPost', {
   pattern = 'lmake',
