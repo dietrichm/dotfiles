@@ -87,17 +87,3 @@ map('n', '<Leader>fs', function()
   local file_root_without_test = file_root:gsub('_test$', ''):gsub('Test$', '')
   builtin.find_files { search_file = file_root_without_test }
 end)
-
-local function rg(...)
-  local additional_args = { ... }
-  return function(options)
-    builtin.grep_string {
-      search = options.args,
-      use_regex = true,
-      additional_args = additional_args,
-    }
-  end
-end
-
-vim.api.nvim_create_user_command('Rg', rg(), { nargs = '*' })
-vim.api.nvim_create_user_command('Rgi', rg('--no-ignore-vcs'), { nargs = '*' })
