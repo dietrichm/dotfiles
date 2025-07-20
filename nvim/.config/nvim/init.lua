@@ -68,12 +68,12 @@ vim.g['test#neovim#term_position'] = 'botright 15'
 vim.g['test#neovim#start_normal'] = 1
 
 vim.api.nvim_create_autocmd('QuickFixCmdPost', {
-  pattern = 'make',
+  pattern = 'lmake',
   group = augroup,
   callback = function()
     vim.cmd([[
-      cwindow
-      if getqflist({'size': 1}).size == 0
+      lwindow
+      if getloclist(0, {'size': 1}).size == 0
         unsilent echomsg "✅ No errors"
       endif
     ]])
