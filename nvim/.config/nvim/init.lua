@@ -100,9 +100,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-vim.api.nvim_create_user_command('Rgi', [[:grep<bang> --no-ignore-vcs <args>]], { nargs = '+', bang = true })
 vim.api.nvim_create_user_command('Nw', [[:noautocmd w]], {})
 vim.api.nvim_create_user_command('Nwa', [[:noautocmd wa]], {})
+vim.api.nvim_create_user_command('Rgi', [[:grep<bang> --no-ignore-vcs <args>]], { nargs = '+', bang = true })
 
 require('dotfiles.colorscheme')
 require('dotfiles.editing')
