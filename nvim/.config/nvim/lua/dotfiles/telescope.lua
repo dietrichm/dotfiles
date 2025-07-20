@@ -73,9 +73,6 @@ map('n', '<Leader>O', function()
 end)
 map('n', '<Leader>b', builtin.buffers)
 map('n', '<Leader>fh', builtin.oldfiles)
-map('n', '<Leader>sw', function()
-  builtin.grep_string { word_match = '-w' }
-end)
 map('n', '<Leader>sg', builtin.live_grep)
 map('n', '<Leader>gs', function()
   builtin.git_status { previewer = vim.go.columns >= 200 }
