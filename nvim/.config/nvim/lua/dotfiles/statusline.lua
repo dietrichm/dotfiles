@@ -27,3 +27,4 @@ vim.g.qf_disable_statusline = 1
 vim.o.statusline = [[ %<%f%( %{get(w:, 'quickfix_title', '')}%) %h%m%r %=]]
   .. [[%{% has('nvim-0.12') && &busy > 0 ? '⏳ ' : '' %}]]
   .. [[%(%{get(b:, 'gitsigns_status', '')} %)%(%{get(b:, 'diagnostic_status', '')} %)]]
+  .. [[%{% &buftype == 'quickfix' ? '%l/%L ' : '' %}]]
