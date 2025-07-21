@@ -51,9 +51,6 @@ map('n', '<Leader>O', function()
 end)
 map('n', '<Leader>b', builtin.buffers)
 map('n', '<Leader>fh', builtin.oldfiles)
-map('n', '<Leader>gs', function()
-  builtin.git_status { previewer = vim.go.columns >= 200 }
-end)
 map('n', '<Leader>tr', builtin.resume)
 
 map('n', '<Leader>fs', function()

@@ -45,3 +45,7 @@ gitsigns.setup {
     vim.api.nvim_buf_create_user_command(0, 'Greset', gitsigns.reset_buffer, {})
   end,
 }
+
+vim.keymap.set('n', '<Leader>gs', function()
+  gitsigns.setqflist('all')
+end)
