@@ -23,6 +23,7 @@ map('n', 'k', [[v:count == 0 && &ft != 'qf' ? 'gk' : 'k']], { expr = true })
 map('n', '{', [[:keepjumps normal! {<CR>]], { silent = true })
 map('n', '}', [[:keepjumps normal! }<CR>]], { silent = true })
 map('v', '<', [[<gv]])
+map('v', '<Leader>s', [["gy :silent execute 'grep! -F ' . shellescape(@g)<CR>]], { silent = true })
 map('v', '>', [[>gv]])
 
 map('n', 'q', function()
