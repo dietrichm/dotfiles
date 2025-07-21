@@ -5,13 +5,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     local function map(mode, lhs, rhs)
       vim.keymap.set(mode, lhs, rhs, { buffer = bufnr })
     end
-    local telescope = require('telescope.builtin')
 
     map('n', 'gd', vim.lsp.buf.declaration)
-    map('n', 'gri', telescope.lsp_implementations)
-    map('n', 'grr', telescope.lsp_references)
-    map('n', 'grt', telescope.lsp_type_definitions)
-    map('n', 'gO', telescope.lsp_document_symbols)
 
     map({ 'i', 'n' }, '<C-S>', function()
       vim.lsp.buf.signature_help { border = 'rounded' }
