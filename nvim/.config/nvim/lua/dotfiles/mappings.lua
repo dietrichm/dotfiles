@@ -30,6 +30,11 @@ map('n', 'q', function()
   return vim.bo.buftype == 'terminal' and ':bd<CR>' or 'q'
 end, { expr = true, silent = true })
 
+map('n', '<Leader>gi', function()
+  vim.bo.grepprg = vim.bo.grepprg == '' and vim.o.grepprg .. ' --no-ignore-vcs' or ''
+  vim.cmd.set('grepprg?')
+end)
+
 map('ia', 'rstr', function()
   return io.open('/dev/urandom'):read(500):gsub('[^%w]', ''):sub(0, 32)
 end, { expr = true })
