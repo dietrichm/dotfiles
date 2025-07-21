@@ -38,28 +38,6 @@ telescope.setup {
     oldfiles = {
       only_cwd = true,
     },
-    current_buffer_tags = {
-      show_line = true,
-    },
-    tagstack = {
-      fname_width = 80,
-    },
-    lsp_implementations = {
-      fname_width = 80,
-    },
-    lsp_references = {
-      fname_width = 80,
-      include_declaration = false,
-    },
-    lsp_type_definitions = {
-      fname_width = 80,
-    },
-    lsp_document_symbols = {
-      symbol_width = 60,
-      symbol_type_width = 10,
-      show_line = true,
-      ignore_symbols = { 'variable', 'property' },
-    },
   },
 }
 
