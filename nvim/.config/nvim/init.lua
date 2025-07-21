@@ -76,6 +76,12 @@ vim.api.nvim_create_autocmd('QuickFixCmdPost', {
 })
 
 vim.api.nvim_create_autocmd('QuickFixCmdPost', {
+  pattern = 'lgrep',
+  group = augroup,
+  command = [[lwindow]],
+})
+
+vim.api.nvim_create_autocmd('QuickFixCmdPost', {
   pattern = 'lmake',
   group = augroup,
   callback = function()
