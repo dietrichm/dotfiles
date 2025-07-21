@@ -8,6 +8,6 @@ vim.keymap.set('n', "'", [[:Cfilter ]], { buffer = true })
 vim.keymap.set('n', '!', [[:Cfilter! ]], { buffer = true })
 
 if vim.w.quickfix_title ~= nil then
-  local grepprg = vim.o.grepprg:gsub('%-', '%%-')
+  local grepprg = ':' .. vim.o.grepprg:gsub('%-', '%%-')
   vim.w.quickfix_title = vim.w.quickfix_title:gsub(grepprg, 'grep')
 end
