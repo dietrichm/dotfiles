@@ -72,7 +72,7 @@ vim.g['test#neovim#start_normal'] = 1
 vim.api.nvim_create_autocmd('QuickFixCmdPost', {
   pattern = 'grep',
   group = augroup,
-  command = [[cwindow]],
+  command = [[botright cwindow]],
 })
 
 vim.api.nvim_create_autocmd('QuickFixCmdPost', {
