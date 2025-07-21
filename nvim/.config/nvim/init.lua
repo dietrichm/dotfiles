@@ -40,7 +40,7 @@ vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
 vim.opt.exrc = true
 vim.opt.fileformats = 'unix'
-vim.opt.grepprg = 'rg --vimgrep'
+vim.opt.grepprg = 'rg --color=never --no-heading --with-filename --line-number --column'
 vim.opt.guicursor:append('a:Cursor')
 vim.opt.guicursor:append('a:blinkon500-blinkoff500')
 vim.opt.hlsearch = false
