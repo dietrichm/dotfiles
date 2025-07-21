@@ -27,7 +27,13 @@ map('v', '<Leader>s', [["gy :silent execute 'grep! -F ' . shellescape(@g)<CR>]],
 map('v', '>', [[>gv]])
 
 map('n', 'q', function()
-  return vim.bo.buftype == 'terminal' and ':bd<CR>' or 'q'
+  if vim.bo.buftype == 'terminal' then
+    return ':bd<CR>'
+  end
+  if vim.bo.buftype == 'quickfix' then
+    return '<C-W>c<C-W>p'
+  end
+  return 'q'
 end, { expr = true, silent = true })
 
 map('n', '<Leader>gi', function()
