@@ -6,6 +6,7 @@ vim.opt_local.wrap = false
 
 vim.keymap.set('n', "'", [[:Cfilter ]], { buffer = true })
 vim.keymap.set('n', '!', [[:Cfilter! ]], { buffer = true })
+vim.keymap.set('n', '^', [[:Cfilter ^]], { buffer = true })
 
 if vim.w.quickfix_title ~= nil then
   local grepprg = vim.o.grepprg:gsub('%-', '%%-')
