@@ -112,6 +112,7 @@ vim.lsp.config('lua_ls', {
 
 vim.lsp.enable {
   'basedpyright',
+  'clangd',
   'gopls',
   'intelephense',
   'lua_ls',
