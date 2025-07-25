@@ -52,9 +52,3 @@ end)
 map('n', '<Leader>b', builtin.buffers)
 map('n', '<Leader>fh', builtin.oldfiles)
 map('n', '<Leader>tr', builtin.resume)
-
-map('n', '<Leader>fs', function()
-  local file_root = vim.fn.expand('%:t:r')
-  local file_root_without_test = file_root:gsub('_test$', ''):gsub('Test$', '')
-  builtin.find_files { search_file = file_root_without_test }
-end)
