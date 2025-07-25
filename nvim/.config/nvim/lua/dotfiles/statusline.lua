@@ -8,7 +8,8 @@ vim.api.nvim_create_autocmd('DiagnosticChanged', {
     end
 
     local items = {}
-    local counts = vim.diagnostic.count(args.buf)
+    local bufnr = args.buf
+    local counts = vim.diagnostic.count(bufnr)
 
     for severity, text in ipairs(severities) do
       if counts[severity] ~= nil then
@@ -16,9 +17,11 @@ vim.api.nvim_create_autocmd('DiagnosticChanged', {
       end
     end
 
-    vim.b[args.buf].diagnostic_status = table.concat(items, ' ')
+    vim.b[bufnr].diagnostic_status = table.concat(items, ' ')
     vim.schedule(function()
-      vim.api.nvim__redraw { buf = args.buf, statusline = true }
+      if vim.api.nvim_buf_is_valid(bufnr) then
+        vim.api.nvim__redraw { buf = bufnr, statusline = true }
+      end
     end)
   end,
 })
