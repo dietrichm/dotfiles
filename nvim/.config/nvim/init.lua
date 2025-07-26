@@ -17,8 +17,6 @@ require('paq'):setup { verbose = true } {
   'lewis6991/gitsigns.nvim',
   'neovim/nvim-lspconfig',
   'nvim-lua/plenary.nvim',
-  'nvim-telescope/telescope.nvim',
-  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   { 'nvim-treesitter/nvim-treesitter', branch = 'master', build = ':TSUpdate' },
   'nvim-treesitter/nvim-treesitter-context',
   { 'nvim-treesitter/nvim-treesitter-textobjects', branch = 'master' },
@@ -117,7 +115,6 @@ require('dotfiles.copilot')
 require('dotfiles.treesitter')
 require('dotfiles.formatters')
 require('dotfiles.mini')
-require('dotfiles.telescope')
 require('dotfiles.gitsigns')
 require('dotfiles.fs')
 require('dotfiles.refactoring')
