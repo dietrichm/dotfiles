@@ -28,6 +28,7 @@ map('n', '<Leader>b', builtin.buffers)
 map('n', '<Leader>fh', function()
   mini_extra.pickers.oldfiles { current_dir = true }
 end)
+map('n', '<Leader>gs', mini_extra.pickers.git_hunks)
 map('n', '<Leader>pr', builtin.resume)
 map('n', '<Leader>fs', function()
   local file_root = vim.fn.expand('%:t:r')
