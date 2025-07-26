@@ -7,14 +7,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
 
     map('n', 'gd', vim.lsp.buf.declaration)
-
-    map({ 'i', 'n' }, '<C-S>', function()
-      vim.lsp.buf.signature_help { border = 'rounded' }
-    end)
-
-    map('n', 'K', function()
-      vim.lsp.buf.hover { border = 'rounded' }
-    end)
+    map('n', '<C-S>', vim.lsp.buf.signature_help)
 
     map('n', '+', function()
       vim.lsp.buf.document_highlight()

@@ -56,6 +56,7 @@ vim.opt.timeoutlen = 3000
 vim.opt.title = true
 vim.opt.titlestring = 'nvim ' .. vim.fs.basename(vim.env.PWD)
 vim.opt.undofile = true
+vim.opt.winborder = 'rounded'
 
 if vim.env.NVIM_EXTUI == '1' and vim.fn.has('nvim-0.12') == 1 then
   require('vim._extui').enable {}
