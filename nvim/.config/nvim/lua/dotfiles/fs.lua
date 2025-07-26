@@ -17,15 +17,10 @@ oil.setup {
     end,
   },
   keymaps = {
-    ['<C-s>'] = false,
+    ['<C-s>'] = 'actions.select_split',
     ['<C-v>'] = 'actions.select_vsplit',
-    ['<C-h>'] = false,
-    ['<C-x>'] = 'actions.select_split',
-    ['<C-c>'] = false,
     ['q'] = 'actions.close',
-    ['<C-l>'] = false,
     ['<C-r>'] = 'actions.refresh',
-    ['<C-p>'] = false,
     ['<M-p>'] = 'actions.preview',
   },
 }
