@@ -22,7 +22,8 @@ oil.setup {
     ['<C-t>'] = { 'actions.select', opts = { tab = true, close = true } },
     ['q'] = 'actions.close',
     ['<C-r>'] = 'actions.refresh',
-    ['<M-p>'] = 'actions.preview',
+    ['<Tab>'] = 'actions.preview',
+    ['<C-p>'] = false,
   },
 }
 
