@@ -17,8 +17,9 @@ oil.setup {
     end,
   },
   keymaps = {
-    ['<C-s>'] = 'actions.select_split',
-    ['<C-v>'] = 'actions.select_vsplit',
+    ['<C-s>'] = { 'actions.select', opts = { horizontal = true, close = true } },
+    ['<C-v>'] = { 'actions.select', opts = { vertical = true, close = true } },
+    ['<C-t>'] = { 'actions.select', opts = { tab = true, close = true } },
     ['q'] = 'actions.close',
     ['<C-r>'] = 'actions.refresh',
     ['<M-p>'] = 'actions.preview',
