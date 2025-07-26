@@ -60,6 +60,7 @@ $0]],
 }
 
 for _, skeleton in ipairs(skeletons) do
+  ---@diagnostic disable-next-line: param-type-mismatch
   vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
     group = augroup,
     pattern = skeleton.pattern,
