@@ -5,7 +5,6 @@ end
 
 local actions = require('telescope.actions')
 local actions_layout = require('telescope.actions.layout')
-local builtin = require('telescope.builtin')
 
 telescope.setup {
   defaults = {
@@ -42,13 +41,3 @@ telescope.setup {
 }
 
 telescope.load_extension('fzf')
-
-local map = vim.keymap.set
-
-map('n', '<Leader>o', builtin.find_files)
-map('n', '<Leader>O', function()
-  builtin.find_files { no_ignore = true }
-end)
-map('n', '<Leader>b', builtin.buffers)
-map('n', '<Leader>fh', builtin.oldfiles)
-map('n', '<Leader>tr', builtin.resume)
