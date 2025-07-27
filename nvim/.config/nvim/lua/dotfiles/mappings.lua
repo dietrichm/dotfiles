@@ -44,6 +44,28 @@ map('n', '<Leader>gi', function()
   vim.cmd.set('grepprg?')
 end)
 
+map('n', '+', function()
+  vim.lsp.buf.document_highlight()
+  vim.api.nvim_create_autocmd('CursorMoved', {
+    once = true,
+    callback = vim.lsp.buf.clear_references,
+  })
+end)
+
+map('n', '<Leader>ih', function()
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end)
+
+map('n', '<Leader>u', function()
+  vim.lsp.buf.code_action {
+    ---@diagnostic disable-next-line: missing-fields
+    context = {
+      only = { 'source.organizeImports' },
+    },
+    apply = true,
+  }
+end)
+
 map('ia', 'rstr', function()
   return io.open('/dev/urandom'):read(500):gsub('[^%w]', ''):sub(0, 32)
 end, { expr = true })
