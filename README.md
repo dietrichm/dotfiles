@@ -29,7 +29,6 @@ Depending on which [config packages](#config-packages) are installed, these depe
      * [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
  * `nvim`
      * [ripgrep](https://github.com/BurntSushi/ripgrep)
-     * [Language servers](#language-servers-lsp) depending on the desired languages
      * [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
 
 ## Installation
@@ -58,25 +57,29 @@ If you wish to only install specific packages, pass them as additional arguments
 
 Run `nvim +PaqUpdate` to update all plugins.
 
-## Language Servers (LSP)
-
-Neovim's internal LSP client is used to provide code intelligence and completion using [language servers](https://langserver.org/).
-
-Depending on the languages used, the following language server binaries need to be installed manually:
-
-* Go ([gopls](https://pkg.go.dev/golang.org/x/tools/gopls)): `go install golang.org/x/tools/gopls@latest`
-* Python ([Basedpyright](https://docs.basedpyright.com/)): `pip install basedpyright`
-* PHP ([Intelephense](https://intelephense.com/)): `npm i -g intelephense`
-* TypeScript and JavaScript ([TypeScript Language Server](https://github.com/typescript-language-server/typescript-language-server)): `npm i -g typescript typescript-language-server`
-* Lua ([lua-language-server](https://github.com/luals/lua-language-server)): see [installation instructions](https://github.com/luals/lua-language-server/wiki/Getting-Started#command-line). Create the wrapper script as `~/bin/lua-language-server`.
-* Markdown ([Marksman](https://github.com/artempyanykh/marksman)): see [installation instructions](https://github.com/artempyanykh/marksman/blob/main/docs/install.md)
-* Tailwind CSS ([tailwindcss/language-server](https://github.com/tailwindlabs/tailwindcss-intellisense)): `npm i -g @tailwindcss/language-server`
-
 ## Custom configuration
 
 ### Neovim
 
 Project local configuration can be set in `.nvim.lua` or `.nvimrc`.
+Here, any desired [Language Servers](https://langserver.org/) (LSP) can be configured and/or enabled. For example:
+
+```lua
+vim.lsp.config('gopls', {
+  settings = {
+    gopls = {
+      staticcheck = true,
+      gofumpt = true,
+      hints = {
+        compositeLiteralFields = true,
+        parameterNames = true,
+      },
+    },
+  },
+})
+vim.lsp.enable('gopls')
+```
+
 Neovim also reads [EditorConfig](https://editorconfig.org/) files.
 
 ### zsh
