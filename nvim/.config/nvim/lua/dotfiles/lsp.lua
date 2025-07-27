@@ -6,9 +6,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.keymap.set(mode, lhs, rhs, { buffer = bufnr })
     end
 
-    map('n', 'gd', vim.lsp.buf.declaration)
-    map('n', '<C-S>', vim.lsp.buf.signature_help)
-
     map('n', '+', function()
       vim.lsp.buf.document_highlight()
       vim.api.nvim_create_autocmd('CursorMoved', {
