@@ -3,6 +3,10 @@ PKG = stow -v -d "$(MY_CONFIG_ROOT)" -t "$(HOME)"
 .PHONY: all
 all: containers dig direnv git kitty nvim ranger ssh
 
+.PHONY: list
+list:
+	@grep -F '$$(PKG)' Makefile | grep -v @grep | awk '{print $$2;}'
+
 .PHONY: containers
 containers: env
 	$(PKG) containers

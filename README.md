@@ -17,7 +17,7 @@ The following is required for installing and using these dotfiles:
 
 ### Optional
 
-[fzf](https://github.com/junegunn/fzf) will be used in zsh when installed (i.e. using a package manager).
+[fzf](https://github.com/junegunn/fzf) will be used in zsh shells when installed (i.e. using a package manager).
 
 Depending on which [config packages](#config-packages) are installed, these dependencies are also required:
 
@@ -35,22 +35,13 @@ Depending on which [config packages](#config-packages) are installed, these depe
 
  * In the repo, execute `git submodule update --init`.
  * Edit `~/.zshenv` to read `export ZDOTDIR="$HOME/repos/dotfiles/zsh"` (adapt directory).
- * Execute `make` in the repo to install all [config packages](#config-packages).
+ * Execute `make` in the repo to install all config packages.
 
 ### Config packages
 
-The following (Stow based) config packages are available:
-
-* `containers`
-* `dig`
-* `direnv`
-* `git`
-* `kitty`
-* `nvim`
-* `ranger`
-* `ssh`
-
+Run `make list` to list the available packages.
 Running `make` installs all of them.
+
 If you wish to only install specific packages, pass them as additional arguments to make, i.e.: `make ssh git`.
 
 ### Updating
@@ -58,6 +49,10 @@ If you wish to only install specific packages, pass them as additional arguments
 Run `nvim +PaqUpdate` to update all plugins.
 
 ## Custom configuration
+
+### zsh
+
+Given direnv is installed, specific environment variables can be exported in `.envrc` files which are loaded automatically upon entering the (sub)directory.
 
 ### Neovim
 
@@ -80,12 +75,6 @@ vim.lsp.config('gopls', {
 vim.lsp.enable('gopls')
 ```
 
-Neovim also reads [EditorConfig](https://editorconfig.org/) files.
-
-### zsh
-
-Given direnv is installed, specific environment variables can be exported in `.envrc` files which are loaded automatically upon entering the (sub)directory.
-
 ### git
 
 A `git/local.inc` file can be used to set custom git configuration values.
@@ -102,7 +91,7 @@ Here you can use [conditional includes](https://git-scm.com/docs/git-config#_con
 
 ### universal-ctags
 
-Aside from common global configuration options set in `nvim/.config/ctags/global.ctags`, additional project-level parameters can be defined within `.ctags.d/*.ctags` files.
+Additional project-level parameters can be defined within `.ctags.d/*.ctags` files.
 This allows to exclude i.e. compiled or vendor source files using more `--exclude=` options.
 
 ## License
