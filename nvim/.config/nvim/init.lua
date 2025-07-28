@@ -52,6 +52,7 @@ vim.opt.showmode = true
 vim.opt.signcolumn = 'yes'
 vim.opt.smartcase = true
 vim.opt.spelllang = 'en_gb'
+vim.opt.switchbuf = 'useopen,uselast'
 vim.opt.timeoutlen = 3000
 vim.opt.title = true
 vim.opt.titlestring = 'nvim ' .. vim.fs.basename(vim.env.PWD)
