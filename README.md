@@ -40,7 +40,6 @@ Depending on which [config packages](#config-packages) are installed, these depe
 ### Config packages
 
 Run `make list` to list the available packages.
-Running `make` installs all of them.
 
 If you wish to only install specific packages, pass them as additional arguments to make, i.e.: `make ssh git`.
 
