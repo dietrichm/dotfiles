@@ -34,7 +34,7 @@ map('n', '<Leader>fs', function()
   local file_root = vim.fn.expand('%:t:r')
   local file_root_without_test = file_root:gsub('_test$', ''):gsub('Test$', '')
   vim.schedule(function()
-    mini_pick.set_picker_query { file_root_without_test }
+    mini_pick.set_picker_query { "'", file_root_without_test }
   end)
   builtin.files()
 end)
