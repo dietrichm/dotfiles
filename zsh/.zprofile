@@ -7,6 +7,7 @@ path=(
     vendor/bin
     node_modules/.bin
     $HOME/.config/composer/vendor/bin
+    $HOME/.deno/bin
     $HOME/.config/yarn/global/node_modules/.bin
     $HOME/bin
     $HOME/.local/bin
