@@ -74,6 +74,10 @@ vim.lsp.config('gopls', {
 vim.lsp.enable('gopls')
 ```
 
+Other dotfiles specific settings that can be set:
+
+* `vim.g.php_tests_prefix`: directory where PHP tests are found (default: `tests/`).
+
 ### git
 
 A `git/local.inc` file can be used to set custom git configuration values.
