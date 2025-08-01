@@ -1,14 +1,18 @@
 vim.api.nvim_create_autocmd('DiagnosticChanged', {
   group = vim.api.nvim_create_augroup('dotfiles_statusline', { clear = true }),
   callback = function(args)
+    local bufnr = args.buf
     local severities = vim.diagnostic.config().signs.text
+
+    if not vim.api.nvim_buf_is_loaded(bufnr) then
+      return
+    end
 
     if severities == nil then
       return
     end
 
     local items = {}
-    local bufnr = args.buf
     local counts = vim.diagnostic.count(bufnr)
 
     for severity, text in ipairs(severities) do
@@ -19,9 +23,7 @@ vim.api.nvim_create_autocmd('DiagnosticChanged', {
 
     vim.b[bufnr].diagnostic_status = table.concat(items, ' ')
     vim.schedule(function()
-      if vim.api.nvim_buf_is_valid(bufnr) then
-        vim.api.nvim__redraw { buf = bufnr, statusline = true }
-      end
+      vim.api.nvim__redraw { buf = bufnr, statusline = true }
     end)
   end,
 })
