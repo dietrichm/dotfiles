@@ -14,5 +14,5 @@ set commit-order = default
 color cursor black cyan
 
 # Keybindings.
-bind generic I !@zsh -c "wl-copy %(commit)"
-bind generic T !@zsh -c "git show -s --format=%s %(commit) | wl-copy -n"
+bind generic I @wl-copy %(commit)
+bind generic T @zsh -c "git show -s --format=%s %(commit) | wl-copy -n"
