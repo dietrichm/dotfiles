@@ -1,19 +1,14 @@
-# Configure views.
-set main-view-id = yes
 set blob-view = line-number:yes,interval=1 text
+set commit-order = default
 set diff-options = -C --show-signature
+set ignore-case = smart-case
 set line-graphics = utf-8
+set main-view-id = yes
+set refresh-mode = manual
 set split-view-height = 80%
 set vertical-split = false
 
-# Behaviour.
-set ignore-case = smart-case
-set commit-order = default
-set refresh-mode = manual
-
-# Colours.
 color cursor black cyan
 
-# Keybindings.
 bind generic I @wl-copy %(commit)
 bind generic T @zsh -c "git show -s --format=%s %(commit) | wl-copy -n"
