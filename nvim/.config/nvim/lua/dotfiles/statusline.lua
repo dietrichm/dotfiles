@@ -1,3 +1,10 @@
+vim.g.qf_disable_statusline = 1
+
+if vim.fn.has('nvim-0.12') == 1 then
+  vim.opt.statusline:prepend(' ')
+  return
+end
+
 vim.api.nvim_create_autocmd('DiagnosticChanged', {
   group = vim.api.nvim_create_augroup('dotfiles_statusline', { clear = true }),
   callback = function(args)
@@ -17,7 +24,7 @@ vim.api.nvim_create_autocmd('DiagnosticChanged', {
 
     for severity, text in ipairs(severities) do
       if counts[severity] ~= nil then
-        table.insert(items, ('%s%d'):format(text, counts[severity]))
+        table.insert(items, ('%s:%d'):format(text, counts[severity]))
       end
     end
 
@@ -28,8 +35,4 @@ vim.api.nvim_create_autocmd('DiagnosticChanged', {
   end,
 })
 
-vim.g.qf_disable_statusline = 1
-vim.o.statusline = [[ %<%f%( %{get(w:, 'quickfix_title', '')}%) %h%m%r %=]]
-  .. [[%{% has('nvim-0.12') && &busy > 0 ? '⏳ ' : '' %}]]
-  .. [[%(%{get(b:, 'gitsigns_status', '')} %)%(%{get(b:, 'diagnostic_status', '')} %)]]
-  .. [[%{% &buftype == 'quickfix' ? '%l/%L ' : '' %}]]
+vim.o.statusline = [[ %<%f %h%w%m%r %=%(%{get(b:, 'diagnostic_status', '')} %)]]
