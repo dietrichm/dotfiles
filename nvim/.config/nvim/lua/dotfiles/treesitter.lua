@@ -16,6 +16,7 @@ treesitter.setup {
     'javascript',
     'markdown',
     'markdown_inline',
+    'sql',
     'yaml',
   },
   highlight = {
