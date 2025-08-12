@@ -16,6 +16,8 @@ if vim.env.NVIM_COMPLETION == '1' then
       vim.keymap.set('i', '<C-Space>', vim.lsp.completion.get, { buffer = bufnr })
     end,
   })
+  -- vim.opt.complete = { 'o' }
+  -- vim.opt.autocomplete = true
   return
 end
 
