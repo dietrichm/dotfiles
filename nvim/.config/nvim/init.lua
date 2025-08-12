@@ -60,7 +60,6 @@ vim.opt.undofile = true
 vim.opt.winborder = 'rounded'
 
 if vim.env.NVIM_EXTUI == '1' and vim.fn.has('nvim-0.12') == 1 then
-  vim.opt.cmdheight = 0
   require('vim._extui').enable {}
 end
 
