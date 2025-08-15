@@ -2,8 +2,6 @@ local map = vim.keymap.set
 
 map('ia', 'mctrl', [[ctrl := gomock.NewController(t)]], { buffer = true })
 map('ia', 'gnew', [[g := NewWithT(t)]], { buffer = true })
-map('ia', 'dump', [[fmt.Printf("%+v\n", )<Left>]], { buffer = true })
-map('ia', 'errn', [[if err != nil {}<Left>]], { buffer = true })
 
 map('ia', 'mockgen', function()
   return string.format(
