@@ -17,13 +17,15 @@ oil.setup {
     end,
   },
   keymaps = {
-    ['<C-s>'] = { 'actions.select', opts = { horizontal = true, close = true } },
-    ['<C-v>'] = { 'actions.select', opts = { vertical = true, close = true } },
-    ['<C-t>'] = { 'actions.select', opts = { tab = true, close = true } },
-    ['q'] = 'actions.close',
-    ['<C-r>'] = 'actions.refresh',
-    ['<Tab>'] = 'actions.preview',
+    ['<C-h>'] = false,
+    ['<C-l>'] = false,
     ['<C-p>'] = false,
+    ['<C-r>'] = 'actions.refresh',
+    ['<C-s>'] = { 'actions.select', opts = { horizontal = true, close = true } },
+    ['<C-t>'] = { 'actions.select', opts = { tab = true, close = true } },
+    ['<C-v>'] = { 'actions.select', opts = { vertical = true, close = true } },
+    ['<Tab>'] = 'actions.preview',
+    ['q'] = 'actions.close',
   },
 }
 
