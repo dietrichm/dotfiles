@@ -37,6 +37,6 @@ nmap('<C-v>', function()
 end)
 
 if vim.w.quickfix_title ~= nil then
-  local grepprg = vim.o.grepprg:gsub('%-', '%%-')
+  local grepprg = vim.pesc(vim.o.grepprg)
   vim.w.quickfix_title = vim.w.quickfix_title:gsub(grepprg, 'grep')
 end
