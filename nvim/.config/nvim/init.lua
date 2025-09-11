@@ -1,4 +1,4 @@
-vim.g.mapleader = ' '
+vim.g.mapleader = vim.keycode('<Space>')
 vim.g.loaded_fzf = 1
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
