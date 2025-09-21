@@ -5,7 +5,7 @@ end
 
 conform.setup {
   formatters_by_ft = {
-    go = { 'goimports', 'gofumpt' },
+    go = { 'goimports', lsp_format = 'first' },
     javascript = { 'prettier' },
     lua = { 'stylua' },
     php = { 'pint', 'php_cs_fixer', stop_after_first = true },
