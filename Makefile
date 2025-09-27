@@ -57,3 +57,14 @@ $(HOME)/.local/share/nvim/site/pack/paqs/start/paq-nvim:
 lint:
 	luacheck -q .
 	stylua --check --allow-hidden .
+
+.PHONY: update-nvim-nightly
+update-nvim-nightly:
+	gh \
+		--repo neovim/neovim \
+		release download nightly \
+		--pattern nvim-linux-x86_64.appimage \
+		--output ~/bin/nvimn \
+		--clobber
+	chmod u+x ~/bin/nvimn
+	@nvimn --version
