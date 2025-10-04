@@ -2,7 +2,16 @@ local loaded, mini_pairs = pcall(require, 'mini.pairs')
 if not loaded then
   return
 end
-mini_pairs.setup()
+mini_pairs.setup {
+  mappings = {
+    ['('] = { neigh_pattern = '[^\\]%s' },
+    ['['] = { neigh_pattern = '[^\\]%s' },
+    ['{'] = { neigh_pattern = '[^\\]%s' },
+    ['"'] = { neigh_pattern = '[^\\]%s' },
+    ["'"] = { neigh_pattern = '[^%a\\]%s' },
+    ['`'] = { neigh_pattern = '[^\\]%s' },
+  },
+}
 
 local mini_extra = require('mini.extra')
 mini_extra.setup()
