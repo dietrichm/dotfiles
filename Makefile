@@ -64,7 +64,7 @@ update-nvim-nightly:
 		--repo neovim/neovim \
 		release download nightly \
 		--pattern nvim-linux-x86_64.appimage \
-		--output ~/bin/nvimn \
+		--output ~/bin/nv \
 		--clobber
-	chmod u+x ~/bin/nvimn
-	@nvimn --version
+	chmod u+x ~/bin/nv
+	@nv --version
