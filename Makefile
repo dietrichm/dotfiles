@@ -68,3 +68,9 @@ update-nvim-nightly:
 		--clobber
 	chmod u+x ~/bin/nv
 	@nv --version
+
+.PHONY: nvim-configs.tar.gz
+nvim-configs.tar.gz: ROOT ?= $(HOME)/repos
+nvim-configs.tar.gz: FILES = $(shell find $(ROOT) -name .nvimrc -o -name .nvim.lua)
+nvim-configs.tar.gz:
+	tar czPf $@ $(FILES)
