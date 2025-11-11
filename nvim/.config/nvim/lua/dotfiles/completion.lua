@@ -51,6 +51,11 @@ cmp.setup {
   sources = cmp.config.sources {
     { name = 'nvim_lsp' },
   },
+  window = {
+    completion = {
+      border = 'none',
+    },
+  },
 }
 
 vim.lsp.config('*', {
