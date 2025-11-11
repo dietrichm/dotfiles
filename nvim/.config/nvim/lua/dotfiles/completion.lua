@@ -55,6 +55,9 @@ cmp.setup {
     completion = {
       border = 'none',
     },
+    documentation = {
+      winhighlight = '',
+    },
   },
 }
 
