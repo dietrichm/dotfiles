@@ -6,16 +6,16 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 
     hi { 'DiagnosticUnderlineError', 'gui=undercurl' }
     hi { 'link', 'ColorColumn', 'CursorLine', bang = true }
-    hi { 'TreesitterContextBottom', 'gui=underline', 'guisp=NvimDarkGrey4' }
-    hi { 'link', 'LspInlayHint', '@comment' }
-    hi { 'Added', 'guifg=NvimLightBlue' }
-    hi { 'Changed', 'guifg=NvimLightYellow' }
-    hi { 'FloatBorder', 'guifg=NvimDarkGrey4', 'guibg=NvimDarkGrey1' }
-    hi { 'qfText', 'guifg=NvimLightGrey2' }
-    hi { 'MiniPickMatchRanges', 'gui=underline', 'guifg=NvimLightYellow' }
+    hi { 'MiniPickMatchRanges', 'gui=underline' }
+    hi { 'TreesitterContextBottom', 'gui=underline' }
 
-    if vim.env.TERM == 'xterm-kitty' then
-      hi { '@comment', 'guifg=NvimLightGrey4', 'gui=italic' }
+    if vim.o.background == 'dark' then
+      hi { 'Added', 'guifg=NvimLightBlue' }
+      hi { 'Changed', 'guifg=NvimLightYellow' }
+      hi { 'FloatBorder', 'guifg=NvimDarkGrey4', 'guibg=NvimDarkGrey1' }
+      hi { 'MiniPickMatchRanges', 'guifg=NvimLightYellow' }
+      hi { 'qfText', 'guifg=NvimLightGrey2' }
+      hi { 'TreesitterContextBottom', 'guisp=NvimDarkGrey4' }
     end
   end,
 })
