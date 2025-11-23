@@ -4,12 +4,12 @@ if not loaded then
 end
 mini_pairs.setup {
   mappings = {
-    ['('] = { neigh_pattern = '[^\\]%s' },
-    ['['] = { neigh_pattern = '[^\\]%s' },
-    ['{'] = { neigh_pattern = '[^\\]%s' },
+    ['('] = { neigh_pattern = '[^\\][%s%p]' },
+    ['['] = { neigh_pattern = '[^\\][%s%p]' },
+    ['{'] = { neigh_pattern = '[^\\][%s%p]' },
     ['"'] = { neigh_pattern = '[^\\]%s' },
-    ["'"] = { neigh_pattern = '[^%a\\]%s' },
-    ['`'] = { neigh_pattern = '[^\\]%s' },
+    ["'"] = { neigh_pattern = '[^\\]%s' },
+    ['`'] = { neigh_pattern = '[^\\`]%s' },
   },
 }
 
