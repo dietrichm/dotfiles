@@ -25,3 +25,4 @@ export LC_ALL=en_GB.UTF-8
 export MANPAGER="nvim +Man!"
 export MANWIDTH=999
 export RIPGREP_CONFIG_PATH=$HOME/.ripgrep.conf
+export SUPPRESS_BOLTDB_WARNING=1
