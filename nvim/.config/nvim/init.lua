@@ -60,9 +60,11 @@ vim.opt.undofile = true
 vim.opt.winborder = 'rounded'
 
 if vim.fn.has('nvim-0.12') == 1 then
+  vim.opt.statusline:prepend(' ')
   require('vim._extui').enable {}
 end
 
+vim.g.qf_disable_statusline = 1
 vim.g['test#strategy'] = 'neovim'
 vim.g['test#neovim#term_position'] = 'botright 15'
 vim.g['test#neovim#start_normal'] = 1
@@ -82,5 +84,4 @@ require('dotfiles.gitsigns')
 require('dotfiles.fs')
 require('dotfiles.refactoring')
 require('dotfiles.skeletons')
-require('dotfiles.statusline')
 require('dotfiles.mappings')
