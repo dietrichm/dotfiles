@@ -16,7 +16,8 @@ vim.api.nvim_create_autocmd('ColorScheme', {
       hi { 'MiniPickMatchRanges', 'guifg=NvimLightYellow' }
       hi { 'NonText', 'guifg=grey' }
       hi { 'qfText', 'guifg=NvimLightGrey2' }
-      hi { 'StatusLine', 'gui=bold', 'guifg=NvimLightGrey1', 'guibg=#707070' }
+      hi { 'StatusLine', 'guifg=NvimLightGrey2', 'guibg=NvimDarkGrey4' }
+      hi { 'StatusLineNC', 'guifg=NvimLightGrey3', 'guibg=NvimDarkGrey3' }
       hi { 'TreesitterContextBottom', 'guisp=NvimDarkGrey4' }
     end
   end,
