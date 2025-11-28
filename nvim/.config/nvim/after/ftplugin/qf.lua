@@ -22,18 +22,24 @@ else
   nmap('u', [[:colder<CR>]])
 end
 
-nmap('<C-v>', function()
+local function displayIn(switchbuf)
   local switchbuf_old = vim.o.switchbuf
   local index = vim.fn.line('.')
-  vim.cmd.wincmd('p')
-  vim.cmd.vsplit()
-  vim.o.switchbuf = 'uselast'
+  vim.o.switchbuf = switchbuf
   if is_loclist then
     vim.cmd.ll(index)
   else
     vim.cmd.cc(index)
   end
   vim.o.switchbuf = switchbuf_old
+end
+
+nmap('<C-v>', function()
+  displayIn('vsplit')
+end)
+
+nmap('<C-t>', function()
+  displayIn('newtab')
 end)
 
 if vim.w.quickfix_title ~= nil then
