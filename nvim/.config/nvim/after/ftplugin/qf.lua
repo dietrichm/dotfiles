@@ -10,6 +10,9 @@ local function nmap(lhs, rhs)
   vim.keymap.set('n', lhs, rhs, { buffer = true })
 end
 
+nmap('<C-i>', '<Nop>')
+nmap('<C-o>', '<Nop>')
+
 if is_loclist then
   nmap("'", [[:Lfilter ]])
   nmap('!', [[:Lfilter! ]])
