@@ -64,9 +64,10 @@ update-nvim-nightly:
 		--repo neovim/neovim \
 		release download nightly \
 		--pattern nvim-linux-x86_64.appimage \
-		--output ~/bin/nv \
-		--clobber
+		--output ~/bin/nv-new
+	mv --backup=numbered ~/bin/nv-new ~/bin/nv
 	chmod u+x ~/bin/nv
+	@echo
 	@nv --version
 
 .PHONY: nvim-configs.tar.gz
