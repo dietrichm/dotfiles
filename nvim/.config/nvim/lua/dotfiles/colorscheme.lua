@@ -6,6 +6,8 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 
     hi { 'DiagnosticUnderlineError', 'gui=undercurl' }
     hi { 'link', 'ColorColumn', 'CursorLine', bang = true }
+    hi { 'link', 'Sneak', 'Search', bang = true }
+    hi { 'link', 'SneakCurrent', 'CurSearch', bang = true }
     hi { 'MiniPickMatchRanges', 'gui=underline' }
     hi { 'TreesitterContextBottom', 'gui=underline' }
 

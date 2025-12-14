@@ -65,9 +65,11 @@ if vim.fn.has('nvim-0.12') == 1 then
 end
 
 vim.g.qf_disable_statusline = 1
-vim.g['test#strategy'] = 'neovim'
-vim.g['test#neovim#term_position'] = 'botright 15'
+vim.g['sneak#label'] = 1
+vim.g['sneak#use_ic_scs'] = 1
 vim.g['test#neovim#start_normal'] = 1
+vim.g['test#neovim#term_position'] = 'botright 15'
+vim.g['test#strategy'] = 'neovim'
 
 vim.api.nvim_create_user_command('Nw', [[:noautocmd w]], {})
 vim.api.nvim_create_user_command('Nwa', [[:noautocmd wa]], {})
