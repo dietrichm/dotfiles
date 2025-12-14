@@ -7,9 +7,9 @@ mini_pairs.setup {
     ['('] = { neigh_pattern = '[^\\][%s%p]' },
     ['['] = { neigh_pattern = '[^\\][%s%p]' },
     ['{'] = { neigh_pattern = '[^\\][%s%p]' },
-    ['"'] = { neigh_pattern = '[^\\]%s' },
-    ["'"] = { neigh_pattern = '[^\\]%s' },
-    ['`'] = { neigh_pattern = '[^\\`]%s' },
+    ['"'] = { neigh_pattern = '[^\\][%s%p]' },
+    ["'"] = { neigh_pattern = '[^\\][%s%p]' },
+    ['`'] = { neigh_pattern = '[^\\`][%s%p]' },
   },
 }
 
