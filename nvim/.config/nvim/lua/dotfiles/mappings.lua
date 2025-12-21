@@ -17,7 +17,7 @@ map('n', '<Leader>sw', [[:silent execute 'grep! -Fw -- ' . shellescape(expand('<
 map('n', '<Leader>sW', [[:silent execute 'grep! -Fw -- ' . shellescape(expand('<cWORD>'))<CR>]], { silent = true })
 map('n', '<Leader>w', [[:setlocal wrap!<CR>]])
 map('n', '<Space>', '')
-map('n', '\\', [[:setlocal hlsearch!<CR>]])
+map('n', '\\', [[:call sneak#cancel() | setlocal hlsearch!<CR>]], { silent = true })
 map('n', 'g#', [[:setlocal hlsearch | normal! g#<CR>]])
 map('n', 'g*', [[:setlocal hlsearch | normal! g*<CR>]])
 map('n', 'gd', vim.lsp.buf.declaration)
