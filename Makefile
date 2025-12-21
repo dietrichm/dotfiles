@@ -1,7 +1,7 @@
 PKG = stow -v -d "$(MY_CONFIG_ROOT)" -t "$(HOME)"
 
 .PHONY: all
-all: containers dig direnv git kitty nvim ranger ssh
+all: containers dig direnv git kitty nvim ssh
 
 .PHONY: list
 list:
@@ -35,10 +35,6 @@ nvim: env $(HOME)/.local/share/nvim/site/pack/paqs/start/paq-nvim
 	@echo -n "Press Enter to continue."
 	@read
 	nvim +PaqInstall
-
-.PHONY: ranger
-ranger: env
-	$(PKG) ranger
 
 .PHONY: ssh
 ssh: env
