@@ -72,6 +72,7 @@ vim.g['test#neovim#start_normal'] = 1
 vim.g['test#neovim#term_position'] = 'botright 15'
 vim.g['test#strategy'] = 'neovim'
 
+vim.api.nvim_create_user_command('LspInfo', [[:checkhealth vim.lsp]], {})
 vim.api.nvim_create_user_command('Nw', [[:noautocmd w]], {})
 vim.api.nvim_create_user_command('Nwa', [[:noautocmd wa]], {})
 
