@@ -14,9 +14,11 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     if vim.o.background == 'dark' then
       hi { 'Added', 'guifg=NvimLightBlue' }
       hi { 'Changed', 'guifg=NvimLightYellow' }
-      hi { 'FloatBorder', 'guifg=NvimDarkGrey4', 'guibg=NvimDarkGrey1' }
+      hi { 'FloatBorder', 'guifg=NvimDarkGrey4', 'guibg=NvimDarkGrey2' }
       hi { 'MiniPickMatchRanges', 'guifg=NvimLightYellow' }
-      hi { 'NonText', 'guifg=grey' }
+      hi { 'NonText', 'guifg=Grey' }
+      hi { 'Normal', 'guibg=Black' }
+      hi { 'NormalFloat', 'guibg=NvimDarkGrey2' }
       hi { 'TreesitterContextBottom', 'guisp=NvimDarkGrey4' }
     end
   end,
