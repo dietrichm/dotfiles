@@ -25,7 +25,7 @@ else
   nmap('u', [[:colder<CR>]])
 end
 
-local function displayIn(switchbuf)
+local function display_in(switchbuf)
   local switchbuf_old = vim.o.switchbuf
   local index = vim.fn.line('.')
   vim.o.switchbuf = switchbuf
@@ -38,11 +38,11 @@ local function displayIn(switchbuf)
 end
 
 nmap('<C-v>', function()
-  displayIn('vsplit')
+  display_in('vsplit')
 end)
 
 nmap('<C-t>', function()
-  displayIn('newtab')
+  display_in('newtab')
 end)
 
 if vim.w.quickfix_title ~= nil then
