@@ -2,6 +2,7 @@ local loaded, copilot = pcall(require, 'copilot')
 if not loaded then
   vim.api.nvim_create_user_command('LoadCopilot', function()
     vim.cmd.packadd('copilot.lua')
+    vim.cmd.packadd('avante.nvim')
     package.loaded['dotfiles.ai'] = nil
     require('dotfiles.ai')
   end, {})
@@ -23,3 +24,7 @@ if cmp_loaded then
     vim.b.copilot_suggestion_hidden = false
   end)
 end
+
+require('avante').setup {
+  provider = 'copilot',
+}

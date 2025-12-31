@@ -13,6 +13,7 @@ require('paq'):setup { verbose = true } {
   'justinmk/vim-sneak',
   { 'knubie/vim-kitty-navigator', build = 'cp pass_keys.py get_layout.py ' .. vim.fs.normalize('$HOME/.config/kitty') },
   'lewis6991/gitsigns.nvim',
+  'MunifTanjim/nui.nvim',
   'neovim/nvim-lspconfig',
   'nvim-lua/plenary.nvim',
   { 'nvim-treesitter/nvim-treesitter', branch = 'master', build = ':TSUpdate' },
@@ -26,6 +27,7 @@ require('paq'):setup { verbose = true } {
   'vim-test/vim-test',
   'Wansmer/treesj',
   'windwp/nvim-ts-autotag',
+  { 'yetone/avante.nvim', branch = 'v0.0.27', opt = true, build = 'make' },
   { 'zbirenbaum/copilot.lua', opt = true },
 }
 -- Sort in {...} selection using :sort /[a-z-\/]\+/ ri.
