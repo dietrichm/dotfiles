@@ -5,7 +5,7 @@ vim.g.loaded_perl_provider = 0
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
 
-vim.cmd.packadd('cfilter')
+vim.cmd.packadd { 'cfilter', bang = true }
 require('paq'):setup { verbose = true } {
   'echasnovski/mini.nvim',
   'hrsh7th/nvim-cmp',
