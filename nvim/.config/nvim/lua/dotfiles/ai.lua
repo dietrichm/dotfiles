@@ -2,8 +2,8 @@ local loaded, copilot = pcall(require, 'copilot')
 if not loaded then
   vim.api.nvim_create_user_command('LoadCopilot', function()
     vim.cmd.packadd('copilot.lua')
-    package.loaded['dotfiles.copilot'] = nil
-    require('dotfiles.copilot')
+    package.loaded['dotfiles.ai'] = nil
+    require('dotfiles.ai')
   end, {})
   return
 end
