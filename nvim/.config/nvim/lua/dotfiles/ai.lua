@@ -1,5 +1,5 @@
-local loaded, copilot = pcall(require, 'copilot')
-if not loaded then
+local copilot_loaded, copilot = pcall(require, 'copilot')
+if not copilot_loaded then
   vim.api.nvim_create_user_command('LoadAI', function()
     vim.cmd.packadd('copilot.lua')
     vim.cmd.packadd('avante.nvim')
