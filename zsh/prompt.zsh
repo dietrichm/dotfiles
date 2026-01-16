@@ -10,7 +10,7 @@ function _dotfiles_prompt_newline() {
         _dotfiles_first_prompt_done=1
         return
     fi
-    echo
+    printf "\n"
 }
 
 typeset -ag precmd_functions
