@@ -17,7 +17,7 @@ The following is required for installing and using these dotfiles:
 
 ### Optional
 
-[fzf](https://github.com/junegunn/fzf) will be used in zsh shells when installed (i.e. using a package manager).
+When installed (i.e. using a package manager), [fzf](https://github.com/junegunn/fzf) will be used in zsh shells for [completion selection](https://github.com/Aloxaf/fzf-tab).
 
 Depending on which [config packages](#config-packages) are installed, these dependencies are also required:
 
@@ -46,6 +46,11 @@ If you wish to only install specific packages, pass them as additional arguments
 ### Updating
 
 Run `nvim +PaqUpdate` to update all plugins.
+
+### Neovim nightly
+
+Nightly versions of Neovim can be downloaded as `~/bin/nv` using `make update-nvim-nightly`.
+This requires [gh](https://cli.github.com/) to be installed.
 
 ## Custom configuration
 
