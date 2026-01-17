@@ -63,6 +63,7 @@ update-nvim-nightly:
 		--output ~/bin/nv-new
 	mv --backup=numbered ~/bin/nv-new ~/bin/nv
 	chmod u+x ~/bin/nv
+	ls -1v ~/bin/nv.~*~ | head -n -5 | xargs rm
 	@echo
 	@nv --version
 
