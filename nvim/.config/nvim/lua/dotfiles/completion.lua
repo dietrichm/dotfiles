@@ -30,6 +30,15 @@ cmp.setup {
   completion = {
     completeopt = vim.o.completeopt,
   },
+  formatting = {
+    format = function(_, item)
+      local max_width = 60
+      if item.menu ~= nil and item.menu:len() > max_width then
+        item.menu = item.menu:sub(1, max_width - 1) .. '…'
+      end
+      return item
+    end,
+  },
   mapping = cmp.mapping.preset.insert {
     ['<C-Space>'] = cmp.mapping.complete(),
   },
