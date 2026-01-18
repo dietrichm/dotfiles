@@ -23,12 +23,7 @@ bindkey -v
 [ -f ~/.config/direnv/direnv.toml ] && eval "$(direnv hook zsh)"
 
 # Autocompletion.
-zstyle :compinstall filename "$ZDOTDIR/.zshrc"
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}'
-zstyle ':completion:*' menu select
-autoload -Uz compinit
+autoload -U compinit
 compinit
 [ -f "$MY_CONFIG_ROOT/vendor/fzf-tab/fzf-tab.plugin.zsh" ] && source "$MY_CONFIG_ROOT/vendor/fzf-tab/fzf-tab.plugin.zsh"
 
