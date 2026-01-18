@@ -22,19 +22,9 @@ bindkey -v
 # Load direnv.
 [ -f ~/.config/direnv/direnv.toml ] && eval "$(direnv hook zsh)"
 
-# Autocompletion.
-autoload -U compinit
-compinit
-[ -f "$MY_CONFIG_ROOT/vendor/fzf-tab/fzf-tab.plugin.zsh" ] && source "$MY_CONFIG_ROOT/vendor/fzf-tab/fzf-tab.plugin.zsh"
-zstyle ':completion:*:git-checkout:*' sort false
-zstyle ':completion:*:descriptions' format '[%d]'
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' menu no
-zstyle ':fzf-tab:*' switch-group '<' '>'
-
-# Load subfiles.
-for file in "$ZDOTDIR"/*.zsh; do
-    source "$file"
-done
+source "$ZDOTDIR/completion.zsh"
+source "$ZDOTDIR/aliases.zsh"
+source "$ZDOTDIR/functions.zsh"
+source "$ZDOTDIR/prompt.zsh"
 
 return 0
