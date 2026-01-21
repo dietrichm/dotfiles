@@ -17,3 +17,7 @@ pdfcompress() {
     gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/default -dQUIET -dNOPAUSE -dBATCH -sOutputFile="$2" "$1"
     ls -lh "$1" "$2"
 }
+
+update-nvim-nightly() {
+    make -C "$MY_CONFIG_ROOT" $0
+}

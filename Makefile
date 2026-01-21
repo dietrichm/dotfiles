@@ -1,4 +1,5 @@
 PKG = stow -v -d "$(MY_CONFIG_ROOT)" -t "$(HOME)"
+MAKEFLAGS += --no-print-directory
 
 .PHONY: all
 all: containers dig direnv git kitty nvim ssh
