@@ -13,3 +13,4 @@ go.work
 go.work.sum
 .idea/
 .conform.*
+.~lock.*#
