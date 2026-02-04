@@ -37,6 +37,10 @@ local function display_in(switchbuf)
   vim.o.switchbuf = switchbuf_old
 end
 
+nmap('<C-s>', function()
+  display_in('split')
+end)
+
 nmap('<C-v>', function()
   display_in('vsplit')
 end)
