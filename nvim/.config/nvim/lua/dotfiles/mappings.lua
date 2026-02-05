@@ -21,7 +21,6 @@ map('n', '<Space>', '')
 map('n', '\\', [[:call sneak#cancel() | setlocal hlsearch!<CR>]], { silent = true })
 map('n', 'g#', [[:setlocal hlsearch | normal! g#<CR>]])
 map('n', 'g*', [[:setlocal hlsearch | normal! g*<CR>]])
-map('n', 'gd', vim.lsp.buf.declaration)
 map('n', 'grd', vim.diagnostic.setloclist)
 map('n', 'j', [[v:count == 0 && &bt != 'quickfix' ? 'gj' : 'j']], { expr = true })
 map('n', 'k', [[v:count == 0 && &bt != 'quickfix' ? 'gk' : 'k']], { expr = true })
@@ -30,6 +29,15 @@ map('n', '}', [[:keepjumps normal! }<CR>]], { silent = true })
 map('v', '<', [[<gv]])
 map('v', '<Leader>s', [["gy :silent execute 'grep! -F -- ' . shellescape(@g)<CR>]], { silent = true })
 map('v', '>', [[>gv]])
+
+map('n', 'gd', function()
+  local clients = vim.lsp.get_clients { bufnr = 0, method = 'textDocument/declaration' }
+  if #clients > 0 then
+    vim.lsp.buf.declaration()
+    return
+  end
+  vim.cmd.normal { 'gd', bang = true }
+end)
 
 map('n', 'q', function()
   if vim.bo.buftype == 'terminal' then
