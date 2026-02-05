@@ -38,6 +38,9 @@ map('n', 'q', function()
   if vim.bo.buftype == 'quickfix' then
     return '<C-W>c<C-W>p'
   end
+  if vim.bo.filetype == 'gitsigns-blame' then
+    return '<C-W>c'
+  end
   return 'q'
 end, { expr = true, silent = true })
 
