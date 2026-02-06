@@ -64,7 +64,7 @@ vim.opt.winborder = 'rounded'
 
 if vim.fn.has('nvim-0.12') == 1 then
   vim.opt.statusline:prepend(' ')
-  require('vim._extui').enable {}
+  require('vim._core.ui2').enable {}
 end
 
 vim.g.health = { style = 'float' }
