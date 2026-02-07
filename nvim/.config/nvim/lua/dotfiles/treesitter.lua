@@ -73,9 +73,9 @@ vim.keymap.set('n', 'grj', treesj.join)
 vim.keymap.set('n', 'grs', treesj.split)
 
 require('treesitter-context').setup {
-  enable = false,
   max_lines = 5,
   multiline_threshold = 1,
+  trim_scope = 'inner',
 }
 
 require('nvim-ts-autotag').setup {
