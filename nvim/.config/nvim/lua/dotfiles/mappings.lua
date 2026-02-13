@@ -69,16 +69,6 @@ map('n', '<Leader>ih', function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end)
 
-map('n', '<Leader>u', function()
-  vim.lsp.buf.code_action {
-    ---@diagnostic disable-next-line: missing-fields
-    context = {
-      only = { 'source.organizeImports' },
-    },
-    apply = true,
-  }
-end)
-
 map('ia', 'rstr', function()
   return io.open('/dev/urandom'):read(500):gsub('[^%w]', ''):sub(0, 32)
 end, { expr = true })
