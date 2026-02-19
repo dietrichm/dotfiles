@@ -8,4 +8,10 @@ if not loaded then
   return
 end
 
-codecompanion.setup {}
+codecompanion.setup {
+  interactions = {
+    chat = {
+      adapter = 'mistral_vibe',
+    },
+  },
+}
