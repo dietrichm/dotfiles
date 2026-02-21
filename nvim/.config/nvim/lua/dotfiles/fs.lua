@@ -4,12 +4,12 @@ if not loaded then
 end
 
 oil.setup {
-  columns = {
-    { 'permissions', highlight = 'Comment' },
-    { 'size', highlight = 'Number' },
-  },
+  columns = {},
   view_options = {
     show_hidden = true,
+  },
+  win_options = {
+    cursorlineopt = 'both',
   },
   git = {
     mv = function()
