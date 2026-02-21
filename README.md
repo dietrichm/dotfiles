@@ -85,7 +85,7 @@ Other dotfiles specific settings that can be set:
 
 ### git
 
-A `git/local.inc` file can be used to set custom git configuration values.
+A `~/.local.gitconfig` file can be used to set custom git configuration values.
 Here you can use [conditional includes](https://git-scm.com/docs/git-config#_conditional_includes) to set configuration per directory:
 
 ```gitconfig

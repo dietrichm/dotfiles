@@ -69,4 +69,4 @@
 [branch]
 	sort = -committerdate
 [include]
-	path = local.inc
+	path = ~/.local.gitconfig
