@@ -11,6 +11,7 @@ oil.setup {
   win_options = {
     cursorlineopt = 'both',
   },
+  delete_to_trash = true,
   git = {
     mv = function()
       return true
