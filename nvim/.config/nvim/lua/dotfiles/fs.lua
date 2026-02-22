@@ -29,4 +29,17 @@ oil.setup {
   },
 }
 
+local set_sort = oil.set_sort
+oil.set_sort = function(sort)
+  set_sort(sort)
+  local columns = {}
+  for _, sort_pair in ipairs(sort) do
+    local name = sort_pair[1]
+    if name ~= 'type' and name ~= 'name' then
+      table.insert(columns, name)
+    end
+  end
+  oil.set_columns(columns)
+end
+
 vim.keymap.set('n', '-', oil.open)
