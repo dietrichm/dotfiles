@@ -68,5 +68,7 @@
 	gpgSign = true
 [branch]
 	sort = -committerdate
+[log]
+	follow = true
 [include]
 	path = ~/.local.gitconfig
