@@ -18,7 +18,7 @@ require('paq'):setup { verbose = true } {
   { 'nvim-treesitter/nvim-treesitter', branch = 'master', build = ':TSUpdate' },
   'nvim-treesitter/nvim-treesitter-context',
   { 'nvim-treesitter/nvim-treesitter-textobjects', branch = 'master' },
-  { 'olimorris/codecompanion.nvim', branch = 'develop', opt = true },
+  { 'olimorris/codecompanion.nvim', opt = true },
   'savq/paq-nvim',
   'stevearc/conform.nvim',
   'stevearc/oil.nvim',
