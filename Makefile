@@ -61,12 +61,12 @@ update-nvim-nightly:
 		--repo neovim/neovim \
 		release download nightly \
 		--pattern nvim-linux-x86_64.appimage \
-		--output ~/bin/nv-new
-	mv --backup=numbered ~/bin/nv-new ~/bin/nv
-	chmod u+x ~/bin/nv
-	ls -1v ~/bin/nv.~*~ | head -n -5 | xargs -r rm
+		--output ~/bin/nvim-new
+	mv --backup=numbered ~/bin/nvim-new ~/bin/nvim
+	chmod u+x ~/bin/nvim
+	ls -1v ~/bin/nvim.~*~ | head -n -5 | xargs -r rm
 	@echo
-	@nv --version
+	@~/bin/nvim --version
 
 .PHONY: nvim-configs.tar.gz
 nvim-configs.tar.gz: ROOT ?= $(HOME)/repos

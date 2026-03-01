@@ -49,7 +49,7 @@ Run `nvim +PaqUpdate` to update all plugins.
 
 ### Neovim nightly
 
-Nightly versions of Neovim can be downloaded as `~/bin/nv` using `update-nvim-nightly`.
+Nightly versions of Neovim can be downloaded as `~/bin/nvim` using `update-nvim-nightly`.
 This requires [gh](https://cli.github.com/) to be installed.
 
 ## Custom configuration
