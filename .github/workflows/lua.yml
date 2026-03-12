@@ -12,19 +12,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v6
     - name: Set up Lua
-      uses: lewis6991/gh-actions-lua@master
+      uses: leafo/gh-actions-lua@v12
     - name: Set up Luarocks
-      uses: leafo/gh-actions-luarocks@v4
+      uses: leafo/gh-actions-luarocks@v6
     - name: Install Luacheck
-      run: |
-        luarocks install luacheck
+      run: luarocks install luacheck
     - name: Install StyLua
       run: |
-        wget -q https://github.com/JohnnyMorganz/StyLua/releases/download/v2.1.0/stylua-linux-x86_64.zip
+        wget -q https://github.com/JohnnyMorganz/StyLua/releases/download/v2.4.0/stylua-linux-x86_64.zip
         unzip stylua-linux-x86_64.zip
         chmod u+x stylua
     - name: Lint Lua files
-      run: |
-        PATH="$PATH:." make lint
+      run: PATH="$PATH:." make lint
