@@ -25,14 +25,6 @@ treesitter.setup {
   indent = {
     enable = true,
   },
-  incremental_selection = {
-    enable = true,
-    keymaps = {
-      init_selection = '<Leader>n',
-      node_incremental = '<Leader>n',
-      node_decremental = '<Leader>N',
-    },
-  },
   textobjects = {
     select = {
       enable = true,
