@@ -22,7 +22,6 @@ When installed (i.e. using a package manager), [fzf](https://github.com/junegunn
 Depending on which [config packages](#config-packages) are installed, these dependencies are also required:
 
  * `git`
-     * GnuPG
      * [Delta](https://github.com/dandavison/delta)
      * [bat](https://github.com/sharkdp/bat) for updated syntax files
  * `kitty`

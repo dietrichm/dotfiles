@@ -18,7 +18,6 @@ export PATH
 export CLICOLOR=1
 export EDITOR=nvim
 export FZF_DEFAULT_COMMAND="rg --files"
-export GPG_TTY=$(tty)
 export LANG=en_GB.UTF-8
 export LANGUAGE=en_GB:en
 export LC_ALL=en_GB.UTF-8

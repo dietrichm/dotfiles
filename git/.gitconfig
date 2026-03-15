@@ -38,7 +38,7 @@
 	new = cyan
 [commit]
 	verbose = true
-	gpgsign = true
+	gpgSign = true
 [fetch]
 	prune = true
 [merge]
