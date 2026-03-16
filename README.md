@@ -40,7 +40,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
 
 Run `make list` to list the available packages.
 
-If you wish to only install specific packages, pass them as additional arguments to make, i.e.: `make ssh git`.
+If you wish to only install specific packages, pass them as additional arguments to make, i.e.: `make kitty git`.
 
 ### Updating
 
