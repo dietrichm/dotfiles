@@ -16,6 +16,8 @@ mini_pairs.setup {
 local mini_extra = require('mini.extra')
 mini_extra.setup()
 
+require('mini.visits').setup()
+
 local mini_pick = require('mini.pick')
 mini_pick.setup {
   source = {
@@ -37,6 +39,7 @@ map('n', '<Leader>b', builtin.buffers)
 map('n', '<Leader>fh', function()
   mini_extra.pickers.oldfiles { current_dir = true }
 end)
+map('n', '<Leader>v', mini_extra.pickers.visit_paths)
 map('n', '<Leader>gs', mini_extra.pickers.git_hunks)
 map('n', 'gO', function()
   mini_extra.pickers.lsp { scope = 'document_symbol' }
