@@ -16,6 +16,7 @@
 	no-merged = branch -a --no-merged
 	pushff = push --force-with-lease
 	st = status -sb
+	stat = diff --stat
 [pull]
 	ff = only
 [push]
