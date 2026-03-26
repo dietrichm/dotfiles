@@ -29,6 +29,7 @@ Depending on which [config packages](#config-packages) are installed, these depe
  * `nvim`
      * [ripgrep](https://github.com/BurntSushi/ripgrep)
      * [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
+     * [Tree-sitter CLI](https://github.com/nvim-treesitter/nvim-treesitter/blob/main/README.md#requirements)
 
 ## Installation
 

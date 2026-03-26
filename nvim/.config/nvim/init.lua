@@ -15,9 +15,9 @@ require('paq'):setup { verbose = true } {
   'lewis6991/gitsigns.nvim',
   'neovim/nvim-lspconfig',
   'nvim-lua/plenary.nvim',
-  { 'nvim-treesitter/nvim-treesitter', branch = 'master', build = ':TSUpdate' },
+  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
   'nvim-treesitter/nvim-treesitter-context',
-  { 'nvim-treesitter/nvim-treesitter-textobjects', branch = 'master' },
+  'nvim-treesitter/nvim-treesitter-textobjects',
   { 'olimorris/codecompanion.nvim', opt = true },
   'savq/paq-nvim',
   'stevearc/conform.nvim',
@@ -35,6 +35,7 @@ vim.opt.cpoptions:append { Z = true }
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
 vim.opt.exrc = true
+vim.opt.foldlevelstart = 99
 vim.opt.grepprg = 'rg --color=never --no-heading --with-filename --line-number --column'
 vim.opt.guicursor:append('a:Cursor')
 vim.opt.guicursor:append('a:blinkon500-blinkoff500')

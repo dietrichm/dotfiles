@@ -1,66 +1,79 @@
-local loaded, treesitter = pcall(require, 'nvim-treesitter.configs')
+local loaded, treesitter = pcall(require, 'nvim-treesitter')
 if not loaded then
   return
 end
 
-vim.o.foldlevelstart = 99
-vim.o.foldmethod = 'expr'
-vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+local filetypes = {
+  'css',
+  'diff',
+  'go',
+  'gotmpl',
+  'html',
+  'javascript',
+  'lua',
+  'markdown',
+  'php',
+  'sql',
+  'typescript',
+  'yaml',
+}
+treesitter.install(filetypes)
 
-treesitter.setup {
-  auto_install = true,
-  ensure_installed = {
-    'css',
-    'diff',
-    'html',
-    'javascript',
-    'markdown',
-    'markdown_inline',
-    'sql',
-    'yaml',
-  },
-  highlight = {
-    enable = true,
-  },
-  indent = {
-    enable = true,
-  },
-  textobjects = {
-    select = {
-      enable = true,
-      lookahead = true,
-      include_surrounding_whitespace = false,
-      keymaps = {
-        ['af'] = '@function.outer',
-        ['if'] = '@function.inner',
-        ['aa'] = '@parameter.outer',
-        ['ia'] = '@parameter.inner',
-      },
-      selection_modes = {
-        ['@function.outer'] = 'V',
-        ['@function.inner'] = 'V',
-        ['@parameter.outer'] = 'v',
-        ['@parameter.inner'] = 'v',
-      },
+vim.api.nvim_create_autocmd('FileType', {
+  group = vim.api.nvim_create_augroup('dotfiles_treesitter', { clear = true }),
+  pattern = filetypes,
+  callback = function()
+    vim.treesitter.start()
+    vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+    vim.wo.foldmethod = 'expr'
+    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+  end,
+})
+
+require('nvim-treesitter-textobjects').setup {
+  select = {
+    lookahead = true,
+    include_surrounding_whitespace = false,
+    selection_modes = {
+      ['@function.outer'] = 'V',
+      ['@function.inner'] = 'V',
+      ['@parameter.outer'] = 'v',
+      ['@parameter.inner'] = 'v',
     },
-    move = {
-      enable = true,
-      set_jumps = true,
-      goto_next_start = {
-        [']m'] = '@function.outer',
-      },
-      goto_next_end = {
-        [']M'] = '@function.outer',
-      },
-      goto_previous_start = {
-        ['[m'] = '@function.outer',
-      },
-      goto_previous_end = {
-        ['[M'] = '@function.outer',
-      },
-    },
+  },
+  move = {
+    set_jumps = true,
   },
 }
+
+local map = vim.keymap.set
+local select = require('nvim-treesitter-textobjects.select')
+local move = require('nvim-treesitter-textobjects.move')
+
+map({ 'x', 'o' }, 'af', function()
+  select.select_textobject('@function.outer', 'textobjects')
+end)
+map({ 'x', 'o' }, 'if', function()
+  select.select_textobject('@function.inner', 'textobjects')
+end)
+map({ 'x', 'o' }, 'aa', function()
+  select.select_textobject('@parameter.outer', 'textobjects')
+end)
+map({ 'x', 'o' }, 'ia', function()
+  select.select_textobject('@parameter.inner', 'textobjects')
+end)
+map({ 'n', 'x', 'o' }, ']m', function()
+  move.goto_next_start('@function.outer', 'textobjects')
+end)
+map({ 'n', 'x', 'o' }, ']M', function()
+  move.goto_next_end('@function.outer', 'textobjects')
+end)
+map({ 'n', 'x', 'o' }, '[m', function()
+  move.goto_previous_start('@function.outer', 'textobjects')
+end)
+map({ 'n', 'x', 'o' }, '[M', function()
+  move.goto_previous_end('@function.outer', 'textobjects')
+end)
 
 local treesj = require('treesj')
 
@@ -69,8 +82,8 @@ treesj.setup {
   max_join_length = 200,
 }
 
-vim.keymap.set('n', 'grj', treesj.join)
-vim.keymap.set('n', 'grs', treesj.split)
+map('n', 'grj', treesj.join)
+map('n', 'grs', treesj.split)
 
 require('treesitter-context').setup {
   max_lines = 5,
