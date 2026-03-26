@@ -3,7 +3,7 @@ vim.opt.completeopt = { 'menu', 'menuone', 'popup', 'noinsert', 'fuzzy' }
 vim.opt.pumwidth = 20
 
 if vim.fn.has('nvim-0.12') == 1 then
-  vim.opt.pummaxwidth = 120
+  vim.opt.pummaxwidth = 100
 end
 
 if vim.env.NVIM_COMPLETION == '1' then
