@@ -10,16 +10,8 @@ if vim.env.NVIM_COMPLETION == '1' then
   vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('dotfiles_completion', { clear = true }),
     callback = function(args)
-      local client_id = args.data.client_id
-      local client = assert(vim.lsp.get_client_by_id(client_id))
-      local bufnr = args.buf
-      print(
-        client.name,
-        'triggerCharacters:',
-        vim.inspect(client.server_capabilities.completionProvider.triggerCharacters)
-      )
-      vim.lsp.completion.enable(true, client_id, bufnr, { autotrigger = true })
-      vim.keymap.set('i', '<C-Space>', vim.lsp.completion.get, { buffer = bufnr })
+      vim.lsp.completion.enable(true, args.data.client_id, args.buf, { autotrigger = true })
+      vim.keymap.set('i', '<C-Space>', vim.lsp.completion.get, { buffer = args.buf })
     end,
   })
   return
