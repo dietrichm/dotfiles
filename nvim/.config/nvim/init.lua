@@ -11,7 +11,7 @@ require('paq'):setup { verbose = true } {
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-nvim-lsp',
   'justinmk/vim-sneak',
-  { 'knubie/vim-kitty-navigator', build = 'cp pass_keys.py get_layout.py ' .. vim.fs.normalize('$HOME/.config/kitty') },
+  'knubie/vim-kitty-navigator',
   'lewis6991/gitsigns.nvim',
   'neovim/nvim-lspconfig',
   'nvim-lua/plenary.nvim',
