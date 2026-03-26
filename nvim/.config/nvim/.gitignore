@@ -1,2 +1,4 @@
 .netrwhist
 spell/
+minimal.lua
+nvim_issue/
