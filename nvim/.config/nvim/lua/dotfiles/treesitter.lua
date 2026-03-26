@@ -95,4 +95,9 @@ require('nvim-ts-autotag').setup {
   aliases = {
     gotmpl = 'html',
   },
+  per_filetype = {
+    php = {
+      enable_close = false,
+    },
+  },
 }
