@@ -13,7 +13,10 @@ if vim.env.NVIM_COMPLETION == '1' then
       vim.lsp.completion.enable(true, args.data.client_id, args.buf, {
         autotrigger = true,
         convert = function(item)
-          return { abbr = item.label }
+          return {
+            abbr = item.label:gsub('%b()', ''),
+            menu = '',
+          }
         end,
       })
       vim.keymap.set('i', '<C-Space>', vim.lsp.completion.get, { buffer = args.buf })
