@@ -64,7 +64,6 @@ if vim.fn.has('nvim-0.12') == 1 then
   require('vim._core.ui2').enable {}
 end
 
-vim.g.health = { style = 'float' }
 vim.g.qf_disable_statusline = 1
 vim.g['sneak#label'] = 1
 vim.g['sneak#use_ic_scs'] = 1
