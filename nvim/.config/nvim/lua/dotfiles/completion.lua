@@ -6,7 +6,7 @@ if vim.fn.has('nvim-0.12') == 1 then
   vim.opt.pummaxwidth = 100
 end
 
-if vim.env.NVIM_COMPLETION == '1' then
+if vim.fn.has('nvim-0.12') == 1 and vim.env.NVIM_COMPLETION ~= '0' then
   vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('dotfiles_completion', { clear = true }),
     callback = function(args)
