@@ -1,32 +1,15 @@
-local loaded, treesitter = pcall(require, 'nvim-treesitter')
-if not loaded then
+if not pcall(require, 'nvim-treesitter') then
   return
 end
 
-local filetypes = {
-  'css',
-  'diff',
-  'go',
-  'gotmpl',
-  'html',
-  'javascript',
-  'lua',
-  'markdown',
-  'php',
-  'sql',
-  'typescript',
-  'yaml',
-}
-treesitter.install(filetypes)
-
 vim.api.nvim_create_autocmd('FileType', {
   group = vim.api.nvim_create_augroup('dotfiles_treesitter', { clear = true }),
-  pattern = filetypes,
   callback = function()
-    vim.treesitter.start()
-    vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-    vim.wo.foldmethod = 'expr'
-    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    if vim.bo.buftype == '' and pcall(vim.treesitter.start) then
+      vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+      vim.wo.foldmethod = 'expr'
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end
   end,
 })
 
