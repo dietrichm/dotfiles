@@ -5,31 +5,6 @@ vim.g.loaded_perl_provider = 0
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
 
-vim.cmd.packadd { 'cfilter', bang = true }
-require('paq'):setup { verbose = true } {
-  'echasnovski/mini.nvim',
-  'hrsh7th/nvim-cmp',
-  'hrsh7th/cmp-nvim-lsp',
-  'justinmk/vim-sneak',
-  'knubie/vim-kitty-navigator',
-  'lewis6991/gitsigns.nvim',
-  'neovim/nvim-lspconfig',
-  'nvim-lua/plenary.nvim',
-  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
-  'nvim-treesitter/nvim-treesitter-context',
-  'nvim-treesitter/nvim-treesitter-textobjects',
-  { 'olimorris/codecompanion.nvim', opt = true },
-  'savq/paq-nvim',
-  'stevearc/conform.nvim',
-  'stevearc/oil.nvim',
-  'ThePrimeagen/refactoring.nvim',
-  'tpope/vim-surround',
-  'vim-test/vim-test',
-  'Wansmer/treesj',
-  'windwp/nvim-ts-autotag',
-}
--- Sort in {...} selection using :sort /[a-z-\/]\+/ ri.
-
 vim.opt.colorcolumn = { '+1' }
 vim.opt.cpoptions:append { Z = true }
 vim.opt.cursorline = true
@@ -61,6 +36,27 @@ vim.opt.undofile = true
 vim.opt.winborder = 'rounded'
 
 require('vim._core.ui2').enable()
+vim.cmd.packadd { 'cfilter', bang = true }
+vim.pack.add {
+  'https://github.com/echasnovski/mini.nvim',
+  'https://github.com/hrsh7th/nvim-cmp',
+  'https://github.com/hrsh7th/cmp-nvim-lsp',
+  'https://github.com/justinmk/vim-sneak',
+  'https://github.com/knubie/vim-kitty-navigator',
+  'https://github.com/lewis6991/gitsigns.nvim',
+  'https://github.com/neovim/nvim-lspconfig',
+  'https://github.com/nvim-lua/plenary.nvim',
+  'https://github.com/nvim-treesitter/nvim-treesitter',
+  'https://github.com/nvim-treesitter/nvim-treesitter-context',
+  'https://github.com/nvim-treesitter/nvim-treesitter-textobjects',
+  'https://github.com/stevearc/conform.nvim',
+  'https://github.com/stevearc/oil.nvim',
+  'https://github.com/ThePrimeagen/refactoring.nvim',
+  'https://github.com/tpope/vim-surround',
+  'https://github.com/vim-test/vim-test',
+  'https://github.com/Wansmer/treesj',
+  'https://github.com/windwp/nvim-ts-autotag',
+}
 
 vim.g.qf_disable_statusline = 1
 vim.g['sneak#label'] = 1
