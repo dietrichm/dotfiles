@@ -30,21 +30,14 @@ kitty: env
 	$(PKG) kitty
 
 .PHONY: nvim
-nvim: env $(HOME)/.local/share/nvim/site/pack/paqs/start/paq-nvim
+nvim: env
 	$(PKG) nvim
-	@echo -e "\n⚠️ Neovim will now start and install all plug-ins. Quit when installation is finished.\n"
-	@echo -n "Press Enter to continue."
-	@read
-	nvim +PaqInstall
 
 .PHONY: env
 env:
 ifndef MY_CONFIG_ROOT
 	$(error Please follow install instructions in README.md first)
 endif
-
-$(HOME)/.local/share/nvim/site/pack/paqs/start/paq-nvim:
-	git clone --depth=1 https://github.com/savq/paq-nvim.git "$@"
 
 .PHONY: lint
 lint:
