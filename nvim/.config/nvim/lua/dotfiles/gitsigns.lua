@@ -17,7 +17,7 @@ gitsigns.setup {
   preview_config = { col = 0, row = 1 },
   on_attach = function(bufnr)
     local function map(mode, lhs, rhs)
-      vim.keymap.set(mode, lhs, rhs, { buffer = bufnr })
+      vim.keymap.set(mode, lhs, rhs, { buf = bufnr })
     end
 
     map('n', '<Leader>gb', gitsigns.blame_line)

@@ -7,7 +7,7 @@ vim.opt_local.wrap = false
 
 local is_loclist = vim.fn.getwininfo(vim.api.nvim_get_current_win())[1].loclist == 1
 local function nmap(lhs, rhs)
-  vim.keymap.set('n', lhs, rhs, { buffer = true })
+  vim.keymap.set('n', lhs, rhs, { buf = 0 })
 end
 
 nmap('<C-i>', '<Nop>')

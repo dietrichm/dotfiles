@@ -1,7 +1,7 @@
 local map = vim.keymap.set
 
-map('ia', 'mctrl', [[ctrl := gomock.NewController(t)]], { buffer = true })
-map('ia', 'gnew', [[g := NewWithT(t)]], { buffer = true })
+map('ia', 'mctrl', [[ctrl := gomock.NewController(t)]], { buf = 0 })
+map('ia', 'gnew', [[g := NewWithT(t)]], { buf = 0 })
 
 map('ia', 'mockgen', function()
   return string.format(
@@ -10,7 +10,7 @@ map('ia', 'mockgen', function()
     vim.fn.expand('%:t:r') .. '_mock.go',
     vim.fn.expand('%:h:t')
   )
-end, { buffer = true, expr = true })
+end, { buf = 0, expr = true })
 
 map('n', '<Leader>ft', function()
   local filename = vim.fn.expand('%:.')
@@ -20,4 +20,4 @@ map('n', '<Leader>ft', function()
   end
   filename = filename:gsub('%.go$', '_test.go')
   vim.cmd.vsplit(filename)
-end, { buffer = true })
+end, { buf = 0 })

@@ -16,7 +16,7 @@ if vim.env.NVIM_COMPLETION ~= '0' then
           }
         end,
       })
-      vim.keymap.set('i', '<C-Space>', vim.lsp.completion.get, { buffer = args.buf })
+      vim.keymap.set('i', '<C-Space>', vim.lsp.completion.get, { buf = args.buf })
     end,
   })
   return
