@@ -1,12 +1,9 @@
 vim.opt.complete:remove('t')
 vim.opt.completeopt = { 'menu', 'menuone', 'popup', 'noinsert', 'fuzzy' }
 vim.opt.pumwidth = 20
+vim.opt.pummaxwidth = 100
 
-if vim.fn.has('nvim-0.12') == 1 then
-  vim.opt.pummaxwidth = 100
-end
-
-if vim.fn.has('nvim-0.12') == 1 and vim.env.NVIM_COMPLETION ~= '0' then
+if vim.env.NVIM_COMPLETION ~= '0' then
   vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('dotfiles_completion', { clear = true }),
     callback = function(args)

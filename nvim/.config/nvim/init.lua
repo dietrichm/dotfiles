@@ -52,6 +52,7 @@ vim.opt.showmode = true
 vim.opt.signcolumn = 'yes'
 vim.opt.smartcase = true
 vim.opt.spelllang = 'en_gb'
+vim.opt.statusline:prepend(' ')
 vim.opt.switchbuf = 'useopen,uselast'
 vim.opt.timeoutlen = 3000
 vim.opt.title = true
@@ -59,10 +60,7 @@ vim.opt.titlestring = 'nvim ' .. vim.fs.basename(vim.env.PWD)
 vim.opt.undofile = true
 vim.opt.winborder = 'rounded'
 
-if vim.fn.has('nvim-0.12') == 1 then
-  vim.opt.statusline:prepend(' ')
-  require('vim._core.ui2').enable {}
-end
+require('vim._core.ui2').enable()
 
 vim.g.qf_disable_statusline = 1
 vim.g['sneak#label'] = 1
