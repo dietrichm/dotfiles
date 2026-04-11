@@ -43,14 +43,14 @@ vim.opt.winborder = 'rounded'
 require('vim._core.ui2').enable()
 vim.cmd.packadd { 'cfilter', bang = true }
 vim.pack.add {
-  'https://github.com/nvim-mini/mini.nvim',
-  'https://github.com/hrsh7th/nvim-cmp',
   'https://github.com/hrsh7th/cmp-nvim-lsp',
+  'https://github.com/hrsh7th/nvim-cmp',
   'https://github.com/justinmk/vim-sneak',
   'https://github.com/knubie/vim-kitty-navigator',
   'https://github.com/lewis6991/gitsigns.nvim',
   'https://github.com/neovim/nvim-lspconfig',
   'https://github.com/nvim-lua/plenary.nvim',
+  'https://github.com/nvim-mini/mini.nvim',
   'https://github.com/nvim-treesitter/nvim-treesitter',
   'https://github.com/nvim-treesitter/nvim-treesitter-context',
   'https://github.com/nvim-treesitter/nvim-treesitter-textobjects',
