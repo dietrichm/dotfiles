@@ -1,3 +1,8 @@
+if vim.fn.has('nvim-0.12') ~= 1 then
+  vim.notify('This configuration requires Neovim 0.12 or later.', vim.log.levels.ERROR)
+  return
+end
+
 vim.g.mapleader = vim.keycode('<Space>')
 vim.g.loaded_fzf = 1
 vim.g.loaded_node_provider = 0
