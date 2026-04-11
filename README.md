@@ -45,7 +45,7 @@ If you wish to only install specific packages, pass them as additional arguments
 
 ### Updating
 
-Run `:lua vim.pack.update()` in Neovim to update all plugins.
+Run `nvim +PackUpdate` to update all plugins.
 
 ### Neovim nightly
 
