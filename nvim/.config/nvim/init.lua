@@ -11,6 +11,8 @@ vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
 
 vim.opt.colorcolumn = { '+1' }
+vim.opt.complete:remove('t')
+vim.opt.completeopt = { 'menu', 'menuone', 'popup', 'noinsert', 'fuzzy' }
 vim.opt.cpoptions:append { Z = true }
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
@@ -25,6 +27,8 @@ vim.opt.linebreak = true
 vim.opt.list = true
 vim.opt.listchars = { tab = '▏ ', extends = '»', precedes = '«', trail = '·', nbsp = '␣' }
 vim.opt.number = true
+vim.opt.pummaxwidth = 100
+vim.opt.pumwidth = 20
 vim.opt.ruler = false
 vim.opt.scrolloff = 2
 vim.opt.shortmess:append { I = true }
@@ -43,8 +47,6 @@ vim.opt.winborder = 'rounded'
 require('vim._core.ui2').enable()
 vim.cmd.packadd { 'cfilter', bang = true }
 vim.pack.add {
-  'https://github.com/hrsh7th/cmp-nvim-lsp',
-  'https://github.com/hrsh7th/nvim-cmp',
   'https://github.com/justinmk/vim-sneak',
   'https://github.com/knubie/vim-kitty-navigator',
   'https://github.com/lewis6991/gitsigns.nvim',
@@ -79,7 +81,6 @@ vim.api.nvim_create_user_command('PackUpdate', [[:lua vim.pack.update()]], {})
 require('dotfiles.colorscheme')
 require('dotfiles.autocmds')
 require('dotfiles.diagnostics')
-require('dotfiles.completion')
 require('dotfiles.ai')
 require('dotfiles.treesitter')
 require('dotfiles.formatters')

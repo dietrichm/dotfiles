@@ -1,9 +1,5 @@
 {
   "plugins": {
-    "cmp-nvim-lsp": {
-      "rev": "cbc7b02bb99fae35cb42f514762b89b5126651ef",
-      "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
-    },
     "codecompanion.nvim": {
       "rev": "680c445eb357c72129d175ea5d481aa9e92ae6a5",
       "src": "https://github.com/olimorris/codecompanion.nvim"
@@ -19,10 +15,6 @@
     "mini.nvim": {
       "rev": "4182d64727fb4876407af65c181b85428a4a70d1",
       "src": "https://github.com/nvim-mini/mini.nvim"
-    },
-    "nvim-cmp": {
-      "rev": "a1d504892f2bc56c2e79b65c6faded2fd21f3eca",
-      "src": "https://github.com/hrsh7th/nvim-cmp"
     },
     "nvim-lspconfig": {
       "rev": "cb5bc0b2b35a6d513e3298d285db81453e791f4f",
