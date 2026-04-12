@@ -36,13 +36,16 @@ vim.opt.showmode = true
 vim.opt.signcolumn = 'yes'
 vim.opt.smartcase = true
 vim.opt.spelllang = 'en_gb'
-vim.opt.statusline:prepend(' ')
 vim.opt.switchbuf = 'useopen,uselast'
 vim.opt.timeoutlen = 3000
 vim.opt.title = true
 vim.opt.titlestring = 'nvim ' .. vim.fs.basename(vim.env.PWD)
 vim.opt.undofile = true
 vim.opt.winborder = 'rounded'
+
+if vim.o.statusline:sub(1, 1) ~= ' ' then
+  vim.opt.statusline:prepend(' ')
+end
 
 require('vim._core.ui2').enable()
 vim.cmd.packadd { 'cfilter', bang = true }
