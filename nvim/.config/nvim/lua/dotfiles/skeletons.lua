@@ -65,16 +65,16 @@ for _, skeleton in ipairs(skeletons) do
     group = augroup,
     pattern = skeleton.pattern,
     desc = 'Skeleton for ' .. skeleton.pattern .. ' files',
-    callback = function(args)
-      local lines = vim.api.nvim_buf_get_lines(args.buf, 0, 2, false)
+    callback = function(ev)
+      local lines = vim.api.nvim_buf_get_lines(ev.buf, 0, 2, false)
       if #lines > 1 or lines[1] ~= '' then
         return
       end
-      if vim.b[args.buf].skeleton_is_applied ~= nil then
+      if vim.b[ev.buf].skeleton_is_applied ~= nil then
         return
       end
       vim.snippet.expand(skeleton.snippet)
-      vim.b[args.buf].skeleton_is_applied = skeleton.pattern
+      vim.b[ev.buf].skeleton_is_applied = skeleton.pattern
     end,
   })
 end

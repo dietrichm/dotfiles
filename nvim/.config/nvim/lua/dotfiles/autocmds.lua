@@ -15,8 +15,8 @@ vim.api.nvim_create_autocmd('PackChanged', {
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = augroup,
-  callback = function(args)
-    local client_id, buf = args.data.client_id, args.buf
+  callback = function(ev)
+    local client_id, buf = ev.data.client_id, ev.buf
     local client = assert(vim.lsp.get_client_by_id(client_id))
     vim.lsp.completion.enable(true, client_id, buf, {
       autotrigger = true,
