@@ -1,5 +1,18 @@
 local augroup = vim.api.nvim_create_augroup('dotfiles_autocmds', { clear = true })
 
+vim.api.nvim_create_autocmd('PackChanged', {
+  group = augroup,
+  callback = function(ev)
+    local name, kind, active = ev.data.spec.name, ev.data.kind, ev.data.active
+    if name == 'nvim-treesitter' and kind == 'update' then
+      if not active then
+        vim.cmd.packadd('nvim-treesitter')
+      end
+      vim.cmd('TSUpdate')
+    end
+  end,
+})
+
 vim.api.nvim_create_autocmd('LspAttach', {
   group = augroup,
   callback = function(args)

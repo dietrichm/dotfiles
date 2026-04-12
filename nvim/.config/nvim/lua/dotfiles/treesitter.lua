@@ -1,22 +1,9 @@
-local loaded, treesitter = pcall(require, 'nvim-treesitter')
-if not loaded then
+if not pcall(require, 'nvim-treesitter') then
   return
 end
 
-local augroup = vim.api.nvim_create_augroup('dotfiles_treesitter', { clear = true })
-
-vim.api.nvim_create_autocmd('PackChanged', {
-  group = augroup,
-  callback = function(ev)
-    local name, kind = ev.data.spec.name, ev.data.kind
-    if name == 'nvim-treesitter' and kind == 'update' then
-      treesitter.update(nil, { summary = true })
-    end
-  end,
-})
-
 vim.api.nvim_create_autocmd('FileType', {
-  group = augroup,
+  group = vim.api.nvim_create_augroup('dotfiles_treesitter', { clear = true }),
   callback = function()
     if vim.bo.buftype == '' and pcall(vim.treesitter.start) then
       vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
