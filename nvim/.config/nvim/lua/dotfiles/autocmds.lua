@@ -28,7 +28,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
       end,
     })
     vim.keymap.set('i', '<C-Space>', vim.lsp.completion.get, { buf = buf })
-    vim.notify_once(('✅ %s attached'):format(client.name), vim.log.levels.INFO)
+    if client.name ~= 'vim.pack' then
+      vim.notify_once(('✅ %s attached'):format(client.name), vim.log.levels.INFO)
+    end
   end,
 })
 
