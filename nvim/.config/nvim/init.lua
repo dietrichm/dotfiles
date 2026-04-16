@@ -79,6 +79,7 @@ vim.api.nvim_create_user_command('Grep', [[:silent grep! <args>]], { nargs = '+'
 vim.api.nvim_create_user_command('LspInfo', [[:checkhealth vim.lsp]], {})
 vim.api.nvim_create_user_command('Nw', [[:noautocmd w]], {})
 vim.api.nvim_create_user_command('Nwa', [[:noautocmd wa]], {})
+vim.api.nvim_create_user_command('Only', [[:only | :e <args>]], { nargs = 1, complete = 'file' })
 vim.api.nvim_create_user_command('PackUpdate', [[:lua vim.pack.update()]], {})
 
 require('dotfiles.colorscheme')
