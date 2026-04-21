@@ -46,8 +46,6 @@
 	conflictStyle = zdiff3
 [diff]
 	tool = nvimdiff
-[difftool "nvimdiff"]
-	cmd = nvim -d "$LOCAL" "$REMOTE"
 [diff "markdown"]
 	xfuncname = "^#+.*$"
 [stash]
