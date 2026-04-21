@@ -45,7 +45,12 @@
 [merge]
 	conflictStyle = zdiff3
 [diff]
-	tool = nvimdiff
+	tool = kitty
+[difftool]
+	prompt = false
+	trustExitCode = true
+[difftool "kitty"]
+	cmd = kitten diff $LOCAL $REMOTE
 [diff "markdown"]
 	xfuncname = "^#+.*$"
 [stash]
