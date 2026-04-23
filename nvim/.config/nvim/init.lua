@@ -52,6 +52,7 @@ vim.cmd.packadd { 'cfilter', bang = true }
 vim.pack.add {
   'https://github.com/justinmk/vim-sneak',
   'https://github.com/knubie/vim-kitty-navigator',
+  'https://github.com/lewis6991/async.nvim',
   'https://github.com/lewis6991/gitsigns.nvim',
   'https://github.com/neovim/nvim-lspconfig',
   'https://github.com/nvim-lua/plenary.nvim',
