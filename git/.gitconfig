@@ -52,8 +52,6 @@
 	trustExitCode = true
 [difftool "kitty"]
 	cmd = kitten diff $LOCAL $REMOTE
-[diff "markdown"]
-	xfuncname = "^#+.*$"
 [stash]
 	showPatch = true
 	showIncludeUntracked = true
