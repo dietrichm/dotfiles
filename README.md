@@ -97,11 +97,6 @@ Here you can use [conditional includes](https://git-scm.com/docs/git-config#_con
 	path = ~/foo/bar/.gitconfig
 ```
 
-### universal-ctags
-
-Additional project-level parameters can be defined within `.ctags.d/*.ctags` files.
-This allows to exclude i.e. compiled or vendor source files using more `--exclude=` options.
-
 ## License
 
 Copyright 2021, Dietrich Moerman.
