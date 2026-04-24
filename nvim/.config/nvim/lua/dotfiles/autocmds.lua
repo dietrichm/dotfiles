@@ -37,7 +37,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 vim.api.nvim_create_autocmd('QuickFixCmdPost', {
   pattern = 'grep',
   group = augroup,
-  command = [[botright cwindow]],
+  command = [[cwindow]],
 })
 
 vim.api.nvim_create_autocmd('QuickFixCmdPost', {
