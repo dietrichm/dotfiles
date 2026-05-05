@@ -9,6 +9,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 
     hi('ColorColumn', { link = 'CursorLine' })
     hi('DiagnosticUnderlineError', { undercurl = true })
+    hi('DiagnosticUnderlineHint', { underline = false })
     hi('MiniPickMatchRanges', { underline = true })
     hi('Sneak', { link = 'Search' })
     hi('SneakCurrent', { link = 'CurSearch' })
