@@ -12,13 +12,7 @@ diagnostic.config {
     text = signs,
   },
   status = {
-    format = function(counts)
-      local parts = {}
-      for severity, count in pairs(counts) do
-        table.insert(parts, signs[severity] .. count)
-      end
-      return table.concat(parts, ' ')
-    end,
+    format = signs,
   },
   virtual_text = {
     current_line = true,
