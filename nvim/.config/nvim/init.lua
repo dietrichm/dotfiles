@@ -82,7 +82,7 @@ vim.api.nvim_create_user_command('Nw', [[:noautocmd w]], {})
 vim.api.nvim_create_user_command('Nwa', [[:noautocmd wa]], {})
 vim.api.nvim_create_user_command('Only', [[:only | :e <args>]], { nargs = 1, complete = 'file' })
 vim.api.nvim_create_user_command('PackUpdate', [[:lua vim.pack.update()]], {})
-vim.api.nvim_create_user_command('PhpstanBaseline', [[:silent lgrep % phpstan-baseline.neon]], {})
+vim.api.nvim_create_user_command('PhpstanBaseline', [[:silent lgrep %:. phpstan-baseline.neon]], {})
 
 require('dotfiles.colorscheme')
 require('dotfiles.autocmds')
