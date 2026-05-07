@@ -69,6 +69,7 @@ vim.pack.add {
   'https://github.com/windwp/nvim-ts-autotag',
 }
 
+vim.g.PHP_noArrowMatching = 1
 vim.g.qf_disable_statusline = 1
 vim.g['sneak#label'] = 1
 vim.g['sneak#use_ic_scs'] = 1
