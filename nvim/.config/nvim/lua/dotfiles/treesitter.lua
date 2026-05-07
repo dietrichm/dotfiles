@@ -8,7 +8,7 @@ vim.api.nvim_create_autocmd('FileType', {
     if vim.bo.buftype == '' and pcall(vim.treesitter.start) then
       vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
       vim.wo.foldmethod = 'expr'
-      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+      vim.bo.syntax = vim.bo.filetype == 'php' and 'ON' or ''
     end
   end,
 })
