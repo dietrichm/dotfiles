@@ -1,7 +1,3 @@
-if not pcall(require, 'nvim-treesitter') then
-  return
-end
-
 vim.api.nvim_create_autocmd('FileType', {
   group = vim.api.nvim_create_augroup('dotfiles_treesitter', { clear = true }),
   callback = function()
@@ -13,7 +9,12 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
-require('nvim-treesitter-textobjects').setup {
+local loaded, textobjects = pcall(require, 'nvim-treesitter-textobjects')
+if not loaded then
+  return
+end
+
+textobjects.setup {
   select = {
     lookahead = true,
     include_surrounding_whitespace = false,
