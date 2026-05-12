@@ -10,7 +10,7 @@ setopt inc_append_history
 setopt extended_history
 setopt beep
 unsetopt list_beep
-setopt globdots
+setopt glob_dots
 
 # Key bindings.
 bindkey -v
