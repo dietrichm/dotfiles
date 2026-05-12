@@ -2,11 +2,12 @@
 
 # History.
 HISTFILE="$ZDOTDIR/.zhistory"
-HISTSIZE=30000
-SAVEHIST=30000
+HISTSIZE=50000
+SAVEHIST=50000
 
 # Options.
-setopt appendhistory
+setopt inc_append_history
+setopt extended_history
 setopt beep
 unsetopt list_beep
 setopt globdots
