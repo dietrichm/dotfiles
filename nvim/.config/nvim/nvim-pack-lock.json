@@ -5,11 +5,11 @@
       "src": "https://github.com/lewis6991/async.nvim"
     },
     "codecompanion.nvim": {
-      "rev": "9d985b1cc4e650a676a977ab1f9ed50dc6d0f4d8",
+      "rev": "b1cbe52ecd71e7b0ed43ac1dc6eb3aab4099db00",
       "src": "https://github.com/olimorris/codecompanion.nvim"
     },
     "conform.nvim": {
-      "rev": "dca1a190aa85f9065979ef35802fb77131911106",
+      "rev": "18aeab3d63d350dcf44d64c462cc489a3412af40",
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "gitsigns.nvim": {
@@ -17,11 +17,11 @@
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "mini.nvim": {
-      "rev": "0f339bf5c93f392dc5d2417d47d7b9edc5f96fe8",
+      "rev": "18797ed18f347d0d0da27fec28a67979b1207f70",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "31026a13eefb20681124706a79fc1df6bf11ab27",
+      "rev": "f9349d4d99e7d66403ae8bf4fbd357b154dca7a7",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-treesitter": {
@@ -29,7 +29,7 @@
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-treesitter-context": {
-      "rev": "b0c45cefe2c8f7b55fc46f34e563bc428ef99636",
+      "rev": "b311b30818951d01f7b4bf650521b868b3fece16",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter-context"
     },
     "nvim-treesitter-textobjects": {
@@ -49,7 +49,7 @@
       "src": "https://github.com/nvim-lua/plenary.nvim"
     },
     "refactoring.nvim": {
-      "rev": "f75049d4564d96f66dc3cd79207d0ad6ea42c668",
+      "rev": "f5b54f3605d9ed709521db1827b8686dea283622",
       "src": "https://github.com/ThePrimeagen/refactoring.nvim"
     },
     "treesj": {
@@ -69,7 +69,7 @@
       "src": "https://github.com/tpope/vim-surround"
     },
     "vim-test": {
-      "rev": "bc0e94059de40641d163516a83c63bc45c716acf",
+      "rev": "7062b50979a28e804081f0e82b7321184ec1c20b",
       "src": "https://github.com/vim-test/vim-test"
     }
   }
