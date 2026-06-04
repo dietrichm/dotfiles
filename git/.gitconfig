@@ -47,6 +47,9 @@
 	conflictStyle = zdiff3
 [diff]
 	tool = kitty
+[diff "pdf"]
+	textconv = sh -c 'pdftotext -q -layout -nopgbrk -enc UTF-8 "$1" -' --
+	cachetextconv = true
 [difftool]
 	prompt = false
 	trustExitCode = true
