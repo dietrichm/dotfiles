@@ -4,10 +4,6 @@
       "rev": "e2a813be9cd143ab1181de6d8a0720e0230cd86e",
       "src": "https://github.com/lewis6991/async.nvim"
     },
-    "codecompanion.nvim": {
-      "rev": "e1352a2f71813e8bd11de317defe8a70362e8bc9",
-      "src": "https://github.com/olimorris/codecompanion.nvim"
-    },
     "conform.nvim": {
       "rev": "619363c30309d29ffa631e67c8183f2a72caa373",
       "src": "https://github.com/stevearc/conform.nvim"

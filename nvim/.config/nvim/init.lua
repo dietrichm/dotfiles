@@ -88,7 +88,6 @@ vim.api.nvim_create_user_command('PhpstanBaseline', [[:silent lgrep %:. phpstan-
 require('dotfiles.colorscheme')
 require('dotfiles.autocmds')
 require('dotfiles.diagnostics')
-require('dotfiles.ai')
 require('dotfiles.treesitter')
 require('dotfiles.formatters')
 require('dotfiles.mini')
