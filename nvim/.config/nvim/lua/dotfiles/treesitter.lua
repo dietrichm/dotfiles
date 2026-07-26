@@ -1,3 +1,23 @@
+local loaded, treesitter = pcall(require, 'nvim-treesitter')
+if not loaded then
+  return
+end
+
+treesitter.install {
+  'css',
+  'diff',
+  'go',
+  'gotmpl',
+  'html',
+  'javascript',
+  'lua',
+  'markdown',
+  'php',
+  'sql',
+  'typescript',
+  'yaml',
+}
+
 vim.api.nvim_create_autocmd('FileType', {
   group = vim.api.nvim_create_augroup('dotfiles_treesitter', { clear = true }),
   callback = function()
@@ -9,12 +29,7 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
-local loaded, textobjects = pcall(require, 'nvim-treesitter-textobjects')
-if not loaded then
-  return
-end
-
-textobjects.setup {
+require('nvim-treesitter-textobjects').setup {
   select = {
     lookahead = true,
     include_surrounding_whitespace = false,
