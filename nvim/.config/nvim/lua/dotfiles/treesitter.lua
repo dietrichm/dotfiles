@@ -13,6 +13,7 @@ treesitter.install {
   'lua',
   'markdown',
   'php',
+  'python',
   'sql',
   'typescript',
   'yaml',
