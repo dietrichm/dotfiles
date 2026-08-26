@@ -2,6 +2,10 @@ vim.opt_local.spell = true
 vim.opt_local.list = false
 vim.b.editorconfig = false
 
+if vim.api.nvim_get_current_line() == '' then
+  vim.cmd.startinsert()
+end
+
 vim.keymap.set('ia', 'bri', function()
   local branch_name = vim.fn.system { 'git', 'rev-parse', '--abbrev-ref', 'HEAD' }
   return branch_name:match('%u+%-%d+') or '?'
