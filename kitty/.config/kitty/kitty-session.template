@@ -1,4 +1,4 @@
-new_tab "__NAME__"
+new_tab __NAME__
 cd .
 enabled_layouts splits,stack
 layout splits
