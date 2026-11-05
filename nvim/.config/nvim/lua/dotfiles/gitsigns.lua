@@ -12,7 +12,7 @@ gitsigns.setup {
     changedelete = { text = '~' },
     untracked = { text = '┆' },
   },
-  attach_to_untracked = false,
+  attach_to_untracked = true,
   signs_staged_enable = false,
   preview_config = { col = 0, row = 1 },
   on_attach = function(bufnr)
@@ -43,3 +43,7 @@ gitsigns.setup {
     vim.api.nvim_buf_create_user_command(0, 'Greset', gitsigns.reset_buffer, {})
   end,
 }
+
+vim.keymap.set('n', '<Leader>gs', function()
+  gitsigns.setqflist('all')
+end)
