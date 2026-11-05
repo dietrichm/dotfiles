@@ -17,8 +17,8 @@ ai() {
     dir=$(cd "${~${1:-$PWD}}" 2>/dev/null && pwd) || return 1
     root=$(git -C "$dir" rev-parse --show-toplevel 2>/dev/null) && dir=$root
     local name=${dir:t}
-
-    local file="$dir/$name.kitty-session"
+    local id=${${dir#$HOME/}//\//-}
+    local file="$dir/$id.kitty-session"
     if [ ! -f "$file" ]; then
         local agent=${AI_AGENT:-vibe}
         if ! command -v "$agent" >/dev/null; then
@@ -41,6 +41,8 @@ ai() {
 }
 
 cpj() {
+    command -v fzf >/dev/null || { echo "cpj: requires fzf" >&2; return 1 }
+
     local dir root base
     root=$(git rev-parse --show-toplevel 2>/dev/null) && root=${root:h}
     base=${root:-$PWD}
