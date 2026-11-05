@@ -1,7 +1,7 @@
 {
   "plugins": {
     "async.nvim": {
-      "rev": "15f28ec323a75f34f317336831c00c2d1b0a7192",
+      "rev": "028d843a892b4920d8306216369aeee9fbcebae5",
       "src": "https://github.com/lewis6991/async.nvim"
     },
     "conform.nvim": {
@@ -9,19 +9,19 @@
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "gitsigns.nvim": {
-      "rev": "fd780920613e541cbdfac41bf711583ed49f9249",
+      "rev": "ef707fb93301a9b856f36eae4c8f56f5b988a794",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "mini.nvim": {
-      "rev": "8831fa150fa26492cfe135801fa498132f1491d2",
+      "rev": "a321b535c75ca88ba7fddfd8eb5b583fbda50dd6",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "ac062d0d01c019c0dbdb798968f3e5d8b35c3853",
+      "rev": "cc404d425c7752f56b8eaa269107be44d888ea51",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-treesitter": {
-      "rev": "ca581c3436fc2b236847f5b739ebc263739e5ca6",
+      "rev": "610734c5d3e59761d5f79318d120633374537fa5",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-treesitter-context": {
@@ -45,7 +45,7 @@
       "src": "https://github.com/nvim-lua/plenary.nvim"
     },
     "refactoring.nvim": {
-      "rev": "684b3484796ea44595bebbfddee4fa4dbfc90939",
+      "rev": "ea18f97c58276e213736c9f0193f7aa4c690693e",
       "src": "https://github.com/ThePrimeagen/refactoring.nvim"
     },
     "treesj": {
@@ -65,7 +65,7 @@
       "src": "https://github.com/tpope/vim-surround"
     },
     "vim-test": {
-      "rev": "3afb1cf5cd3013e8822e6eecf612fc36c974a98f",
+      "rev": "94868d13e660bea196cba584c08249bfee499158",
       "src": "https://github.com/vim-test/vim-test"
     }
   }
