@@ -35,7 +35,7 @@ ai() {
 
     kitty @ action goto_session "$file"
     if [ -n "$KITTY_WINDOW_ID" ]; then
-        kitty @ close-tab --match "window_id:$KITTY_WINDOW_ID and session:^$"
+        kitty @ close-tab --match "env:KITTY_WINDOW_ID=$KITTY_WINDOW_ID and session:^$"
     fi
 }
 
