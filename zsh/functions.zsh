@@ -13,9 +13,8 @@ update-nvim-nightly() {
 }
 
 ai() {
-    local dir root
+    local dir
     dir=$(cd "${~${1:-$PWD}}" 2>/dev/null && pwd) || return 1
-    root=$(git -C "$dir" rev-parse --show-toplevel 2>/dev/null) && dir=$root
     local name=${dir:t}
     local id=${${dir#$HOME/}//\//-}
     local file="$dir/$id.kitty-session"
