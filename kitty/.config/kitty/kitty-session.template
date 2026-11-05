@@ -3,6 +3,6 @@ cd .
 enabled_layouts splits,stack
 layout splits
 launch --var window=agent __AGENT__
-launch --location=vsplit --bias=40
+launch --location=vsplit
 launch --location=hsplit nvim
 focus_matching_window var:window=agent
