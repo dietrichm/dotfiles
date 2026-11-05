@@ -20,13 +20,9 @@ ai() {
     local file="$dir/$id.kitty-session"
     if [ ! -f "$file" ]; then
         local agent=${AI_AGENT:-vibe}
-        if ! command -v "$agent" >/dev/null; then
-            echo "ai: agent '$agent' not found (override with AI_AGENT)" >&2
-            return 1
-        fi
+        command -v "$agent" >/dev/null || { echo "ai: agent '$agent' not found (override with AI_AGENT)" >&2; return 1 }
 
-        local template
-        template=$(<"${XDG_CONFIG_HOME:-$HOME/.config}/kitty/kitty-session.template")
+        local template=$(<"${XDG_CONFIG_HOME:-$HOME/.config}/kitty/kitty-session.template")
         [ -n "$template" ] || { echo "ai: missing kitty session template" >&2; return 1 }
         template=${template//__NAME__/$name}
         template=${template//__AGENT__/$agent}
@@ -39,10 +35,9 @@ ai() {
 cpj() {
     command -v fzf >/dev/null || { echo "cpj: requires fzf" >&2; return 1 }
 
-    local dir root base
+    local dir root
     root=$(git rev-parse --show-toplevel 2>/dev/null) && root=${root:h}
-    base=${root:-$PWD}
-    dir=$(find "$base" -maxdepth 2 -name .git -type d -printf '%T@ %h\n' 2>/dev/null \
+    dir=$(find "${root:-$PWD}" -maxdepth 2 -name .git -type d -printf '%T@ %h\n' 2>/dev/null \
         | sort -rn \
         | cut -d' ' -f2- \
         | fzf --query="${1:-}") || return 0
