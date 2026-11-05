@@ -1,5 +1,5 @@
-cd .
 new_tab "__NAME__"
+cd .
 enabled_layouts splits,stack
 layout splits
 launch --var window=agent __AGENT__
