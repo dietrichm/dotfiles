@@ -35,7 +35,7 @@ ai() {
 
     kitty @ action goto_session "$file"
     if [ -n "$KITTY_WINDOW_ID" ]; then
-        kitty @ close-tab --match "window_id:$KITTY_WINDOW_ID and not var:window=agent"
+        kitty @ close-tab --match "window_id:$KITTY_WINDOW_ID and session:^$"
     fi
 }
 
