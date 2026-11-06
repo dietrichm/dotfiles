@@ -3,6 +3,6 @@ cd .
 enabled_layouts tall,stack
 layout tall
 launch --var window=agent __AGENT__
-launch
 launch nvim
+launch
 focus_matching_window var:window=agent
