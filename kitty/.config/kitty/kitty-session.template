@@ -1,8 +1,8 @@
 new_tab __NAME__
 cd .
-enabled_layouts splits,stack
-layout splits
+enabled_layouts tall,stack
+layout tall
 launch --var window=agent __AGENT__
-launch --location=vsplit
-launch --location=hsplit nvim
+launch
+launch nvim
 focus_matching_window var:window=agent
