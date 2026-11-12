@@ -15,4 +15,3 @@ go.work.sum
 .conform.*
 .~lock.*#
 __pycache__/
-*.kitty-session

@@ -12,26 +12,6 @@ update-nvim-nightly() {
     make -C "$MY_CONFIG_ROOT" $0
 }
 
-ai() {
-    local dir
-    dir=$(cd "${~${1:-$PWD}}" 2>/dev/null && pwd) || return 1
-    local name=${dir:t}
-    local id=${${dir#$HOME/}//\//-}
-    local file="$dir/$id.kitty-session"
-    if [ ! -f "$file" ]; then
-        local agent=${AI_AGENT:-vibe}
-        command -v "$agent" >/dev/null || { echo "ai: agent '$agent' not found (override with AI_AGENT)" >&2; return 1 }
-
-        local template=$(<"${XDG_CONFIG_HOME:-$HOME/.config}/kitty/kitty-session.template")
-        [ -n "$template" ] || { echo "ai: missing kitty session template" >&2; return 1 }
-        template=${template//__NAME__/$name}
-        template=${template//__AGENT__/$agent}
-        print -r -- "$template" > "$file"
-    fi
-
-    kitty @ action goto_session "$file"
-}
-
 cpj() {
     command -v fzf >/dev/null || { echo "cpj: requires fzf" >&2; return 1 }
 
