@@ -1,5 +1,5 @@
 alias cpwd='wl-copy "$PWD"'
-alias d='git addn . && git diff'
+alias d='git addn . && git diff --exit-code && git show'
 alias go-updates-direct='go list -m -mod=readonly -u -f "{{if and .Update (not .Indirect)}}{{.}}{{end}}" all'
 alias go-updates='go list -m -mod=readonly -u -f "{{if .Update}}{{.}}{{end}}" all'
 alias info='info --vi-keys'
