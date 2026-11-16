@@ -6,6 +6,7 @@ path=(
     bin
     vendor/bin
     node_modules/.bin
+    .venv/bin
     $HOME/.deno/bin
     $HOME/.local/bin
     $HOME/.luarocks/bin
