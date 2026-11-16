@@ -9,7 +9,7 @@ conform.setup {
     javascript = { 'prettier' },
     lua = { 'stylua' },
     php = { 'php_cs_fixer' },
-    python = { 'isort', 'black' },
+    python = { 'ruff_format' },
     typescript = { 'prettier' },
     typescriptreact = { 'prettier' },
   },
